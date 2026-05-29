@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+results/
+# Include data dir but not breakdown_charts (intermediate artifact)
+data/breakdown_charts.json
+# Scratch/investigation scripts
+discover*.py
+test_breakdown*.py
+check_*.py
+verify_*.py
