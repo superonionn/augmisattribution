@@ -689,28 +689,27 @@ def _render_lock_imp_analysis(bd):
     <div class="sub">{imp_pct:+.1f}% — less damage in aug groups</div>
   </div>
   <div class="card">
-    <div class="label">Expected Ebon Might Strip</div>
-    <div class="value" style="color:#E17055">~8-10%</div>
-    <div class="sub">Matches observed {imp_pct:.0f}% deficit</div>
+    <div class="label">Other Lock Pets</div>
+    <div class="value" style="color:#6C5CE7">+2-5%</div>
+    <div class="sub">Tyrant, Dreadstalkers, Ritual all positive</div>
   </div>
 </div>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">Key insight — reattribution working correctly on imps:</strong>
-  The -9 to -10% imp delta is consistent with WCL <em>correctly</em> reattributing Ebon Might damage
-  from imps back to the Aug Evoker. Ebon Might buffs pet damage by ~8-10%; if WCL strips this correctly,
-  imp DPS should appear ~8-10% lower in aug groups — exactly what we observe.
+  <strong style="color:{STYLE['accent']}">Key mystery — why only Wild Imps?</strong>
+  The -10 to -12% imp delta is NOT explained by Ebon Might reattribution. If WCL were stripping
+  Ebon Might from pets, <em>all</em> pets would show -8 to -10% — but Tyrant (+4.9%), Dreadstalkers (+3.6%),
+  and Diabolic Ritual (+3.8%) are all positive. Unholy DK pets (Army +0.6%, Ghoul +3.5%) are also flat/positive.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  Imps are target-capped, so they don't benefit from bigger pulls. This means the reattribution
-  shows up clean without being masked by a pull size effect. Uncapped AoE abilities (Tyrant +6.4%,
-  Diabolic Ritual +7.3%) are likely also being reattributed, but the pull size boost from bigger
-  packs (~14-19%) overwhelms the -8% reattribution, netting positive.
+  Something specific to Wild Imps is causing this deficit. Imps are unique in that they spawn in large batches
+  (6 per Hand of Gul'dan, passive spawns from Inner Demons), are short-lived (~15-20s), and many instances exist
+  simultaneously. This may cause a WCL attribution anomaly where imp damage is being over-credited to the Aug Evoker.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  Single-target filler (Shadow Bolt +1.8%, Demonbolt -0.3%) is slightly positive rather than -8%,
-  suggesting reattribution may not apply uniformly to player-cast spells vs pet damage, or
-  there's a small player skill bias in aug groups.
+  <strong>Investigation ongoing:</strong> We're collecting Aug Evoker damage data from these same reports to see
+  if the Aug is credited more damage when paired with Lock (imp-heavy) vs DK. If so, it would confirm
+  over-attribution from imps specifically.
 </p>
 
 <h3>Wild Imp DPS by Dungeon</h3>
@@ -755,21 +754,21 @@ def _render_lock_conclusion(stats, bd):
     Capped/cleave (Wild Imps, Dreadstalkers, Implosion, Charhound): <strong>{cc_pct}</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Wild Imps show -9 to -10% in aug groups. This is consistent with WCL <em>correctly</em>
-    reattributing Ebon Might damage (~8-10%) from imps back to the Aug. Since imps are
-    target-capped and don't benefit from bigger pulls, the reattribution effect is visible
-    without being masked by a pull size boost.
+    Wild Imps show -10 to -12% in aug groups — but this is <strong>NOT</strong> explained by
+    Ebon Might reattribution. If it were, all pets would show similar negatives. Instead, Tyrant (+4.9%),
+    Dreadstalkers (+3.6%), Diabolic Ritual (+3.8%), and all DK pets (Army +0.6%, Ghoul +3.5%)
+    are flat or positive.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Uncapped AoE sources show +6-11% because they <em>do</em> scale with pull size — the pull
-    size boost (~14-19%) overwhelms the reattribution (-8%), netting positive. This means
-    the headline +2.6% buff-normalized delta is mostly explained by aug groups pulling bigger,
-    with WCL reattribution actually working correctly on pet damage.
+    Something specific to Wild Imps — likely related to their high-quantity, short-lived,
+    simultaneous-instance nature — is causing WCL to over-credit imp damage to the Aug Evoker.
+    We're collecting Aug perspective data to confirm whether Aug gets credited more damage
+    when paired with Lock vs DK.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    ST filler (Shadow Bolt +1.8%) is slightly positive rather than -8%, suggesting
-    reattribution may apply more strongly to pets than player-cast spells — or there's
-    a small player skill bias in aug groups.
+    The positive uncapped AoE delta (+6%) and flat ST filler (+0.6-1.8%) suggest aug groups may
+    pull slightly bigger, but the magnitude is modest — not the 15-20% that would be needed
+    to explain the full pattern through pull size alone.
   </p>"""
 
     html += """
