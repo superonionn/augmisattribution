@@ -11,6 +11,11 @@ from analyze import (
     BUFF_MULTIPLIERS, STYLE,
 )
 from pullsize_control import run_pullsize_analysis
+from analyze_lock import (
+    load_lock_rankings, normalize_lock_dps, compute_lock_stats,
+    chart_lock_distributions, chart_lock_per_dungeon, chart_lock_key_level,
+    load_lock_breakdowns,
+)
 
 app = Flask(__name__)
 
@@ -40,6 +45,27 @@ def get_dk_data():
 
     result = {"stats": stats, "charts": charts, "breakdown": breakdown_data, "pullsize": pullsize}
     _cache["dk"] = result
+    return result
+
+
+def get_lock_data():
+    if "lock" in _cache:
+        return _cache["lock"]
+
+    df = load_lock_rankings()
+    df = normalize_lock_dps(df)
+    charts = {
+        "distributions": chart_lock_distributions(df),
+        "per_dungeon": chart_lock_per_dungeon(df),
+        "key_level": chart_lock_key_level(df),
+    }
+    stats = compute_lock_stats(df)
+    breakdown_data, breakdown_charts = load_lock_breakdowns()
+    if breakdown_charts:
+        charts.update(breakdown_charts)
+
+    result = {"stats": stats, "charts": charts, "breakdown": breakdown_data}
+    _cache["lock"] = result
     return result
 
 
@@ -128,13 +154,12 @@ def dh_page():
 
 @app.route("/lock")
 def lock_page():
-    content = """
-    <div class="coming-soon">
-      <h2>Demo Lock Analysis</h2>
-      <p>Coming soon. Demo Lock's uncapped AoE pets (Tyrant via Burning Cleave, Inquisitor via Mind Sear)
-         are strong candidates for misattribution.</p>
-      <p style="margin-top:10px; color:#666;">Expected key level skew will need careful control.</p>
-    </div>"""
+    data = get_lock_data()
+    stats = data["stats"]
+    charts = data["charts"]
+    bd = data["breakdown"]
+
+    content = _render_lock(stats, charts, bd)
     return render_template_string(BASE_TEMPLATE, content=content, active="lock")
 
 
@@ -289,6 +314,270 @@ def _render_dk(stats, charts, bd, ps):
     <li>Pull size control: AoE/ST ratio (Epidemic+Graveyard)/(Death Coil+Necrotic Coil) used as proxy for pull size.</li>
     <li>Regression: normalized_dps ~ has_aug + aoe_st_ratio + key_level (OLS).</li>
     <li>Caveats: Buff multipliers are estimates. Player skill selection bias exists. Pull size proxy is imperfect.</li>
+  </ul>
+</div>
+"""
+    return html
+
+
+def _render_lock(stats, charts, bd):
+    """Render the full Demo Lock analysis page content."""
+    html = f"""
+<h2 style="border:none; margin-top:0;">Demo Lock — Midnight Season 1</h2>
+<p class="subtitle">Top 400 rankings per dungeon across all regions (Demonology spec)</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Total Rankings</div>
+    <div class="value accent">{stats['total']:,}</div>
+    <div class="sub">{stats['n_aug']:,} aug / {stats['n_noaug']:,} no-aug</div>
+  </div>
+  <div class="card">
+    <div class="label">Raw DPS Delta</div>
+    <div class="value" style="color: {'#6C5CE7' if stats['raw_delta'] > 0 else '#E17055'}">{stats['raw_delta']:+,.0f}</div>
+    <div class="sub">{stats['raw_pct']:+.1f}% (as shown in logs)</div>
+  </div>
+  <div class="card">
+    <div class="label">Buff-Normalized Delta</div>
+    <div class="value" style="color: {'#6C5CE7' if stats['norm_delta'] > 0 else '#E17055'}">{stats['norm_delta']:+,.0f}</div>
+    <div class="sub">{stats['norm_pct']:+.1f}% (controlling for raid buffs)</div>
+  </div>
+  <div class="card">
+    <div class="label">Estimated Misattribution</div>
+    <div class="value accent">{stats['norm_pct']:+.1f}%</div>
+    <div class="sub">~{abs(stats['norm_delta']):,.0f} DPS upper bound</div>
+  </div>
+</div>
+"""
+
+    # DPS distributions
+    html += f"""
+<h2>DPS Distributions</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['distributions']}"></div>
+"""
+
+    # Per dungeon
+    dungeon_rows = ""
+    for d in stats["dungeon_stats"]:
+        color = "#6C5CE7" if d["delta"] > 0 else "#E17055"
+        dungeon_rows += f"""<tr><td>{d['dungeon']}</td><td style="color:{color}">{d['delta']:+,.0f}</td><td style="color:{color}">{d['pct']:+.1f}%</td><td>{d['n_aug']}</td><td>{d['n_noaug']}</td></tr>"""
+
+    html += f"""
+<h2>Per-Dungeon Breakdown</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['per_dungeon']}"></div>
+<table>
+  <thead><tr><th>Dungeon</th><th>DPS Delta</th><th>%</th><th>n (aug)</th><th>n (no-aug)</th></tr></thead>
+  <tbody>{dungeon_rows}</tbody>
+</table>
+"""
+
+    # Key level
+    kl_rows = ""
+    for kl in stats["kl_stats"]:
+        color = "#6C5CE7" if kl["delta"] > 0 else "#E17055"
+        kl_rows += f"""<tr><td>+{kl['key']}</td><td style="color:{color}">{kl['delta']:+,.0f}</td><td style="color:{color}">{kl['pct']:+.1f}%</td><td>{kl['n_aug']}</td><td>{kl['n_noaug']}</td></tr>"""
+
+    html += f"""
+<h2>Key Level Matched</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['key_level']}"></div>
+<table>
+  <thead><tr><th>Key Level</th><th>DPS Delta</th><th>%</th><th>n (aug)</th><th>n (no-aug)</th></tr></thead>
+  <tbody>{kl_rows}</tbody>
+</table>
+"""
+
+    # Breakdown sections
+    if bd:
+        html += _render_lock_breakdown(charts, bd)
+
+    # Conclusion
+    html += _render_lock_conclusion(stats, bd)
+
+    return html
+
+
+def _render_lock_breakdown(charts, bd):
+    """Render the Lock damage breakdown section."""
+    cs = bd["cat_stats"]
+    n_aug = bd["n_aug"]
+    n_noaug = bd["n_noaug"]
+
+    total_delta = cs["pet"]["delta"] + cs["player"]["delta"]
+
+    cat_table_rows = ""
+    for cat in ["pet", "player"]:
+        s = cs[cat]
+        share = s["delta"] / total_delta * 100 if total_delta else 0
+        color = "#6C5CE7" if s["delta"] > 0 else "#E17055"
+        label = "Pet (Demons)" if cat == "pet" else "Player (Direct)"
+        cat_table_rows += f"""
+        <tr>
+            <td>{label}</td>
+            <td>{s['aug_pct']:.1f}%</td>
+            <td>{s['noaug_pct']:.1f}%</td>
+            <td>{s['aug_dps']:,.0f}</td>
+            <td>{s['noaug_dps']:,.0f}</td>
+            <td style="color:{color}">{s['delta']:+,.0f}</td>
+            <td style="color:{color}">{s['pct']:+.1f}%</td>
+            <td>{share:.0f}%</td>
+        </tr>"""
+
+    html = f"""
+<h2>Damage Breakdown Analysis</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Analyzing {n_aug + n_noaug} per-fight ability breakdowns ({n_aug} aug, {n_noaug} no-aug).
+  Demo Lock damage is ~80% pet/demon damage, making pet misattribution the primary concern.
+  All DPS values are buff-normalized.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('lock_category', '')}"></div>
+
+<table>
+  <thead><tr>
+    <th>Category</th><th>Aug %</th><th>No-Aug %</th>
+    <th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th><th>Share of Δ</th>
+  </tr></thead>
+  <tbody>{cat_table_rows}</tbody>
+</table>
+"""
+
+    # Pet sub-categories
+    pet_subs = bd.get("pet_subcats")
+    if pet_subs:
+        from analyze_lock import PET_SUBCATS, SUBCAT_ORDER
+        pet_sub_rows = ""
+        total_pet_delta = 0
+        subcat_names = SUBCAT_ORDER
+        for name in subcat_names:
+            a = pet_subs["aug"].get(name, 0)
+            n = pet_subs["noaug"].get(name, 0)
+            delta = a - n
+            pct = delta / n * 100 if n > 0 else 0
+            total_pet_delta += delta
+            color = "#6C5CE7" if delta > 0 else "#E17055"
+            pet_sub_rows += f"""
+            <tr>
+                <td>{name}</td>
+                <td>{a:,.0f}</td>
+                <td>{n:,.0f}</td>
+                <td style="color:{color}">{delta:+,.0f}</td>
+                <td style="color:{color}">{pct:+.1f}%</td>
+            </tr>"""
+        aug_total = sum(pet_subs["aug"].values())
+        noaug_total = sum(pet_subs["noaug"].values())
+        total_pct = total_pet_delta / noaug_total * 100 if noaug_total else 0
+        pet_sub_rows += f"""
+            <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold">
+                <td>Total Pet</td>
+                <td>{aug_total:,.0f}</td>
+                <td>{noaug_total:,.0f}</td>
+                <td style="color:#6C5CE7">{total_pet_delta:+,.0f}</td>
+                <td style="color:#6C5CE7">{total_pct:+.1f}%</td>
+            </tr>"""
+
+        html += f"""
+<h2>Pet Damage Sub-Categories</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Breaking down pet damage by demon type. Felguard (Main Pet) includes the permanent Felguard
+  with its randomly generated name (like DK's main ghoul). Diabolic Ritual damage is consolidated
+  by WCL — individual ritual demons (Pit Lord, Mother of Chaos, etc.) are not broken out separately.
+  Dominion of Argus sub-types (Antoran Jailer, Inquisitor, Alythess, Sacrolash) log 0 damage — their
+  effects are rolled into the main Dominion of Argus entry.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('lock_subcats', '')}"></div>
+
+<table>
+  <thead><tr>
+    <th>Demon Source</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th>
+  </tr></thead>
+  <tbody>{pet_sub_rows}</tbody>
+</table>
+"""
+
+    # Per-ability chart and table
+    ability_rows = bd.get("ability_rows", [])
+    ability_table_rows = ""
+    for r in ability_rows[:15]:
+        color = "#6C5CE7" if r["delta"] > 0 else "#E17055"
+        cat_color = {"pet": "#e74c3c", "player": "#3498db"}.get(r["cat"], "#aaa")
+        pct_str = f"{r['pct']:+.1f}%" if abs(r["pct"]) < 500 else "new"
+        ability_table_rows += f"""
+        <tr>
+            <td>{r['name']}</td>
+            <td><span style="color:{cat_color}">{r['cat']}</span></td>
+            <td>{r['aug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('aug_n','-')})</span></td>
+            <td>{r['noaug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('noaug_n','-')})</span></td>
+            <td style="color:{color}">{r['delta']:+,.0f}</td>
+            <td style="color:{color}">{pct_str}</td>
+        </tr>"""
+
+    html += f"""
+<h2>Per-Ability DPS Delta</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Individual ability comparison (buff-normalized DPS).
+  <span style="color:#e74c3c">Red = Pet/Demon</span>,
+  <span style="color:#3498db">Blue = Player/Direct</span>.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('lock_abilities', '')}"></div>
+
+<table>
+  <thead><tr>
+    <th>Ability</th><th>Type</th><th>Aug DPS (n)</th><th>No-Aug DPS (n)</th><th>Δ DPS</th><th>Δ%</th>
+  </tr></thead>
+  <tbody>{ability_table_rows}</tbody>
+</table>
+"""
+    return html
+
+
+
+def _render_lock_conclusion(stats, bd):
+    """Render the Lock conclusion section."""
+    html = f"""
+<div class="conclusion">
+  <h2>Summary</h2>
+  <p style="font-size:16px; line-height:1.7;">
+    After normalizing for raid buffs, Demo Locks with Aug show
+    <strong style="color:{STYLE['accent']}">{stats['norm_delta']:+,.0f} DPS ({stats['norm_pct']:+.1f}%)</strong>
+    higher personal DPS than Locks without Aug.
+  </p>"""
+
+    if bd:
+        cs = bd["cat_stats"]
+        html += f"""
+  <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
+    <strong style="color:{STYLE['accent']}">Key finding — divergent pet inflation:</strong><br>
+    Unlike DK where all pet sub-sources were uniformly inflated 3-5%,
+    Demo Lock shows a split pattern: Demonic Tyrant and Diabolic Ritual
+    are heavily inflated, while Wild Imps from both sources are <em>negative</em>.
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    Tyrant and Diabolic Ritual are both big AoE burst windows. Their inflation
+    likely reflects aug groups coordinating cooldowns with bigger pulls.
+    Wild Imps, which passively attack individual targets, show <em>less</em>
+    damage in aug groups — possibly because they die during Implosion
+    in AoE-heavy pulls rather than passively attacking.
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    Player direct damage (+{cs['player']['pct']:.1f}%) is inflated
+    <em>more</em> than pet damage (+{cs['pet']['pct']:.1f}%), the opposite of
+    what we'd expect from pet-specific misattribution. This points toward
+    general gameplay/routing differences between aug and non-aug comps
+    rather than WCL misattribution as the primary driver of the delta.
+  </p>"""
+
+    html += """
+</div>
+
+<div class="methodology">
+  <h3>Methodology</h3>
+  <ul>
+    <li>Data: Top 400 Demo Lock rankings per dungeon from WarcraftLogs API (characterRankings), across all regions.</li>
+    <li>Buff normalization: Same approach as DK — each Lock's logged DPS is divided by the multiplicative product of all raid buffs present.</li>
+    <li>Damage categorization: Pet abilities include all demon summons (Tyrant, Dreadstalkers, Wild Imps, Charhound, Diabolic Ritual, Dominion of Argus, Grimoire demons). Player abilities include Hand of Gul'dan, Shadow Bolt, Demonbolt, Implosion.</li>
+    <li>Caveats: Smaller breakdown sample than DK. Buff multipliers are estimates using DK values (Lock has similar phys/magic split). No clean AoE/ST proxy exists for Demo Lock unlike DK.</li>
   </ul>
 </div>
 """
