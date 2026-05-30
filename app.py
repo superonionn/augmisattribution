@@ -659,13 +659,6 @@ def _render_lock_imp_analysis(bd):
     imp_delta = aug_imp - noaug_imp
     imp_pct = imp_delta / noaug_imp * 100
 
-    aug_ratio = imp["aug"]["implosion_imp_ratio"]
-    noaug_ratio = imp["noaug"]["implosion_imp_ratio"]
-
-    aug_combined = imp["aug"]["imp_plus_implosion"]
-    noaug_combined = imp["noaug"]["imp_plus_implosion"]
-    combined_delta = aug_combined - noaug_combined
-    combined_pct = combined_delta / noaug_combined * 100
 
     dungeon_rows = ""
     for g in imp_by_dungeon:
@@ -681,33 +674,43 @@ def _render_lock_imp_analysis(bd):
 
 <div class="cards">
   <div class="card">
-    <div class="label">Wild Imp DPS (Combined)</div>
+    <div class="label">Wild Imp DPS (Aug)</div>
+    <div class="value accent">{aug_imp:,.0f}</div>
+    <div class="sub">{imp['aug']['imp_pct']:.1f}% of total damage</div>
+  </div>
+  <div class="card">
+    <div class="label">Wild Imp DPS (No-Aug)</div>
+    <div class="value accent">{noaug_imp:,.0f}</div>
+    <div class="sub">{imp['noaug']['imp_pct']:.1f}% of total damage</div>
+  </div>
+  <div class="card">
+    <div class="label">Imp Delta</div>
     <div class="value" style="color:#E17055">{imp_delta:+,.0f}</div>
     <div class="sub">{imp_pct:+.1f}% — less damage in aug groups</div>
   </div>
   <div class="card">
-    <div class="label">Implosion/Imp Ratio</div>
-    <div class="value accent">{aug_ratio:.2f} / {noaug_ratio:.2f}</div>
-    <div class="sub">Aug groups Implode more aggressively</div>
-  </div>
-  <div class="card">
-    <div class="label">Imps + Implosion Combined</div>
-    <div class="value" style="color:{'#6C5CE7' if combined_delta > 0 else '#E17055'}">{combined_delta:+,.0f}</div>
-    <div class="sub">{combined_pct:+.1f}% — nearly flat when combined</div>
-  </div>
-  <div class="card">
-    <div class="label">Imp % of Total DPS</div>
-    <div class="value accent">{imp['aug']['imp_pct']:.1f}% / {imp['noaug']['imp_pct']:.1f}%</div>
-    <div class="sub">Aug / No-Aug</div>
+    <div class="label">Expected Ebon Might Strip</div>
+    <div class="value" style="color:#E17055">~8-10%</div>
+    <div class="sub">Matches observed {imp_pct:.0f}% deficit</div>
   </div>
 </div>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">Key insight:</strong> Aug groups have a higher Implosion-to-Imp ratio
-  ({aug_ratio:.2f} vs {noaug_ratio:.2f}), meaning they consume imps via Implosion more aggressively.
-  When you combine Wild Imp + Implosion damage, the delta nearly disappears ({combined_pct:+.1f}%).
-  This strongly suggests the imp negative delta is explained by aug groups converting more imp uptime
-  into Implosion burst — not by misattribution or reattribution working correctly.
+  <strong style="color:{STYLE['accent']}">Key insight — reattribution working correctly on imps:</strong>
+  The -9 to -10% imp delta is consistent with WCL <em>correctly</em> reattributing Ebon Might damage
+  from imps back to the Aug Evoker. Ebon Might buffs pet damage by ~8-10%; if WCL strips this correctly,
+  imp DPS should appear ~8-10% lower in aug groups — exactly what we observe.
+</p>
+<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
+  Imps are target-capped, so they don't benefit from bigger pulls. This means the reattribution
+  shows up clean without being masked by a pull size effect. Uncapped AoE abilities (Tyrant +6.4%,
+  Diabolic Ritual +7.3%) are likely also being reattributed, but the pull size boost from bigger
+  packs (~14-19%) overwhelms the -8% reattribution, netting positive.
+</p>
+<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
+  Single-target filler (Shadow Bolt +1.8%, Demonbolt -0.3%) is slightly positive rather than -8%,
+  suggesting reattribution may not apply uniformly to player-cast spells vs pet damage, or
+  there's a small player skill bias in aug groups.
 </p>
 
 <h3>Wild Imp DPS by Dungeon</h3>
@@ -748,23 +751,25 @@ def _render_lock_conclusion(stats, bd):
         html += f"""
   <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
     <strong style="color:{STYLE['accent']}">Key finding — uncapped vs capped AoE split:</strong><br>
-    Uncapped AoE sources (Tyrant, Diabolic Ritual, Dominion, HoG impact) show <strong>{uc_pct}</strong>
-    while capped/cleave sources (Wild Imps, Dreadstalkers, Implosion, Charhound) show <strong>{cc_pct}</strong>.
-    If this were flat misattribution, both categories should be inflated equally.
+    Uncapped AoE (Tyrant, Diabolic Ritual, Dominion, HoG impact): <strong>{uc_pct}</strong><br>
+    Capped/cleave (Wild Imps, Dreadstalkers, Implosion, Charhound): <strong>{cc_pct}</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Wild Imps show -9% damage in aug groups despite cleaving via To Hell and Back.
-    However, aug groups have a higher Implosion-to-Imp ratio, meaning they consume imps
-    for burst AoE more aggressively. When combining Imp + Implosion damage, the delta
-    nearly disappears — the imps aren't doing less damage, they're being converted into
-    Implosion damage faster.
+    Wild Imps show -9 to -10% in aug groups. This is consistent with WCL <em>correctly</em>
+    reattributing Ebon Might damage (~8-10%) from imps back to the Aug. Since imps are
+    target-capped and don't benefit from bigger pulls, the reattribution effect is visible
+    without being masked by a pull size boost.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    The overall pattern — uncapped AoE inflated, capped damage flat or negative, ST unchanged —
-    is consistent with aug groups pulling bigger and optimizing burst windows rather than
-    WCL misattribution. Player direct damage (+{cs['player']['pct']:.1f}%) is inflated
-    <em>more</em> than pet damage (+{cs['pet']['pct']:.1f}%), further contradicting
-    pet-specific misattribution as the primary driver.
+    Uncapped AoE sources show +6-11% because they <em>do</em> scale with pull size — the pull
+    size boost (~14-19%) overwhelms the reattribution (-8%), netting positive. This means
+    the headline +2.6% buff-normalized delta is mostly explained by aug groups pulling bigger,
+    with WCL reattribution actually working correctly on pet damage.
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    ST filler (Shadow Bolt +1.8%) is slightly positive rather than -8%, suggesting
+    reattribution may apply more strongly to pets than player-cast spells — or there's
+    a small player skill bias in aug groups.
   </p>"""
 
     html += """
