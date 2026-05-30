@@ -476,112 +476,141 @@ def load_lock_breakdowns():
     fig.tight_layout()
     subcat_chart = fig_to_base64(fig)
 
+    # Uncapped vs Capped AoE analysis
+    UNCAPPED_AOE = ["Summon Demonic Tyrant", "Diabolic Ritual", "Dominion of Argus", "Hand of Gul'dan"]
+    CAPPED_CLEAVE = ["Wild Imp (Hand of Gul'dan)", "Wild Imp (Inner Demons/To Hell and Back)",
+                     "Call Dreadstalkers", "Implosion", "Summon Charhound"]
+    ST_FILLER = ["Shadow Bolt", "Demonbolt"]
+
+    def get_dps_from_row(row, name):
+        dur = row["total_damage"] / row["dps"]
+        bm = compute_buff_multiplier(row["buffs"])
+        for a in row["abilities"]:
+            if a["name"] == name:
+                return a["total"] / bm / dur
+        return 0
+
+    aoe_analysis = {"uncapped": {}, "capped": {}, "st": {}}
+    for label, subset in [("aug", aug), ("noaug", noaug)]:
+        for ab in UNCAPPED_AOE:
+            vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
+            aoe_analysis["uncapped"].setdefault(ab, {})[label] = sum(vals) / len(vals)
+        for ab in CAPPED_CLEAVE:
+            vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
+            aoe_analysis["capped"].setdefault(ab, {})[label] = sum(vals) / len(vals)
+        for ab in ST_FILLER:
+            vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
+            aoe_analysis["st"].setdefault(ab, {})[label] = sum(vals) / len(vals)
+
+    # Totals per category
+    for cat, abilities in [("uncapped", UNCAPPED_AOE), ("capped", CAPPED_CLEAVE), ("st", ST_FILLER)]:
+        for label in ["aug", "noaug"]:
+            aoe_analysis[cat]["_total_" + label] = sum(
+                aoe_analysis[cat][ab][label] for ab in abilities)
+
+    # Wild Imp deep dive
+    import statistics as stats_mod
+    imp_analysis = {}
+    for label, subset_list in [("aug", [row for _, row in aug.iterrows()]),
+                                ("noaug", [row for _, row in noaug.iterrows()])]:
+        imp_dps = [get_dps_from_row(r, "Wild Imp (Hand of Gul'dan)") +
+                   get_dps_from_row(r, "Wild Imp (Inner Demons/To Hell and Back)") for r in subset_list]
+        implosion_dps = [get_dps_from_row(r, "Implosion") for r in subset_list]
+        norm_dps = [r["dps"] / compute_buff_multiplier(r["buffs"]) for r in subset_list]
+        imp_pct = [i / t * 100 for i, t in zip(imp_dps, norm_dps) if t > 0]
+        imp_implosion_ratio = [imp / wimp if wimp > 0 else 0
+                               for imp, wimp in zip(implosion_dps, imp_dps)]
+        imp_analysis[label] = {
+            "imp_dps": stats_mod.mean(imp_dps),
+            "implosion_dps": stats_mod.mean(implosion_dps),
+            "imp_pct": stats_mod.mean(imp_pct),
+            "implosion_imp_ratio": stats_mod.mean(imp_implosion_ratio),
+            "imp_plus_implosion": stats_mod.mean(imp_dps) + stats_mod.mean(implosion_dps),
+        }
+
+    # Imp by dungeon
+    imp_by_dungeon = []
+    for dg in sorted(bdf["dungeon"].unique()):
+        aug_d = [row for _, row in aug[aug["dungeon"] == dg].iterrows()]
+        noaug_d = [row for _, row in noaug[noaug["dungeon"] == dg].iterrows()]
+        if not aug_d or not noaug_d:
+            continue
+        aug_imp = [get_dps_from_row(r, "Wild Imp (Hand of Gul'dan)") +
+                   get_dps_from_row(r, "Wild Imp (Inner Demons/To Hell and Back)") for r in aug_d]
+        noaug_imp = [get_dps_from_row(r, "Wild Imp (Hand of Gul'dan)") +
+                     get_dps_from_row(r, "Wild Imp (Inner Demons/To Hell and Back)") for r in noaug_d]
+        a_avg = sum(aug_imp) / len(aug_imp)
+        n_avg = sum(noaug_imp) / len(noaug_imp)
+        delta = a_avg - n_avg
+        pct = delta / n_avg * 100 if n_avg > 0 else 0
+        imp_by_dungeon.append({
+            "dungeon": dg, "aug": a_avg, "noaug": n_avg,
+            "delta": delta, "pct": pct,
+            "n_aug": len(aug_d), "n_noaug": len(noaug_d),
+        })
+
+    # Uncapped vs Capped chart
+    uncapped_labels = ["Tyrant\n(Burning Cleave)", "Diabolic\nRitual", "Dominion\nof Argus", "Hand of\nGul'dan"]
+    capped_labels = ["Wild Imp\n(HoG)", "Wild Imp\n(ID/THB)", "Dreadstalkers", "Implosion", "Charhound"]
+
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    fig.patch.set_facecolor(STYLE["bg"])
+    w = 0.35
+
+    ax = axes[0]
+    set_dark_style(ax, "Uncapped AoE Sources")
+    xi = range(len(UNCAPPED_AOE))
+    aug_vals = [aoe_analysis["uncapped"][ab]["aug"] for ab in UNCAPPED_AOE]
+    noaug_vals = [aoe_analysis["uncapped"][ab]["noaug"] for ab in UNCAPPED_AOE]
+    ax.bar([i - w/2 for i in xi], aug_vals, w, color=STYLE["aug"], alpha=0.85, label="Aug")
+    ax.bar([i + w/2 for i in xi], noaug_vals, w, color=STYLE["noaug"], alpha=0.85, label="No Aug")
+    ax.set_xticks(list(xi))
+    ax.set_xticklabels(uncapped_labels, fontsize=8)
+    ax.set_ylabel("Normalized DPS", color=STYLE["text"])
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k"))
+    for i, (a, n) in enumerate(zip(aug_vals, noaug_vals)):
+        delta = a - n
+        pct = delta / n * 100 if n > 0 else 0
+        ax.text(i, max(a, n) + 400, f"{pct:+.1f}%", ha="center",
+                color=STYLE["accent"], fontsize=9, fontweight="bold")
+    ax.legend(fontsize=9, facecolor=STYLE["card"], edgecolor=STYLE["grid"], labelcolor=STYLE["text"])
+
+    ax = axes[1]
+    set_dark_style(ax, "Capped/Cleave AoE Sources")
+    xi = range(len(CAPPED_CLEAVE))
+    aug_vals = [aoe_analysis["capped"][ab]["aug"] for ab in CAPPED_CLEAVE]
+    noaug_vals = [aoe_analysis["capped"][ab]["noaug"] for ab in CAPPED_CLEAVE]
+    ax.bar([i - w/2 for i in xi], aug_vals, w, color=STYLE["aug"], alpha=0.85, label="Aug")
+    ax.bar([i + w/2 for i in xi], noaug_vals, w, color=STYLE["noaug"], alpha=0.85, label="No Aug")
+    ax.set_xticks(list(xi))
+    ax.set_xticklabels(capped_labels, fontsize=8)
+    ax.set_ylabel("Normalized DPS", color=STYLE["text"])
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k"))
+    for i, (a, n) in enumerate(zip(aug_vals, noaug_vals)):
+        delta = a - n
+        pct = delta / n * 100 if n > 0 else 0
+        color = STYLE["accent"] if delta >= 0 else "#E17055"
+        ax.text(i, max(a, n) + 200, f"{pct:+.1f}%", ha="center",
+                color=color, fontsize=9, fontweight="bold")
+    ax.legend(fontsize=9, facecolor=STYLE["card"], edgecolor=STYLE["grid"], labelcolor=STYLE["text"])
+    fig.tight_layout()
+    aoe_chart = fig_to_base64(fig)
+
     breakdown_data = {
         "cat_stats": cat_stats, "ability_rows": filtered,
         "n_aug": len(aug), "n_noaug": len(noaug),
         "pet_subcats": pet_subcat_stats,
+        "aoe_analysis": aoe_analysis,
+        "imp_analysis": imp_analysis,
+        "imp_by_dungeon": imp_by_dungeon,
+        "uncapped_abilities": UNCAPPED_AOE,
+        "capped_abilities": CAPPED_CLEAVE,
+        "st_abilities": ST_FILLER,
     }
     breakdown_charts = {
         "lock_category": cat_chart,
         "lock_abilities": ability_chart,
         "lock_subcats": subcat_chart,
+        "lock_aoe": aoe_chart,
     }
     return breakdown_data, breakdown_charts
-
-
-def run_lock_pullsize_analysis():
-    """Pull size proxy for Demo Lock: Implosion (AoE) vs Shadow Bolt + Demonbolt (ST filler)."""
-    path = os.path.join("data", "lock_breakdowns.json")
-    if not os.path.exists(path):
-        return None
-
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-
-    def get_dps(entry, name):
-        dur = entry["total_damage"] / entry["dps"]
-        bm = compute_buff_multiplier(entry["buffs"])
-        for a in entry["abilities"]:
-            if a["name"] == name:
-                return a["total"] / bm / dur
-        return 0
-
-    entries = []
-    for e in data:
-        bm = compute_buff_multiplier(e["buffs"])
-        norm_dps = e["dps"] / bm
-        implosion = get_dps(e, "Implosion")
-        sb = get_dps(e, "Shadow Bolt")
-        db = get_dps(e, "Demonbolt")
-        st_filler = sb + db
-        if st_filler < 100:
-            continue
-        entries.append({
-            "has_aug": e["has_aug"],
-            "norm_dps": norm_dps,
-            "aoe_st_ratio": implosion / st_filler,
-            "key_level": e["key_level"],
-        })
-
-    if len(entries) < 50:
-        return None
-
-    import statistics
-
-    ratios = sorted(e["aoe_st_ratio"] for e in entries)
-    n = len(ratios)
-    quintile_bounds = [ratios[min(int(n * q), n - 1)] for q in [0, 0.2, 0.4, 0.6, 0.8, 1.0]]
-
-    buckets = []
-    for i in range(5):
-        lo = quintile_bounds[i]
-        hi = quintile_bounds[i + 1] + (0.001 if i == 4 else 0)
-        bucket_aug = [e for e in entries if e["has_aug"] and lo <= e["aoe_st_ratio"] < hi]
-        bucket_noaug = [e for e in entries if not e["has_aug"] and lo <= e["aoe_st_ratio"] < hi]
-        if not bucket_aug or not bucket_noaug:
-            continue
-        aug_avg = statistics.mean(e["norm_dps"] for e in bucket_aug)
-        noaug_avg = statistics.mean(e["norm_dps"] for e in bucket_noaug)
-        delta = aug_avg - noaug_avg
-        pct = delta / noaug_avg * 100
-        buckets.append({
-            "label": f"{lo:.2f} - {hi:.2f}",
-            "aug_dps": aug_avg, "noaug_dps": noaug_avg,
-            "delta": delta, "pct": pct,
-            "n_aug": len(bucket_aug), "n_noaug": len(bucket_noaug),
-        })
-
-    X_aug = np.array([1.0 if e["has_aug"] else 0.0 for e in entries])
-    X_ratio = np.array([e["aoe_st_ratio"] for e in entries])
-    X_key = np.array([float(e["key_level"]) for e in entries])
-    y = np.array([e["norm_dps"] for e in entries])
-    noaug_mean = float(np.mean(y[X_aug == 0]))
-
-    X_full = np.column_stack([np.ones(len(entries)), X_aug, X_ratio, X_key])
-    beta_full = np.linalg.lstsq(X_full, y, rcond=None)[0]
-
-    X_ratio_only = np.column_stack([np.ones(len(entries)), X_aug, X_ratio])
-    beta_ratio = np.linalg.lstsq(X_ratio_only, y, rcond=None)[0]
-
-    X_uncont = np.column_stack([np.ones(len(entries)), X_aug])
-    beta_uncont = np.linalg.lstsq(X_uncont, y, rcond=None)[0]
-
-    uncontrolled_dps = float(beta_uncont[1])
-    ratio_only_dps = float(beta_ratio[1])
-    regression_aug_dps = float(beta_full[1])
-    pullsize_contribution_dps = uncontrolled_dps - ratio_only_dps
-    keylevel_contribution_dps = ratio_only_dps - regression_aug_dps
-
-    return {
-        "uncontrolled_dps": uncontrolled_dps,
-        "uncontrolled_pct": uncontrolled_dps / noaug_mean * 100,
-        "ratio_only_dps": ratio_only_dps,
-        "ratio_only_pct": ratio_only_dps / noaug_mean * 100,
-        "regression_aug_dps": regression_aug_dps,
-        "regression_aug_pct": regression_aug_dps / noaug_mean * 100,
-        "pullsize_contribution_dps": pullsize_contribution_dps,
-        "pullsize_contribution_pct": pullsize_contribution_dps / noaug_mean * 100,
-        "keylevel_contribution_dps": keylevel_contribution_dps,
-        "keylevel_contribution_pct": keylevel_contribution_dps / noaug_mean * 100,
-        "buckets": buckets,
-    }

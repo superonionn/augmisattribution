@@ -104,6 +104,9 @@ BASE_TEMPLATE = """<!DOCTYPE html>
   .conclusion h2 { border: none; margin-top: 0; }
   .methodology { background: %(card)s; border-radius: 10px; padding: 20px; margin: 20px 0; font-size: 13px; color: #aaa; }
   .methodology h3 { color: %(accent)s; font-size: 15px; margin-bottom: 10px; }
+  .tip { position: relative; cursor: help; border-bottom: 1px dotted #888; }
+  .tip .tiptext { visibility: hidden; background: #0d1117; color: #e0e0e0; border: 1px solid %(accent)s; border-radius: 6px; padding: 8px 12px; font-size: 12px; line-height: 1.5; position: absolute; z-index: 10; bottom: 125%%; left: 50%%; transform: translateX(-50%%); width: 280px; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.4); pointer-events: none; }
+  .tip:hover .tiptext { visibility: visible; }
   .methodology ul { margin-left: 20px; }
   .methodology li { margin: 5px 0; }
   .coming-soon { text-align: center; padding: 100px 40px; }
@@ -496,15 +499,32 @@ def _render_lock_breakdown(charts, bd):
 """
 
     # Per-ability chart and table
+    ABILITY_TOOLTIPS = {
+        "Diabolic Ritual": "Diabolist hero talent. Summons a Pit Lord, Mother of Chaos, or Overlord on a cycle. All do uncapped AoE. WCL consolidates all sub-demons into this one entry.",
+        "Dominion of Argus": "Diabolist hero talent. Summons Legion generals (Antoran Jailer, Inquisitor, Alythess, Sacrolash). Uncapped AoE. Sub-types log 0 damage separately — all rolled into this entry.",
+        "Summon Demonic Tyrant": "Major cooldown. Extends active demons and does uncapped AoE via Burning Cleave talent. Damage scales with number of active demons.",
+        "Call Dreadstalkers": "Summons 2 Dreadstalkers that cleave nearby targets. Target-capped cleave.",
+        "Wild Imp (Hand of Gul'dan)": "Imps summoned by Hand of Gul'dan. Cleave via To Hell and Back talent (target-capped). Can be consumed by Implosion for AoE burst.",
+        "Wild Imp (Inner Demons/To Hell and Back)": "Imps passively summoned by Inner Demons talent + To Hell and Back cleave. Target-capped. Can be consumed by Implosion.",
+        "Implosion": "Consumes all active Wild Imps, dealing AoE damage per imp consumed. Target-capped. Higher Implosion DPS means fewer imps alive to do passive damage.",
+        "Hand of Gul'dan": "Core ability. Impact damage is uncapped AoE, also summons Wild Imps.",
+        "Summon Charhound": "Summoned demon that does target-capped cleave damage.",
+        "Shadow Bolt": "Single-target filler spell. Cast when no other priority abilities are available.",
+        "Demonbolt": "Single-target filler spell (empowered). Cast during Demonic Core procs.",
+        "Grimoire: Imp Lord": "Grimoire talent summon. Stronger imp that does additional damage.",
+    }
+
     ability_rows = bd.get("ability_rows", [])
     ability_table_rows = ""
     for r in ability_rows[:15]:
         color = "#6C5CE7" if r["delta"] > 0 else "#E17055"
         cat_color = {"pet": "#e74c3c", "player": "#3498db"}.get(r["cat"], "#aaa")
         pct_str = f"{r['pct']:+.1f}%" if abs(r["pct"]) < 500 else "new"
+        tip = ABILITY_TOOLTIPS.get(r["name"], "")
+        name_html = f"""<span class="tip">{r['name']}<span class="tiptext">{tip}</span></span>""" if tip else r["name"]
         ability_table_rows += f"""
         <tr>
-            <td>{r['name']}</td>
+            <td>{name_html}</td>
             <td><span style="color:{cat_color}">{r['cat']}</span></td>
             <td>{r['aug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('aug_n','-')})</span></td>
             <td>{r['noaug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('noaug_n','-')})</span></td>
@@ -515,7 +535,7 @@ def _render_lock_breakdown(charts, bd):
     html += f"""
 <h2>Per-Ability DPS Delta</h2>
 <p style="color:#888; font-size:13px; margin-bottom:10px;">
-  Individual ability comparison (buff-normalized DPS).
+  Individual ability comparison (buff-normalized DPS). Hover ability names for descriptions.
   <span style="color:#e74c3c">Red = Pet/Demon</span>,
   <span style="color:#3498db">Blue = Player/Direct</span>.
 </p>
@@ -529,8 +549,176 @@ def _render_lock_breakdown(charts, bd):
   <tbody>{ability_table_rows}</tbody>
 </table>
 """
+
+    # Uncapped vs Capped AoE analysis
+    aoe = bd.get("aoe_analysis")
+    if aoe:
+        html += _render_lock_aoe_analysis(charts, bd)
+
+    # Wild Imp deep dive
+    imp = bd.get("imp_analysis")
+    if imp:
+        html += _render_lock_imp_analysis(bd)
+
     return html
 
+
+
+def _render_lock_aoe_analysis(charts, bd):
+    """Render uncapped vs capped AoE comparison."""
+    aoe = bd["aoe_analysis"]
+    uncapped_abs = bd["uncapped_abilities"]
+    capped_abs = bd["capped_abilities"]
+    st_abs = bd["st_abilities"]
+
+    NICE_NAMES = {
+        "Summon Demonic Tyrant": "Demonic Tyrant",
+        "Diabolic Ritual": "Diabolic Ritual",
+        "Dominion of Argus": "Dominion of Argus",
+        "Hand of Gul'dan": "Hand of Gul'dan",
+        "Wild Imp (Hand of Gul'dan)": "Wild Imp (HoG)",
+        "Wild Imp (Inner Demons/To Hell and Back)": "Wild Imp (ID/THB)",
+        "Call Dreadstalkers": "Dreadstalkers",
+        "Implosion": "Implosion",
+        "Summon Charhound": "Charhound",
+        "Shadow Bolt": "Shadow Bolt",
+        "Demonbolt": "Demonbolt",
+    }
+
+    def make_rows(abilities, category):
+        rows = ""
+        for ab in abilities:
+            a = aoe[category][ab]["aug"]
+            n = aoe[category][ab]["noaug"]
+            delta = a - n
+            pct = delta / n * 100 if n > 0 else 0
+            color = "#6C5CE7" if delta > 0 else "#E17055"
+            rows += f"""<tr><td>{NICE_NAMES.get(ab, ab)}</td><td>{a:,.0f}</td><td>{n:,.0f}</td><td style="color:{color}">{delta:+,.0f}</td><td style="color:{color}">{pct:+.1f}%</td></tr>"""
+        return rows
+
+    uc_a = aoe["uncapped"]["_total_aug"]
+    uc_n = aoe["uncapped"]["_total_noaug"]
+    cc_a = aoe["capped"]["_total_aug"]
+    cc_n = aoe["capped"]["_total_noaug"]
+    st_a = aoe["st"]["_total_aug"]
+    st_n = aoe["st"]["_total_noaug"]
+
+    return f"""
+<h2>Uncapped vs Capped AoE Analysis</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  If misattribution were a flat multiplier, all ability types should be inflated equally.
+  Splitting abilities by their AoE target cap reveals whether the delta comes from
+  gameplay/routing differences (bigger pulls) or actual misattribution.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('lock_aoe', '')}"></div>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Uncapped AoE</div>
+    <div class="value" style="color:#6C5CE7">{(uc_a - uc_n) / uc_n * 100:+.1f}%</div>
+    <div class="sub">Tyrant, Diabolic Ritual, Dominion, HoG impact</div>
+  </div>
+  <div class="card">
+    <div class="label">Capped/Cleave</div>
+    <div class="value" style="color:#E17055">{(cc_a - cc_n) / cc_n * 100:+.1f}%</div>
+    <div class="sub">Wild Imps, Dreadstalkers, Implosion, Charhound</div>
+  </div>
+  <div class="card">
+    <div class="label">ST Filler</div>
+    <div class="value accent">{(st_a - st_n) / st_n * 100:+.1f}%</div>
+    <div class="sub">Shadow Bolt + Demonbolt</div>
+  </div>
+</div>
+
+<h3>Uncapped AoE (scales infinitely with pull size)</h3>
+<table>
+  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
+  <tbody>{make_rows(uncapped_abs, "uncapped")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{uc_a:,.0f}</td><td>{uc_n:,.0f}</td><td style="color:#6C5CE7">{uc_a-uc_n:+,.0f}</td><td style="color:#6C5CE7">{(uc_a-uc_n)/uc_n*100:+.1f}%</td></tr>
+  </tbody>
+</table>
+
+<h3>Capped/Cleave (target-capped, doesn't scale with pull size)</h3>
+<table>
+  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
+  <tbody>{make_rows(capped_abs, "capped")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{cc_a:,.0f}</td><td>{cc_n:,.0f}</td><td style="color:#E17055">{cc_a-cc_n:+,.0f}</td><td style="color:#E17055">{(cc_a-cc_n)/cc_n*100:+.1f}%</td></tr>
+  </tbody>
+</table>
+"""
+
+
+def _render_lock_imp_analysis(bd):
+    """Render Wild Imp deep dive section."""
+    imp = bd["imp_analysis"]
+    imp_by_dungeon = bd.get("imp_by_dungeon", [])
+
+    aug_imp = imp["aug"]["imp_dps"]
+    noaug_imp = imp["noaug"]["imp_dps"]
+    imp_delta = aug_imp - noaug_imp
+    imp_pct = imp_delta / noaug_imp * 100
+
+    aug_ratio = imp["aug"]["implosion_imp_ratio"]
+    noaug_ratio = imp["noaug"]["implosion_imp_ratio"]
+
+    aug_combined = imp["aug"]["imp_plus_implosion"]
+    noaug_combined = imp["noaug"]["imp_plus_implosion"]
+    combined_delta = aug_combined - noaug_combined
+    combined_pct = combined_delta / noaug_combined * 100
+
+    dungeon_rows = ""
+    for g in imp_by_dungeon:
+        color = "#6C5CE7" if g["delta"] > 0 else "#E17055"
+        dungeon_rows += f"""<tr><td>{g['dungeon']}</td><td>{g['aug']:,.0f}</td><td>{g['noaug']:,.0f}</td><td style="color:{color}">{g['delta']:+,.0f}</td><td style="color:{color}">{g['pct']:+.1f}%</td><td>{g['n_aug']}</td><td>{g['n_noaug']}</td></tr>"""
+
+    return f"""
+<h2>Wild Imp Deep Dive</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Wild Imps cleave via To Hell and Back, so they should do <em>more</em> damage in bigger pulls — yet
+  they show a large <em>negative</em> delta. This section investigates why.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Wild Imp DPS (Combined)</div>
+    <div class="value" style="color:#E17055">{imp_delta:+,.0f}</div>
+    <div class="sub">{imp_pct:+.1f}% — less damage in aug groups</div>
+  </div>
+  <div class="card">
+    <div class="label">Implosion/Imp Ratio</div>
+    <div class="value accent">{aug_ratio:.2f} / {noaug_ratio:.2f}</div>
+    <div class="sub">Aug groups Implode more aggressively</div>
+  </div>
+  <div class="card">
+    <div class="label">Imps + Implosion Combined</div>
+    <div class="value" style="color:{'#6C5CE7' if combined_delta > 0 else '#E17055'}">{combined_delta:+,.0f}</div>
+    <div class="sub">{combined_pct:+.1f}% — nearly flat when combined</div>
+  </div>
+  <div class="card">
+    <div class="label">Imp % of Total DPS</div>
+    <div class="value accent">{imp['aug']['imp_pct']:.1f}% / {imp['noaug']['imp_pct']:.1f}%</div>
+    <div class="sub">Aug / No-Aug</div>
+  </div>
+</div>
+
+<p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
+  <strong style="color:{STYLE['accent']}">Key insight:</strong> Aug groups have a higher Implosion-to-Imp ratio
+  ({aug_ratio:.2f} vs {noaug_ratio:.2f}), meaning they consume imps via Implosion more aggressively.
+  When you combine Wild Imp + Implosion damage, the delta nearly disappears ({combined_pct:+.1f}%).
+  This strongly suggests the imp negative delta is explained by aug groups converting more imp uptime
+  into Implosion burst — not by misattribution or reattribution working correctly.
+</p>
+
+<h3>Wild Imp DPS by Dungeon</h3>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  The negative imp delta is consistent across all dungeons, not concentrated in specific ones.
+</p>
+<table>
+  <thead><tr><th>Dungeon</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th><th>n aug</th><th>n no-aug</th></tr></thead>
+  <tbody>{dungeon_rows}</tbody>
+</table>
+"""
 
 
 def _render_lock_conclusion(stats, bd):
@@ -546,26 +734,37 @@ def _render_lock_conclusion(stats, bd):
 
     if bd:
         cs = bd["cat_stats"]
+        aoe = bd.get("aoe_analysis")
+        imp = bd.get("imp_analysis")
+        uc_pct = ""
+        cc_pct = ""
+        if aoe:
+            uc_a = aoe["uncapped"]["_total_aug"]
+            uc_n = aoe["uncapped"]["_total_noaug"]
+            cc_a = aoe["capped"]["_total_aug"]
+            cc_n = aoe["capped"]["_total_noaug"]
+            uc_pct = f"{(uc_a - uc_n) / uc_n * 100:+.1f}%"
+            cc_pct = f"{(cc_a - cc_n) / cc_n * 100:+.1f}%"
         html += f"""
   <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
-    <strong style="color:{STYLE['accent']}">Key finding — divergent pet inflation:</strong><br>
-    Unlike DK where all pet sub-sources were uniformly inflated 3-5%,
-    Demo Lock shows a split pattern: Demonic Tyrant and Diabolic Ritual
-    are heavily inflated, while Wild Imps from both sources are <em>negative</em>.
+    <strong style="color:{STYLE['accent']}">Key finding — uncapped vs capped AoE split:</strong><br>
+    Uncapped AoE sources (Tyrant, Diabolic Ritual, Dominion, HoG impact) show <strong>{uc_pct}</strong>
+    while capped/cleave sources (Wild Imps, Dreadstalkers, Implosion, Charhound) show <strong>{cc_pct}</strong>.
+    If this were flat misattribution, both categories should be inflated equally.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Tyrant and Diabolic Ritual are both big AoE burst windows. Their inflation
-    likely reflects aug groups coordinating cooldowns with bigger pulls.
-    Wild Imps, which passively attack individual targets, show <em>less</em>
-    damage in aug groups — possibly because they die during Implosion
-    in AoE-heavy pulls rather than passively attacking.
+    Wild Imps show -9% damage in aug groups despite cleaving via To Hell and Back.
+    However, aug groups have a higher Implosion-to-Imp ratio, meaning they consume imps
+    for burst AoE more aggressively. When combining Imp + Implosion damage, the delta
+    nearly disappears — the imps aren't doing less damage, they're being converted into
+    Implosion damage faster.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Player direct damage (+{cs['player']['pct']:.1f}%) is inflated
-    <em>more</em> than pet damage (+{cs['pet']['pct']:.1f}%), the opposite of
-    what we'd expect from pet-specific misattribution. This points toward
-    general gameplay/routing differences between aug and non-aug comps
-    rather than WCL misattribution as the primary driver of the delta.
+    The overall pattern — uncapped AoE inflated, capped damage flat or negative, ST unchanged —
+    is consistent with aug groups pulling bigger and optimizing burst windows rather than
+    WCL misattribution. Player direct damage (+{cs['player']['pct']:.1f}%) is inflated
+    <em>more</em> than pet damage (+{cs['pet']['pct']:.1f}%), further contradicting
+    pet-specific misattribution as the primary driver.
   </p>"""
 
     html += """
