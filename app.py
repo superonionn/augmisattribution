@@ -703,17 +703,21 @@ def _render_lock_imp_analysis(bd):
   Shifting Sands."</em> This causes WCL to over-strip damage from imp abilities, crediting it to the Aug Evoker.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  <strong>Why only imps?</strong> Other Lock pets (Tyrant +4.8%, Dreadstalkers +4.1%, Diabolic Ritual +4.5%)
-  and DK pets (Army +0.6%, Ghoul +3.5%) are all flat or positive. Wild Imps are unique: they spawn in
-  large batches (6 per Hand of Gul'dan), are short-lived, and many instances exist simultaneously — creating
-  more support events for the buggy reattribution to mishandle.
+  <strong>The support event system breaks in mass AoE.</strong> Blizzard's combat log support events — which WCL
+  uses for reattribution — are known to malfunction with many enemies. The bug report notes
+  <em>"support events may write negative values"</em> in large pulls. This causes the system to fail in
+  <strong>both directions</strong> in dungeons:
 </p>
+<ul style="color:#999; font-size:13px; line-height:1.6; margin:5px 0 10px 20px;">
+  <li><strong>Under-stripping on AoE abilities (+3-5%):</strong> Support events get missed in large pulls,
+      so Aug contributions leak through on Tyrant, Diabolic Ritual, Dreadstalkers, etc.</li>
+  <li><strong>Over-stripping on Wild Imps (-12%):</strong> The Shifting Sands bug causes WCL to take
+      <em>too much</em> damage from imps and credit it to the Aug (~2,900 DPS per Lock).</li>
+</ul>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  <strong>Scale of the over-strip:</strong> WCL's "unaugmented" view strips ~17% of a DPS player's raw damage
-  (Ebon Might, Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, Inferno's Blessing combined).
-  Single-target filler abilities (Shadow Bolt, Demonbolt) show -1% in aug groups, confirming stripping is
-  roughly correct for player-cast spells. But Wild Imps show -12% — an additional ~11% is being over-stripped
-  and incorrectly credited to the Aug (~2,900 DPS per Lock).
+  ST filler (Shadow Bolt -0.2%, Demonbolt -1.8%) and DK ST abilities (Scourge Strike -6.1%) show that
+  stripping works correctly in single-target scenarios — exactly where Blizzard would have prioritized
+  fixing it for raid accuracy. The mass AoE issues are dungeon-specific and likely lower priority.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
   <strong>HoG imps are slightly worse:</strong> Wild Imp (Hand of Gul'dan) shows -12.1% while
@@ -763,21 +767,22 @@ def _render_lock_conclusion(stats, bd):
     Capped/cleave (Wild Imps, Dreadstalkers, Implosion, Charhound): <strong>{cc_pct}</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Wild Imps show -12% in aug groups due to a
+    <strong>Reattribution breaks in mass AoE (dungeon-specific):</strong> Blizzard's combat log support events
+    malfunction with many enemies, causing failures in both directions. AoE abilities are <em>under-stripped</em>
+    (+3-5% Aug contribution leaks through), while Wild Imps are <em>over-stripped</em> (-12% due to a
     <a href="https://gist.github.com/ljosberinn/a2f08a53cfe8632a18350eea44e9da3e" style="color:{STYLE['accent']}" target="_blank">
-    known WCL bug</a> where Demo Warlock pets incorrectly reattribute Shifting Sands. This causes
-    WCL to over-strip ~2,900 DPS from imp damage and over-credit it to the Aug Evoker.
+    known WCL bug</a> with Demo pet Shifting Sands reattribution, costing ~2,900 DPS per Lock).
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    <strong>Cross-class evidence:</strong> Unholy DK ST abilities also show -6% in aug groups (Scourge Strike -6.1%,
-    Necrotic Coil -5.1%), suggesting over-stripping affects more than just Lock pets. DK pets are flat/positive
-    because pull size masks the effect on AoE-scaling abilities.
+    <strong>ST stripping works correctly:</strong> Shadow Bolt (-0.2%), Demonbolt (-1.8%), and DK's Scourge Strike (-6.1%)
+    all show slightly negative deltas — exactly what you'd expect if Blizzard has prioritized fixing reattribution
+    for raid (single-target) accuracy. The mass AoE issues are dungeon-specific and lower priority.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
     <strong>What WCL strips:</strong> The "unaugmented" view removes ~17% of a DPS player's raw damage — not just Ebon Might,
     but also Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, and Inferno's Blessing.
-    ST filler (Shadow Bolt -0.2%, Demonbolt -1.8%) confirms stripping is roughly correct for player-cast spells,
-    while the uncapped AoE positive deltas (+3-5%) are consistent with aug groups pulling slightly bigger.
+    The headline +1.2% delta is the net of under-stripping on AoE (+3-5%) partially canceled by over-stripping
+    on Wild Imps (-12%).
   </p>"""
 
     html += """
