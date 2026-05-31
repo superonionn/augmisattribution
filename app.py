@@ -696,33 +696,30 @@ def _render_lock_imp_analysis(bd):
 </div>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">Known WCL bug — Demo Warlock pets incorrectly reattribute Shifting Sands</strong><br>
-  WarcraftLogs has a
+  <strong style="color:{STYLE['accent']}">Wild Imps are being over-stripped — but we don't fully know why</strong><br>
+  The -12% imp deficit is real and consistent across all dungeons, but it only affects Wild Imps.
+  Other demo pets (Tyrant +4.8%, Dreadstalkers +4.1%, Diabolic Ritual +4.5%) and DK pets (Army +0.6%,
+  Ghoul +3.5%) are all positive. If this were a general pet reattribution issue, all pets would be negative.
+</p>
+<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
+  <strong>What's unique about Wild Imps:</strong> They are the only pet in the game with 15-20+ simultaneous
+  short-lived instances, each generating support events on every damage tick against every target. This volume
+  of support events in AoE may trigger edge cases in the reattribution system. WCL has
   <a href="https://gist.github.com/ljosberinn/a2f08a53cfe8632a18350eea44e9da3e" style="color:{STYLE['accent']}" target="_blank">
-  documented bug</a>: <em>"Damaging abilities from many Demonology Warlock pets are incorrectly reattributing
-  Shifting Sands."</em> This causes WCL to over-strip damage from imp abilities, crediting it to the Aug Evoker.
+  historically had issues</a> with demo pet reattribution, though many of those bugs were from Dragonflight
+  and may be fixed.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  <strong>The support event system breaks in mass AoE.</strong> Blizzard's combat log support events — which WCL
-  uses for reattribution — are known to malfunction with many enemies. The bug report notes
-  <em>"support events may write negative values"</em> in large pulls. This causes the system to fail in
-  <strong>both directions</strong> in dungeons:
-</p>
-<ul style="color:#999; font-size:13px; line-height:1.6; margin:5px 0 10px 20px;">
-  <li><strong>Under-stripping on AoE abilities (+3-5%):</strong> Support events get missed in large pulls,
-      so Aug contributions leak through on Tyrant, Diabolic Ritual, Dreadstalkers, etc.</li>
-  <li><strong>Over-stripping on Wild Imps (-12%):</strong> The Shifting Sands bug causes WCL to take
-      <em>too much</em> damage from imps and credit it to the Aug (~2,900 DPS per Lock).</li>
-</ul>
-<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  ST filler (Shadow Bolt -0.2%, Demonbolt -1.8%) and DK ST abilities (Scourge Strike -6.1%) show that
-  stripping works correctly in single-target scenarios — exactly where Blizzard would have prioritized
-  fixing it for raid accuracy. The mass AoE issues are dungeon-specific and likely lower priority.
+  <strong>The broader reattribution picture in dungeons:</strong> WCL strips ~17% of a DPS player's raw damage
+  in aug groups (Ebon Might, Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, Inferno's
+  Blessing combined). ST stripping works correctly (Shadow Bolt -0.2%, DK Scourge Strike -6.1%), likely because
+  Blizzard prioritized raid accuracy. AoE abilities show +3-5%, suggesting under-stripping in large pulls where
+  support events are less reliable.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
   <strong>HoG imps are slightly worse:</strong> Wild Imp (Hand of Gul'dan) shows -12.1% while
-  Wild Imp (Inner Demons/THB) shows -11.1%. HoG spawns 6 imps simultaneously, creating more concurrent
-  support events — consistent with batch spawning worsening the bug.
+  Wild Imp (Inner Demons/THB) shows -11.1%. HoG spawns 6 imps simultaneously vs individual spawns from
+  Inner Demons, suggesting the issue scales with the number of concurrent imp instances.
 </p>
 
 <h3>Wild Imp DPS by Dungeon</h3>
@@ -767,16 +764,16 @@ def _render_lock_conclusion(stats, bd):
     Capped/cleave (Wild Imps, Dreadstalkers, Implosion, Charhound): <strong>{cc_pct}</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    <strong>Reattribution breaks in mass AoE (dungeon-specific):</strong> Blizzard's combat log support events
-    malfunction with many enemies, causing failures in both directions. AoE abilities are <em>under-stripped</em>
-    (+3-5% Aug contribution leaks through), while Wild Imps are <em>over-stripped</em> (-12% due to a
-    <a href="https://gist.github.com/ljosberinn/a2f08a53cfe8632a18350eea44e9da3e" style="color:{STYLE['accent']}" target="_blank">
-    known WCL bug</a> with Demo pet Shifting Sands reattribution, costing ~2,900 DPS per Lock).
+    <strong>Wild Imps are over-stripped (-12%):</strong> Only Wild Imps show a large negative delta — all other
+    demo pets and DK pets are flat or positive. The cause is unclear but likely related to imps having 15-20+
+    simultaneous instances generating support events, a volume no other pet produces. This costs the Lock
+    ~2,900 DPS that is incorrectly credited to the Aug.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    <strong>ST stripping works correctly:</strong> Shadow Bolt (-0.2%), Demonbolt (-1.8%), and DK's Scourge Strike (-6.1%)
-    all show slightly negative deltas — exactly what you'd expect if Blizzard has prioritized fixing reattribution
-    for raid (single-target) accuracy. The mass AoE issues are dungeon-specific and lower priority.
+    <strong>AoE abilities are under-stripped (+3-5%):</strong> Uncapped AoE sources show positive deltas,
+    likely because support events are less reliable in large pulls — Aug contributions leak through and
+    remain on the DPS player's log. ST stripping works correctly (Shadow Bolt -0.2%, DK Scourge Strike -6.1%),
+    consistent with Blizzard prioritizing raid (ST) accuracy over dungeon mass-AoE edge cases.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
     <strong>What WCL strips:</strong> The "unaugmented" view removes ~17% of a DPS player's raw damage — not just Ebon Might,
