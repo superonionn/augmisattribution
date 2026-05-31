@@ -696,20 +696,29 @@ def _render_lock_imp_analysis(bd):
 </div>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">Key mystery — why only Wild Imps?</strong>
-  The -10 to -12% imp delta is NOT explained by Ebon Might reattribution. If WCL were stripping
-  Ebon Might from pets, <em>all</em> pets would show -8 to -10% — but Tyrant (+4.9%), Dreadstalkers (+3.6%),
-  and Diabolic Ritual (+3.8%) are all positive. Unholy DK pets (Army +0.6%, Ghoul +3.5%) are also flat/positive.
+  <strong style="color:{STYLE['accent']}">Known WCL bug — Demo Warlock pets incorrectly reattribute Shifting Sands</strong><br>
+  WarcraftLogs has a
+  <a href="https://gist.github.com/ljosberinn/a2f08a53cfe8632a18350eea44e9da3e" style="color:{STYLE['accent']}" target="_blank">
+  documented bug</a>: <em>"Damaging abilities from many Demonology Warlock pets are incorrectly reattributing
+  Shifting Sands."</em> This causes WCL to over-strip damage from imp abilities, crediting it to the Aug Evoker.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  Something specific to Wild Imps is causing this deficit. Imps are unique in that they spawn in large batches
-  (6 per Hand of Gul'dan, passive spawns from Inner Demons), are short-lived (~15-20s), and many instances exist
-  simultaneously. This may cause a WCL attribution anomaly where imp damage is being over-credited to the Aug Evoker.
+  <strong>Why only imps?</strong> Other Lock pets (Tyrant +4.8%, Dreadstalkers +4.1%, Diabolic Ritual +4.5%)
+  and DK pets (Army +0.6%, Ghoul +3.5%) are all flat or positive. Wild Imps are unique: they spawn in
+  large batches (6 per Hand of Gul'dan), are short-lived, and many instances exist simultaneously — creating
+  more support events for the buggy reattribution to mishandle.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  <strong>Investigation ongoing:</strong> We're collecting Aug Evoker damage data from these same reports to see
-  if the Aug is credited more damage when paired with Lock (imp-heavy) vs DK. If so, it would confirm
-  over-attribution from imps specifically.
+  <strong>Scale of the over-strip:</strong> WCL's "unaugmented" view strips ~17% of a DPS player's raw damage
+  (Ebon Might, Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, Inferno's Blessing combined).
+  Single-target filler abilities (Shadow Bolt, Demonbolt) show -1% in aug groups, confirming stripping is
+  roughly correct for player-cast spells. But Wild Imps show -12% — an additional ~11% is being over-stripped
+  and incorrectly credited to the Aug (~2,900 DPS per Lock).
+</p>
+<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
+  <strong>HoG imps are slightly worse:</strong> Wild Imp (Hand of Gul'dan) shows -12.1% while
+  Wild Imp (Inner Demons/THB) shows -11.1%. HoG spawns 6 imps simultaneously, creating more concurrent
+  support events — consistent with batch spawning worsening the bug.
 </p>
 
 <h3>Wild Imp DPS by Dungeon</h3>
@@ -754,21 +763,21 @@ def _render_lock_conclusion(stats, bd):
     Capped/cleave (Wild Imps, Dreadstalkers, Implosion, Charhound): <strong>{cc_pct}</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Wild Imps show -10 to -12% in aug groups — but this is <strong>NOT</strong> explained by
-    Ebon Might reattribution. If it were, all pets would show similar negatives. Instead, Tyrant (+4.9%),
-    Dreadstalkers (+3.6%), Diabolic Ritual (+3.8%), and all DK pets (Army +0.6%, Ghoul +3.5%)
-    are flat or positive.
+    Wild Imps show -12% in aug groups due to a
+    <a href="https://gist.github.com/ljosberinn/a2f08a53cfe8632a18350eea44e9da3e" style="color:{STYLE['accent']}" target="_blank">
+    known WCL bug</a> where Demo Warlock pets incorrectly reattribute Shifting Sands. This causes
+    WCL to over-strip ~2,900 DPS from imp damage and over-credit it to the Aug Evoker.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    Something specific to Wild Imps — likely related to their high-quantity, short-lived,
-    simultaneous-instance nature — is causing WCL to over-credit imp damage to the Aug Evoker.
-    We're collecting Aug perspective data to confirm whether Aug gets credited more damage
-    when paired with Lock vs DK.
+    <strong>Cross-class evidence:</strong> Unholy DK ST abilities also show -6% in aug groups (Scourge Strike -6.1%,
+    Necrotic Coil -5.1%), suggesting over-stripping affects more than just Lock pets. DK pets are flat/positive
+    because pull size masks the effect on AoE-scaling abilities.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    The positive uncapped AoE delta (+6%) and flat ST filler (+0.6-1.8%) suggest aug groups may
-    pull slightly bigger, but the magnitude is modest — not the 15-20% that would be needed
-    to explain the full pattern through pull size alone.
+    <strong>What WCL strips:</strong> The "unaugmented" view removes ~17% of a DPS player's raw damage — not just Ebon Might,
+    but also Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, and Inferno's Blessing.
+    ST filler (Shadow Bolt -0.2%, Demonbolt -1.8%) confirms stripping is roughly correct for player-cast spells,
+    while the uncapped AoE positive deltas (+3-5%) are consistent with aug groups pulling slightly bigger.
   </p>"""
 
     html += """
@@ -780,7 +789,8 @@ def _render_lock_conclusion(stats, bd):
     <li>Data: Top 400 Demo Lock rankings per dungeon from WarcraftLogs API (characterRankings), across all regions.</li>
     <li>Buff normalization: Same approach as DK — each Lock's logged DPS is divided by the multiplicative product of all raid buffs present.</li>
     <li>Damage categorization: Pet abilities include all demon summons (Tyrant, Dreadstalkers, Wild Imps, Charhound, Diabolic Ritual, Dominion of Argus, Grimoire demons). Player abilities include Hand of Gul'dan, Shadow Bolt, Demonbolt, Implosion.</li>
-    <li>Caveats: Smaller breakdown sample than DK. Buff multipliers are estimates using DK values (Lock has similar phys/magic split). No clean AoE/ST proxy exists for Demo Lock unlike DK.</li>
+    <li>WCL data is the "unaugmented" (stripped) view by default: Aug contributions (Ebon Might, Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, Inferno's Blessing) are removed from DPS players and credited to the Aug Evoker.</li>
+    <li>Caveats: Buff multipliers are estimates using DK values (Lock has similar phys/magic split). No clean AoE/ST proxy exists for Demo Lock unlike DK.</li>
   </ul>
 </div>
 """
