@@ -1,4 +1,4 @@
-"""WarcraftLogs v2 GraphQL API client."""
+"""WarcraftLogs v2 GraphQL API client with rate limit awareness."""
 
 import os
 import sys
@@ -13,6 +13,13 @@ WCL_TOKEN_URL = "https://www.warcraftlogs.com/oauth/token"
 WCL_API_URL = "https://www.warcraftlogs.com/api/v2/client"
 
 _token_cache: dict = {}
+_rate_state: dict = {
+    "limit": 800,
+    "remaining": 800,
+    "retry_after": 0,
+    "last_request": 0,
+    "requests_this_window": 0,
+}
 
 
 def get_token() -> str:
@@ -37,19 +44,55 @@ def get_token() -> str:
     return _token_cache["token"]
 
 
+def _update_rate_state(resp):
+    """Update rate limit state from response headers."""
+    if "x-ratelimit-limit" in resp.headers:
+        _rate_state["limit"] = int(resp.headers["x-ratelimit-limit"])
+    if "x-ratelimit-remaining" in resp.headers:
+        _rate_state["remaining"] = int(resp.headers["x-ratelimit-remaining"])
+    if "retry-after" in resp.headers:
+        _rate_state["retry_after"] = int(resp.headers["retry-after"])
+
+
+def get_rate_info() -> dict:
+    """Return current rate limit state for callers to inspect."""
+    return dict(_rate_state)
+
+
 def query(q: str, variables: dict | None = None) -> dict:
     token = get_token()
     payload = {"query": q}
     if variables:
         payload["variables"] = variables
-    r = requests.post(
+
+    # Pre-request pacing: ensure minimum gap between requests
+    elapsed = time.time() - _rate_state["last_request"]
+    min_gap = 2.0  # minimum seconds between requests
+    if elapsed < min_gap:
+        time.sleep(min_gap - elapsed)
+
+    resp = requests.post(
         WCL_API_URL,
         json=payload,
         headers={"Authorization": f"Bearer {token}"},
         timeout=30,
     )
-    r.raise_for_status()
-    body = r.json()
+    _rate_state["last_request"] = time.time()
+    _update_rate_state(resp)
+
+    if resp.status_code == 429:
+        retry_after = _rate_state["retry_after"]
+        raise RateLimitError(retry_after)
+
+    resp.raise_for_status()
+    body = resp.json()
     if "errors" in body:
         print(f"WCL API errors: {body['errors']}", file=sys.stderr)
     return body.get("data", {})
+
+
+class RateLimitError(Exception):
+    """Raised on 429 with the retry-after duration."""
+    def __init__(self, retry_after: int):
+        self.retry_after = retry_after
+        super().__init__(f"429 rate limited, retry after {retry_after}s")
