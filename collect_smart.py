@@ -18,7 +18,7 @@ sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 from wcl_api import query as wcl_query, get_rate_info
 
-WORKERS = 3  # Concurrent request threads (rate limiter in wcl_api serializes timing)
+WORKERS = 4  # Concurrent request threads (rate limiter in wcl_api serializes timing)
 
 BATCH_SIZE = 10  # Sweet spot: enough to be efficient, not so many that one failure loses a lot
 

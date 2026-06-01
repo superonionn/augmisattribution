@@ -16,6 +16,11 @@ from analyze_lock import (
     chart_lock_distributions, chart_lock_per_dungeon, chart_lock_key_level,
     load_lock_breakdowns,
 )
+from analyze_dh import (
+    load_dh_rankings, normalize_dh_dps, compute_dh_stats,
+    chart_dh_distributions, chart_dh_per_dungeon, chart_dh_key_level,
+    load_dh_breakdowns, UNCAPPED_AOE, CAPPED_CLEAVE, ST_FILLER,
+)
 
 app = Flask(__name__)
 
@@ -45,6 +50,27 @@ def get_dk_data():
 
     result = {"stats": stats, "charts": charts, "breakdown": breakdown_data, "pullsize": pullsize}
     _cache["dk"] = result
+    return result
+
+
+def get_dh_data():
+    if "dh" in _cache:
+        return _cache["dh"]
+
+    df = load_dh_rankings()
+    df = normalize_dh_dps(df)
+    charts = {
+        "distributions": chart_dh_distributions(df),
+        "per_dungeon": chart_dh_per_dungeon(df),
+        "key_level": chart_dh_key_level(df),
+    }
+    stats = compute_dh_stats(df)
+    breakdown_data, breakdown_charts = load_dh_breakdowns()
+    if breakdown_charts:
+        charts.update(breakdown_charts)
+
+    result = {"stats": stats, "charts": charts, "breakdown": breakdown_data}
+    _cache["dh"] = result
     return result
 
 
@@ -146,12 +172,12 @@ def dk_page():
 
 @app.route("/dh")
 def dh_page():
-    content = """
-    <div class="coming-soon">
-      <h2>Devourer DH Analysis</h2>
-      <p>Coming soon. Will analyze DH damage patterns with and without Aug to compare against DK findings.</p>
-      <p style="margin-top:10px; color:#666;">DH is more skill/routing-dependent, so controlling for player quality will be important.</p>
-    </div>"""
+    data = get_dh_data()
+    stats = data["stats"]
+    charts = data["charts"]
+    bd = data["breakdown"]
+
+    content = _render_dh(stats, charts, bd)
     return render_template_string(BASE_TEMPLATE, content=content, active="dh")
 
 
@@ -1141,6 +1167,268 @@ def _render_lock_conclusion(stats, bd):
     <li>Damage categorization: Pet abilities include all demon summons (Tyrant, Dreadstalkers, Wild Imps, Charhound, Diabolic Ritual, Dominion of Argus, Grimoire demons). Player abilities include Hand of Gul'dan, Shadow Bolt, Demonbolt, Implosion.</li>
     <li>WCL data is the "unaugmented" (stripped) view by default: Aug contributions (Ebon Might, Prescience, Shifting Sands, Bombardments, Fate Mirror, Breath of Eons, Inferno's Blessing) are removed from DPS players and credited to the Aug Evoker.</li>
     <li>Caveats: Buff multipliers are estimates using DK values (Lock has similar phys/magic split). No clean AoE/ST proxy exists for Demo Lock unlike DK.</li>
+  </ul>
+</div>
+"""
+    return html
+
+
+def _render_dh(stats, charts, bd):
+    """Render the full Havoc DH analysis page content."""
+    html = f"""
+<h2 style="border:none; margin-top:0;">Havoc DH — Midnight Season 1</h2>
+<p class="subtitle">Top 400 rankings per dungeon across all regions (Havoc spec, Aldrachi Reaver)</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Total Rankings</div>
+    <div class="value accent">{stats['total']:,}</div>
+    <div class="sub">{stats['n_aug']:,} aug / {stats['n_noaug']:,} no-aug</div>
+  </div>
+  <div class="card">
+    <div class="label">Raw DPS Delta</div>
+    <div class="value" style="color: {'#6C5CE7' if stats['raw_delta'] > 0 else '#E17055'}">{stats['raw_delta']:+,.0f}</div>
+    <div class="sub">{stats['raw_pct']:+.1f}% (as shown in logs)</div>
+  </div>
+  <div class="card">
+    <div class="label">Buff-Normalized Delta</div>
+    <div class="value" style="color: {'#6C5CE7' if stats['norm_delta'] > 0 else '#E17055'}">{stats['norm_delta']:+,.0f}</div>
+    <div class="sub">{stats['norm_pct']:+.1f}% (controlling for raid buffs)</div>
+  </div>
+  <div class="card">
+    <div class="label">Estimated Misattribution</div>
+    <div class="value accent">{stats['norm_pct']:+.1f}%</div>
+    <div class="sub">~{abs(stats['norm_delta']):,.0f} DPS upper bound</div>
+  </div>
+</div>
+"""
+
+    html += f"""
+<h2>DPS Distributions</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['distributions']}"></div>
+"""
+
+    dungeon_rows = ""
+    for d in stats["dungeon_stats"]:
+        color = "#6C5CE7" if d["delta"] > 0 else "#E17055"
+        dungeon_rows += f"""<tr><td>{d['dungeon']}</td><td style="color:{color}">{d['delta']:+,.0f}</td><td style="color:{color}">{d['pct']:+.1f}%</td><td>{d['n_aug']}</td><td>{d['n_noaug']}</td></tr>"""
+
+    html += f"""
+<h2>Per-Dungeon Breakdown</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['per_dungeon']}"></div>
+<table>
+  <thead><tr><th>Dungeon</th><th>DPS Delta</th><th>%</th><th>n (aug)</th><th>n (no-aug)</th></tr></thead>
+  <tbody>{dungeon_rows}</tbody>
+</table>
+"""
+
+    kl_rows = ""
+    for kl in stats["kl_stats"]:
+        color = "#6C5CE7" if kl["delta"] > 0 else "#E17055"
+        kl_rows += f"""<tr><td>+{kl['key']}</td><td style="color:{color}">{kl['delta']:+,.0f}</td><td style="color:{color}">{kl['pct']:+.1f}%</td><td>{kl['n_aug']}</td><td>{kl['n_noaug']}</td></tr>"""
+
+    html += f"""
+<h2>Key Level Matched</h2>
+<div class="chart"><img src="data:image/png;base64,{charts['key_level']}"></div>
+<table>
+  <thead><tr><th>Key Level</th><th>DPS Delta</th><th>%</th><th>n (aug)</th><th>n (no-aug)</th></tr></thead>
+  <tbody>{kl_rows}</tbody>
+</table>
+"""
+
+    if bd:
+        html += _render_dh_breakdown(charts, bd)
+
+    html += _render_dh_conclusion(stats, bd)
+    return html
+
+
+def _render_dh_breakdown(charts, bd):
+    """Render the DH damage breakdown section."""
+    n_aug = bd["n_aug"]
+    n_noaug = bd["n_noaug"]
+    aoe = bd["aoe_analysis"]
+
+    ability_rows = bd.get("ability_rows", [])
+    ability_table_rows = ""
+    for r in ability_rows[:15]:
+        color = "#6C5CE7" if r["delta"] > 0 else "#E17055"
+        cat_colors = {"uncapped_aoe": "#e74c3c", "capped_cleave": "#f39c12",
+                      "st": "#3498db"}
+        cat_color = cat_colors.get(r["cat"], "#aaa")
+        cat_label = {"uncapped_aoe": "uncapped", "capped_cleave": "capped",
+                     "st": "ST"}.get(r["cat"], "other")
+        pct_str = f"{r['pct']:+.1f}%" if abs(r["pct"]) < 500 else "new"
+        ability_table_rows += f"""
+        <tr>
+            <td>{r['name']}</td>
+            <td><span style="color:{cat_color}">{cat_label}</span></td>
+            <td>{r['aug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('aug_n','-')})</span></td>
+            <td>{r['noaug']:,.0f} <span style="color:#666;font-size:11px">(n={r.get('noaug_n','-')})</span></td>
+            <td style="color:{color}">{r['delta']:+,.0f}</td>
+            <td style="color:{color}">{pct_str}</td>
+        </tr>"""
+
+    html = f"""
+<h2>Damage Breakdown Analysis</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Analyzing {n_aug + n_noaug} per-fight ability breakdowns ({n_aug} aug, {n_noaug} no-aug).
+  Havoc DH damage is entirely direct player damage (no pets), split between uncapped AoE
+  (Immolation Aura, Eye Beam/Demonsurge) and capped cleave (Blade Dance, Death Sweep, Glaive Tempest).
+  All DPS values are buff-normalized.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('dh_abilities', '')}"></div>
+
+<table>
+  <thead><tr>
+    <th>Ability</th><th>Type</th><th>Aug DPS (n)</th><th>No-Aug DPS (n)</th><th>Δ DPS</th><th>Δ%</th>
+  </tr></thead>
+  <tbody>{ability_table_rows}</tbody>
+</table>
+"""
+
+    uc_a = aoe["uncapped"]["_total_aug"]
+    uc_n = aoe["uncapped"]["_total_noaug"]
+    cc_a = aoe["capped"]["_total_aug"]
+    cc_n = aoe["capped"]["_total_noaug"]
+    st_a = aoe["st"]["_total_aug"]
+    st_n = aoe["st"]["_total_noaug"]
+
+    html += f"""
+<h2>Uncapped vs Capped AoE Analysis</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  If misattribution were a flat multiplier, all ability types should be inflated equally.
+  DH has no pets, so this comparison directly reveals whether the Aug delta comes from
+  gameplay differences (bigger pulls) or actual reattribution artifacts.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('dh_aoe', '')}"></div>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Uncapped AoE</div>
+    <div class="value" style="color:{'#6C5CE7' if uc_a > uc_n else '#E17055'}">{(uc_a - uc_n) / uc_n * 100 if uc_n else 0:+.1f}%</div>
+    <div class="sub">Immolation Aura, Demonsurge, Eye Beam</div>
+  </div>
+  <div class="card">
+    <div class="label">Capped Cleave</div>
+    <div class="value" style="color:{'#6C5CE7' if cc_a > cc_n else '#E17055'}">{(cc_a - cc_n) / cc_n * 100 if cc_n else 0:+.1f}%</div>
+    <div class="sub">Death Sweep, Blade Dance, Glaive Tempest, The Hunt</div>
+  </div>
+  <div class="card">
+    <div class="label">ST Filler</div>
+    <div class="value" style="color:{'#6C5CE7' if st_a > st_n else '#E17055'}">{(st_a - st_n) / st_n * 100 if st_n else 0:+.1f}%</div>
+    <div class="sub">Annihilation, Chaos Strike, Demon Blades, Melee</div>
+  </div>
+</div>
+"""
+
+    NICE_NAMES = {
+        "Immolation Aura": "Immolation Aura",
+        "Demonsurge": "Demonsurge",
+        "Eye Beam": "Eye Beam",
+        "Death Sweep": "Death Sweep",
+        "Blade Dance": "Blade Dance",
+        "Glaive Tempest": "Glaive Tempest",
+        "Trail of Ruin": "Trail of Ruin",
+        "Burning Blades": "Burning Blades",
+        "The Hunt": "The Hunt",
+        "Annihilation": "Annihilation",
+        "Chaos Strike": "Chaos Strike",
+        "Demon Blades": "Demon Blades",
+        "Melee": "Melee",
+        "Throw Glaive": "Throw Glaive",
+    }
+
+    def make_rows(abilities, category):
+        rows = ""
+        for ab in abilities:
+            a = aoe[category][ab]["aug"]
+            n = aoe[category][ab]["noaug"]
+            delta = a - n
+            pct = delta / n * 100 if n > 0 else 0
+            color = "#6C5CE7" if delta > 0 else "#E17055"
+            rows += f"""<tr><td>{NICE_NAMES.get(ab, ab)}</td><td>{a:,.0f}</td><td>{n:,.0f}</td><td style="color:{color}">{delta:+,.0f}</td><td style="color:{color}">{pct:+.1f}%</td></tr>"""
+        return rows
+
+    html += f"""
+<h3>Uncapped AoE (scales with pull size)</h3>
+<table>
+  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
+  <tbody>{make_rows(UNCAPPED_AOE, "uncapped")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{uc_a:,.0f}</td><td>{uc_n:,.0f}</td><td style="color:{'#6C5CE7' if uc_a>uc_n else '#E17055'}">{uc_a-uc_n:+,.0f}</td><td style="color:{'#6C5CE7' if uc_a>uc_n else '#E17055'}">{(uc_a-uc_n)/uc_n*100 if uc_n else 0:+.1f}%</td></tr>
+  </tbody>
+</table>
+
+<h3>Capped Cleave (target-capped)</h3>
+<table>
+  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
+  <tbody>{make_rows(CAPPED_CLEAVE, "capped")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{cc_a:,.0f}</td><td>{cc_n:,.0f}</td><td style="color:{'#6C5CE7' if cc_a>cc_n else '#E17055'}">{cc_a-cc_n:+,.0f}</td><td style="color:{'#6C5CE7' if cc_a>cc_n else '#E17055'}">{(cc_a-cc_n)/cc_n*100 if cc_n else 0:+.1f}%</td></tr>
+  </tbody>
+</table>
+
+<h3>ST Filler</h3>
+<table>
+  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
+  <tbody>{make_rows(ST_FILLER, "st")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{st_a:,.0f}</td><td>{st_n:,.0f}</td><td style="color:{'#6C5CE7' if st_a>st_n else '#E17055'}">{st_a-st_n:+,.0f}</td><td style="color:{'#6C5CE7' if st_a>st_n else '#E17055'}">{(st_a-st_n)/st_n*100 if st_n else 0:+.1f}%</td></tr>
+  </tbody>
+</table>
+"""
+    return html
+
+
+def _render_dh_conclusion(stats, bd):
+    """Render the DH conclusion section."""
+    html = f"""
+<div class="conclusion">
+  <h2>Summary</h2>
+  <p style="font-size:16px; line-height:1.7;">
+    After normalizing for raid buffs, Havoc DHs with Aug show
+    <strong style="color:{STYLE['accent']}">{stats['norm_delta']:+,.0f} DPS ({stats['norm_pct']:+.1f}%)</strong>
+    {'higher' if stats['norm_delta'] > 0 else 'lower'} personal DPS than DHs without Aug.
+  </p>"""
+
+    if bd:
+        aoe = bd.get("aoe_analysis")
+        if aoe:
+            uc_a = aoe["uncapped"]["_total_aug"]
+            uc_n = aoe["uncapped"]["_total_noaug"]
+            cc_a = aoe["capped"]["_total_aug"]
+            cc_n = aoe["capped"]["_total_noaug"]
+            st_a = aoe["st"]["_total_aug"]
+            st_n = aoe["st"]["_total_noaug"]
+            uc_pct = (uc_a - uc_n) / uc_n * 100 if uc_n else 0
+            cc_pct = (cc_a - cc_n) / cc_n * 100 if cc_n else 0
+            st_pct = (st_a - st_n) / st_n * 100 if st_n else 0
+            html += f"""
+  <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
+    <strong style="color:{STYLE['accent']}">Uncapped vs Capped AoE split:</strong><br>
+    Uncapped AoE (Immolation Aura, Demonsurge, Eye Beam): <strong>{uc_pct:+.1f}%</strong><br>
+    Capped Cleave (Death Sweep, Blade Dance, Glaive Tempest, The Hunt): <strong>{cc_pct:+.1f}%</strong><br>
+    ST Filler (Annihilation, Chaos Strike, Demon Blades, Melee): <strong>{st_pct:+.1f}%</strong>
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    <strong>DH has no pets</strong>, so the misattribution picture is simpler than Lock or DK.
+    All damage is direct player damage — no pet-specific edge cases to worry about.
+    The AoE vs ST split tells the same story as the other classes: uncapped AoE abilities
+    are slightly under-stripped in dungeons (Aug contributions leak through), while ST abilities
+    are more accurately stripped by WCL's reattribution system.
+  </p>"""
+
+    html += """
+</div>
+
+<div class="methodology">
+  <h3>Methodology</h3>
+  <ul>
+    <li>Data: Top 400 Havoc DH rankings per dungeon from WarcraftLogs API (characterRankings), across all regions.</li>
+    <li>Buff normalization: Same approach as DK/Lock — each DH's logged DPS is divided by the multiplicative product of all raid buffs present.</li>
+    <li>Damage categorization: Uncapped AoE (Immolation Aura, Demonsurge, Eye Beam), Capped Cleave (Death Sweep, Blade Dance, Glaive Tempest, Trail of Ruin, Burning Blades, The Hunt), ST Filler (Annihilation, Chaos Strike, Demon Blades, Melee, Throw Glaive).</li>
+    <li>WCL data is the "unaugmented" (stripped) view by default: Aug contributions are removed from DPS players.</li>
+    <li>Caveats: Buff multipliers use DK-tuned values. DH always provides Chaos Brand, so that buff is always present in both groups.</li>
   </ul>
 </div>
 """

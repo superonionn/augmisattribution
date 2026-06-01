@@ -102,7 +102,7 @@ def query(q: str, variables: dict | None = None) -> dict:
     # Thread-safe request pacing: ensures minimum gap between ANY two requests
     with _request_lock:
         elapsed = time.time() - _rate_state["last_request"]
-        min_gap = 1.2  # tight enough for throughput, spaced enough to avoid burst throttle
+        min_gap = 0.8  # tight enough for throughput, spaced enough to avoid burst throttle
         if elapsed < min_gap:
             time.sleep(min_gap - elapsed)
         _rate_state["last_request"] = time.time()
