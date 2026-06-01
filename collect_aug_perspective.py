@@ -13,7 +13,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from wcl_api import query as wcl_query
 
-BATCH_SIZE = 8
+BATCH_SIZE = 12
 
 
 def build_batch_query(entries):
@@ -35,13 +35,15 @@ def build_batch_query(entries):
 
 def collect(source_class):
     """Collect Aug damage from reports where source_class was the DPS."""
-    if source_class == "lock":
-        rankings_path = os.path.join("data", "lock_rankings.json")
-    elif source_class == "dk":
-        rankings_path = os.path.join("data", "rankings.json")
-    else:
+    class_to_rankings = {
+        "lock": "lock_rankings.json",
+        "dk": "rankings.json",
+        "dh": "dh_rankings.json",
+    }
+    if source_class not in class_to_rankings:
         print(f"Unknown class: {source_class}")
         sys.exit(1)
+    rankings_path = os.path.join("data", class_to_rankings[source_class])
 
     out_path = os.path.join("data", f"aug_with_{source_class}.json")
 
@@ -122,7 +124,7 @@ def collect(source_class):
                     time.sleep(60)
                     consecutive_429 = 0
 
-        time.sleep(1.0)  # gentle rate
+        time.sleep(1.5)
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
@@ -131,7 +133,7 @@ def collect(source_class):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2 or sys.argv[1] not in ("lock", "dk"):
-        print(f"Usage: python collect_aug_perspective.py [lock|dk]")
+    if len(sys.argv) < 2 or sys.argv[1] not in ("lock", "dk", "dh"):
+        print(f"Usage: python collect_aug_perspective.py [lock|dk|dh]")
         sys.exit(1)
     collect(sys.argv[1])

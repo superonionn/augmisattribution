@@ -760,40 +760,64 @@ def _render_aug_perspective():
                     totals[a["name"]].append(a["total"] / dur)
             return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 5}, statistics.mean(overall_dps) if overall_dps else 0
 
-        lock_ab, lock_avg = ability_breakdown(aug_lock)
-        dk_ab, dk_avg = ability_breakdown(aug_dk)
+        lock_ab_raw, lock_avg_raw = ability_breakdown(aug_lock)
+        dk_ab_raw, dk_avg_raw = ability_breakdown(aug_dk)
+
+        # Key-level-controlled comparison: find overlapping key levels
+        lock_by_key = defaultdict(list)
+        dk_by_key = defaultdict(list)
+        for r in aug_lock:
+            lock_by_key[r["key_level"]].append(r)
+        for r in aug_dk:
+            dk_by_key[r["key_level"]].append(r)
+        overlap_keys = [k for k in lock_by_key if k in dk_by_key and len(lock_by_key[k]) >= 10 and len(dk_by_key[k]) >= 10]
+        if overlap_keys:
+            best_key = max(overlap_keys, key=lambda k: min(len(lock_by_key[k]), len(dk_by_key[k])))
+            lock_ab, lock_avg = ability_breakdown(lock_by_key[best_key])
+            dk_ab, dk_avg = ability_breakdown(dk_by_key[best_key])
+            controlled_note = f"Controlled for key level ({best_key}): Lock {len(lock_by_key[best_key])} / DK {len(dk_by_key[best_key])} reports"
+        else:
+            lock_ab, lock_avg = lock_ab_raw, lock_avg_raw
+            dk_ab, dk_avg = dk_ab_raw, dk_avg_raw
+            controlled_note = "No overlapping key levels with sufficient sample — using raw averages"
+
+        lock_mean_key = statistics.mean([r["key_level"] for r in aug_lock])
+        dk_mean_key = statistics.mean([r["key_level"] for r in aug_dk])
 
         html += f"""
 <div class="cards">
   <div class="card">
     <div class="label">Aug DPS (paired w/ Lock)</div>
-    <div class="value accent">{lock_avg:,.0f}</div>
-    <div class="sub">{len(aug_lock)} reports</div>
+    <div class="value accent">{lock_avg_raw:,.0f}</div>
+    <div class="sub">{len(aug_lock)} reports, avg key {lock_mean_key:.1f}</div>
   </div>
   <div class="card">
     <div class="label">Aug DPS (paired w/ DK)</div>
-    <div class="value accent">{dk_avg:,.0f}</div>
-    <div class="sub">{len(aug_dk)} reports</div>
+    <div class="value accent">{dk_avg_raw:,.0f}</div>
+    <div class="sub">{len(aug_dk)} reports, avg key {dk_mean_key:.1f}</div>
   </div>
   <div class="card">
-    <div class="label">Δ (Lock − DK)</div>
+    <div class="label">Δ at Key {best_key if overlap_keys else '?'}</div>
     <div class="value" style="color:{'#00B894' if lock_avg >= dk_avg else '#E17055'}">{lock_avg - dk_avg:+,.0f}</div>
-    <div class="sub">{(lock_avg - dk_avg) / dk_avg * 100:+.1f}% difference</div>
+    <div class="sub">{(lock_avg - dk_avg) / dk_avg * 100:+.1f}% (key-controlled)</div>
   </div>
 </div>
 
+<p style="color:#999; font-size:13px; margin-bottom:5px;">
+  <em>{controlled_note}</em>. The raw difference ({lock_avg_raw - dk_avg_raw:+,.0f} DPS) is heavily confounded
+  by key level (Lock avg {lock_mean_key:.1f} vs DK avg {dk_mean_key:.1f}).
+</p>
+
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  If WCL over-strips damage from a DPS class (e.g., Wild Imps), that stripped damage gets <em>credited</em>
-  to the Aug. So the Aug's logged DPS should be <strong>higher</strong> when paired with classes that
-  are over-stripped.
+  After controlling for key level, the Aug gets credited roughly the same damage regardless of DPS partner.
+  The reattributed and own-damage deltas move in lockstep, confirming this is not a reattribution effect but
+  simply "higher keys = more damage everywhere."
 </p>
 """
 
         reattrib_abilities = ["Ebon Might", "Shifting Sands", "Prescience", "Bombardments",
                               "Breath of Eons", "Fate Mirror", "Inferno's Blessing"]
-        own_abilities = [n for n in set(list(lock_ab.keys()) + list(dk_ab.keys())) if n not in reattrib_abilities]
 
-        ab_rows = ""
         all_ab = set(list(lock_ab.keys()) + list(dk_ab.keys()))
         ab_data = []
         for name in all_ab:
@@ -822,21 +846,21 @@ def _render_aug_perspective():
             else:
                 own_rows += row
 
+        kc_label = f"Key {best_key}" if overlap_keys else "Raw"
         html += f"""
-<h3>Reattributed Abilities (damage stripped from DPS → credited to Aug)</h3>
+<h3>Reattributed Abilities at {kc_label} (damage stripped from DPS → credited to Aug)</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
   These are the Aug's support abilities — damage that WCL strips from DPS players and credits to the Aug.
-  If stripping is inconsistent across DPS classes, these numbers should differ.
 </p>
 <table>
   <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
   <tbody>{reattrib_rows}</tbody>
 </table>
 
-<h3 style="margin-top:25px;">Aug's Own Abilities</h3>
+<h3 style="margin-top:25px;">Aug's Own Abilities at {kc_label}</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
-  The Aug's personal damage (Eruption, Living Flame, etc.) should not vary much by partner class.
-  Large differences here would suggest comp/key-level confounding rather than reattribution effects.
+  The Aug's personal damage should not vary by partner class. Similar deltas here and above
+  confirm this is key-level confounding, not a reattribution difference.
 </p>
 <table>
   <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
@@ -844,30 +868,37 @@ def _render_aug_perspective():
 </table>
 """
 
-        lock_em = lock_ab.get("Ebon Might", 0)
-        dk_em = dk_ab.get("Ebon Might", 0)
-        lock_ss = lock_ab.get("Shifting Sands", 0)
-        dk_ss = dk_ab.get("Shifting Sands", 0)
-        lock_presc = lock_ab.get("Prescience", 0)
-        dk_presc = dk_ab.get("Prescience", 0)
+        lock_r = sum(lock_ab.get(n, 0) for n in reattrib_abilities)
+        dk_r = sum(dk_ab.get(n, 0) for n in reattrib_abilities)
+        lock_o = sum(v for n, v in lock_ab.items() if n not in reattrib_abilities)
+        dk_o = sum(v for n, v in dk_ab.items() if n not in reattrib_abilities)
 
         html += f"""
 <div class="conclusion">
   <h2>Aug Perspective Summary</h2>
   <p style="font-size:14px; line-height:1.7; color:#ccc;">
-    The Aug Evoker gets credited <strong style="color:{STYLE['accent']}">{lock_avg - dk_avg:+,.0f} DPS ({(lock_avg - dk_avg) / dk_avg * 100:+.1f}%)</strong>
-    more damage when paired with Demo Lock vs Unholy DK.
+    At the same key level, the Aug gets credited
+    <strong style="color:{STYLE['accent']}">{lock_avg - dk_avg:+,.0f} DPS ({(lock_avg - dk_avg) / dk_avg * 100:+.1f}%)</strong>
+    when paired with Lock vs DK — effectively no meaningful difference.
+    Both reattributed ({lock_r - dk_r:+,.0f}) and own damage ({lock_o - dk_o:+,.0f}) shift by similar amounts,
+    confirming the delta is not driven by reattribution.
+  </p>
+  <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
+    <strong style="color:{STYLE['accent']}">But the Aug's real contribution is higher than what WCL credits.</strong>
+    The DPS-side analysis shows net under-stripping of +1-2% across both Lock and DK — meaning Aug contributions
+    on AoE abilities leak through and stay on the DPS player's log. The Aug is doing more than its WCL numbers suggest,
+    especially in dungeon AoE where support events are less reliable.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    <strong>Ebon Might:</strong> {lock_em:,.0f} w/ Lock vs {dk_em:,.0f} w/ DK ({lock_em - dk_em:+,.0f})<br>
-    <strong>Shifting Sands:</strong> {lock_ss:,.0f} w/ Lock vs {dk_ss:,.0f} w/ DK ({lock_ss - dk_ss:+,.0f})<br>
-    <strong>Prescience:</strong> {lock_presc:,.0f} w/ Lock vs {dk_presc:,.0f} w/ DK ({lock_presc - dk_presc:+,.0f})
+    <strong>Lock specifically:</strong> Wild Imps are over-stripped by ~12% (excess flows to Aug), but uncapped AoE abilities
+    (Tyrant +4.8%, Diabolic Ritual +4.5%) are under-stripped by more in absolute terms. Net: Lock keeps ~1.2% of
+    damage that should be credited to Aug.<br>
+    <strong>DK specifically:</strong> Graveyard is under-stripped by +8.9% (the single largest source), while ST abilities
+    are over-stripped by 5-6%. Net: DK keeps ~1.4% of damage that should be credited to Aug.
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    This is consistent with the per-ability findings: Demo Lock's Wild Imps are over-stripped, and that
-    excess damage flows to the Aug. Meanwhile DK is over-stripped on ST abilities (Scourge Strike), contributing
-    a smaller surplus. The differences in reattributed abilities reflect the different misattribution profiles
-    of each DPS class.
+    In both cases, the Aug's true DPS contribution is understated by WCL — the under-stripping on big AoE abilities
+    means damage the Aug helped create stays on the DPS player's log instead of being properly credited.
   </p>
 </div>
 """
