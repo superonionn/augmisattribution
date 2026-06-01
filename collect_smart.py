@@ -15,7 +15,7 @@ import random
 
 sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-from wcl_api import query as wcl_query, RateLimitError, get_rate_info
+from wcl_api import query as wcl_query, get_rate_info
 
 BATCH_SIZE = 10  # Sweet spot: enough to be efficient, not so many that one failure loses a lot
 
@@ -76,11 +76,6 @@ def smart_sleep(base_sleep=2.0):
     time.sleep(sleep_time)
 
 
-def handle_rate_limit(e: RateLimitError):
-    """Handle a 429 by sleeping the exact retry-after duration."""
-    wait = e.retry_after + 5  # small buffer
-    print(f"  Rate limited. Waiting {wait}s ({wait//60}m{wait%60}s) until {time.strftime('%H:%M:%S', time.localtime(time.time() + wait))}...")
-    time.sleep(wait)
 
 
 def save_json(path, data):
@@ -167,37 +162,6 @@ def collect_breakdowns(class_key, max_new=None):
                     "total_damage": total,
                     "abilities": abilities,
                 })
-
-        except RateLimitError as e:
-            errors += len(batch)
-            handle_rate_limit(e)
-            # Retry this batch after waiting
-            try:
-                data = wcl_query(q, {})
-                report_data = data.get("reportData", {})
-                for i, entry in enumerate(batch):
-                    report = report_data.get(f"r{i}")
-                    if not report or not report.get("table"):
-                        continue
-                    raw = report["table"].get("data", {}).get("entries", [])
-                    abilities = []
-                    total = 0
-                    for e in raw:
-                        total += e.get("total", 0)
-                        abilities.append({"name": e.get("name", "Unknown"), "total": e.get("total", 0)})
-                    results.append({
-                        "player": entry["player"],
-                        "dungeon": entry["dungeon"],
-                        "dps": entry["dps"],
-                        "key_level": entry["key_level"],
-                        "has_aug": entry["has_aug"],
-                        "buffs": entry["buffs"],
-                        "total_damage": total,
-                        "abilities": abilities,
-                    })
-                    errors -= 1  # undo the error count for successful retries
-            except Exception:
-                pass
 
         except Exception as ex:
             errors += len(batch)
@@ -297,41 +261,6 @@ def collect_aug_perspective(class_key, key_filter=None, max_new=500):
                     "abilities": abilities,
                     "comp": entry.get("comp", []),
                 })
-
-        except RateLimitError as e:
-            errors += len(batch)
-            handle_rate_limit(e)
-            try:
-                data = wcl_query(q, {})
-                report_data = data.get("reportData", {})
-                for i, entry in enumerate(batch):
-                    report = report_data.get(f"r{i}")
-                    if not report or not report.get("table"):
-                        continue
-                    raw = report["table"].get("data", {}).get("entries", [])
-                    abilities = []
-                    total = 0
-                    for e in raw:
-                        total += e.get("total", 0)
-                        abilities.append({"name": e.get("name", "Unknown"), "total": e.get("total", 0)})
-                    duration_s = entry.get("duration_s") or (entry.get("duration_ms", 0) / 1000)
-                    aug_dps = total / duration_s if duration_s > 0 else 0
-                    results.append({
-                        "report_code": entry["report_code"],
-                        "fight_id": entry["fight_id"],
-                        "dungeon": entry["dungeon"],
-                        "key_level": entry["key_level"],
-                        "paired_with": class_key,
-                        "paired_dps": entry["dps"],
-                        "aug_total_damage": total,
-                        "aug_dps": aug_dps,
-                        "duration_s": duration_s,
-                        "abilities": abilities,
-                        "comp": entry.get("comp", []),
-                    })
-                    errors -= 1
-            except Exception:
-                pass
 
         except Exception as ex:
             errors += len(batch)

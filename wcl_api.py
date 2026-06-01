@@ -1,4 +1,4 @@
-"""WarcraftLogs v2 GraphQL API client with rate limit awareness."""
+"""WarcraftLogs v2 GraphQL API client with rate limit awareness and automatic retry."""
 
 import os
 import sys
@@ -6,6 +6,10 @@ import time
 
 import requests
 from dotenv import load_dotenv
+from tenacity import (
+    retry, retry_if_exception_type, stop_after_attempt,
+    wait_exponential, before_sleep_log,
+)
 
 load_dotenv()
 
@@ -18,8 +22,19 @@ _rate_state: dict = {
     "remaining": 800,
     "retry_after": 0,
     "last_request": 0,
-    "requests_this_window": 0,
 }
+
+
+class RateLimitError(Exception):
+    """Raised on 429 with the retry-after duration."""
+    def __init__(self, retry_after: int):
+        self.retry_after = retry_after
+        super().__init__(f"429 rate limited, retry after {retry_after}s")
+
+
+class TransientError(Exception):
+    """Wraps transient HTTP errors (5xx, timeouts) for retry."""
+    pass
 
 
 def get_token() -> str:
@@ -59,40 +74,56 @@ def get_rate_info() -> dict:
     return dict(_rate_state)
 
 
+def _wait_for_rate_limit(retry_state):
+    """Custom wait function: on RateLimitError use retry-after, otherwise exponential backoff."""
+    exc = retry_state.outcome.exception()
+    if isinstance(exc, RateLimitError):
+        wait = exc.retry_after + 5
+        print(f"  Rate limited. Waiting {wait}s ({wait//60}m{wait%60}s)...", flush=True)
+        return wait
+    # Exponential backoff for transient errors: 4s, 8s, 16s
+    return min(4 * (2 ** (retry_state.attempt_number - 1)), 60)
+
+
+@retry(
+    retry=retry_if_exception_type((RateLimitError, TransientError)),
+    wait=_wait_for_rate_limit,
+    stop=stop_after_attempt(4),
+    reraise=True,
+)
 def query(q: str, variables: dict | None = None) -> dict:
     token = get_token()
     payload = {"query": q}
     if variables:
         payload["variables"] = variables
 
-    # Pre-request pacing: ensure minimum gap between requests
+    # Pre-request pacing
     elapsed = time.time() - _rate_state["last_request"]
-    min_gap = 2.0  # minimum seconds between requests
+    min_gap = 2.0
     if elapsed < min_gap:
         time.sleep(min_gap - elapsed)
 
-    resp = requests.post(
-        WCL_API_URL,
-        json=payload,
-        headers={"Authorization": f"Bearer {token}"},
-        timeout=30,
-    )
+    try:
+        resp = requests.post(
+            WCL_API_URL,
+            json=payload,
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=30,
+        )
+    except (requests.Timeout, requests.ConnectionError) as e:
+        raise TransientError(f"Network error: {e}") from e
+
     _rate_state["last_request"] = time.time()
     _update_rate_state(resp)
 
     if resp.status_code == 429:
-        retry_after = _rate_state["retry_after"]
-        raise RateLimitError(retry_after)
+        raise RateLimitError(_rate_state["retry_after"])
+
+    if resp.status_code >= 500:
+        raise TransientError(f"Server error {resp.status_code}")
 
     resp.raise_for_status()
     body = resp.json()
     if "errors" in body:
         print(f"WCL API errors: {body['errors']}", file=sys.stderr)
     return body.get("data", {})
-
-
-class RateLimitError(Exception):
-    """Raised on 429 with the retry-after duration."""
-    def __init__(self, retry_after: int):
-        self.retry_after = retry_after
-        super().__init__(f"429 rate limited, retry after {retry_after}s")
