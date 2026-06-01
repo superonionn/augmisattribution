@@ -999,6 +999,7 @@ def _render_misattribution_sources():
 
     lock_path = os.path.join("data", "lock_breakdowns.json")
     dk_path = os.path.join("data", "breakdowns.json")
+    dh_path = os.path.join("data", "dh_breakdowns.json")
     if not os.path.exists(lock_path) or not os.path.exists(dk_path):
         return ""
 
@@ -1006,6 +1007,10 @@ def _render_misattribution_sources():
         lock_data = json.load(f)
     with open(dk_path, encoding="utf-8") as f:
         dk_data = json.load(f)
+    dh_data = []
+    if os.path.exists(dh_path):
+        with open(dh_path, encoding="utf-8") as f:
+            dh_data = json.load(f)
 
     def per_ability(entries):
         totals = defaultdict(list)
@@ -1022,6 +1027,8 @@ def _render_misattribution_sources():
     lock_noaug_ab = per_ability([e for e in lock_data if not e["has_aug"]])
     dk_aug_ab = per_ability([e for e in dk_data if e["has_aug"]])
     dk_noaug_ab = per_ability([e for e in dk_data if not e["has_aug"]])
+    dh_aug_ab = per_ability([e for e in dh_data if e["has_aug"]]) if dh_data else {}
+    dh_noaug_ab = per_ability([e for e in dh_data if not e["has_aug"]]) if dh_data else {}
 
     rows = []
     for name in set(lock_aug_ab) | set(lock_noaug_ab):
@@ -1036,6 +1043,11 @@ def _render_misattribution_sources():
         n = dk_noaug_ab.get(name, 0)
         if a + n > 500:
             rows.append(("DK", name, a, n, a - n, (a - n) / n * 100 if n else 0))
+    for name in set(dh_aug_ab) | set(dh_noaug_ab):
+        a = dh_aug_ab.get(name, 0)
+        n = dh_noaug_ab.get(name, 0)
+        if a + n > 500:
+            rows.append(("DH", name, a, n, a - n, (a - n) / n * 100 if n else 0))
 
     rows.sort(key=lambda x: -x[4])
 
@@ -1066,9 +1078,10 @@ def _render_misattribution_sources():
     return f"""
 <h2>Cross-Class Misattribution Sources</h2>
 <p style="color:#888; font-size:13px; margin-bottom:10px;">
-  Comparing per-ability deltas across Demo Lock and Unholy DK to identify which abilities are
+  Comparing per-ability deltas across Demo Lock, Unholy DK, and Havoc DH to identify which abilities are
   most affected by reattribution issues. Positive = Aug contribution leaking through (under-stripped).
   Negative = too much stripped from player and credited to Aug (over-stripped).
+  DH (no pets) serves as a baseline — all damage is direct, so any delta is purely from AoE stripping behavior.
 </p>
 
 <h3>Largest Under-Stripped Abilities</h3>
@@ -1093,10 +1106,11 @@ def _render_misattribution_sources():
 </table>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">The pattern across both classes:</strong>
+  <strong style="color:{STYLE['accent']}">The pattern across all three classes:</strong>
   Big uncapped AoE abilities are consistently under-stripped (+4-9%), while ST and high-instance-count abilities
-  are over-stripped (-6 to -13%). The net effect is a small positive headline delta (+1-2%) that masks
-  significant per-ability misattribution in both directions.
+  are over-stripped (-6 to -13%). The net effect is a small positive headline delta (+1-4%) that masks
+  significant per-ability misattribution in both directions. DH confirms this isn't pet-specific —
+  Immolation Aura (uncapped AoE, no pet involvement) shows the same under-stripping pattern.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
   Per-pull analysis confirms this: on the Crawth boss fight (pure ST) in Algeth'ar Academy, Lock overall
