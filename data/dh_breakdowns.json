@@ -20706,5 +20706,9687 @@
         "total": 1296
       }
     ]
+  },
+  {
+    "player": "Shikidh",
+    "dungeon": "Maisara Caverns",
+    "dps": 221213.7644699812,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 433669676,
+    "abilities": [
+      {
+        "name": "Devour",
+        "total": 28878184
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 89187224
+      },
+      {
+        "name": "Reap",
+        "total": 224980
+      },
+      {
+        "name": "Eradicate",
+        "total": 114210592
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11986190
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 133
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38274103
+      },
+      {
+        "name": "Consume",
+        "total": 5219428
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1316764
+      },
+      {
+        "name": "Void Nova",
+        "total": 21639
+      },
+      {
+        "name": "Melee",
+        "total": 50989
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 144299450
+      }
+    ]
+  },
+  {
+    "player": "Discuver",
+    "dungeon": "Pit of Saron",
+    "dps": 228382.7471500039,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 410274532,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 79952311
+      },
+      {
+        "name": "Eradicate",
+        "total": 101844037
+      },
+      {
+        "name": "Void Nova",
+        "total": 50916
+      },
+      {
+        "name": "Reap",
+        "total": 501587
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1108571
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1406
+      },
+      {
+        "name": "Melee",
+        "total": 49436
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12356240
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39351517
+      },
+      {
+        "name": "Devour",
+        "total": 29921727
+      },
+      {
+        "name": "Cull",
+        "total": 1857840
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 744728
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 137962131
+      },
+      {
+        "name": "Consume",
+        "total": 4572085
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "Miakitty",
+    "dungeon": "Magisters' Terrace",
+    "dps": 236918.3496299982,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 471629331,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 23962
+      },
+      {
+        "name": "Consume",
+        "total": 5454802
+      },
+      {
+        "name": "Eradicate",
+        "total": 130172636
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13116347
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 149974826
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1500025
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 43727202
+      },
+      {
+        "name": "Void Ray",
+        "total": 94272534
+      },
+      {
+        "name": "Reap",
+        "total": 165613
+      },
+      {
+        "name": "Devour",
+        "total": 32581829
+      },
+      {
+        "name": "Void Nova",
+        "total": 16719
+      },
+      {
+        "name": "Cull",
+        "total": 622836
+      }
+    ]
+  },
+  {
+    "player": "小灰丶",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 213969.5680999756,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 392939706,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 33380670
+      },
+      {
+        "name": "Void Nova",
+        "total": 1615
+      },
+      {
+        "name": "Void Ray",
+        "total": 78891143
+      },
+      {
+        "name": "Devour",
+        "total": 32307169
+      },
+      {
+        "name": "Reap",
+        "total": 56368
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10049198
+      },
+      {
+        "name": "Consume",
+        "total": 4637289
+      },
+      {
+        "name": "Melee",
+        "total": 43040
+      },
+      {
+        "name": "Eradicate",
+        "total": 99688907
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 133883691
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 616
+      }
+    ]
+  },
+  {
+    "player": "Shalidh",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 218940.6451600194,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 446012308,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 119207394
+      },
+      {
+        "name": "Consume",
+        "total": 5424157
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 148467062
+      },
+      {
+        "name": "Cull",
+        "total": 104961
+      },
+      {
+        "name": "Melee",
+        "total": 33534
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 98
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39266698
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13029609
+      },
+      {
+        "name": "Void Nova",
+        "total": 14791
+      },
+      {
+        "name": "Devour",
+        "total": 33916396
+      },
+      {
+        "name": "Void Ray",
+        "total": 86547608
+      }
+    ]
+  },
+  {
+    "player": "哈基马",
+    "dungeon": "Windrunner Spire",
+    "dps": 209332.73926997185,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 401941258,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5633039
+      },
+      {
+        "name": "Void Ray",
+        "total": 78045182
+      },
+      {
+        "name": "Melee",
+        "total": 46177
+      },
+      {
+        "name": "Immolation Aura",
+        "total": 214
+      },
+      {
+        "name": "Eradicate",
+        "total": 102139313
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 873657
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10454989
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31853871
+      },
+      {
+        "name": "Void Nova",
+        "total": 11190
+      },
+      {
+        "name": "Voidblade",
+        "total": 11264
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 144661774
+      },
+      {
+        "name": "Devour",
+        "total": 28210588
+      }
+    ]
+  },
+  {
+    "player": "Kkermi",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 196903.79818999767,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 360396763,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 75383282
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 113339647
+      },
+      {
+        "name": "Melee",
+        "total": 46582
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 623671
+      },
+      {
+        "name": "Consume",
+        "total": 4823002
+      },
+      {
+        "name": "Eradicate",
+        "total": 92440170
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34188699
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9812124
+      },
+      {
+        "name": "Cull",
+        "total": 160183
+      },
+      {
+        "name": "Devour",
+        "total": 29515989
+      },
+      {
+        "name": "Void Nova",
+        "total": 8218
+      },
+      {
+        "name": "Reap",
+        "total": 55196
+      }
+    ]
+  },
+  {
+    "player": "周防有希",
+    "dungeon": "Skyreach",
+    "dps": 149236.27780997753,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 329006895,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 76766111
+      },
+      {
+        "name": "Void Ray",
+        "total": 63580539
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9015659
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 798186
+      },
+      {
+        "name": "Melee",
+        "total": 61629
+      },
+      {
+        "name": "Void Nova",
+        "total": 6667
+      },
+      {
+        "name": "Consume",
+        "total": 5128209
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 111654823
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 392
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 28162929
+      },
+      {
+        "name": "Devour",
+        "total": 33831751
+      }
+    ]
+  },
+  {
+    "player": "Sisora",
+    "dungeon": "Maisara Caverns",
+    "dps": 215526.24005001783,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 417252766,
+    "abilities": [
+      {
+        "name": "Reap",
+        "total": 240133
+      },
+      {
+        "name": "Void Ray",
+        "total": 84707501
+      },
+      {
+        "name": "Catastrophe",
+        "total": 14261197
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 115270022
+      },
+      {
+        "name": "Void Nova",
+        "total": 37969
+      },
+      {
+        "name": "Consume",
+        "total": 5426400
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 118538223
+      },
+      {
+        "name": "Devour",
+        "total": 32619644
+      },
+      {
+        "name": "Melee",
+        "total": 27059
+      },
+      {
+        "name": "Cull",
+        "total": 285787
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 45838831
+      }
+    ]
+  },
+  {
+    "player": "灯下黑",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 199333.4953200221,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 392537087,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4410805
+      },
+      {
+        "name": "Eradicate",
+        "total": 95761838
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 134926772
+      },
+      {
+        "name": "Void Nova",
+        "total": 9151
+      },
+      {
+        "name": "Melee",
+        "total": 86175
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 652
+      },
+      {
+        "name": "Reap",
+        "total": 108833
+      },
+      {
+        "name": "Void Ray",
+        "total": 81440847
+      },
+      {
+        "name": "Devour",
+        "total": 33062804
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 896016
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32539640
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9293554
+      }
+    ]
+  },
+  {
+    "player": "Therealjhazy",
+    "dungeon": "Windrunner Spire",
+    "dps": 210724.3739799857,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 385316261,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 118886130
+      },
+      {
+        "name": "Reap",
+        "total": 174952
+      },
+      {
+        "name": "Cull",
+        "total": 711253
+      },
+      {
+        "name": "Void Nova",
+        "total": 781
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11755560
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 862868
+      },
+      {
+        "name": "Voidblade",
+        "total": 42558
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 102986196
+      },
+      {
+        "name": "Devour",
+        "total": 29963769
+      },
+      {
+        "name": "Void Ray",
+        "total": 77834629
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36820638
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 951
+      },
+      {
+        "name": "Melee",
+        "total": 42242
+      },
+      {
+        "name": "Consume",
+        "total": 5233734
+      }
+    ]
+  },
+  {
+    "player": "自在浩劫",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 204815.2722300291,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 355095406,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 113167847
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10337974
+      },
+      {
+        "name": "Void Ray",
+        "total": 70494189
+      },
+      {
+        "name": "Eradicate",
+        "total": 96323998
+      },
+      {
+        "name": "Void Nova",
+        "total": 11009
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31337302
+      },
+      {
+        "name": "Consume",
+        "total": 4542253
+      },
+      {
+        "name": "Melee",
+        "total": 14058
+      },
+      {
+        "name": "Devour",
+        "total": 28866776
+      }
+    ]
+  },
+  {
+    "player": "Padgodglaive",
+    "dungeon": "Windrunner Spire",
+    "dps": 210051.24813002348,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": false,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 386828068,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 81008539
+      },
+      {
+        "name": "Reap",
+        "total": 122774
+      },
+      {
+        "name": "Eradicate",
+        "total": 96193828
+      },
+      {
+        "name": "Cull",
+        "total": 252762
+      },
+      {
+        "name": "Melee",
+        "total": 57371
+      },
+      {
+        "name": "Consume",
+        "total": 4630363
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38740453
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11758390
+      },
+      {
+        "name": "Devour",
+        "total": 30215709
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 123847879
+      }
+    ]
+  },
+  {
+    "player": "Fäuste",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 208278.82511001825,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 396217765,
+    "abilities": [
+      {
+        "name": "Heaven's Glaive",
+        "total": 1097727
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 652
+      },
+      {
+        "name": "Void Ray",
+        "total": 81822136
+      },
+      {
+        "name": "Consume",
+        "total": 5848578
+      },
+      {
+        "name": "Devour",
+        "total": 30212249
+      },
+      {
+        "name": "Melee",
+        "total": 44619
+      },
+      {
+        "name": "Eradicate",
+        "total": 106337024
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 2194
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 123900401
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11048032
+      },
+      {
+        "name": "Cull",
+        "total": 220817
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35366681
+      },
+      {
+        "name": "Reap",
+        "total": 316655
+      }
+    ]
+  },
+  {
+    "player": "丶菠萝",
+    "dungeon": "Magisters' Terrace",
+    "dps": 223056.62770998478,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 422414604,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 19502
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35248772
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 154785114
+      },
+      {
+        "name": "Void Ray",
+        "total": 81840915
+      },
+      {
+        "name": "Melee",
+        "total": 24685
+      },
+      {
+        "name": "Eradicate",
+        "total": 102726128
+      },
+      {
+        "name": "Consume",
+        "total": 5814004
+      },
+      {
+        "name": "Devour",
+        "total": 31166400
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 629
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10022327
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 766128
+      }
+    ]
+  },
+  {
+    "player": "Balancedcdh",
+    "dungeon": "Skyreach",
+    "dps": 175778.29540997744,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 275247893,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 24406
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 96
+      },
+      {
+        "name": "Reap",
+        "total": 32196
+      },
+      {
+        "name": "Melee",
+        "total": 35610
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25086755
+      },
+      {
+        "name": "Void Ray",
+        "total": 55596817
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8165138
+      },
+      {
+        "name": "Eradicate",
+        "total": 67123134
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 86984228
+      },
+      {
+        "name": "Consume",
+        "total": 4222985
+      },
+      {
+        "name": "Cull",
+        "total": 558469
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 571643
+      },
+      {
+        "name": "Devour",
+        "total": 26846416
+      }
+    ]
+  },
+  {
+    "player": "紫色奥法",
+    "dungeon": "Skyreach",
+    "dps": 153730.49531000853,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 254944040,
+    "abilities": [
+      {
+        "name": "Vengeful Retreat",
+        "total": 181
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 817611
+      },
+      {
+        "name": "Melee",
+        "total": 10254
+      },
+      {
+        "name": "Eradicate",
+        "total": 59603469
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 22959371
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 604
+      },
+      {
+        "name": "Void Ray",
+        "total": 45476185
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 87744236
+      },
+      {
+        "name": "Reap",
+        "total": 144581
+      },
+      {
+        "name": "Consume",
+        "total": 5550181
+      },
+      {
+        "name": "Void Nova",
+        "total": 9678
+      },
+      {
+        "name": "Catastrophe",
+        "total": 7533706
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 687570
+      },
+      {
+        "name": "Devour",
+        "total": 24406413
+      }
+    ]
+  },
+  {
+    "player": "Jabuka",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 226623.21553999186,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 400028728,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 10779690
+      },
+      {
+        "name": "Consume",
+        "total": 4474738
+      },
+      {
+        "name": "Voidblade",
+        "total": 8671
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 130961342
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 24041
+      },
+      {
+        "name": "Void Nova",
+        "total": 18181
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34784148
+      },
+      {
+        "name": "Void Ray",
+        "total": 77335652
+      },
+      {
+        "name": "Devour",
+        "total": 34585550
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 678673
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 312
+      },
+      {
+        "name": "Reap",
+        "total": 56184
+      },
+      {
+        "name": "Eradicate",
+        "total": 106321546
+      }
+    ]
+  },
+  {
+    "player": "Hyped",
+    "dungeon": "Pit of Saron",
+    "dps": 234633.74997997284,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 410781049,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 45533
+      },
+      {
+        "name": "Melee",
+        "total": 51016
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 138159814
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 205
+      },
+      {
+        "name": "Devour",
+        "total": 30276264
+      },
+      {
+        "name": "Consume",
+        "total": 4700551
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38724640
+      },
+      {
+        "name": "Eradicate",
+        "total": 104495969
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12144706
+      },
+      {
+        "name": "Void Ray",
+        "total": 81297732
+      },
+      {
+        "name": "Reap",
+        "total": 191357
+      },
+      {
+        "name": "Cull",
+        "total": 693262
+      }
+    ]
+  },
+  {
+    "player": "湾区陈浩南",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 184015.2294999957,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 323771116,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 7993404
+      },
+      {
+        "name": "Melee",
+        "total": 70720
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 831400
+      },
+      {
+        "name": "Devour",
+        "total": 29504675
+      },
+      {
+        "name": "Voidblade",
+        "total": 23362
+      },
+      {
+        "name": "Cull",
+        "total": 144867
+      },
+      {
+        "name": "Consume",
+        "total": 5962934
+      },
+      {
+        "name": "Eradicate",
+        "total": 73866761
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 115942043
+      },
+      {
+        "name": "Void Ray",
+        "total": 64502426
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 24928524
+      }
+    ]
+  },
+  {
+    "player": "Fäuste",
+    "dungeon": "Windrunner Spire",
+    "dps": 182868.09873002768,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 353996797,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5689633
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31751786
+      },
+      {
+        "name": "Void Ray",
+        "total": 71195077
+      },
+      {
+        "name": "Void Nova",
+        "total": 58112
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1005034
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 116755281
+      },
+      {
+        "name": "Disrupt",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 35510
+      },
+      {
+        "name": "Devour",
+        "total": 25579959
+      },
+      {
+        "name": "Cull",
+        "total": 428625
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10733874
+      },
+      {
+        "name": "Eradicate",
+        "total": 90763768
+      },
+      {
+        "name": "Immolation Aura",
+        "total": 138
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "Neglected",
+    "dungeon": "Magisters' Terrace",
+    "dps": 217291.8587899804,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 439069708,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 41411529
+      },
+      {
+        "name": "Void Ray",
+        "total": 91240699
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 140452961
+      },
+      {
+        "name": "Devour",
+        "total": 35249989
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11934690
+      },
+      {
+        "name": "Consume",
+        "total": 5468890
+      },
+      {
+        "name": "Void Nova",
+        "total": 7270
+      },
+      {
+        "name": "Melee",
+        "total": 28255
+      },
+      {
+        "name": "Eradicate",
+        "total": 113275425
+      }
+    ]
+  },
+  {
+    "player": "拳头弟弟丶",
+    "dungeon": "Maisara Caverns",
+    "dps": 226654.97055000067,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 432427992,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 84550194
+      },
+      {
+        "name": "Reap",
+        "total": 79796
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Consume",
+        "total": 6059423
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 148188031
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 37058270
+      },
+      {
+        "name": "Void Nova",
+        "total": 31410
+      },
+      {
+        "name": "Cull",
+        "total": 157964
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12133542
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 681343
+      },
+      {
+        "name": "Eradicate",
+        "total": 113268624
+      },
+      {
+        "name": "Devour",
+        "total": 29054603
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1151278
+      },
+      {
+        "name": "Melee",
+        "total": 13514
+      }
+    ]
+  },
+  {
+    "player": "罗罗汤马西丶",
+    "dungeon": "Windrunner Spire",
+    "dps": 206411.06774002314,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 404338847,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 54682
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 781076
+      },
+      {
+        "name": "Melee",
+        "total": 35128
+      },
+      {
+        "name": "Void Ray",
+        "total": 82195490
+      },
+      {
+        "name": "Eradicate",
+        "total": 104286690
+      },
+      {
+        "name": "Consume",
+        "total": 5068221
+      },
+      {
+        "name": "Cull",
+        "total": 472867
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 37132878
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11902126
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 135605099
+      },
+      {
+        "name": "Devour",
+        "total": 26804590
+      }
+    ]
+  },
+  {
+    "player": "Altriasdh",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 206237.44053000212,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 384191066,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 76453316
+      },
+      {
+        "name": "Melee",
+        "total": 76950
+      },
+      {
+        "name": "Eradicate",
+        "total": 97054110
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 129009277
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10337931
+      },
+      {
+        "name": "Void Nova",
+        "total": 75753
+      },
+      {
+        "name": "Consume",
+        "total": 5670911
+      },
+      {
+        "name": "Reap",
+        "total": 157707
+      },
+      {
+        "name": "Devour",
+        "total": 30577341
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 605879
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34021818
+      },
+      {
+        "name": "Cull",
+        "total": 150073
+      }
+    ]
+  },
+  {
+    "player": "Tshockdh",
+    "dungeon": "Maisara Caverns",
+    "dps": 221030.282220006,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428736638,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 15441209
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 124438560
+      },
+      {
+        "name": "Devour",
+        "total": 26580123
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 49513373
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 112918851
+      },
+      {
+        "name": "Cull",
+        "total": 659682
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 540842
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Void Nova",
+        "total": 54980
+      },
+      {
+        "name": "Reap",
+        "total": 165530
+      },
+      {
+        "name": "Void Ray",
+        "total": 93257661
+      },
+      {
+        "name": "Melee",
+        "total": 19686
+      },
+      {
+        "name": "Consume",
+        "total": 5145313
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 828
+      }
+    ]
+  },
+  {
+    "player": "Infliktdh",
+    "dungeon": "Skyreach",
+    "dps": 123743.80312001705,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 263762020,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4740051
+      },
+      {
+        "name": "Eradicate",
+        "total": 67844176
+      },
+      {
+        "name": "Melee",
+        "total": 75760
+      },
+      {
+        "name": "Void Ray",
+        "total": 55293074
+      },
+      {
+        "name": "Cull",
+        "total": 138679
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25363158
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8164019
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 79746099
+      },
+      {
+        "name": "Devour",
+        "total": 22392835
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 1891
+      },
+      {
+        "name": "Void Nova",
+        "total": 2278
+      }
+    ]
+  },
+  {
+    "player": "Jonzydh",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 218273.6632500291,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 362590316,
+    "abilities": [
+      {
+        "name": "Heaven's Glaive",
+        "total": 903576
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 593674
+      },
+      {
+        "name": "Void Ray",
+        "total": 69349460
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Consume",
+        "total": 4818401
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35043878
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 113536296
+      },
+      {
+        "name": "Melee",
+        "total": 7194
+      },
+      {
+        "name": "Eradicate",
+        "total": 94426408
+      },
+      {
+        "name": "Devour",
+        "total": 33420808
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10229334
+      },
+      {
+        "name": "Void Nova",
+        "total": 15848
+      },
+      {
+        "name": "Cull",
+        "total": 245079
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 360
+      }
+    ]
+  },
+  {
+    "player": "Evne",
+    "dungeon": "Pit of Saron",
+    "dps": 265423.61488997936,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428049460,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 111269653
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12904774
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42708090
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1751
+      },
+      {
+        "name": "Consume",
+        "total": 3898899
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 142393583
+      },
+      {
+        "name": "Cull",
+        "total": 517010
+      },
+      {
+        "name": "Void Ray",
+        "total": 84104922
+      },
+      {
+        "name": "Devour",
+        "total": 30203586
+      },
+      {
+        "name": "Melee",
+        "total": 47192
+      }
+    ]
+  },
+  {
+    "player": "Rainyydh",
+    "dungeon": "Windrunner Spire",
+    "dps": 207719.71443998814,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 394087504,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 2056640
+      },
+      {
+        "name": "Void Nova",
+        "total": 33723
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40425543
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12771031
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 636196
+      },
+      {
+        "name": "Devour",
+        "total": 30035525
+      },
+      {
+        "name": "Eradicate",
+        "total": 104866749
+      },
+      {
+        "name": "Reap",
+        "total": 429189
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1137579
+      },
+      {
+        "name": "Void Ray",
+        "total": 76735619
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 120237191
+      },
+      {
+        "name": "Consume",
+        "total": 4700259
+      },
+      {
+        "name": "Melee",
+        "total": 22260
+      }
+    ]
+  },
+  {
+    "player": "逆旅饱饱",
+    "dungeon": "Pit of Saron",
+    "dps": 244696.5490499735,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 397482872,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 36970649
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 718
+      },
+      {
+        "name": "Void Ray",
+        "total": 72249975
+      },
+      {
+        "name": "Eradicate",
+        "total": 96610432
+      },
+      {
+        "name": "Consume",
+        "total": 5198060
+      },
+      {
+        "name": "Cull",
+        "total": 140447
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 147009621
+      },
+      {
+        "name": "Melee",
+        "total": 65046
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11683303
+      },
+      {
+        "name": "Void Nova",
+        "total": 8401
+      },
+      {
+        "name": "Devour",
+        "total": 27047276
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 498944
+      }
+    ]
+  },
+  {
+    "player": "夜雨小梦",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 238664.50511997938,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 467087439,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 159781381
+      },
+      {
+        "name": "Void Nova",
+        "total": 18851
+      },
+      {
+        "name": "Consume",
+        "total": 5356225
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38086550
+      },
+      {
+        "name": "Void Ray",
+        "total": 90585666
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12200951
+      },
+      {
+        "name": "Melee",
+        "total": 29760
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 619
+      },
+      {
+        "name": "Reap",
+        "total": 227422
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1086868
+      },
+      {
+        "name": "Devour",
+        "total": 39576546
+      },
+      {
+        "name": "Eradicate",
+        "total": 120136600
+      }
+    ]
+  },
+  {
+    "player": "事件视界",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 195796.47048002481,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 363897726,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 95110642
+      },
+      {
+        "name": "Devour",
+        "total": 32150705
+      },
+      {
+        "name": "Void Nova",
+        "total": 26355
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 303
+      },
+      {
+        "name": "Melee",
+        "total": 17380
+      },
+      {
+        "name": "Consume",
+        "total": 5646172
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34017332
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 70729311
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10674512
+      },
+      {
+        "name": "Reap",
+        "total": 118414
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 115406600
+      }
+    ]
+  },
+  {
+    "player": "Mvpx",
+    "dungeon": "Maisara Caverns",
+    "dps": 190428.62102997303,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 353202436,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 104039251
+      },
+      {
+        "name": "Eradicate",
+        "total": 97369983
+      },
+      {
+        "name": "Void Nova",
+        "total": 9713
+      },
+      {
+        "name": "Reap",
+        "total": 163710
+      },
+      {
+        "name": "Snowball",
+        "total": 0
+      },
+      {
+        "name": "Devour",
+        "total": 24277713
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 264
+      },
+      {
+        "name": "Consume",
+        "total": 5276432
+      },
+      {
+        "name": "Cull",
+        "total": 580135
+      },
+      {
+        "name": "Melee",
+        "total": 50479
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 37296935
+      },
+      {
+        "name": "Void Ray",
+        "total": 71708293
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12369642
+      },
+      {
+        "name": "Voidblade",
+        "total": 59886
+      }
+    ]
+  },
+  {
+    "player": "Pve",
+    "dungeon": "Pit of Saron",
+    "dps": 255853.67497998476,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 414506492,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 46681
+      },
+      {
+        "name": "Reap",
+        "total": 124218
+      },
+      {
+        "name": "Consume",
+        "total": 4839724
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11261505
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 652708
+      },
+      {
+        "name": "Void Nova",
+        "total": 20069
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35729655
+      },
+      {
+        "name": "Eradicate",
+        "total": 109956046
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 147432524
+      },
+      {
+        "name": "Devour",
+        "total": 25894704
+      },
+      {
+        "name": "Void Ray",
+        "total": 78546644
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 906
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1108
+      }
+    ]
+  },
+  {
+    "player": "Armdh",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 195017.42238998413,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 377646168,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 78547141
+      },
+      {
+        "name": "Melee",
+        "total": 22592
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11280106
+      },
+      {
+        "name": "Devour",
+        "total": 26168526
+      },
+      {
+        "name": "Consume",
+        "total": 7353374
+      },
+      {
+        "name": "Void Nova",
+        "total": 14723
+      },
+      {
+        "name": "Eradicate",
+        "total": 103454691
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35435554
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 986656
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 113834997
+      },
+      {
+        "name": "Reap",
+        "total": 434990
+      },
+      {
+        "name": "Cull",
+        "total": 112818
+      }
+    ]
+  },
+  {
+    "player": "Cyices",
+    "dungeon": "Windrunner Spire",
+    "dps": 217119.3202199936,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 385458877,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 80220189
+      },
+      {
+        "name": "Eradicate",
+        "total": 100338751
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39330934
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12257654
+      },
+      {
+        "name": "Void Nova",
+        "total": 8209
+      },
+      {
+        "name": "Melee",
+        "total": 52122
+      },
+      {
+        "name": "Devour",
+        "total": 26993624
+      },
+      {
+        "name": "Consume",
+        "total": 4657736
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 121599658
+      }
+    ]
+  },
+  {
+    "player": "Crossii",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 221671.1269699931,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 438491203,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5148797
+      },
+      {
+        "name": "Melee",
+        "total": 34611
+      },
+      {
+        "name": "Cull",
+        "total": 2399449
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 136085260
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13011465
+      },
+      {
+        "name": "Eradicate",
+        "total": 118971195
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 43206040
+      },
+      {
+        "name": "Devour",
+        "total": 30512877
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1951330
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 709778
+      },
+      {
+        "name": "Reap",
+        "total": 51475
+      },
+      {
+        "name": "Void Ray",
+        "total": 86375988
+      },
+      {
+        "name": "Void Nova",
+        "total": 32938
+      }
+    ]
+  },
+  {
+    "player": "Voluxar",
+    "dungeon": "Magisters' Terrace",
+    "dps": 250169.63736999035,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 448514633,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 3915512
+      },
+      {
+        "name": "Void Ray",
+        "total": 88785729
+      },
+      {
+        "name": "Devour",
+        "total": 33140905
+      },
+      {
+        "name": "Melee",
+        "total": 14386
+      },
+      {
+        "name": "Void Nova",
+        "total": 4518
+      },
+      {
+        "name": "Voidblade",
+        "total": 60944
+      },
+      {
+        "name": "Eradicate",
+        "total": 115100170
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 839
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38879049
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11379224
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 784732
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 156317523
+      },
+      {
+        "name": "Cull",
+        "total": 130573
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 529
+      }
+    ]
+  },
+  {
+    "player": "Nzangellips",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 243686.89759999514,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 450115287,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 89832098
+      },
+      {
+        "name": "Devour",
+        "total": 32709071
+      },
+      {
+        "name": "Eradicate",
+        "total": 121881425
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12077454
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1283771
+      },
+      {
+        "name": "Reap",
+        "total": 105121
+      },
+      {
+        "name": "Voidblade",
+        "total": 10346
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 146989780
+      },
+      {
+        "name": "Melee",
+        "total": 78101
+      },
+      {
+        "name": "Consume",
+        "total": 4861928
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40286192
+      }
+    ]
+  },
+  {
+    "player": "Infliktdh",
+    "dungeon": "Windrunner Spire",
+    "dps": 193568.19929999113,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 383987044,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 207334
+      },
+      {
+        "name": "Consume",
+        "total": 4681036
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 118884314
+      },
+      {
+        "name": "Void Ray",
+        "total": 79171082
+      },
+      {
+        "name": "Void Nova",
+        "total": 29726
+      },
+      {
+        "name": "Devour",
+        "total": 28910057
+      },
+      {
+        "name": "Melee",
+        "total": 64008
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35773419
+      },
+      {
+        "name": "Eradicate",
+        "total": 104833113
+      },
+      {
+        "name": "Reap",
+        "total": 94845
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11337706
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 404
+      }
+    ]
+  },
+  {
+    "player": "豆瓣酱炒面",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 197770.9724100232,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 371480535,
+    "abilities": [
+      {
+        "name": "Reap",
+        "total": 428801
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 125223156
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9722118
+      },
+      {
+        "name": "Devour",
+        "total": 35599502
+      },
+      {
+        "name": "Melee",
+        "total": 21773
+      },
+      {
+        "name": "Consume",
+        "total": 4353801
+      },
+      {
+        "name": "Eradicate",
+        "total": 99193081
+      },
+      {
+        "name": "Void Ray",
+        "total": 65781938
+      },
+      {
+        "name": "Void Nova",
+        "total": 5367
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31150998
+      }
+    ]
+  },
+  {
+    "player": "屁桑",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 217403.4808099866,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 382828833,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 10450571
+      },
+      {
+        "name": "Reap",
+        "total": 241296
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 815541
+      },
+      {
+        "name": "Melee",
+        "total": 64006
+      },
+      {
+        "name": "Eradicate",
+        "total": 97669094
+      },
+      {
+        "name": "Void Ray",
+        "total": 72826410
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 265
+      },
+      {
+        "name": "Cull",
+        "total": 141883
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 130322537
+      },
+      {
+        "name": "Void Nova",
+        "total": 7349
+      },
+      {
+        "name": "Voidblade",
+        "total": 9287
+      },
+      {
+        "name": "Devour",
+        "total": 30187260
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35713010
+      },
+      {
+        "name": "Consume",
+        "total": 4380324
+      }
+    ]
+  },
+  {
+    "player": "Faitfroid",
+    "dungeon": "Pit of Saron",
+    "dps": 233650.07536000013,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 416528223,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 65202
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11961971
+      },
+      {
+        "name": "Reap",
+        "total": 97126
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 602149
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38090125
+      },
+      {
+        "name": "Eradicate",
+        "total": 99095765
+      },
+      {
+        "name": "Devour",
+        "total": 29457106
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1177
+      },
+      {
+        "name": "Void Ray",
+        "total": 76329886
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 862878
+      },
+      {
+        "name": "Cull",
+        "total": 527735
+      },
+      {
+        "name": "Consume",
+        "total": 5624289
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 153812814
+      }
+    ]
+  },
+  {
+    "player": "Девоуреркала",
+    "dungeon": "Maisara Caverns",
+    "dps": 260749.61629998684,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 435262555,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4201831
+      },
+      {
+        "name": "Eradicate",
+        "total": 116667238
+      },
+      {
+        "name": "Void Ray",
+        "total": 88379554
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13213184
+      },
+      {
+        "name": "Void Nova",
+        "total": 929
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 137651741
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42985059
+      },
+      {
+        "name": "Cull",
+        "total": 106504
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 470218
+      },
+      {
+        "name": "Devour",
+        "total": 30365812
+      },
+      {
+        "name": "Melee",
+        "total": 46258
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1174227
+      }
+    ]
+  },
+  {
+    "player": "Overthinking",
+    "dungeon": "Skyreach",
+    "dps": 172171.28469997644,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 274354770,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 25321247
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 92457047
+      },
+      {
+        "name": "Devour",
+        "total": 26741135
+      },
+      {
+        "name": "Cull",
+        "total": 157175
+      },
+      {
+        "name": "Catastrophe",
+        "total": 7932165
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 205
+      },
+      {
+        "name": "Void Nova",
+        "total": 2420
+      },
+      {
+        "name": "Eradicate",
+        "total": 64419165
+      },
+      {
+        "name": "Consume",
+        "total": 4951349
+      },
+      {
+        "name": "Melee",
+        "total": 35191
+      },
+      {
+        "name": "Void Ray",
+        "total": 52337671
+      }
+    ]
+  },
+  {
+    "player": "Shironito",
+    "dungeon": "Magisters' Terrace",
+    "dps": 229402.47143000364,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 456758214,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 92359356
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 145156201
+      },
+      {
+        "name": "Melee",
+        "total": 21111
+      },
+      {
+        "name": "Eradicate",
+        "total": 121525391
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42081117
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12500683
+      },
+      {
+        "name": "Cull",
+        "total": 411197
+      },
+      {
+        "name": "Reap",
+        "total": 454068
+      },
+      {
+        "name": "Devour",
+        "total": 37041483
+      },
+      {
+        "name": "Void Nova",
+        "total": 20974
+      },
+      {
+        "name": "Consume",
+        "total": 5186633
+      }
+    ]
+  },
+  {
+    "player": "Chân",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 212136.1963199973,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 336509739,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 93830619
+      },
+      {
+        "name": "Consume",
+        "total": 4511866
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 548332
+      },
+      {
+        "name": "Melee",
+        "total": 8613
+      },
+      {
+        "name": "Void Ray",
+        "total": 68546716
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Devour",
+        "total": 27605371
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 100676447
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9633000
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31117905
+      },
+      {
+        "name": "Void Nova",
+        "total": 30870
+      }
+    ]
+  },
+  {
+    "player": "道心安稳",
+    "dungeon": "Pit of Saron",
+    "dps": 242969.40217000246,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 429451091,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 154748761
+      },
+      {
+        "name": "Eradicate",
+        "total": 112184099
+      },
+      {
+        "name": "Consume",
+        "total": 6190608
+      },
+      {
+        "name": "Devour",
+        "total": 28639659
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 922872
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 799
+      },
+      {
+        "name": "Void Ray",
+        "total": 80068064
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11224301
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "Void Nova",
+        "total": 2531
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35420763
+      },
+      {
+        "name": "Melee",
+        "total": 48634
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "Wolskuvroom",
+    "dungeon": "Pit of Saron",
+    "dps": 239168.29729002714,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 429117194,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 143786155
+      },
+      {
+        "name": "Reap",
+        "total": 52361
+      },
+      {
+        "name": "Consume",
+        "total": 4810657
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 644150
+      },
+      {
+        "name": "Devour",
+        "total": 31465042
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12694927
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42165332
+      },
+      {
+        "name": "Cull",
+        "total": 113661
+      },
+      {
+        "name": "Void Ray",
+        "total": 84972943
+      },
+      {
+        "name": "Eradicate",
+        "total": 108361134
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 2
+      },
+      {
+        "name": "Melee",
+        "total": 50830
+      }
+    ]
+  },
+  {
+    "player": "阿乐噬灭",
+    "dungeon": "Maisara Caverns",
+    "dps": 211441.11348998547,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 384230580,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 76460403
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Consume",
+        "total": 5369451
+      },
+      {
+        "name": "Void Nova",
+        "total": 14096
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11311832
+      },
+      {
+        "name": "Eradicate",
+        "total": 101223859
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 125093491
+      },
+      {
+        "name": "Melee",
+        "total": 29043
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34920739
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 784318
+      },
+      {
+        "name": "Devour",
+        "total": 29023348
+      }
+    ]
+  },
+  {
+    "player": "大丶梦丶",
+    "dungeon": "Pit of Saron",
+    "dps": 216841.71583002806,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 385370230,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 39768459
+      },
+      {
+        "name": "Eradicate",
+        "total": 90663898
+      },
+      {
+        "name": "Devour",
+        "total": 27702101
+      },
+      {
+        "name": "Voidblade",
+        "total": 19033
+      },
+      {
+        "name": "Void Ray",
+        "total": 74801874
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12190017
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 211
+      },
+      {
+        "name": "Cull",
+        "total": 325123
+      },
+      {
+        "name": "Consume",
+        "total": 5190691
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 134591383
+      },
+      {
+        "name": "Melee",
+        "total": 91752
+      },
+      {
+        "name": "Void Nova",
+        "total": 25688
+      }
+    ]
+  },
+  {
+    "player": "Evrya",
+    "dungeon": "Magisters' Terrace",
+    "dps": 229066.58301001787,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 423141642,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 34341909
+      },
+      {
+        "name": "Melee",
+        "total": 32985
+      },
+      {
+        "name": "Eradicate",
+        "total": 112039554
+      },
+      {
+        "name": "Reap",
+        "total": 19286
+      },
+      {
+        "name": "Consume",
+        "total": 4421603
+      },
+      {
+        "name": "Devour",
+        "total": 34600245
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10508299
+      },
+      {
+        "name": "Void Nova",
+        "total": 15357
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 142396835
+      },
+      {
+        "name": "Void Ray",
+        "total": 84661497
+      },
+      {
+        "name": "Cull",
+        "total": 104072
+      }
+    ]
+  },
+  {
+    "player": "Elmon",
+    "dungeon": "Windrunner Spire",
+    "dps": 193882.6012300253,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 373995854,
+    "abilities": [
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 796609
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33158164
+      },
+      {
+        "name": "Melee",
+        "total": 53441
+      },
+      {
+        "name": "Voidblade",
+        "total": 19612
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1061841
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 125790404
+      },
+      {
+        "name": "Devour",
+        "total": 27427684
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10871240
+      },
+      {
+        "name": "Consume",
+        "total": 5021577
+      },
+      {
+        "name": "Eradicate",
+        "total": 93850244
+      },
+      {
+        "name": "Void Ray",
+        "total": 75915840
+      },
+      {
+        "name": "Void Nova",
+        "total": 29198
+      }
+    ]
+  },
+  {
+    "player": "Soxxs",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 208311.8223400116,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": false,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 358213218,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4191805
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32748542
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10074120
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 73755041
+      },
+      {
+        "name": "Void Nova",
+        "total": 28097
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Cull",
+        "total": 1272789
+      },
+      {
+        "name": "Eradicate",
+        "total": 97481800
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 106468412
+      },
+      {
+        "name": "Devour",
+        "total": 32178265
+      },
+      {
+        "name": "Melee",
+        "total": 14347
+      }
+    ]
+  },
+  {
+    "player": "Tshockdh",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 214528.56313997507,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": false,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 377126197,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 11505
+      },
+      {
+        "name": "Consume",
+        "total": 4076526
+      },
+      {
+        "name": "Cull",
+        "total": 927026
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Reap",
+        "total": 59988
+      },
+      {
+        "name": "Eradicate",
+        "total": 105293720
+      },
+      {
+        "name": "Void Ray",
+        "total": 78695536
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38678681
+      },
+      {
+        "name": "Melee",
+        "total": 15463
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11652697
+      },
+      {
+        "name": "Voidblade",
+        "total": 12406
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1046785
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 249
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 105641835
+      },
+      {
+        "name": "Devour",
+        "total": 31013780
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "Kabaday",
+    "dungeon": "Windrunner Spire",
+    "dps": 170460.23074001074,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 363783099,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 1044298
+      },
+      {
+        "name": "Eradicate",
+        "total": 94910158
+      },
+      {
+        "name": "Devour",
+        "total": 27334967
+      },
+      {
+        "name": "Voidblade",
+        "total": 11492
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35762499
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 73669582
+      },
+      {
+        "name": "Void Nova",
+        "total": 78773
+      },
+      {
+        "name": "Melee",
+        "total": 56168
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11399842
+      },
+      {
+        "name": "Consume",
+        "total": 6720169
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 112019374
+      },
+      {
+        "name": "Reap",
+        "total": 82812
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 692964
+      }
+    ]
+  },
+  {
+    "player": "Chân",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 220095.1116399765,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 420216812,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 705981
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 137337734
+      },
+      {
+        "name": "Eradicate",
+        "total": 106023457
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11551523
+      },
+      {
+        "name": "Void Nova",
+        "total": 12947
+      },
+      {
+        "name": "Consume",
+        "total": 5161844
+      },
+      {
+        "name": "Void Ray",
+        "total": 84986910
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 37094454
+      },
+      {
+        "name": "Reap",
+        "total": 148167
+      },
+      {
+        "name": "Devour",
+        "total": 36358163
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 809513
+      },
+      {
+        "name": "Melee",
+        "total": 26119
+      }
+    ]
+  },
+  {
+    "player": "粗雨",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 215901.4414499998,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 374601955,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 39520
+      },
+      {
+        "name": "Voidblade",
+        "total": 31888
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33162817
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 122772535
+      },
+      {
+        "name": "Eradicate",
+        "total": 96983174
+      },
+      {
+        "name": "Devour",
+        "total": 32417450
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 17506
+      },
+      {
+        "name": "Consume",
+        "total": 4756565
+      },
+      {
+        "name": "Void Ray",
+        "total": 74183734
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10236766
+      }
+    ]
+  },
+  {
+    "player": "一二三恶",
+    "dungeon": "Skyreach",
+    "dps": 155723.74861997366,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 258042972,
+    "abilities": [
+      {
+        "name": "Vengeful Retreat",
+        "total": 241
+      },
+      {
+        "name": "Cull",
+        "total": 454916
+      },
+      {
+        "name": "Consume",
+        "total": 5635225
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 876309
+      },
+      {
+        "name": "Devour",
+        "total": 24351819
+      },
+      {
+        "name": "Reap",
+        "total": 138705
+      },
+      {
+        "name": "Catastrophe",
+        "total": 7599370
+      },
+      {
+        "name": "Void Ray",
+        "total": 51161667
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 80560310
+      },
+      {
+        "name": "Eradicate",
+        "total": 62886135
+      },
+      {
+        "name": "Melee",
+        "total": 53222
+      },
+      {
+        "name": "Void Nova",
+        "total": 26539
+      },
+      {
+        "name": "Immolation Aura",
+        "total": 819
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 24297695
+      }
+    ]
+  },
+  {
+    "player": "紫色奥法",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 228973.57902002335,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 406374065,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 33193
+      },
+      {
+        "name": "Void Ray",
+        "total": 76745339
+      },
+      {
+        "name": "Void Nova",
+        "total": 17915
+      },
+      {
+        "name": "Eradicate",
+        "total": 101010070
+      },
+      {
+        "name": "Reap",
+        "total": 56751
+      },
+      {
+        "name": "Consume",
+        "total": 5369352
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 866254
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34984739
+      },
+      {
+        "name": "Cull",
+        "total": 140118
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9943337
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 147082502
+      },
+      {
+        "name": "Devour",
+        "total": 30123578
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 917
+      }
+    ]
+  },
+  {
+    "player": "Demonyazzle",
+    "dungeon": "Windrunner Spire",
+    "dps": 193634.7038999796,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 394426921,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 39765965
+      },
+      {
+        "name": "Devour",
+        "total": 28538180
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12240557
+      },
+      {
+        "name": "Melee",
+        "total": 40849
+      },
+      {
+        "name": "Eradicate",
+        "total": 108881702
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 119594453
+      },
+      {
+        "name": "Consume",
+        "total": 5122260
+      },
+      {
+        "name": "Void Ray",
+        "total": 80095045
+      },
+      {
+        "name": "Void Nova",
+        "total": 33462
+      },
+      {
+        "name": "Cull",
+        "total": 114448
+      }
+    ]
+  },
+  {
+    "player": "Speculation",
+    "dungeon": "Skyreach",
+    "dps": 181441.519389987,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 276116797,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 43430
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 708680
+      },
+      {
+        "name": "Consume",
+        "total": 3687968
+      },
+      {
+        "name": "Eradicate",
+        "total": 71592813
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 82104893
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8036881
+      },
+      {
+        "name": "Void Nova",
+        "total": 10500
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25839296
+      },
+      {
+        "name": "Devour",
+        "total": 27468462
+      },
+      {
+        "name": "Void Ray",
+        "total": 56275583
+      },
+      {
+        "name": "Cull",
+        "total": 348291
+      }
+    ]
+  },
+  {
+    "player": "蓝伽梅朵",
+    "dungeon": "Windrunner Spire",
+    "dps": 217491.61093997955,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 413150544,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5874861
+      },
+      {
+        "name": "Cull",
+        "total": 113016
+      },
+      {
+        "name": "Void Ray",
+        "total": 81367256
+      },
+      {
+        "name": "Eradicate",
+        "total": 104407192
+      },
+      {
+        "name": "Melee",
+        "total": 32454
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 142052264
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11180614
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1067109
+      },
+      {
+        "name": "Devour",
+        "total": 30912847
+      },
+      {
+        "name": "Reap",
+        "total": 47348
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35375126
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 720457
+      }
+    ]
+  },
+  {
+    "player": "伊丶凡",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 210993.22931998968,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 357873423,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5052518
+      },
+      {
+        "name": "Devour",
+        "total": 27494554
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33630853
+      },
+      {
+        "name": "Reap",
+        "total": 46466
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 109561235
+      },
+      {
+        "name": "Melee",
+        "total": 7611
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 654253
+      },
+      {
+        "name": "Void Ray",
+        "total": 70780894
+      },
+      {
+        "name": "Eradicate",
+        "total": 100201300
+      },
+      {
+        "name": "Void Nova",
+        "total": 40357
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10403382
+      }
+    ]
+  },
+  {
+    "player": "Yegeurmeta",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 199700.15416002274,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 387320446,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 10937
+      },
+      {
+        "name": "Cull",
+        "total": 186637
+      },
+      {
+        "name": "Consume",
+        "total": 5607215
+      },
+      {
+        "name": "Void Ray",
+        "total": 80589083
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 121892711
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10261082
+      },
+      {
+        "name": "Eradicate",
+        "total": 103194004
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 611
+      },
+      {
+        "name": "Melee",
+        "total": 31711
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35079711
+      },
+      {
+        "name": "Reap",
+        "total": 36027
+      },
+      {
+        "name": "Devour",
+        "total": 30430717
+      }
+    ]
+  },
+  {
+    "player": "少喝苏打水",
+    "dungeon": "Magisters' Terrace",
+    "dps": 207793.3287500143,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 411509129,
+    "abilities": [
+      {
+        "name": "Devour",
+        "total": 32483139
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 894091
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10593558
+      },
+      {
+        "name": "Cull",
+        "total": 100547
+      },
+      {
+        "name": "Consume",
+        "total": 5116151
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35415663
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 141496378
+      },
+      {
+        "name": "Void Ray",
+        "total": 84156110
+      },
+      {
+        "name": "Eradicate",
+        "total": 101214645
+      },
+      {
+        "name": "Melee",
+        "total": 38636
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 211
+      }
+    ]
+  },
+  {
+    "player": "鱼吃堡拉",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 226420.77748000622,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 426860450,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4456090
+      },
+      {
+        "name": "Void Ray",
+        "total": 85371519
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36657173
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 2115
+      },
+      {
+        "name": "Void Nova",
+        "total": 5125
+      },
+      {
+        "name": "Eradicate",
+        "total": 110074771
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 143251703
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11028681
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 686798
+      },
+      {
+        "name": "Devour",
+        "total": 35299811
+      },
+      {
+        "name": "Melee",
+        "total": 26664
+      }
+    ]
+  },
+  {
+    "player": "驱夜断愁丶",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 231902.79702997208,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 466826128,
+    "abilities": [
+      {
+        "name": "Voidblade",
+        "total": 17379
+      },
+      {
+        "name": "Cull",
+        "total": 113110
+      },
+      {
+        "name": "Void Ray",
+        "total": 87888432
+      },
+      {
+        "name": "Void Nova",
+        "total": 4480
+      },
+      {
+        "name": "Melee",
+        "total": 17502
+      },
+      {
+        "name": "Consume",
+        "total": 5969535
+      },
+      {
+        "name": "Devour",
+        "total": 37498115
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12272232
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 164988613
+      },
+      {
+        "name": "Eradicate",
+        "total": 118868492
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39188238
+      }
+    ]
+  },
+  {
+    "player": "必兮相语丶",
+    "dungeon": "Magisters' Terrace",
+    "dps": 212076.71004998684,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 390554319,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 74589029
+      },
+      {
+        "name": "Melee",
+        "total": 10126
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10565589
+      },
+      {
+        "name": "Void Nova",
+        "total": 22977
+      },
+      {
+        "name": "Eradicate",
+        "total": 93081360
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 104
+      },
+      {
+        "name": "Reap",
+        "total": 108037
+      },
+      {
+        "name": "Cull",
+        "total": 1462338
+      },
+      {
+        "name": "Devour",
+        "total": 34175790
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 137152368
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34012506
+      },
+      {
+        "name": "Consume",
+        "total": 5374095
+      }
+    ]
+  },
+  {
+    "player": "Cowboysam",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 249510.93208998442,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 438283917,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 83963778
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36687226
+      },
+      {
+        "name": "Eradicate",
+        "total": 113831563
+      },
+      {
+        "name": "Consume",
+        "total": 4825058
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11052740
+      },
+      {
+        "name": "Devour",
+        "total": 32747553
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 154145383
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 674078
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 302
+      },
+      {
+        "name": "Cull",
+        "total": 302192
+      },
+      {
+        "name": "Melee",
+        "total": 42975
+      },
+      {
+        "name": "Void Nova",
+        "total": 11069
+      }
+    ]
+  },
+  {
+    "player": "Streakdh",
+    "dungeon": "Skyreach",
+    "dps": 174068.41510999203,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 287365717,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4195904
+      },
+      {
+        "name": "Void Nova",
+        "total": 26585
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 87463303
+      },
+      {
+        "name": "Melee",
+        "total": 48585
+      },
+      {
+        "name": "Devour",
+        "total": 26839344
+      },
+      {
+        "name": "Reap",
+        "total": 258532
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 26125816
+      },
+      {
+        "name": "Eradicate",
+        "total": 74491528
+      },
+      {
+        "name": "Void Ray",
+        "total": 58608755
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8173224
+      },
+      {
+        "name": "Cull",
+        "total": 1134141
+      }
+    ]
+  },
+  {
+    "player": "Трикснамету",
+    "dungeon": "Pit of Saron",
+    "dps": 272546.89825999737,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 419714592,
+    "abilities": [
+      {
+        "name": "Vengeful Retreat",
+        "total": 653
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 892380
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39182872
+      },
+      {
+        "name": "Consume",
+        "total": 3884821
+      },
+      {
+        "name": "Cull",
+        "total": 107582
+      },
+      {
+        "name": "Eradicate",
+        "total": 109067639
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 143605528
+      },
+      {
+        "name": "Melee",
+        "total": 32319
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12364721
+      },
+      {
+        "name": "Devour",
+        "total": 27371929
+      },
+      {
+        "name": "Void Ray",
+        "total": 83087118
+      },
+      {
+        "name": "Reap",
+        "total": 110633
+      },
+      {
+        "name": "Void Nova",
+        "total": 6397
+      }
+    ]
+  },
+  {
+    "player": "Fanalol",
+    "dungeon": "Windrunner Spire",
+    "dps": 215709.18843001127,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 394667571,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 1426098
+      },
+      {
+        "name": "Void Ray",
+        "total": 78829213
+      },
+      {
+        "name": "Eradicate",
+        "total": 100022828
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38233419
+      },
+      {
+        "name": "Void Nova",
+        "total": 60072
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 696305
+      },
+      {
+        "name": "Melee",
+        "total": 36540
+      },
+      {
+        "name": "Devour",
+        "total": 25721583
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 132544617
+      },
+      {
+        "name": "Reap",
+        "total": 105604
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12056274
+      },
+      {
+        "name": "Consume",
+        "total": 4935018
+      }
+    ]
+  },
+  {
+    "player": "Junkratdh",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 218638.72720998526,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 387059637,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 101506554
+      },
+      {
+        "name": "Void Ray",
+        "total": 74623609
+      },
+      {
+        "name": "Cull",
+        "total": 159317
+      },
+      {
+        "name": "Devour",
+        "total": 30755347
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10027610
+      },
+      {
+        "name": "Consume",
+        "total": 4991930
+      },
+      {
+        "name": "Melee",
+        "total": 49585
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34417566
+      },
+      {
+        "name": "Void Nova",
+        "total": 20010
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 130508008
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 101
+      }
+    ]
+  },
+  {
+    "player": "Midnaj",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 217239.10124999285,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 362093265,
+    "abilities": [
+      {
+        "name": "Vengeful Retreat",
+        "total": 412
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 98755167
+      },
+      {
+        "name": "Consume",
+        "total": 4792257
+      },
+      {
+        "name": "Devour",
+        "total": 25501733
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35513730
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10099024
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 114355389
+      },
+      {
+        "name": "Void Nova",
+        "total": 6405
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 840881
+      },
+      {
+        "name": "Melee",
+        "total": 14082
+      },
+      {
+        "name": "Void Ray",
+        "total": 72214185
+      }
+    ]
+  },
+  {
+    "player": "Isoqt",
+    "dungeon": "Magisters' Terrace",
+    "dps": 245387.39854002,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428127885,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 39947411
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11724659
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 786243
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1414742
+      },
+      {
+        "name": "Reap",
+        "total": 128206
+      },
+      {
+        "name": "Devour",
+        "total": 30052214
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 138131278
+      },
+      {
+        "name": "Void Nova",
+        "total": 3228
+      },
+      {
+        "name": "Consume",
+        "total": 4038317
+      },
+      {
+        "name": "Cull",
+        "total": 1773562
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 106
+      },
+      {
+        "name": "Void Ray",
+        "total": 88714087
+      },
+      {
+        "name": "Melee",
+        "total": 28372
+      },
+      {
+        "name": "Eradicate",
+        "total": 111385460
+      }
+    ]
+  },
+  {
+    "player": "Isoqt",
+    "dungeon": "Skyreach",
+    "dps": 173386.17830002308,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 287592533,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 9546411
+      },
+      {
+        "name": "Melee",
+        "total": 67832
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 30122051
+      },
+      {
+        "name": "Devour",
+        "total": 24982252
+      },
+      {
+        "name": "Consume",
+        "total": 4230809
+      },
+      {
+        "name": "Cull",
+        "total": 1762111
+      },
+      {
+        "name": "Eradicate",
+        "total": 74205391
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 83593554
+      },
+      {
+        "name": "Reap",
+        "total": 281065
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 189
+      },
+      {
+        "name": "Void Ray",
+        "total": 58771868
+      },
+      {
+        "name": "Void Nova",
+        "total": 29000
+      }
+    ]
+  },
+  {
+    "player": "Noomi",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 204744.66359001398,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 377651532,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 9459584
+      },
+      {
+        "name": "Devour",
+        "total": 33396005
+      },
+      {
+        "name": "Void Nova",
+        "total": 15605
+      },
+      {
+        "name": "Melee",
+        "total": 65842
+      },
+      {
+        "name": "Void Ray",
+        "total": 76101339
+      },
+      {
+        "name": "Eradicate",
+        "total": 85252814
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 135064674
+      },
+      {
+        "name": "Reap",
+        "total": 59001
+      },
+      {
+        "name": "Consume",
+        "total": 5356266
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 31988797
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 772518
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 313
+      },
+      {
+        "name": "Cull",
+        "total": 118774
+      }
+    ]
+  },
+  {
+    "player": "Shironito",
+    "dungeon": "Skyreach",
+    "dps": 182906.758589983,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 265610976,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 55702
+      },
+      {
+        "name": "Reap",
+        "total": 134029
+      },
+      {
+        "name": "Void Ray",
+        "total": 53269445
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25384247
+      },
+      {
+        "name": "Cull",
+        "total": 636113
+      },
+      {
+        "name": "Devour",
+        "total": 24929143
+      },
+      {
+        "name": "Void Nova",
+        "total": 2702
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 81681280
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 205
+      },
+      {
+        "name": "Eradicate",
+        "total": 67311931
+      },
+      {
+        "name": "Consume",
+        "total": 4213846
+      },
+      {
+        "name": "Catastrophe",
+        "total": 7992333
+      }
+    ]
+  },
+  {
+    "player": "地瓜叶",
+    "dungeon": "Pit of Saron",
+    "dps": 227860.0309200287,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428884986,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 37786605
+      },
+      {
+        "name": "Consume",
+        "total": 6476643
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12193535
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 148779917
+      },
+      {
+        "name": "Void Nova",
+        "total": 21023
+      },
+      {
+        "name": "Devour",
+        "total": 27307695
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1448211
+      },
+      {
+        "name": "Reap",
+        "total": 47763
+      },
+      {
+        "name": "Void Ray",
+        "total": 81922816
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1147
+      },
+      {
+        "name": "Eradicate",
+        "total": 112843069
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 1218
+      },
+      {
+        "name": "Melee",
+        "total": 55344
+      }
+    ]
+  },
+  {
+    "player": "屁桑",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 221064.30062001944,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 354785875,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 68909429
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 30639391
+      },
+      {
+        "name": "Melee",
+        "total": 43688
+      },
+      {
+        "name": "Consume",
+        "total": 4787958
+      },
+      {
+        "name": "Devour",
+        "total": 30073614
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9189811
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 905
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 95925635
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 960570
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 114237322
+      },
+      {
+        "name": "Void Nova",
+        "total": 17552
+      }
+    ]
+  },
+  {
+    "player": "伊丶凡",
+    "dungeon": "Skyreach",
+    "dps": 176937.61909997463,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 275585296,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 66088541
+      },
+      {
+        "name": "Reap",
+        "total": 249473
+      },
+      {
+        "name": "Devour",
+        "total": 24841904
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25262206
+      },
+      {
+        "name": "Void Ray",
+        "total": 58038114
+      },
+      {
+        "name": "Void Nova",
+        "total": 2576
+      },
+      {
+        "name": "Melee",
+        "total": 34562
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8104131
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 737192
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 87341924
+      },
+      {
+        "name": "Consume",
+        "total": 4510794
+      },
+      {
+        "name": "Cull",
+        "total": 373754
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 125
+      }
+    ]
+  },
+  {
+    "player": "Merakî",
+    "dungeon": "Windrunner Spire",
+    "dps": 191447.798420012,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 381230001,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 2531381
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 123
+      },
+      {
+        "name": "Reap",
+        "total": 283867
+      },
+      {
+        "name": "Eradicate",
+        "total": 95660007
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1347469
+      },
+      {
+        "name": "Void Nova",
+        "total": 27735
+      },
+      {
+        "name": "Consume",
+        "total": 5432847
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 121387784
+      },
+      {
+        "name": "Voidblade",
+        "total": 10521
+      },
+      {
+        "name": "Melee",
+        "total": 34279
+      },
+      {
+        "name": "Devour",
+        "total": 28633434
+      },
+      {
+        "name": "Void Ray",
+        "total": 79275590
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35285961
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11319003
+      }
+    ]
+  },
+  {
+    "player": "全方位是咩",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 202265.18396002054,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 347424434,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 89208035
+      },
+      {
+        "name": "Melee",
+        "total": 11082
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 115245367
+      },
+      {
+        "name": "Cull",
+        "total": 318973
+      },
+      {
+        "name": "Devour",
+        "total": 30575008
+      },
+      {
+        "name": "Consume",
+        "total": 4940461
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 29512008
+      },
+      {
+        "name": "Void Nova",
+        "total": 21805
+      },
+      {
+        "name": "Reap",
+        "total": 99154
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9297663
+      },
+      {
+        "name": "Void Ray",
+        "total": 68194878
+      }
+    ]
+  },
+  {
+    "player": "Pve",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 230009.5764799714,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 432206855,
+    "abilities": [
+      {
+        "name": "Devour",
+        "total": 34449414
+      },
+      {
+        "name": "Cull",
+        "total": 212752
+      },
+      {
+        "name": "Void Ray",
+        "total": 86232109
+      },
+      {
+        "name": "Eradicate",
+        "total": 120305250
+      },
+      {
+        "name": "Consume",
+        "total": 4378882
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 845331
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40809072
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12585433
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 385
+      },
+      {
+        "name": "Void Nova",
+        "total": 10868
+      },
+      {
+        "name": "Melee",
+        "total": 22989
+      },
+      {
+        "name": "Reap",
+        "total": 269663
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 132084707
+      }
+    ]
+  },
+  {
+    "player": "Entelligent",
+    "dungeon": "Pit of Saron",
+    "dps": 232002.01687002182,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 386502832,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 97987663
+      },
+      {
+        "name": "Devour",
+        "total": 26793568
+      },
+      {
+        "name": "Cull",
+        "total": 112995
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35294285
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 906
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 395
+      },
+      {
+        "name": "Consume",
+        "total": 4183879
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 133828708
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 625565
+      },
+      {
+        "name": "Melee",
+        "total": 26227
+      },
+      {
+        "name": "Void Ray",
+        "total": 76532948
+      },
+      {
+        "name": "Void Nova",
+        "total": 794
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11060117
+      },
+      {
+        "name": "Reap",
+        "total": 54782
+      }
+    ]
+  },
+  {
+    "player": "珠珠虎",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 179831.62593001127,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 311322173,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 66296327
+      },
+      {
+        "name": "Void Nova",
+        "total": 25657
+      },
+      {
+        "name": "Consume",
+        "total": 4626665
+      },
+      {
+        "name": "Melee",
+        "total": 19050
+      },
+      {
+        "name": "Devour",
+        "total": 27822021
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 30575096
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9427443
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Immolation Aura",
+        "total": 792
+      },
+      {
+        "name": "Reap",
+        "total": 110732
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 89978076
+      },
+      {
+        "name": "Eradicate",
+        "total": 81127395
+      },
+      {
+        "name": "Cull",
+        "total": 1312919
+      }
+    ]
+  },
+  {
+    "player": "依神",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 215532.52534002066,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 385134854,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4892370
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33618267
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 128639027
+      },
+      {
+        "name": "Void Nova",
+        "total": 5187
+      },
+      {
+        "name": "Melee",
+        "total": 34146
+      },
+      {
+        "name": "Eradicate",
+        "total": 99209845
+      },
+      {
+        "name": "Reap",
+        "total": 46091
+      },
+      {
+        "name": "Devour",
+        "total": 32627083
+      },
+      {
+        "name": "Void Ray",
+        "total": 75962439
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10100399
+      }
+    ]
+  },
+  {
+    "player": "Jungtaldh",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 220378.20033997297,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": false,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 377590499,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 2166856
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10548981
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 968
+      },
+      {
+        "name": "Consume",
+        "total": 3949193
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 125398449
+      },
+      {
+        "name": "Eradicate",
+        "total": 96250375
+      },
+      {
+        "name": "Void Ray",
+        "total": 72923416
+      },
+      {
+        "name": "Devour",
+        "total": 30377504
+      },
+      {
+        "name": "Melee",
+        "total": 87204
+      },
+      {
+        "name": "Void Nova",
+        "total": 3352
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35884201
+      }
+    ]
+  },
+  {
+    "player": "小灰丶",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 201504.29467999935,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 386475968,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 79423538
+      },
+      {
+        "name": "Melee",
+        "total": 16452
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32754585
+      },
+      {
+        "name": "Consume",
+        "total": 4806400
+      },
+      {
+        "name": "Void Nova",
+        "total": 1609
+      },
+      {
+        "name": "Cull",
+        "total": 566355
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 123361301
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 303
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10519403
+      },
+      {
+        "name": "Eradicate",
+        "total": 103822482
+      },
+      {
+        "name": "Devour",
+        "total": 31203540
+      }
+    ]
+  },
+  {
+    "player": "Felsylma",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 206519.40232002735,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 381275501,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5219527
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 114830982
+      },
+      {
+        "name": "Reap",
+        "total": 232293
+      },
+      {
+        "name": "Eradicate",
+        "total": 105174754
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36578293
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11343337
+      },
+      {
+        "name": "Void Ray",
+        "total": 77358196
+      },
+      {
+        "name": "Cull",
+        "total": 409867
+      },
+      {
+        "name": "Devour",
+        "total": 30086418
+      },
+      {
+        "name": "Melee",
+        "total": 31998
+      },
+      {
+        "name": "Void Nova",
+        "total": 9836
+      }
+    ]
+  },
+  {
+    "player": "Milkdemon",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 211232.17641997337,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 329512901,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 27196646
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8900786
+      },
+      {
+        "name": "Eradicate",
+        "total": 91239061
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 105312445
+      },
+      {
+        "name": "Void Nova",
+        "total": 12760
+      },
+      {
+        "name": "Consume",
+        "total": 4297051
+      },
+      {
+        "name": "Devour",
+        "total": 25127971
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 29881
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 103
+      },
+      {
+        "name": "Void Ray",
+        "total": 67396197
+      }
+    ]
+  },
+  {
+    "player": "安妮波尼",
+    "dungeon": "Magisters' Terrace",
+    "dps": 221511.8687300086,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 424547654,
+    "abilities": [
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 766416
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11386250
+      },
+      {
+        "name": "Eradicate",
+        "total": 106009293
+      },
+      {
+        "name": "Cull",
+        "total": 916712
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 408
+      },
+      {
+        "name": "Consume",
+        "total": 5026962
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38641720
+      },
+      {
+        "name": "Void Ray",
+        "total": 80709819
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 147039740
+      },
+      {
+        "name": "Devour",
+        "total": 34008992
+      },
+      {
+        "name": "Melee",
+        "total": 41342
+      }
+    ]
+  },
+  {
+    "player": "Shikidh",
+    "dungeon": "Magisters' Terrace",
+    "dps": 252124.38490998745,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 471385869,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 177508425
+      },
+      {
+        "name": "Void Nova",
+        "total": 7839
+      },
+      {
+        "name": "Reap",
+        "total": 67993
+      },
+      {
+        "name": "Void Ray",
+        "total": 91368004
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40160490
+      },
+      {
+        "name": "Cull",
+        "total": 226045
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11926027
+      },
+      {
+        "name": "Consume",
+        "total": 4542085
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 103
+      },
+      {
+        "name": "Devour",
+        "total": 31988168
+      },
+      {
+        "name": "Eradicate",
+        "total": 113562506
+      },
+      {
+        "name": "Melee",
+        "total": 28184
+      }
+    ]
+  },
+  {
+    "player": "Eldemoñoo",
+    "dungeon": "Windrunner Spire",
+    "dps": 215756.31005001068,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 400496356,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4827029
+      },
+      {
+        "name": "Devour",
+        "total": 30950710
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36667179
+      },
+      {
+        "name": "Melee",
+        "total": 53382
+      },
+      {
+        "name": "Void Ray",
+        "total": 81178042
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 128045870
+      },
+      {
+        "name": "Eradicate",
+        "total": 107662497
+      },
+      {
+        "name": "Void Nova",
+        "total": 11012
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 105
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11100530
+      }
+    ]
+  },
+  {
+    "player": "丿呆萌瞎灬",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 188839.97785001993,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 335626048,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 31649368
+      },
+      {
+        "name": "Devour",
+        "total": 33945987
+      },
+      {
+        "name": "Reap",
+        "total": 52162
+      },
+      {
+        "name": "Void Ray",
+        "total": 61204705
+      },
+      {
+        "name": "Cull",
+        "total": 211003
+      },
+      {
+        "name": "Consume",
+        "total": 5421782
+      },
+      {
+        "name": "Melee",
+        "total": 7523
+      },
+      {
+        "name": "Void Nova",
+        "total": 10063
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 113812986
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9787181
+      },
+      {
+        "name": "Eradicate",
+        "total": 79523288
+      }
+    ]
+  },
+  {
+    "player": "Chainbeamm",
+    "dungeon": "Maisara Caverns",
+    "dps": 213356.70507001877,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 411570418,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 82856997
+      },
+      {
+        "name": "Devour",
+        "total": 27142891
+      },
+      {
+        "name": "Melee",
+        "total": 36856
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Void Nova",
+        "total": 10226
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39678340
+      },
+      {
+        "name": "Cull",
+        "total": 268790
+      },
+      {
+        "name": "Eradicate",
+        "total": 110069522
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 205
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12410898
+      },
+      {
+        "name": "Consume",
+        "total": 4892710
+      },
+      {
+        "name": "Consume Magic",
+        "total": 0
+      },
+      {
+        "name": "Reap",
+        "total": 123800
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 134079183
+      }
+    ]
+  },
+  {
+    "player": "Ruaruadh",
+    "dungeon": "Maisara Caverns",
+    "dps": 251517.4813899994,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 472342033,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 43301994
+      },
+      {
+        "name": "Voidblade",
+        "total": 84794
+      },
+      {
+        "name": "Consume",
+        "total": 5006474
+      },
+      {
+        "name": "Reap",
+        "total": 56860
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 102
+      },
+      {
+        "name": "Void Ray",
+        "total": 96679189
+      },
+      {
+        "name": "Cull",
+        "total": 116528
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1923398
+      },
+      {
+        "name": "Void Nova",
+        "total": 46611
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 667848
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 161925201
+      },
+      {
+        "name": "Melee",
+        "total": 18281
+      },
+      {
+        "name": "Eradicate",
+        "total": 115502602
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13845699
+      },
+      {
+        "name": "Devour",
+        "total": 33166452
+      }
+    ]
+  },
+  {
+    "player": "小红手文蔚",
+    "dungeon": "Maisara Caverns",
+    "dps": 234861.0477899909,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 460536680,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 162669359
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39453478
+      },
+      {
+        "name": "Devour",
+        "total": 34122779
+      },
+      {
+        "name": "Melee",
+        "total": 14648
+      },
+      {
+        "name": "Eradicate",
+        "total": 115159963
+      },
+      {
+        "name": "Consume",
+        "total": 5223171
+      },
+      {
+        "name": "Void Ray",
+        "total": 89431158
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1274118
+      },
+      {
+        "name": "Void Nova",
+        "total": 14376
+      },
+      {
+        "name": "Cull",
+        "total": 143012
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13030618
+      }
+    ]
+  },
+  {
+    "player": "Immoaura",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 202368.27780002356,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 379549395,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 76415668
+      },
+      {
+        "name": "Reap",
+        "total": 420776
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33668767
+      },
+      {
+        "name": "Void Nova",
+        "total": 8250
+      },
+      {
+        "name": "Eradicate",
+        "total": 102411364
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 101
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 118348061
+      },
+      {
+        "name": "Cull",
+        "total": 367486
+      },
+      {
+        "name": "Melee",
+        "total": 11449
+      },
+      {
+        "name": "Consume",
+        "total": 5636839
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10504939
+      },
+      {
+        "name": "Devour",
+        "total": 31755695
+      }
+    ]
+  },
+  {
+    "player": "Jlxdh",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 206837.3542199731,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 400663191,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 81509022
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10900682
+      },
+      {
+        "name": "Eradicate",
+        "total": 106109772
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34025698
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 129508256
+      },
+      {
+        "name": "Devour",
+        "total": 31609440
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 1074489
+      },
+      {
+        "name": "Consume",
+        "total": 5841272
+      },
+      {
+        "name": "Melee",
+        "total": 21781
+      },
+      {
+        "name": "Void Nova",
+        "total": 4037
+      },
+      {
+        "name": "Reap",
+        "total": 58742
+      }
+    ]
+  },
+  {
+    "player": "神奈川冲浪里",
+    "dungeon": "Skyreach",
+    "dps": 167550.96191000938,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 269542751,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 72284212
+      },
+      {
+        "name": "Void Nova",
+        "total": 16912
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 797
+      },
+      {
+        "name": "Consume",
+        "total": 4286769
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 23294894
+      },
+      {
+        "name": "Devour",
+        "total": 25035372
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 604
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 82750635
+      },
+      {
+        "name": "Cull",
+        "total": 245266
+      },
+      {
+        "name": "Catastrophe",
+        "total": 7513747
+      },
+      {
+        "name": "Melee",
+        "total": 32713
+      },
+      {
+        "name": "Void Ray",
+        "total": 54080830
+      }
+    ]
+  },
+  {
+    "player": "Windzeitl",
+    "dungeon": "Windrunner Spire",
+    "dps": 211558.39837998152,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 396402260,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 37138598
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 126638039
+      },
+      {
+        "name": "Eradicate",
+        "total": 106898524
+      },
+      {
+        "name": "Void Nova",
+        "total": 23725
+      },
+      {
+        "name": "Void Ray",
+        "total": 79348785
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11568815
+      },
+      {
+        "name": "Devour",
+        "total": 30463906
+      },
+      {
+        "name": "Consume",
+        "total": 4265628
+      },
+      {
+        "name": "Melee",
+        "total": 56240
+      }
+    ]
+  },
+  {
+    "player": "Jts",
+    "dungeon": "Magisters' Terrace",
+    "dps": 210767.65558999777,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 415095727,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 39074344
+      },
+      {
+        "name": "Devour",
+        "total": 36063921
+      },
+      {
+        "name": "Void Nova",
+        "total": 16428
+      },
+      {
+        "name": "Cull",
+        "total": 2359783
+      },
+      {
+        "name": "Consume",
+        "total": 5444557
+      },
+      {
+        "name": "Eradicate",
+        "total": 82628389
+      },
+      {
+        "name": "Melee",
+        "total": 16542
+      },
+      {
+        "name": "Void Ray",
+        "total": 76306099
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 160795079
+      },
+      {
+        "name": "Reap",
+        "total": 313400
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12065883
+      },
+      {
+        "name": "Voidblade",
+        "total": 11302
+      }
+    ]
+  },
+  {
+    "player": "豆芽拌葱花",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 183314.26029002666,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 303389317,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 28998523
+      },
+      {
+        "name": "Void Nova",
+        "total": 5029
+      },
+      {
+        "name": "Reap",
+        "total": 230154
+      },
+      {
+        "name": "Devour",
+        "total": 26689462
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 89241810
+      },
+      {
+        "name": "Eradicate",
+        "total": 82600137
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8948274
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 954279
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 515
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 26972
+      },
+      {
+        "name": "Void Ray",
+        "total": 59142614
+      },
+      {
+        "name": "Cull",
+        "total": 1324234
+      },
+      {
+        "name": "Consume",
+        "total": 5227314
+      }
+    ]
+  },
+  {
+    "player": "屁桑",
+    "dungeon": "Skyreach",
+    "dps": 194620.0547400117,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 315935882,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 27600872
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8946315
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 755785
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 761212
+      },
+      {
+        "name": "Void Ray",
+        "total": 61851176
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 124
+      },
+      {
+        "name": "Eradicate",
+        "total": 81231131
+      },
+      {
+        "name": "Melee",
+        "total": 73952
+      },
+      {
+        "name": "Devour",
+        "total": 27732868
+      },
+      {
+        "name": "Consume",
+        "total": 4787782
+      },
+      {
+        "name": "Void Nova",
+        "total": 8581
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 102186084
+      }
+    ]
+  },
+  {
+    "player": "Eerliyy",
+    "dungeon": "Skyreach",
+    "dps": 183354.893230021,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 302760917,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4796031
+      },
+      {
+        "name": "Melee",
+        "total": 22818
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 97596882
+      },
+      {
+        "name": "Devour",
+        "total": 27421968
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 25787223
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 675870
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8354189
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 97
+      },
+      {
+        "name": "Void Ray",
+        "total": 61111656
+      },
+      {
+        "name": "Eradicate",
+        "total": 76994183
+      }
+    ]
+  },
+  {
+    "player": "Eerliyy",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 197877.55567997694,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 320004417,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 62499620
+      },
+      {
+        "name": "Fate Mirror",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 11880
+      },
+      {
+        "name": "Voidblade",
+        "total": 22304
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9125741
+      },
+      {
+        "name": "Void Nova",
+        "total": 857
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 524652
+      },
+      {
+        "name": "Consume",
+        "total": 4898909
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 297
+      },
+      {
+        "name": "Devour",
+        "total": 28330279
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 101511434
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 29417941
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 83660503
+      }
+    ]
+  },
+  {
+    "player": "寒幕初晴",
+    "dungeon": "Windrunner Spire",
+    "dps": 189922.7893499732,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 358417540,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 10684788
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 816476
+      },
+      {
+        "name": "Reap",
+        "total": 276560
+      },
+      {
+        "name": "Voidblade",
+        "total": 38608
+      },
+      {
+        "name": "Devour",
+        "total": 28624314
+      },
+      {
+        "name": "Melee",
+        "total": 38605
+      },
+      {
+        "name": "Void Ray",
+        "total": 68241092
+      },
+      {
+        "name": "Cull",
+        "total": 504348
+      },
+      {
+        "name": "Eradicate",
+        "total": 96193429
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33180253
+      },
+      {
+        "name": "Void Nova",
+        "total": 28202
+      },
+      {
+        "name": "Consume",
+        "total": 5234789
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 114556076
+      }
+    ]
+  },
+  {
+    "player": "珠珠虎",
+    "dungeon": "Magisters' Terrace",
+    "dps": 210609.93919998407,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428958530,
+    "abilities": [
+      {
+        "name": "Immolation Aura",
+        "total": 294
+      },
+      {
+        "name": "Devour",
+        "total": 31755550
+      },
+      {
+        "name": "Void Nova",
+        "total": 10598
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11937496
+      },
+      {
+        "name": "Consume",
+        "total": 5968380
+      },
+      {
+        "name": "Void Ray",
+        "total": 84148556
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38339423
+      },
+      {
+        "name": "Eradicate",
+        "total": 102967134
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 153783425
+      },
+      {
+        "name": "Melee",
+        "total": 47674
+      }
+    ]
+  },
+  {
+    "player": "Jumpzzik",
+    "dungeon": "Maisara Caverns",
+    "dps": 231728.85383999348,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 411168787,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13666981
+      },
+      {
+        "name": "Melee",
+        "total": 41879
+      },
+      {
+        "name": "Void Nova",
+        "total": 3801
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 854784
+      },
+      {
+        "name": "Reap",
+        "total": 116631
+      },
+      {
+        "name": "Eradicate",
+        "total": 107766451
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      },
+      {
+        "name": "Voidblade",
+        "total": 61165
+      },
+      {
+        "name": "Void Ray",
+        "total": 86313298
+      },
+      {
+        "name": "Consume",
+        "total": 4093729
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1457549
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 129178180
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42331512
+      },
+      {
+        "name": "Devour",
+        "total": 25282827
+      }
+    ]
+  },
+  {
+    "player": "反方向仙贝",
+    "dungeon": "Pit of Saron",
+    "dps": 222608.15078002214,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 396701749,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 76789563
+      },
+      {
+        "name": "Devour",
+        "total": 28221530
+      },
+      {
+        "name": "Consume",
+        "total": 4674851
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 146194360
+      },
+      {
+        "name": "Melee",
+        "total": 30285
+      },
+      {
+        "name": "Eradicate",
+        "total": 97444688
+      },
+      {
+        "name": "Void Nova",
+        "total": 26691
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 2152
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32689744
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10627885
+      }
+    ]
+  },
+  {
+    "player": "隨便溜溜",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 200838.31063997746,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 353129784,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4673467
+      },
+      {
+        "name": "Chaos Brand",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Reap",
+        "total": 327014
+      },
+      {
+        "name": "Devour",
+        "total": 32001956
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 111790721
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33070535
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10111309
+      },
+      {
+        "name": "Melee",
+        "total": 17202
+      },
+      {
+        "name": "Void Ray",
+        "total": 68484901
+      },
+      {
+        "name": "Eradicate",
+        "total": 92520118
+      },
+      {
+        "name": "Void Nova",
+        "total": 14613
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Cull",
+        "total": 117948
+      }
+    ]
+  },
+  {
+    "player": "Rotiyo",
+    "dungeon": "Magisters' Terrace",
+    "dps": 237429.13418000937,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": true,
+      "augmentation": true
+    },
+    "total_damage": 470244308,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 124925755
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 154969833
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12411681
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40388208
+      },
+      {
+        "name": "Void Ray",
+        "total": 93604232
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 952688
+      },
+      {
+        "name": "Melee",
+        "total": 36860
+      },
+      {
+        "name": "Consume",
+        "total": 5907884
+      },
+      {
+        "name": "Cull",
+        "total": 123534
+      },
+      {
+        "name": "Reap",
+        "total": 54562
+      },
+      {
+        "name": "Devour",
+        "total": 36869071
+      }
+    ]
+  },
+  {
+    "player": "最爱跟儿子玩",
+    "dungeon": "Maisara Caverns",
+    "dps": 194385.02325999737,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 359083177,
+    "abilities": [
+      {
+        "name": "Cull",
+        "total": 296731
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 652648
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 114308014
+      },
+      {
+        "name": "Eradicate",
+        "total": 97156562
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33045143
+      },
+      {
+        "name": "Melee",
+        "total": 13836
+      },
+      {
+        "name": "Devour",
+        "total": 22220614
+      },
+      {
+        "name": "Void Nova",
+        "total": 24122
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "Consume",
+        "total": 6051107
+      },
+      {
+        "name": "Void Ray",
+        "total": 74677702
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10565592
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      },
+      {
+        "name": "Reap",
+        "total": 71106
+      }
+    ]
+  },
+  {
+    "player": "Chaoticmuchh",
+    "dungeon": "Maisara Caverns",
+    "dps": 218607.5177500248,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 430948651,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 147127355
+      },
+      {
+        "name": "Void Ray",
+        "total": 85935695
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36186217
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 103
+      },
+      {
+        "name": "Void Nova",
+        "total": 24637
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11783125
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Reap",
+        "total": 63325
+      },
+      {
+        "name": "Consume",
+        "total": 7121742
+      },
+      {
+        "name": "Devour",
+        "total": 28398016
+      },
+      {
+        "name": "Melee",
+        "total": 26513
+      },
+      {
+        "name": "Eradicate",
+        "total": 114281923
+      }
+    ]
+  },
+  {
+    "player": "Dangie",
+    "dungeon": "Windrunner Spire",
+    "dps": 211246.70516997576,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 405925965,
+    "abilities": [
+      {
+        "name": "Void Nova",
+        "total": 7086
+      },
+      {
+        "name": "Eradicate",
+        "total": 105757202
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 131391352
+      },
+      {
+        "name": "Reap",
+        "total": 60376
+      },
+      {
+        "name": "Devour",
+        "total": 27296741
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11580381
+      },
+      {
+        "name": "Void Ray",
+        "total": 86174126
+      },
+      {
+        "name": "Cull",
+        "total": 119184
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38991088
+      },
+      {
+        "name": "Consume",
+        "total": 4501064
+      },
+      {
+        "name": "Melee",
+        "total": 47365
+      }
+    ]
+  },
+  {
+    "player": "芙芙喷气了",
+    "dungeon": "Skyreach",
+    "dps": 173228.9676399827,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 254435936,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 4020925
+      },
+      {
+        "name": "Eradicate",
+        "total": 67540723
+      },
+      {
+        "name": "Void Ray",
+        "total": 52809584
+      },
+      {
+        "name": "Void Nova",
+        "total": 3269
+      },
+      {
+        "name": "Cull",
+        "total": 284689
+      },
+      {
+        "name": "Catastrophe",
+        "total": 6815121
+      },
+      {
+        "name": "Melee",
+        "total": 52617
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 292
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 557900
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 78798542
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 21210308
+      },
+      {
+        "name": "Devour",
+        "total": 22341966
+      }
+    ]
+  },
+  {
+    "player": "黑白瞎",
+    "dungeon": "Pit of Saron",
+    "dps": 238899.3163999915,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 421534977,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 77192695
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 38143245
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12290631
+      },
+      {
+        "name": "Devour",
+        "total": 30063479
+      },
+      {
+        "name": "Consume",
+        "total": 4980785
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 151491904
+      },
+      {
+        "name": "Melee",
+        "total": 32209
+      },
+      {
+        "name": "Void Nova",
+        "total": 25252
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 260
+      },
+      {
+        "name": "Eradicate",
+        "total": 107314517
+      }
+    ]
+  },
+  {
+    "player": "Девоуреркала",
+    "dungeon": "Magisters' Terrace",
+    "dps": 227449.69256997108,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 455996375,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 149441616
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12965715
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 743492
+      },
+      {
+        "name": "Cull",
+        "total": 713999
+      },
+      {
+        "name": "Reap",
+        "total": 133812
+      },
+      {
+        "name": "Void Ray",
+        "total": 93443402
+      },
+      {
+        "name": "Eradicate",
+        "total": 111248096
+      },
+      {
+        "name": "Melee",
+        "total": 36058
+      },
+      {
+        "name": "Devour",
+        "total": 37253764
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 45200049
+      },
+      {
+        "name": "Consume",
+        "total": 4816372
+      }
+    ]
+  },
+  {
+    "player": "Affiliation",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 184330.62274998426,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 315992641,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5076653
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10643740
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 630
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33786897
+      },
+      {
+        "name": "Reap",
+        "total": 124133
+      },
+      {
+        "name": "Eradicate",
+        "total": 85613148
+      },
+      {
+        "name": "Cull",
+        "total": 368346
+      },
+      {
+        "name": "Devour",
+        "total": 25008476
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 91937474
+      },
+      {
+        "name": "Void Nova",
+        "total": 12453
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 62665187
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 727339
+      },
+      {
+        "name": "Melee",
+        "total": 28165
+      }
+    ]
+  },
+  {
+    "player": "Smallnik",
+    "dungeon": "Pit of Saron",
+    "dps": 256788.2685599923,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 423480062,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 82265736
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36228961
+      },
+      {
+        "name": "Cull",
+        "total": 178819
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 146826648
+      },
+      {
+        "name": "Consume",
+        "total": 4613724
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11718447
+      },
+      {
+        "name": "Void Nova",
+        "total": 25028
+      },
+      {
+        "name": "Melee",
+        "total": 48288
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 504
+      },
+      {
+        "name": "Devour",
+        "total": 28919720
+      },
+      {
+        "name": "Eradicate",
+        "total": 112654187
+      }
+    ]
+  },
+  {
+    "player": "Loobstadh",
+    "dungeon": "Maisara Caverns",
+    "dps": 234586.2566099763,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 459805484,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 89524694
+      },
+      {
+        "name": "Void Nova",
+        "total": 10956
+      },
+      {
+        "name": "Eradicate",
+        "total": 117013313
+      },
+      {
+        "name": "Consume",
+        "total": 4892118
+      },
+      {
+        "name": "Catastrophe",
+        "total": 14895105
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 157674222
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 206
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 45079377
+      },
+      {
+        "name": "Reap",
+        "total": 163192
+      },
+      {
+        "name": "Devour",
+        "total": 30537235
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 15066
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "중이병딜딸러",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 206379.26029998064,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 347271492,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5326024
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 107925775
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32953158
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 0
+      },
+      {
+        "name": "World Killer",
+        "total": 0
+      },
+      {
+        "name": "Devour",
+        "total": 29220206
+      },
+      {
+        "name": "Cull",
+        "total": 105084
+      },
+      {
+        "name": "Melee",
+        "total": 13574
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9910795
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1090346
+      },
+      {
+        "name": "Eradicate",
+        "total": 92041142
+      },
+      {
+        "name": "Void Ray",
+        "total": 68685388
+      }
+    ]
+  },
+  {
+    "player": "玥汐",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 168165.3306300044,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 279010163,
+    "abilities": [
+      {
+        "name": "Collapsing Star",
+        "total": 84566654
+      },
+      {
+        "name": "Void Nova",
+        "total": 5715
+      },
+      {
+        "name": "Melee",
+        "total": 18020
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Void Ray",
+        "total": 55678308
+      },
+      {
+        "name": "Consume",
+        "total": 4832370
+      },
+      {
+        "name": "Cull",
+        "total": 1341228
+      },
+      {
+        "name": "Devour",
+        "total": 25890484
+      },
+      {
+        "name": "Reap",
+        "total": 395214
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 27259125
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8529464
+      },
+      {
+        "name": "Eradicate",
+        "total": 70493581
+      }
+    ]
+  },
+  {
+    "player": "少喝苏打水",
+    "dungeon": "Maisara Caverns",
+    "dps": 211205.63379001617,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 408585958,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 11431388
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 138354887
+      },
+      {
+        "name": "Consume",
+        "total": 5719953
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35324030
+      },
+      {
+        "name": "Melee",
+        "total": 22834
+      },
+      {
+        "name": "Eradicate",
+        "total": 107057387
+      },
+      {
+        "name": "Void Nova",
+        "total": 11507
+      },
+      {
+        "name": "Reap",
+        "total": 159355
+      },
+      {
+        "name": "Void Ray",
+        "total": 82197029
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 646120
+      },
+      {
+        "name": "Devour",
+        "total": 27649726
+      },
+      {
+        "name": "Voidblade",
+        "total": 11742
+      }
+    ]
+  },
+  {
+    "player": "Sicklikemè",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 200999.34121000767,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 396027595,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 11145580
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1138840
+      },
+      {
+        "name": "Void Ray",
+        "total": 78100714
+      },
+      {
+        "name": "Eradicate",
+        "total": 105394551
+      },
+      {
+        "name": "Cull",
+        "total": 1580643
+      },
+      {
+        "name": "Devour",
+        "total": 33238043
+      },
+      {
+        "name": "Reap",
+        "total": 48978
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36445230
+      },
+      {
+        "name": "Melee",
+        "total": 29755
+      },
+      {
+        "name": "Consume",
+        "total": 4961363
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 123928035
+      },
+      {
+        "name": "Void Nova",
+        "total": 15863
+      }
+    ]
+  },
+  {
+    "player": "Lexiuwu",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 226071.9394800067,
+    "key_level": 21,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 383702860,
+    "abilities": [
+      {
+        "name": "Devour",
+        "total": 30944658
+      },
+      {
+        "name": "Eradicate",
+        "total": 94247390
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 513
+      },
+      {
+        "name": "Melee",
+        "total": 56938
+      },
+      {
+        "name": "Consume",
+        "total": 4570504
+      },
+      {
+        "name": "Catastrophe",
+        "total": 9822551
+      },
+      {
+        "name": "Reap",
+        "total": 145653
+      },
+      {
+        "name": "Voidblade",
+        "total": 68419
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 134793825
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 35038997
+      },
+      {
+        "name": "Void Ray",
+        "total": 74013412
+      }
+    ]
+  },
+  {
+    "player": "Felsylma",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 224069.1383100152,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 410791553,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 43120
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34299841
+      },
+      {
+        "name": "Voidblade",
+        "total": 16113
+      },
+      {
+        "name": "Void Nova",
+        "total": 15485
+      },
+      {
+        "name": "Eradicate",
+        "total": 101111099
+      },
+      {
+        "name": "Reap",
+        "total": 300483
+      },
+      {
+        "name": "Void Ray",
+        "total": 79316188
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10693950
+      },
+      {
+        "name": "Devour",
+        "total": 30098749
+      },
+      {
+        "name": "Consume",
+        "total": 5256638
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 772223
+      },
+      {
+        "name": "Cull",
+        "total": 329144
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 148538390
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 130
+      }
+    ]
+  },
+  {
+    "player": "Chân",
+    "dungeon": "Skyreach",
+    "dps": 177089.9085199833,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 291097204,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 27278461
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 621403
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 104
+      },
+      {
+        "name": "Void Ray",
+        "total": 58170785
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 92212960
+      },
+      {
+        "name": "Void Nova",
+        "total": 5260
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8707761
+      },
+      {
+        "name": "Melee",
+        "total": 51040
+      },
+      {
+        "name": "Consume",
+        "total": 4552817
+      },
+      {
+        "name": "Eradicate",
+        "total": 71860197
+      },
+      {
+        "name": "Devour",
+        "total": 27494685
+      },
+      {
+        "name": "Cull",
+        "total": 141731
+      }
+    ]
+  },
+  {
+    "player": "炽阳之影丶",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 229488.89138001204,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 390768406,
+    "abilities": [
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 690538
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 246
+      },
+      {
+        "name": "Void Ray",
+        "total": 78003803
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33950913
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10395662
+      },
+      {
+        "name": "Eradicate",
+        "total": 114196594
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 115375050
+      },
+      {
+        "name": "Devour",
+        "total": 31900780
+      },
+      {
+        "name": "Consume",
+        "total": 5130474
+      },
+      {
+        "name": "Void Nova",
+        "total": 2245
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1041762
+      },
+      {
+        "name": "Melee",
+        "total": 9313
+      },
+      {
+        "name": "Reap",
+        "total": 71026
+      }
+    ]
+  },
+  {
+    "player": "距离感",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 219214.00273001194,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 433135741,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 107356273
+      },
+      {
+        "name": "Consume",
+        "total": 4531066
+      },
+      {
+        "name": "Void Ray",
+        "total": 83620495
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 147191694
+      },
+      {
+        "name": "Devour",
+        "total": 37715488
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12455870
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 39755454
+      },
+      {
+        "name": "Melee",
+        "total": 9091
+      },
+      {
+        "name": "Void Nova",
+        "total": 8770
+      },
+      {
+        "name": "Reap",
+        "total": 491540
+      }
+    ]
+  },
+  {
+    "player": "Freakerino",
+    "dungeon": "Pit of Saron",
+    "dps": 248681.37664997578,
+    "key_level": 23,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 418983357,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 37889769
+      },
+      {
+        "name": "Devour",
+        "total": 30546187
+      },
+      {
+        "name": "Void Ray",
+        "total": 79891684
+      },
+      {
+        "name": "Cull",
+        "total": 96284
+      },
+      {
+        "name": "Consume",
+        "total": 4999293
+      },
+      {
+        "name": "Reap",
+        "total": 32146
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11747681
+      },
+      {
+        "name": "Void Nova",
+        "total": 8366
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 323
+      },
+      {
+        "name": "Melee",
+        "total": 36120
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 139485547
+      },
+      {
+        "name": "Eradicate",
+        "total": 114249957
+      }
+    ]
+  },
+  {
+    "player": "Fíxhavoc",
+    "dungeon": "Windrunner Spire",
+    "dps": 193746.22031998634,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 359281441,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5416683
+      },
+      {
+        "name": "Melee",
+        "total": 27630
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 410
+      },
+      {
+        "name": "Eradicate",
+        "total": 90170697
+      },
+      {
+        "name": "Void Ray",
+        "total": 75104541
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 115613812
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10935225
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 34447917
+      },
+      {
+        "name": "Void Nova",
+        "total": 11365
+      },
+      {
+        "name": "Reap",
+        "total": 56581
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 801847
+      },
+      {
+        "name": "Devour",
+        "total": 26694733
+      }
+    ]
+  },
+  {
+    "player": "Raschêd",
+    "dungeon": "Seat of the Triumvirate",
+    "dps": 209578.53420001268,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 416103090,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5740004
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 129355784
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 403
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1112909
+      },
+      {
+        "name": "Imprison",
+        "total": 0
+      },
+      {
+        "name": "Void Nova",
+        "total": 14628
+      },
+      {
+        "name": "Melee",
+        "total": 45225
+      },
+      {
+        "name": "Void Ray",
+        "total": 81669302
+      },
+      {
+        "name": "Devour",
+        "total": 35211083
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 972138
+      },
+      {
+        "name": "Eradicate",
+        "total": 107644599
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 42165963
+      },
+      {
+        "name": "Catastrophe",
+        "total": 12171052
+      }
+    ]
+  },
+  {
+    "player": "Transpaleta",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 235443.8389800191,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 428486597,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 84575274
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 141897602
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 40165398
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11737301
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 104
+      },
+      {
+        "name": "Reap",
+        "total": 58546
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 789131
+      },
+      {
+        "name": "Consume",
+        "total": 5376428
+      },
+      {
+        "name": "Void Nova",
+        "total": 1976
+      },
+      {
+        "name": "Devour",
+        "total": 32937969
+      },
+      {
+        "name": "Melee",
+        "total": 41553
+      },
+      {
+        "name": "Cull",
+        "total": 427184
+      },
+      {
+        "name": "Eradicate",
+        "total": 110478131
+      }
+    ]
+  },
+  {
+    "player": "Sisora",
+    "dungeon": "Magisters' Terrace",
+    "dps": 227734.94927001,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 445067877,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 39112
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 43331476
+      },
+      {
+        "name": "Void Ray",
+        "total": 94454426
+      },
+      {
+        "name": "Devour",
+        "total": 32842702
+      },
+      {
+        "name": "Cull",
+        "total": 109103
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 142214561
+      },
+      {
+        "name": "Void Nova",
+        "total": 5768
+      },
+      {
+        "name": "Throw Glaive",
+        "total": 922
+      },
+      {
+        "name": "Eradicate",
+        "total": 113725296
+      },
+      {
+        "name": "Consume",
+        "total": 5285433
+      },
+      {
+        "name": "Catastrophe",
+        "total": 13059078
+      }
+    ]
+  },
+  {
+    "player": "Loonydh",
+    "dungeon": "Skyreach",
+    "dps": 185214.62290000916,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 284771187,
+    "abilities": [
+      {
+        "name": "Void Ray",
+        "total": 56288229
+      },
+      {
+        "name": "Catastrophe",
+        "total": 8708245
+      },
+      {
+        "name": "Devour",
+        "total": 26831620
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 268
+      },
+      {
+        "name": "Consume",
+        "total": 4591131
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 27622623
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 91853730
+      },
+      {
+        "name": "Reap",
+        "total": 53429
+      },
+      {
+        "name": "Eradicate",
+        "total": 68456434
+      },
+      {
+        "name": "Void Nova",
+        "total": 938
+      },
+      {
+        "name": "Voidblade",
+        "total": 10864
+      },
+      {
+        "name": "Melee",
+        "total": 64715
+      },
+      {
+        "name": "Cull",
+        "total": 288961
+      }
+    ]
+  },
+  {
+    "player": "Swingshot",
+    "dungeon": "Windrunner Spire",
+    "dps": 196826.64432001114,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 378611206,
+    "abilities": [
+      {
+        "name": "Devour",
+        "total": 30476883
+      },
+      {
+        "name": "Melee",
+        "total": 65984
+      },
+      {
+        "name": "Void Nova",
+        "total": 78667
+      },
+      {
+        "name": "Consume",
+        "total": 6191130
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 36896486
+      },
+      {
+        "name": "Void Ray",
+        "total": 75131529
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11793818
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 122070202
+      },
+      {
+        "name": "Sigil of Misery",
+        "total": 0
+      },
+      {
+        "name": "Eradicate",
+        "total": 94775127
+      },
+      {
+        "name": "Cull",
+        "total": 401879
+      },
+      {
+        "name": "Eternal Voidsong Chain",
+        "total": 729501
+      }
+    ]
+  },
+  {
+    "player": "小暖暖",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 191571.15289002657,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 340798376,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 9712172
+      },
+      {
+        "name": "Melee",
+        "total": 14554
+      },
+      {
+        "name": "Void Ray",
+        "total": 64931364
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 408
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32041101
+      },
+      {
+        "name": "Consume",
+        "total": 5007426
+      },
+      {
+        "name": "Void Nova",
+        "total": 14846
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 0
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 109086824
+      },
+      {
+        "name": "Eradicate",
+        "total": 89124777
+      },
+      {
+        "name": "Devour",
+        "total": 30864904
+      }
+    ]
+  },
+  {
+    "player": "冥犽",
+    "dungeon": "Pit of Saron",
+    "dps": 214339.9058700204,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 409545474,
+    "abilities": [
+      {
+        "name": "Voidfall Meteor",
+        "total": 36466228
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 143515383
+      },
+      {
+        "name": "Reap",
+        "total": 270379
+      },
+      {
+        "name": "Consume",
+        "total": 4953492
+      },
+      {
+        "name": "Cull",
+        "total": 241643
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1939
+      },
+      {
+        "name": "Eradicate",
+        "total": 102795680
+      },
+      {
+        "name": "Void Nova",
+        "total": 20233
+      },
+      {
+        "name": "Voidblade",
+        "total": 33154
+      },
+      {
+        "name": "Void Ray",
+        "total": 82432212
+      },
+      {
+        "name": "Melee",
+        "total": 61166
+      },
+      {
+        "name": "Devour",
+        "total": 27740831
+      },
+      {
+        "name": "Catastrophe",
+        "total": 11013134
+      }
+    ]
+  },
+  {
+    "player": "不会玩复仇",
+    "dungeon": "Nexus-Point Xenas",
+    "dps": 202022.33239001036,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 356083957,
+    "abilities": [
+      {
+        "name": "Eradicate",
+        "total": 90780487
+      },
+      {
+        "name": "Cull",
+        "total": 103084
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 113591026
+      },
+      {
+        "name": "Void Nova",
+        "total": 11121
+      },
+      {
+        "name": "Void Ray",
+        "total": 70651743
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 33910050
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10264289
+      },
+      {
+        "name": "Melee",
+        "total": 14960
+      },
+      {
+        "name": "Devour",
+        "total": 32515894
+      },
+      {
+        "name": "Reap",
+        "total": 133410
+      },
+      {
+        "name": "Consume",
+        "total": 4107893
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      }
+    ]
+  },
+  {
+    "player": "Madboy",
+    "dungeon": "Windrunner Spire",
+    "dps": 188028.0792800188,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 379206381,
+    "abilities": [
+      {
+        "name": "Consume",
+        "total": 5923259
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 32519133
+      },
+      {
+        "name": "Void Ray",
+        "total": 79151707
+      },
+      {
+        "name": "Void Nova",
+        "total": 47848
+      },
+      {
+        "name": "Devour",
+        "total": 29636643
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 117954443
+      },
+      {
+        "name": "Catastrophe",
+        "total": 10625597
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 408
+      },
+      {
+        "name": "Eradicate",
+        "total": 103141014
+      },
+      {
+        "name": "Melee",
+        "total": 49876
+      },
+      {
+        "name": "Cull",
+        "total": 156453
+      }
+    ]
+  },
+  {
+    "player": "Folidan",
+    "dungeon": "Algeth'ar Academy",
+    "dps": 223774.039839983,
+    "key_level": 22,
+    "has_aug": true,
+    "buffs": {
+      "mark_of_the_wild": true,
+      "mystic_touch": true,
+      "chaos_brand": true,
+      "battle_shout": false,
+      "skyfury": false,
+      "augmentation": true
+    },
+    "total_damage": 402996011,
+    "abilities": [
+      {
+        "name": "Catastrophe",
+        "total": 10623192
+      },
+      {
+        "name": "Vengeful Retreat",
+        "total": 1744
+      },
+      {
+        "name": "Void Ray",
+        "total": 78770517
+      },
+      {
+        "name": "Heaven's Glaive",
+        "total": 1021168
+      },
+      {
+        "name": "Melee",
+        "total": 78952
+      },
+      {
+        "name": "Consume",
+        "total": 5020934
+      },
+      {
+        "name": "Void Nova",
+        "total": 16305
+      },
+      {
+        "name": "Devour",
+        "total": 30907728
+      },
+      {
+        "name": "Eradicate",
+        "total": 108908417
+      },
+      {
+        "name": "Collapsing Star",
+        "total": 127162341
+      },
+      {
+        "name": "Reap",
+        "total": 329696
+      },
+      {
+        "name": "Cull",
+        "total": 2589157
+      },
+      {
+        "name": "Voidfall Meteor",
+        "total": 37565860
+      }
+    ]
   }
 ]

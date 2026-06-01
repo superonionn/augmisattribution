@@ -1,0 +1,9802 @@
+[
+  {
+    "report_code": "DGyBfCAZ29mp68J7",
+    "fight_id": 3,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 202756.576579988,
+    "aug_total_damage": 403250507,
+    "aug_dps": 218308.37989129257,
+    "duration_s": 1847.16,
+    "abilities": [
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2925922
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 26310617
+      },
+      {
+        "name": "Ebon Might",
+        "total": 99597780
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1612048
+      },
+      {
+        "name": "Upheaval",
+        "total": 19399758
+      },
+      {
+        "name": "Bombardments",
+        "total": 20711740
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9574036
+      },
+      {
+        "name": "Eruption",
+        "total": 65384166
+      },
+      {
+        "name": "Living Flame",
+        "total": 7844718
+      },
+      {
+        "name": "Duplicate",
+        "total": 60533222
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 65437789
+      },
+      {
+        "name": "Fire Breath",
+        "total": 23915881
+      },
+      {
+        "name": "Melee",
+        "total": 2830
+      }
+    ],
+    "comp": [
+      {
+        "name": "葡萄酱的狗",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "奶球蓄力了",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "小软饱饱",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "我要睡觉了",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "戰临丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "9JbVxPcY28WtdXkQ",
+    "fight_id": 8,
+    "dungeon": "Pit of Saron",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 240514.12976002693,
+    "aug_total_damage": 417437262,
+    "aug_dps": 236333.35654560616,
+    "duration_s": 1766.307,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 382935
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1803216
+      },
+      {
+        "name": "Duplicate",
+        "total": 65813089
+      },
+      {
+        "name": "Bombardments",
+        "total": 16610942
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 953229
+      },
+      {
+        "name": "Melee",
+        "total": 7428
+      },
+      {
+        "name": "Prescience",
+        "total": 34762388
+      },
+      {
+        "name": "Living Flame",
+        "total": 5971647
+      },
+      {
+        "name": "Deep Breath",
+        "total": 72308991
+      },
+      {
+        "name": "Eruption",
+        "total": 62247118
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 15861931
+      },
+      {
+        "name": "Ebon Might",
+        "total": 117256337
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10485842
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12972169
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Justace",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Fazo",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Midnaj",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Spingg",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Rehumi",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "MTapvBDNAgymqbjW",
+    "fight_id": 1,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 190555.12884998322,
+    "aug_total_damage": 289999426,
+    "aug_dps": 185307.76549703156,
+    "duration_s": 1564.961,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 14010999
+      },
+      {
+        "name": "Duplicate",
+        "total": 42626896
+      },
+      {
+        "name": "Azure Strike",
+        "total": 849030
+      },
+      {
+        "name": "Eruption",
+        "total": 44976353
+      },
+      {
+        "name": "Ebon Might",
+        "total": 76038828
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17774202
+      },
+      {
+        "name": "Living Flame",
+        "total": 6314185
+      },
+      {
+        "name": "Prescience",
+        "total": 21279486
+      },
+      {
+        "name": "Bombardments",
+        "total": 17526498
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 38380422
+      },
+      {
+        "name": "Melee",
+        "total": 1351
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10221176
+      }
+    ],
+    "comp": [
+      {
+        "name": "三星塔塔",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "执念神",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Holyfish",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "月朔宝宝",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "白鹿青芽丶",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "A3V21YfDmRx7TrdX",
+    "fight_id": 19,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 210458.08380001783,
+    "aug_total_damage": 397030490,
+    "aug_dps": 200705.64606836712,
+    "duration_s": 1978.173,
+    "abilities": [
+      {
+        "name": "Eruption",
+        "total": 62670722
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 20216042
+      },
+      {
+        "name": "Living Flame",
+        "total": 7023251
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 6457
+      },
+      {
+        "name": "Duplicate",
+        "total": 55574332
+      },
+      {
+        "name": "Upheaval",
+        "total": 13703041
+      },
+      {
+        "name": "Prescience",
+        "total": 35537727
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15840728
+      },
+      {
+        "name": "Azure Strike",
+        "total": 59455
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1546768
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11195409
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 108983532
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2657052
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 62015974
+      }
+    ],
+    "comp": [
+      {
+        "name": "Krølbøl",
+        "class": "Shaman",
+        "spec": "Restoration"
+      },
+      {
+        "name": "Sjelelele",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Pjdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Gypsdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Nynsa",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "xqYJbdtLnjZaQVPX",
+    "fight_id": 2,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 222022.09406000376,
+    "aug_total_damage": 402665670,
+    "aug_dps": 208828.63441812125,
+    "duration_s": 1928.211,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 6113891
+      },
+      {
+        "name": "Prescience",
+        "total": 33003308
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13749902
+      },
+      {
+        "name": "Upheaval",
+        "total": 19828035
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 47547649
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 70252787
+      },
+      {
+        "name": "Melee",
+        "total": 4060
+      },
+      {
+        "name": "Azure Strike",
+        "total": 3401750
+      },
+      {
+        "name": "Ebon Might",
+        "total": 105321734
+      },
+      {
+        "name": "Eruption",
+        "total": 61463961
+      },
+      {
+        "name": "Bombardments",
+        "total": 18824001
+      },
+      {
+        "name": "Fire Breath",
+        "total": 23154592
+      }
+    ],
+    "comp": [
+      {
+        "name": "Shiftháppens",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Nnoggiedk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Mysticdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Hoolàx",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Xhszoàz",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "4Wg1VNR8ZzhJxG6y",
+    "fight_id": 6,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 234680.66177999973,
+    "aug_total_damage": 362443441,
+    "aug_dps": 208051.64446720135,
+    "duration_s": 1742.084,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 5182315
+      },
+      {
+        "name": "Upheaval",
+        "total": 20687103
+      },
+      {
+        "name": "Duplicate",
+        "total": 47127166
+      },
+      {
+        "name": "Bombardments",
+        "total": 15123280
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 61974354
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15884918
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20364521
+      },
+      {
+        "name": "Prescience",
+        "total": 28146531
+      },
+      {
+        "name": "Eruption",
+        "total": 51182539
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 450802
+      },
+      {
+        "name": "Ebon Might",
+        "total": 96317884
+      },
+      {
+        "name": "Melee",
+        "total": 2028
+      }
+    ],
+    "comp": [
+      {
+        "name": "Dunderdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Scarsofdeath",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Perniebad",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Nomeyebeam",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Neemspin",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "QK9Cyafm2VjYFW3v",
+    "fight_id": 5,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 201430.06277000904,
+    "aug_total_damage": 343506232,
+    "aug_dps": 195241.4424983176,
+    "duration_s": 1759.392,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 29237639
+      },
+      {
+        "name": "Bombardments",
+        "total": 13820267
+      },
+      {
+        "name": "Azure Strike",
+        "total": 855465
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20357524
+      },
+      {
+        "name": "Ebon Might",
+        "total": 89657852
+      },
+      {
+        "name": "Living Flame",
+        "total": 6337218
+      },
+      {
+        "name": "Eruption",
+        "total": 56625789
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 46347347
+      },
+      {
+        "name": "Quell",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 46904071
+      },
+      {
+        "name": "Melee",
+        "total": 7911
+      },
+      {
+        "name": "Upheaval",
+        "total": 16380133
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 16975016
+      }
+    ],
+    "comp": [
+      {
+        "name": "Warcvoker",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Deeprayaa",
+        "class": "Shaman",
+        "spec": "Elemental"
+      },
+      {
+        "name": "Triogodx",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Grókon",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Vildie",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "ZC7hJAaHPcqTXMB4",
+    "fight_id": 3,
+    "dungeon": "Pit of Saron",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 271311.72654002905,
+    "aug_total_damage": 424800269,
+    "aug_dps": 247683.51861969,
+    "duration_s": 1715.093,
+    "abilities": [
+      {
+        "name": "Ebon Might",
+        "total": 127957047
+      },
+      {
+        "name": "Upheaval",
+        "total": 13380609
+      },
+      {
+        "name": "Eruption",
+        "total": 62569364
+      },
+      {
+        "name": "Azure Strike",
+        "total": 418362
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 67831512
+      },
+      {
+        "name": "Bombardments",
+        "total": 15237864
+      },
+      {
+        "name": "Prescience",
+        "total": 31205770
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 21462269
+      },
+      {
+        "name": "Duplicate",
+        "total": 67257594
+      },
+      {
+        "name": "Melee",
+        "total": 3229
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1134104
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11010700
+      },
+      {
+        "name": "Living Flame",
+        "total": 5331845
+      }
+    ],
+    "comp": [
+      {
+        "name": "阿揪揪",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "双马尾张俊杰",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "芙宁娜德楓丹",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "夜雨小梦",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Xyzmage",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "PdF4Kx8rfj3gYR6v",
+    "fight_id": 1,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 223151.8210300207,
+    "aug_total_damage": 322238729,
+    "aug_dps": 178493.6706617043,
+    "duration_s": 1805.323,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 1610618
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19505991
+      },
+      {
+        "name": "Ebon Might",
+        "total": 87460466
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 48049731
+      },
+      {
+        "name": "Living Flame",
+        "total": 5821824
+      },
+      {
+        "name": "Melee",
+        "total": 14534
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11708132
+      },
+      {
+        "name": "Upheaval",
+        "total": 15256676
+      },
+      {
+        "name": "Eruption",
+        "total": 45779641
+      },
+      {
+        "name": "Prescience",
+        "total": 27388450
+      },
+      {
+        "name": "Bombardments",
+        "total": 16608240
+      },
+      {
+        "name": "Duplicate",
+        "total": 43034426
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "还得超哥",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Cynthias",
+        "class": "Monk",
+        "spec": "Brewmaster"
+      },
+      {
+        "name": "小青龙丿",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "蛆蛆丶",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "备孕女高中生",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "KXkfmJcDH6Cgn1rV",
+    "fight_id": 2,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 249880.47442001104,
+    "aug_total_damage": 381697360,
+    "aug_dps": 207617.98461756035,
+    "duration_s": 1838.46,
+    "abilities": [
+      {
+        "name": "Shifting Sands",
+        "total": 17636017
+      },
+      {
+        "name": "Melee",
+        "total": 6766
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1273052
+      },
+      {
+        "name": "Upheaval",
+        "total": 14665931
+      },
+      {
+        "name": "Living Flame",
+        "total": 6177215
+      },
+      {
+        "name": "Prescience",
+        "total": 31015099
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10664995
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1522279
+      },
+      {
+        "name": "Ebon Might",
+        "total": 104756207
+      },
+      {
+        "name": "Duplicate",
+        "total": 53939392
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58359384
+      },
+      {
+        "name": "Bombardments",
+        "total": 19941572
+      },
+      {
+        "name": "Eruption",
+        "total": 61739451
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "狂小迟",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "烟紫",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "芬梨道上",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "哥布宁",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Huangdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "afZ73cg2Hvk6dMJ1",
+    "fight_id": 14,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 223705.70691001415,
+    "aug_total_damage": 316851843,
+    "aug_dps": 176312.5669480269,
+    "duration_s": 1797.103,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 4595596
+      },
+      {
+        "name": "Duplicate",
+        "total": 38016414
+      },
+      {
+        "name": "Melee",
+        "total": 13927
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1149419
+      },
+      {
+        "name": "Bombardments",
+        "total": 16769724
+      },
+      {
+        "name": "Ebon Might",
+        "total": 81101988
+      },
+      {
+        "name": "Azure Strike",
+        "total": 141539
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9894452
+      },
+      {
+        "name": "Upheaval",
+        "total": 10336187
+      },
+      {
+        "name": "Prescience",
+        "total": 28854851
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 51234990
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11446311
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 5016662
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58279783
+      }
+    ],
+    "comp": [
+      {
+        "name": "Yòshidh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Blinddk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Lumivoker",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Tsuyokú",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Ovridah",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "cAmahFLMTQ1rpZKP",
+    "fight_id": 49,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 213598.805850029,
+    "aug_total_damage": 396222837,
+    "aug_dps": 225889.50238760907,
+    "duration_s": 1754.056,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 30412874
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11495066
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22134999
+      },
+      {
+        "name": "Bombardments",
+        "total": 18482807
+      },
+      {
+        "name": "Melee",
+        "total": 1940
+      },
+      {
+        "name": "Ebon Might",
+        "total": 115412299
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 51220029
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 60346206
+      },
+      {
+        "name": "Living Flame",
+        "total": 6011536
+      },
+      {
+        "name": "Eruption",
+        "total": 59817064
+      },
+      {
+        "name": "Upheaval",
+        "total": 19171792
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1716225
+      }
+    ],
+    "comp": [
+      {
+        "name": "Okawalil",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "三代鹿人",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "夏诗",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "一点仇恨没有",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Xfmonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "c2NkbZAJpCKBgRQY",
+    "fight_id": 3,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 164873.22176998854,
+    "aug_total_damage": 299253641,
+    "aug_dps": 182077.04701090013,
+    "duration_s": 1643.555,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 21892113
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 44446645
+      },
+      {
+        "name": "Azure Strike",
+        "total": 435841
+      },
+      {
+        "name": "Duplicate",
+        "total": 42171655
+      },
+      {
+        "name": "Eruption",
+        "total": 46601088
+      },
+      {
+        "name": "Upheaval",
+        "total": 12454009
+      },
+      {
+        "name": "Bombardments",
+        "total": 17138738
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17681411
+      },
+      {
+        "name": "Melee",
+        "total": 6241
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11002796
+      },
+      {
+        "name": "Living Flame",
+        "total": 7099232
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 78323872
+      }
+    ],
+    "comp": [
+      {
+        "name": "一口顶满",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "闷闷不乐",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "果冻熊丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "牛波一丶龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "狂小霸",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "crMd6CJQHGgTy8nB",
+    "fight_id": 15,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 199178.2612900138,
+    "aug_total_damage": 340070426,
+    "aug_dps": 200227.87454435515,
+    "duration_s": 1698.417,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 56888674
+      },
+      {
+        "name": "Living Flame",
+        "total": 7531426
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 55602948
+      },
+      {
+        "name": "Melee",
+        "total": 1353
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 18380195
+      },
+      {
+        "name": "Azure Strike",
+        "total": 89299
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17644264
+      },
+      {
+        "name": "Bombardments",
+        "total": 16918421
+      },
+      {
+        "name": "Duplicate",
+        "total": 42441612
+      },
+      {
+        "name": "Prescience",
+        "total": 27608544
+      },
+      {
+        "name": "Ebon Might",
+        "total": 80113085
+      },
+      {
+        "name": "Upheaval",
+        "total": 16850605
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "丶彼岸荼蘼",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "不是笨蛋",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "丧彪灬",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "木法沙大魔王",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Ashuimonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "THdXtb1whFW2NRPM",
+    "fight_id": 9,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 254077.48309999704,
+    "aug_total_damage": 368241578,
+    "aug_dps": 245618.340722618,
+    "duration_s": 1499.243,
+    "abilities": [
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 33832071
+      },
+      {
+        "name": "Eruption",
+        "total": 53004657
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9446988
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12711468
+      },
+      {
+        "name": "Bombardments",
+        "total": 15573537
+      },
+      {
+        "name": "Azure Strike",
+        "total": 98306
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 53569889
+      },
+      {
+        "name": "Duplicate",
+        "total": 62232808
+      },
+      {
+        "name": "Upheaval",
+        "total": 12186660
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 938202
+      },
+      {
+        "name": "Melee",
+        "total": 4984
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 458495
+      },
+      {
+        "name": "Living Flame",
+        "total": 6239170
+      },
+      {
+        "name": "Ebon Might",
+        "total": 107944343
+      }
+    ],
+    "comp": [
+      {
+        "name": "Bzkmistx",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Anydhng",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Cheveubleu",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Qldurtms",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Râyanmcdrood",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "RApCdBgXq1xr2wDc",
+    "fight_id": 2,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 191590.82692998648,
+    "aug_total_damage": 331669013,
+    "aug_dps": 191525.55260024415,
+    "duration_s": 1731.722,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 42151072
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17727935
+      },
+      {
+        "name": "Melee",
+        "total": 331
+      },
+      {
+        "name": "Bombardments",
+        "total": 16035867
+      },
+      {
+        "name": "Upheaval",
+        "total": 16635368
+      },
+      {
+        "name": "Eruption",
+        "total": 54074092
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 4849452
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15233260
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 2848507
+      },
+      {
+        "name": "Prescience",
+        "total": 21324034
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1740827
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 53330154
+      },
+      {
+        "name": "Ebon Might",
+        "total": 85718114
+      }
+    ],
+    "comp": [
+      {
+        "name": "沈哒哒",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "咕咕队立大功",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "绿茶饼饼",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "溪谷鸿",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "批队",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "TV4ZWRnrHzJXDNq9",
+    "fight_id": 10,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 204793.45627999306,
+    "aug_total_damage": 384432844,
+    "aug_dps": 221262.29831828544,
+    "duration_s": 1737.453,
+    "abilities": [
+      {
+        "name": "Shifting Sands",
+        "total": 15522373
+      },
+      {
+        "name": "Bombardments",
+        "total": 19009617
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1415116
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10389037
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 69515355
+      },
+      {
+        "name": "Living Flame",
+        "total": 8677611
+      },
+      {
+        "name": "Upheaval",
+        "total": 11054282
+      },
+      {
+        "name": "Eruption",
+        "total": 73740077
+      },
+      {
+        "name": "Prescience",
+        "total": 27593159
+      },
+      {
+        "name": "Deep Breath",
+        "total": 51758472
+      },
+      {
+        "name": "Azure Strike",
+        "total": 96258
+      },
+      {
+        "name": "Ebon Might",
+        "total": 90610999
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 4077
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 5046411
+      }
+    ],
+    "comp": [
+      {
+        "name": "Рэйвмейв",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Zefirdudu",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Блэйфи",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Sanguinedk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Iarnir",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "Jjxv1PrdzwBt8RV7",
+    "fight_id": 4,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 243194.82539999485,
+    "aug_total_damage": 323819611,
+    "aug_dps": 186070.39505098813,
+    "duration_s": 1740.307,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 23073477
+      },
+      {
+        "name": "Melee",
+        "total": 2428
+      },
+      {
+        "name": "Ebon Might",
+        "total": 83514484
+      },
+      {
+        "name": "Bombardments",
+        "total": 15254323
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20017768
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1713922
+      },
+      {
+        "name": "Living Flame",
+        "total": 6931845
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 47739691
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9173483
+      },
+      {
+        "name": "Eruption",
+        "total": 51036038
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 49789070
+      },
+      {
+        "name": "Upheaval",
+        "total": 15573082
+      }
+    ],
+    "comp": [
+      {
+        "name": "Xdeviill",
+        "class": "Hunter",
+        "spec": "Survival"
+      },
+      {
+        "name": "Grizzlly",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Shalidh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Lildwarfy",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Unförgivenz",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "2XbznZjcH3a1Vfhw",
+    "fight_id": 6,
+    "dungeon": "Skyreach",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 175026.05491000414,
+    "aug_total_damage": 245725280,
+    "aug_dps": 149096.46040036503,
+    "duration_s": 1648.096,
+    "abilities": [
+      {
+        "name": "Shifting Sands",
+        "total": 9700574
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 37216052
+      },
+      {
+        "name": "Upheaval",
+        "total": 11873133
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 43549
+      },
+      {
+        "name": "Melee",
+        "total": 4023
+      },
+      {
+        "name": "Eruption",
+        "total": 40706661
+      },
+      {
+        "name": "Living Flame",
+        "total": 4467638
+      },
+      {
+        "name": "Duplicate",
+        "total": 31782892
+      },
+      {
+        "name": "Echo of the Evercurse (Soulcatcher's Charm)",
+        "total": 3309700
+      },
+      {
+        "name": "Fire Breath",
+        "total": 16410502
+      },
+      {
+        "name": "Prescience",
+        "total": 18566154
+      },
+      {
+        "name": "Bombardments",
+        "total": 11661169
+      },
+      {
+        "name": "Ebon Might",
+        "total": 59983233
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Greekpistol",
+        "class": "Paladin",
+        "spec": "Retribution"
+      },
+      {
+        "name": "Рьюэн",
+        "class": "Monk",
+        "spec": "Brewmaster"
+      },
+      {
+        "name": "Râlf",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Drakomana",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Няпик",
+        "class": "Shaman",
+        "spec": "Restoration"
+      }
+    ]
+  },
+  {
+    "report_code": "Rm6dJ2PXtb4ZCWrh",
+    "fight_id": 4,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 214798.6432800293,
+    "aug_total_damage": 410450998,
+    "aug_dps": 215856.88216015178,
+    "duration_s": 1901.496,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 21789488
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22911834
+      },
+      {
+        "name": "Melee",
+        "total": 3061
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 65620201
+      },
+      {
+        "name": "Duplicate",
+        "total": 51589806
+      },
+      {
+        "name": "Azure Strike",
+        "total": 490921
+      },
+      {
+        "name": "Eruption",
+        "total": 63312881
+      },
+      {
+        "name": "Living Flame",
+        "total": 7043183
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 112293548
+      },
+      {
+        "name": "Prescience",
+        "total": 33865735
+      },
+      {
+        "name": "Bombardments",
+        "total": 18384657
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13145683
+      }
+    ],
+    "comp": [
+      {
+        "name": "Dzonamvp",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Streakdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Oxyarctic",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Kitsuwvoker",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Patookoon",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "zrnP1FGt7MDNvLak",
+    "fight_id": 1,
+    "dungeon": "Skyreach",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 176200.42598998547,
+    "aug_total_damage": 250740210,
+    "aug_dps": 154889.580883007,
+    "duration_s": 1618.832,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 36248126
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8413018
+      },
+      {
+        "name": "Bombardments",
+        "total": 14782582
+      },
+      {
+        "name": "Upheaval",
+        "total": 13616947
+      },
+      {
+        "name": "Ebon Might",
+        "total": 67487220
+      },
+      {
+        "name": "Prescience",
+        "total": 12920043
+      },
+      {
+        "name": "Melee",
+        "total": 8108
+      },
+      {
+        "name": "Eruption",
+        "total": 39628784
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 6574026
+      },
+      {
+        "name": "Fire Breath",
+        "total": 16543029
+      },
+      {
+        "name": "Duplicate",
+        "total": 34518327
+      }
+    ],
+    "comp": [
+      {
+        "name": "超级丶蔡蔡",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "破灭",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "丰川祥孑",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "大威天龙丶",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Hachimedes",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "rQbFd3gfDB4WYLTx",
+    "fight_id": 6,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 201917.20082998276,
+    "aug_total_damage": 329742981,
+    "aug_dps": 191729.31663251613,
+    "duration_s": 1719.836,
+    "abilities": [
+      {
+        "name": "Ebon Might",
+        "total": 88282006
+      },
+      {
+        "name": "Eruption",
+        "total": 58485140
+      },
+      {
+        "name": "Bombardments",
+        "total": 15395092
+      },
+      {
+        "name": "Prescience",
+        "total": 26025414
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11813316
+      },
+      {
+        "name": "Upheaval",
+        "total": 13871630
+      },
+      {
+        "name": "Duplicate",
+        "total": 45240289
+      },
+      {
+        "name": "Living Flame",
+        "total": 6502266
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 45800700
+      },
+      {
+        "name": "Fire Breath",
+        "total": 18320017
+      },
+      {
+        "name": "Melee",
+        "total": 7111
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Sântîmn",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Apovoker",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Besttáco",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Transpaleta",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Malecxo",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "j1XBKMzdxQVkGbZp",
+    "fight_id": 11,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 205636.21569997072,
+    "aug_total_damage": 403258079,
+    "aug_dps": 203727.3291263367,
+    "duration_s": 1979.401,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 20093190
+      },
+      {
+        "name": "Living Flame",
+        "total": 7360114
+      },
+      {
+        "name": "Prescience",
+        "total": 26551247
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 56045023
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24343439
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11024932
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6639224
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 5602
+      },
+      {
+        "name": "Ebon Might",
+        "total": 106095480
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 61113634
+      },
+      {
+        "name": "Bombardments",
+        "total": 20944279
+      },
+      {
+        "name": "Eruption",
+        "total": 62318883
+      },
+      {
+        "name": "Azure Strike",
+        "total": 723032
+      }
+    ],
+    "comp": [
+      {
+        "name": "叽里咕噜蛋",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Marcille",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "简美妍",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "穆蛋蛋",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "叽哩咕噜蛋",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "PdAfprh7QwN4xBmc",
+    "fight_id": 18,
+    "dungeon": "Maisara Caverns",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 269818.2783700228,
+    "aug_total_damage": 486151101,
+    "aug_dps": 266694.55355164036,
+    "duration_s": 1822.876,
+    "abilities": [
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 18434094
+      },
+      {
+        "name": "Ebon Might",
+        "total": 125015331
+      },
+      {
+        "name": "Prescience",
+        "total": 36848350
+      },
+      {
+        "name": "Melee",
+        "total": 1078
+      },
+      {
+        "name": "Azure Strike",
+        "total": 351667
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 77019917
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 13559856
+      },
+      {
+        "name": "Upheaval",
+        "total": 17444905
+      },
+      {
+        "name": "Living Flame",
+        "total": 9796100
+      },
+      {
+        "name": "Bombardments",
+        "total": 22166687
+      },
+      {
+        "name": "Deep Breath",
+        "total": 82004950
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1509987
+      },
+      {
+        "name": "Eruption",
+        "total": 81998179
+      }
+    ],
+    "comp": [
+      {
+        "name": "丶牙齿发黄了",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "阿布夏会变身",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "孤独龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "大年三十一",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "天和山雨雪",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "TdGZ1DgP49mBbcfX",
+    "fight_id": 1,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 173430.54668998718,
+    "aug_total_damage": 289680371,
+    "aug_dps": 178627.48496794415,
+    "duration_s": 1621.701,
+    "abilities": [
+      {
+        "name": "Eruption",
+        "total": 45753606
+      },
+      {
+        "name": "Bombardments",
+        "total": 16602112
+      },
+      {
+        "name": "Azure Strike",
+        "total": 772486
+      },
+      {
+        "name": "Living Flame",
+        "total": 6782027
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 40236231
+      },
+      {
+        "name": "Fire Breath",
+        "total": 16637105
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 14489447
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8406750
+      },
+      {
+        "name": "Prescience",
+        "total": 19691868
+      },
+      {
+        "name": "Melee",
+        "total": 7170
+      },
+      {
+        "name": "Ebon Might",
+        "total": 77656718
+      },
+      {
+        "name": "Duplicate",
+        "total": 42644851
+      }
+    ],
+    "comp": [
+      {
+        "name": "血翎丶丶",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "你又没了是吧",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "山楂奶酪球",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "芙芙喷气了",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "这个翔龙奈斯",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "w3JQCKpAZzLThPax",
+    "fight_id": 14,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 199174.65496999025,
+    "aug_total_damage": 407305206,
+    "aug_dps": 206482.23555606024,
+    "duration_s": 1972.592,
+    "abilities": [
+      {
+        "name": "Ebon Might",
+        "total": 106663203
+      },
+      {
+        "name": "Azure Strike",
+        "total": 14125665
+      },
+      {
+        "name": "Upheaval",
+        "total": 18249105
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 3569
+      },
+      {
+        "name": "Eruption",
+        "total": 65299169
+      },
+      {
+        "name": "Duplicate",
+        "total": 53447302
+      },
+      {
+        "name": "Bombardments",
+        "total": 19923437
+      },
+      {
+        "name": "Living Flame",
+        "total": 803595
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24082809
+      },
+      {
+        "name": "Prescience",
+        "total": 31058874
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 63255964
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10392514
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Hahabeamxd",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Nebelmann",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Emobolg",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Ddoeydruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Auganised",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "WfMyL8nqjP9VtpGY",
+    "fight_id": 1,
+    "dungeon": "Skyreach",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 188947.7139300108,
+    "aug_total_damage": 326685818,
+    "aug_dps": 199886.69413927817,
+    "duration_s": 1634.355,
+    "abilities": [
+      {
+        "name": "Bombardments",
+        "total": 19281894
+      },
+      {
+        "name": "Melee",
+        "total": 1599
+      },
+      {
+        "name": "Prescience",
+        "total": 22858417
+      },
+      {
+        "name": "Ebon Might",
+        "total": 88355346
+      },
+      {
+        "name": "Eruption",
+        "total": 49389480
+      },
+      {
+        "name": "Duplicate",
+        "total": 45487932
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2535032
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 47777850
+      },
+      {
+        "name": "Upheaval",
+        "total": 15591288
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19893262
+      },
+      {
+        "name": "Living Flame",
+        "total": 6880009
+      },
+      {
+        "name": "Azure Strike",
+        "total": 489124
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8144585
+      }
+    ],
+    "comp": [
+      {
+        "name": "黑锋二酱",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Selong",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "无数梦境",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "陈小北啊",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "戰临丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "bHy8wqB1xAF4nhZj",
+    "fight_id": 14,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 182934.4623299837,
+    "aug_total_damage": 370232640,
+    "aug_dps": 194752.27296159373,
+    "duration_s": 1901.044,
+    "abilities": [
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 22139420
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21167792
+      },
+      {
+        "name": "Duplicate",
+        "total": 49528965
+      },
+      {
+        "name": "Living Flame",
+        "total": 7111446
+      },
+      {
+        "name": "Melee",
+        "total": 3377
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58113737
+      },
+      {
+        "name": "Bombardments",
+        "total": 18103717
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12387231
+      },
+      {
+        "name": "Ebon Might",
+        "total": 100468381
+      },
+      {
+        "name": "Azure Strike",
+        "total": 969318
+      },
+      {
+        "name": "Prescience",
+        "total": 25291478
+      },
+      {
+        "name": "Eruption",
+        "total": 54947778
+      }
+    ],
+    "comp": [
+      {
+        "name": "Tb",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "丶将息",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "老大牛",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "我真的好低迷",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "风为龙龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "v39AZmL87Qy4PWza",
+    "fight_id": 6,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 226030.98071998358,
+    "aug_total_damage": 361851349,
+    "aug_dps": 196684.3170049088,
+    "duration_s": 1839.757,
+    "abilities": [
+      {
+        "name": "Eruption",
+        "total": 54415882
+      },
+      {
+        "name": "Upheaval",
+        "total": 18357754
+      },
+      {
+        "name": "Duplicate",
+        "total": 45882817
+      },
+      {
+        "name": "Melee",
+        "total": 430
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 49952718
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20779639
+      },
+      {
+        "name": "Bombardments",
+        "total": 18028725
+      },
+      {
+        "name": "Prescience",
+        "total": 30362919
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12104598
+      },
+      {
+        "name": "Living Flame",
+        "total": 5799573
+      },
+      {
+        "name": "Azure Strike",
+        "total": 438110
+      },
+      {
+        "name": "Ebon Might",
+        "total": 105728184
+      }
+    ],
+    "comp": [
+      {
+        "name": "酷的莫名堂",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "灬笙箫灬",
+        "class": "Druid",
+        "spec": "Restoration"
+      },
+      {
+        "name": "天災白菜",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Lailiva",
+        "class": "Monk",
+        "spec": "Brewmaster"
+      },
+      {
+        "name": "拳头弟弟丶",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "jVfakGLcTgH4FWtd",
+    "fight_id": 10,
+    "dungeon": "Windrunner Spire",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 220022.37243002653,
+    "aug_total_damage": 404724556,
+    "aug_dps": 203883.5551467273,
+    "duration_s": 1985.077,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 7698765
+      },
+      {
+        "name": "Upheaval",
+        "total": 19891892
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1526861
+      },
+      {
+        "name": "Melee",
+        "total": 8272
+      },
+      {
+        "name": "Blistering Scales",
+        "total": 119978
+      },
+      {
+        "name": "Ebon Might",
+        "total": 111105030
+      },
+      {
+        "name": "Bombardments",
+        "total": 18269605
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 63146663
+      },
+      {
+        "name": "Duplicate",
+        "total": 52774606
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13437643
+      },
+      {
+        "name": "Eruption",
+        "total": 57827063
+      },
+      {
+        "name": "Prescience",
+        "total": 36105701
+      },
+      {
+        "name": "Azure Strike",
+        "total": 27708
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22784769
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Hotdognitro",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Preparedfour",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Yorita",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Procapproved",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Istomponmen",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "Dx3fqLtcFhNY6W4M",
+    "fight_id": 12,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 224326.99646002054,
+    "aug_total_damage": 407051407,
+    "aug_dps": 226763.2695468093,
+    "duration_s": 1795.05,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 32250714
+      },
+      {
+        "name": "Living Flame",
+        "total": 5516069
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12452211
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 5341
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11818644
+      },
+      {
+        "name": "Bombardments",
+        "total": 19319670
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 66431558
+      },
+      {
+        "name": "Duplicate",
+        "total": 60559224
+      },
+      {
+        "name": "Command Squadron",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 67293075
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1580491
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1538844
+      },
+      {
+        "name": "Ebon Might",
+        "total": 112137048
+      },
+      {
+        "name": "Upheaval",
+        "total": 13004254
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 3144264
+      }
+    ],
+    "comp": [
+      {
+        "name": "啊咕啊咕乖",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Expelharm",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "散华礼弥丷",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "龙之獭獭",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "深紫色法师",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "LVBz9wDkMJd3FGqT",
+    "fight_id": 9,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 216384.07949000597,
+    "aug_total_damage": 391838538,
+    "aug_dps": 197668.8358662522,
+    "duration_s": 1982.298,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 58534845
+      },
+      {
+        "name": "Fire Breath",
+        "total": 23145970
+      },
+      {
+        "name": "Prescience",
+        "total": 24519337
+      },
+      {
+        "name": "Bombardments",
+        "total": 20190722
+      },
+      {
+        "name": "Duplicate",
+        "total": 57697249
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 14422154
+      },
+      {
+        "name": "Living Flame",
+        "total": 8254416
+      },
+      {
+        "name": "Ebon Might",
+        "total": 99585587
+      },
+      {
+        "name": "Upheaval",
+        "total": 19494092
+      },
+      {
+        "name": "Azure Strike",
+        "total": 744044
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 963
+      },
+      {
+        "name": "Eruption",
+        "total": 65249159
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Variables",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Entelligent",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Clarr",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Neukrank",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Zaradrip",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "9JbVxPcY28WtdXkQ",
+    "fight_id": 6,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 230364.33412998915,
+    "aug_total_damage": 418466763,
+    "aug_dps": 234242.2559572789,
+    "duration_s": 1786.47,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 62897942
+      },
+      {
+        "name": "Azure Strike",
+        "total": 289640
+      },
+      {
+        "name": "Unravel",
+        "total": 739102
+      },
+      {
+        "name": "Prescience",
+        "total": 32443741
+      },
+      {
+        "name": "Bombardments",
+        "total": 19060917
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1514266
+      },
+      {
+        "name": "Deep Breath",
+        "total": 75503716
+      },
+      {
+        "name": "Upheaval",
+        "total": 13128975
+      },
+      {
+        "name": "Melee",
+        "total": 5658
+      },
+      {
+        "name": "Eruption",
+        "total": 66247060
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 6660958
+      },
+      {
+        "name": "Ebon Might",
+        "total": 111689214
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10879354
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 17406220
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Justace",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Fazo",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Midnaj",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Spingg",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Rehumi",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "GAVXj3RqBmfFKynw",
+    "fight_id": 2,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 227193.78416001797,
+    "aug_total_damage": 311857639,
+    "aug_dps": 186727.57183461558,
+    "duration_s": 1670.121,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 3906805
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 51772418
+      },
+      {
+        "name": "Eruption",
+        "total": 45987192
+      },
+      {
+        "name": "Upheaval",
+        "total": 15799973
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 81917446
+      },
+      {
+        "name": "Bombardments",
+        "total": 16396299
+      },
+      {
+        "name": "Fire Breath",
+        "total": 18451876
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9247327
+      },
+      {
+        "name": "Azure Strike",
+        "total": 3021459
+      },
+      {
+        "name": "Duplicate",
+        "total": 40624503
+      },
+      {
+        "name": "Prescience",
+        "total": 22707355
+      },
+      {
+        "name": "Melee",
+        "total": 331
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2024655
+      }
+    ],
+    "comp": [
+      {
+        "name": "奧利",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "一只呆呆鸟",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "溪谷鸿",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "批队",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "郑大东",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "H63kRcwVM8jhrTBP",
+    "fight_id": 10,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 215176.09693998098,
+    "aug_total_damage": 416348309,
+    "aug_dps": 226463.82601676605,
+    "duration_s": 1838.476,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 63203891
+      },
+      {
+        "name": "Bombardments",
+        "total": 17763486
+      },
+      {
+        "name": "Melee",
+        "total": 946
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1425746
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 4452992
+      },
+      {
+        "name": "Eruption",
+        "total": 72856361
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12796710
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 519036
+      },
+      {
+        "name": "Ebon Might",
+        "total": 114972645
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 32200992
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 60401468
+      },
+      {
+        "name": "Living Flame",
+        "total": 7165206
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12009376
+      },
+      {
+        "name": "Upheaval",
+        "total": 16579454
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Gperê",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Druidfisch",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Draizen",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Balancedcdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Míkuz",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "CJVdLm2rnNHWPpT9",
+    "fight_id": 45,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 245320.1468499899,
+    "aug_total_damage": 422414989,
+    "aug_dps": 232087.09385512985,
+    "duration_s": 1820.071,
+    "abilities": [
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1507932
+      },
+      {
+        "name": "Melee",
+        "total": 2648
+      },
+      {
+        "name": "Prescience",
+        "total": 36720267
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11666285
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 22921583
+      },
+      {
+        "name": "Ebon Might",
+        "total": 118193504
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1335626
+      },
+      {
+        "name": "Eruption",
+        "total": 65772157
+      },
+      {
+        "name": "Bombardments",
+        "total": 19382944
+      },
+      {
+        "name": "Duplicate",
+        "total": 50642660
+      },
+      {
+        "name": "Living Flame",
+        "total": 6538366
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Chi Wave",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 73493514
+      },
+      {
+        "name": "Upheaval",
+        "total": 14237503
+      }
+    ],
+    "comp": [
+      {
+        "name": "黑锋二酱",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "橙小北",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Selong",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "无数梦境",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "陈小北啊",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "38LMAcDZ7Xnw9rbq",
+    "fight_id": 11,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 233314.51468002796,
+    "aug_total_damage": 393855961,
+    "aug_dps": 208139.29981487853,
+    "duration_s": 1892.271,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 6392861
+      },
+      {
+        "name": "Duplicate",
+        "total": 59965130
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2490632
+      },
+      {
+        "name": "Melee",
+        "total": 5206
+      },
+      {
+        "name": "Ebon Might",
+        "total": 113539335
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10296181
+      },
+      {
+        "name": "Azure Strike",
+        "total": 2250523
+      },
+      {
+        "name": "Prescience",
+        "total": 22634508
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 53566164
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 19775055
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22935310
+      },
+      {
+        "name": "Upheaval",
+        "total": 20893284
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 59111772
+      }
+    ],
+    "comp": [
+      {
+        "name": "借一瞬永恒",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Jmý",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "昭朝",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "黑龙咕咕",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "唯獨的德",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "z49JmTwHgr2MdBap",
+    "fight_id": 9,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 216180.96934998035,
+    "aug_total_damage": 361384210,
+    "aug_dps": 202077.2310966496,
+    "duration_s": 1788.347,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 32480927
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 15662658
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 5799933
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22311262
+      },
+      {
+        "name": "Azure Strike",
+        "total": 404278
+      },
+      {
+        "name": "Duplicate",
+        "total": 43466451
+      },
+      {
+        "name": "Eruption",
+        "total": 53141415
+      },
+      {
+        "name": "Upheaval",
+        "total": 21034011
+      },
+      {
+        "name": "Ebon Might",
+        "total": 94977172
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 55674643
+      },
+      {
+        "name": "Living Flame",
+        "total": 5916851
+      },
+      {
+        "name": "Melee",
+        "total": 2298
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10512311
+      }
+    ],
+    "comp": [
+      {
+        "name": "Grieftorch",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Sickrizz",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Ilu",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Rubÿ",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Ravzdragon",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "CjvPtcgZyAxrkQzG",
+    "fight_id": 10,
+    "dungeon": "Windrunner Spire",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 215533.31771999598,
+    "aug_total_damage": 347725865,
+    "aug_dps": 199597.428099758,
+    "duration_s": 1742.136,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 2810
+      },
+      {
+        "name": "Prescience",
+        "total": 28005635
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 48078991
+      },
+      {
+        "name": "Upheaval",
+        "total": 22647839
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8108292
+      },
+      {
+        "name": "Duplicate",
+        "total": 49531549
+      },
+      {
+        "name": "Living Flame",
+        "total": 6407089
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2621739
+      },
+      {
+        "name": "Bombardments",
+        "total": 17131918
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 55201876
+      },
+      {
+        "name": "Ebon Might",
+        "total": 88999086
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20962640
+      },
+      {
+        "name": "Azure Strike",
+        "total": 26401
+      }
+    ],
+    "comp": [
+      {
+        "name": "Dzonamvp",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Dailo",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Sjelelele",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Loonydh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Roibendeux",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "Nj3Q4qDbMZyPaKtw",
+    "fight_id": 20,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 224279.2625899911,
+    "aug_total_damage": 325524018,
+    "aug_dps": 182849.38535122183,
+    "duration_s": 1780.285,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 16321590
+      },
+      {
+        "name": "Eruption",
+        "total": 47505093
+      },
+      {
+        "name": "Azure Strike",
+        "total": 829470
+      },
+      {
+        "name": "Ebon Might",
+        "total": 82737829
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20634987
+      },
+      {
+        "name": "Bombardments",
+        "total": 16528173
+      },
+      {
+        "name": "Prescience",
+        "total": 25934782
+      },
+      {
+        "name": "Living Flame",
+        "total": 7150532
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10109279
+      },
+      {
+        "name": "Melee",
+        "total": 14165
+      },
+      {
+        "name": "Duplicate",
+        "total": 43231612
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 54526506
+      }
+    ],
+    "comp": [
+      {
+        "name": "丶黑白",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "大丰打更人",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Nicedk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "我不着急",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "恶唬",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "FpHCKvh9XZx6b2M7",
+    "fight_id": 1,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 213141.1808000207,
+    "aug_total_damage": 356719177,
+    "aug_dps": 213587.92679363498,
+    "duration_s": 1670.128,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 6108808
+      },
+      {
+        "name": "Azure Strike",
+        "total": 543402
+      },
+      {
+        "name": "Melee",
+        "total": 4877
+      },
+      {
+        "name": "Eruption",
+        "total": 66823897
+      },
+      {
+        "name": "Ebon Might",
+        "total": 92501274
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 17584148
+      },
+      {
+        "name": "Bombardments",
+        "total": 16317825
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9186591
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1057965
+      },
+      {
+        "name": "Prescience",
+        "total": 31190164
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 5039860
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 52244179
+      },
+      {
+        "name": "Duplicate",
+        "total": 47942541
+      },
+      {
+        "name": "Upheaval",
+        "total": 10173646
+      }
+    ],
+    "comp": [
+      {
+        "name": "Themolished",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Asâp",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Хеймгрип",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Valtáru",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Loathdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "7XgGYQfjhqbKpnrB",
+    "fight_id": 10,
+    "dungeon": "Windrunner Spire",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 209226.5688199997,
+    "aug_total_damage": 339976632,
+    "aug_dps": 187628.59347250446,
+    "duration_s": 1811.966,
+    "abilities": [
+      {
+        "name": "Bombardments",
+        "total": 17326592
+      },
+      {
+        "name": "Eruption",
+        "total": 58286049
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 45975252
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9183201
+      },
+      {
+        "name": "Upheaval",
+        "total": 12647766
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13986225
+      },
+      {
+        "name": "Prescience",
+        "total": 32835105
+      },
+      {
+        "name": "Melee",
+        "total": 5436
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1413171
+      },
+      {
+        "name": "Azure Strike",
+        "total": 200382
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 4385258
+      },
+      {
+        "name": "Ebon Might",
+        "total": 92275940
+      },
+      {
+        "name": "Duplicate",
+        "total": 44976685
+      },
+      {
+        "name": "Living Flame",
+        "total": 6479570
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Goopswoop",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Dorkibear",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Drohgoe",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Cowboysam",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Crypticdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "wTJqmjGY7hQ16BVr",
+    "fight_id": 17,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 210463.3982899785,
+    "aug_total_damage": 408459945,
+    "aug_dps": 217190.83561534574,
+    "duration_s": 1880.65,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 68646353
+      },
+      {
+        "name": "Eruption",
+        "total": 63961251
+      },
+      {
+        "name": "Melee",
+        "total": 4646
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1372638
+      },
+      {
+        "name": "Ebon Might",
+        "total": 106657021
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 19054112
+      },
+      {
+        "name": "Prescience",
+        "total": 32819135
+      },
+      {
+        "name": "Upheaval",
+        "total": 21207616
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 52840900
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22881785
+      },
+      {
+        "name": "Living Flame",
+        "total": 8332245
+      },
+      {
+        "name": "Temporal Wound",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10682243
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Sicklikemè",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Xmdw",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "滕春龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "翻滚吧小闲",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "复仇备胎",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "qkpZDj8WyG3KbFxh",
+    "fight_id": 1,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 214306.76024001837,
+    "aug_total_damage": 384689941,
+    "aug_dps": 220494.13356779955,
+    "duration_s": 1744.672,
+    "abilities": [
+      {
+        "name": "Inferno's Blessing",
+        "total": 1505469
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 61297712
+      },
+      {
+        "name": "Ebon Might",
+        "total": 104210467
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 20787804
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9919584
+      },
+      {
+        "name": "Duplicate",
+        "total": 51442131
+      },
+      {
+        "name": "Living Flame",
+        "total": 6430244
+      },
+      {
+        "name": "Melee",
+        "total": 3316
+      },
+      {
+        "name": "Prescience",
+        "total": 31121919
+      },
+      {
+        "name": "Upheaval",
+        "total": 13305568
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 67824689
+      },
+      {
+        "name": "Bombardments",
+        "total": 16841038
+      }
+    ],
+    "comp": [
+      {
+        "name": "幻海梦蝶",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "星火龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "阿揪揪",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "双马尾张俊杰",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "柳贯壹",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "VC7jzhRfkgQG4AmY",
+    "fight_id": 3,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 193882.6012300253,
+    "aug_total_damage": 366093051,
+    "aug_dps": 189785.7215804614,
+    "duration_s": 1928.981,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 45274069
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 55605113
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2187605
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 30060073
+      },
+      {
+        "name": "Upheaval",
+        "total": 25177885
+      },
+      {
+        "name": "Bombardments",
+        "total": 16514534
+      },
+      {
+        "name": "Melee",
+        "total": 1647
+      },
+      {
+        "name": "Eruption",
+        "total": 52830822
+      },
+      {
+        "name": "Fire Breath",
+        "total": 20683909
+      },
+      {
+        "name": "Ebon Might",
+        "total": 99753972
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11878923
+      },
+      {
+        "name": "Azure Strike",
+        "total": 426246
+      },
+      {
+        "name": "Living Flame",
+        "total": 5698253
+      }
+    ],
+    "comp": [
+      {
+        "name": "冬天下雪",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Elmon",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Vicdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Rñb",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "恨龍人",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "12LjkNwpYGFHgzTV",
+    "fight_id": 19,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 241806.7151299715,
+    "aug_total_damage": 356187808,
+    "aug_dps": 205955.93132331505,
+    "duration_s": 1729.437,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 62454268
+      },
+      {
+        "name": "Eruption",
+        "total": 52549157
+      },
+      {
+        "name": "Melee",
+        "total": 5119
+      },
+      {
+        "name": "Upheaval",
+        "total": 13966594
+      },
+      {
+        "name": "Azure Strike",
+        "total": 466376
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 17573826
+      },
+      {
+        "name": "Living Flame",
+        "total": 3536742
+      },
+      {
+        "name": "Prescience",
+        "total": 32364677
+      },
+      {
+        "name": "Ebon Might",
+        "total": 100763149
+      },
+      {
+        "name": "Duplicate",
+        "total": 46216172
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1210288
+      },
+      {
+        "name": "Bombardments",
+        "total": 14960044
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10121396
+      }
+    ],
+    "comp": [
+      {
+        "name": "Yodadadr",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Duolagong",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Nuttywutty",
+        "class": "Shaman",
+        "spec": "Restoration"
+      },
+      {
+        "name": "Nerrfdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Mortdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "qhJ8wZ3Ncv4g6bmF",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 214631.11558002234,
+    "aug_total_damage": 380944908,
+    "aug_dps": 205454.39385424546,
+    "duration_s": 1854.158,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 643790
+      },
+      {
+        "name": "Prescience",
+        "total": 27837324
+      },
+      {
+        "name": "Bombardments",
+        "total": 19372746
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 60927919
+      },
+      {
+        "name": "Upheaval",
+        "total": 20580516
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 5629970
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 51800351
+      },
+      {
+        "name": "Eruption",
+        "total": 57048403
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11636870
+      },
+      {
+        "name": "Melee",
+        "total": 3876
+      },
+      {
+        "name": "Ebon Might",
+        "total": 104072362
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21390781
+      }
+    ],
+    "comp": [
+      {
+        "name": "轰天乌驹",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "绿玲珑",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "魔霭领主",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "小小火龙丶",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "小玉子",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "3wh1Yz4FBgVvWDq9",
+    "fight_id": 1,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 225906.92874002457,
+    "aug_total_damage": 402102304,
+    "aug_dps": 201232.26103493143,
+    "duration_s": 1998.2,
+    "abilities": [
+      {
+        "name": "Fire Breath",
+        "total": 23644744
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 32068250
+      },
+      {
+        "name": "Duplicate",
+        "total": 55817426
+      },
+      {
+        "name": "Eruption",
+        "total": 59035046
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6215288
+      },
+      {
+        "name": "Melee",
+        "total": 5466
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1668749
+      },
+      {
+        "name": "Bombardments",
+        "total": 19929312
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 61481684
+      },
+      {
+        "name": "Upheaval",
+        "total": 20161280
+      },
+      {
+        "name": "Living Flame",
+        "total": 5465992
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11119908
+      },
+      {
+        "name": "Ebon Might",
+        "total": 105489159
+      }
+    ],
+    "comp": [
+      {
+        "name": "Fânas",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Draizen",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Discuver",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Gigagundone",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Dendeec",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "qzydarKnLQPjAFCZ",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 215709.18843001127,
+    "aug_total_damage": 384009731,
+    "aug_dps": 209884.04801413184,
+    "duration_s": 1829.628,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 23538986
+      },
+      {
+        "name": "Prescience",
+        "total": 31418385
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21656920
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9761518
+      },
+      {
+        "name": "Bombardments",
+        "total": 19242784
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 56874180
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6860883
+      },
+      {
+        "name": "Ebon Might",
+        "total": 97262308
+      },
+      {
+        "name": "Duplicate",
+        "total": 53229991
+      },
+      {
+        "name": "Living Flame",
+        "total": 7140323
+      },
+      {
+        "name": "Azure Strike",
+        "total": 705169
+      },
+      {
+        "name": "Melee",
+        "total": 5646
+      },
+      {
+        "name": "Eruption",
+        "total": 56312638
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Effendxdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Hawkev",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Rickymank",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Fanalol",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Lonelylunar",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "wt9FCWKYDMj8hc42",
+    "fight_id": 11,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 24,
+    "paired_with": "dh",
+    "paired_dps": 229935.8702700138,
+    "aug_total_damage": 472085138,
+    "aug_dps": 204195.87417054983,
+    "duration_s": 2311.923,
+    "abilities": [
+      {
+        "name": "Shifting Sands",
+        "total": 13371370
+      },
+      {
+        "name": "Bombardments",
+        "total": 26415201
+      },
+      {
+        "name": "Ebon Might",
+        "total": 110699137
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12595913
+      },
+      {
+        "name": "Melee",
+        "total": 3571
+      },
+      {
+        "name": "Living Flame",
+        "total": 9825336
+      },
+      {
+        "name": "Azure Strike",
+        "total": 772015
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 78351281
+      },
+      {
+        "name": "Duplicate",
+        "total": 83350040
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2655094
+      },
+      {
+        "name": "Upheaval",
+        "total": 16520130
+      },
+      {
+        "name": "Prescience",
+        "total": 40336286
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1897488
+      },
+      {
+        "name": "Eruption",
+        "total": 75292276
+      }
+    ],
+    "comp": [
+      {
+        "name": "Waalpen",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Speculation",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Griwygoose",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Vibezz",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Andymeow",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "p3jf1VbqYTCP62ha",
+    "fight_id": 84,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 212474.42010998726,
+    "aug_total_damage": 410119083,
+    "aug_dps": 218633.51243636815,
+    "duration_s": 1875.829,
+    "abilities": [
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 19965961
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 17750298
+      },
+      {
+        "name": "Duplicate",
+        "total": 61078929
+      },
+      {
+        "name": "Upheaval",
+        "total": 13252266
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103808741
+      },
+      {
+        "name": "Azure Strike",
+        "total": 647085
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11791595
+      },
+      {
+        "name": "Prescience",
+        "total": 32913856
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1588096
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 7348895
+      },
+      {
+        "name": "Melee",
+        "total": 648
+      },
+      {
+        "name": "Eruption",
+        "total": 68766983
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 71205730
+      }
+    ],
+    "comp": [
+      {
+        "name": "很内向",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "小小琛",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "皮皮车车",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "西海岸丶",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "欧洲小牛",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "DTvNCmfLaJkzR3wt",
+    "fight_id": 9,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 197576.90878999233,
+    "aug_total_damage": 410982234,
+    "aug_dps": 208847.6113863965,
+    "duration_s": 1967.857,
+    "abilities": [
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1999944
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 67476648
+      },
+      {
+        "name": "Prescience",
+        "total": 36261296
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10539285
+      },
+      {
+        "name": "Melee",
+        "total": 1315
+      },
+      {
+        "name": "Ebon Might",
+        "total": 108447272
+      },
+      {
+        "name": "Azure Strike",
+        "total": 239420
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 16473448
+      },
+      {
+        "name": "Eruption",
+        "total": 68075819
+      },
+      {
+        "name": "Bombardments",
+        "total": 21483616
+      },
+      {
+        "name": "Living Flame",
+        "total": 7297591
+      },
+      {
+        "name": "Upheaval",
+        "total": 12613293
+      },
+      {
+        "name": "Duplicate",
+        "total": 60073287
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "三懒",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Aweidruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "破戒萝莉",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "枫丷",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "沸腾泉水",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "4Bg3xQ1YAamzPKNn",
+    "fight_id": 25,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 228490.24291998148,
+    "aug_total_damage": 359848311,
+    "aug_dps": 201843.5585884739,
+    "duration_s": 1782.808,
+    "abilities": [
+      {
+        "name": "Bombardments",
+        "total": 13383168
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19681460
+      },
+      {
+        "name": "Living Flame",
+        "total": 5857084
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 56917139
+      },
+      {
+        "name": "Ebon Might",
+        "total": 100044427
+      },
+      {
+        "name": "Upheaval",
+        "total": 20880341
+      },
+      {
+        "name": "Eruption",
+        "total": 51664781
+      },
+      {
+        "name": "Melee",
+        "total": 1324
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1641864
+      },
+      {
+        "name": "Prescience",
+        "total": 32384535
+      },
+      {
+        "name": "Duplicate",
+        "total": 44474871
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12917317
+      }
+    ],
+    "comp": [
+      {
+        "name": "Seita",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Peladorperas",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Trumpettadh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Nizeedkd",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Almeeyy",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "87pHCTgt1Fa6WRND",
+    "fight_id": 1,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 221573.20625001192,
+    "aug_total_damage": 395906672,
+    "aug_dps": 236252.3172805006,
+    "duration_s": 1675.779,
+    "abilities": [
+      {
+        "name": "Inferno's Blessing",
+        "total": 1123923
+      },
+      {
+        "name": "Bombardments",
+        "total": 15925492
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10896885
+      },
+      {
+        "name": "Melee",
+        "total": 4956
+      },
+      {
+        "name": "Duplicate",
+        "total": 66194917
+      },
+      {
+        "name": "Eruption",
+        "total": 62566455
+      },
+      {
+        "name": "Upheaval",
+        "total": 16241586
+      },
+      {
+        "name": "Living Flame",
+        "total": 6782581
+      },
+      {
+        "name": "Prescience",
+        "total": 25246597
+      },
+      {
+        "name": "Azure Strike",
+        "total": 269487
+      },
+      {
+        "name": "Ebon Might",
+        "total": 112669999
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11897919
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 66085875
+      }
+    ],
+    "comp": [
+      {
+        "name": "李铁犇",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Longwage",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "黑的发光",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "乐未殇",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "吃我元气弹嗷",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "Vzr7hHAGwdQyWgK9",
+    "fight_id": 4,
+    "dungeon": "Pit of Saron",
+    "key_level": 24,
+    "paired_with": "dh",
+    "paired_dps": 255345.70262998343,
+    "aug_total_damage": 483154684,
+    "aug_dps": 270726.3082456556,
+    "duration_s": 1784.661,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 1341
+      },
+      {
+        "name": "Living Flame",
+        "total": 9053072
+      },
+      {
+        "name": "Duplicate",
+        "total": 90589377
+      },
+      {
+        "name": "Prescience",
+        "total": 40429511
+      },
+      {
+        "name": "Ebon Might",
+        "total": 134758493
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1385629
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12429833
+      },
+      {
+        "name": "Upheaval",
+        "total": 14978371
+      },
+      {
+        "name": "Bombardments",
+        "total": 19044027
+      },
+      {
+        "name": "Azure Strike",
+        "total": 400379
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2577845
+      },
+      {
+        "name": "Eruption",
+        "total": 73224333
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 14252354
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 70030119
+      }
+    ],
+    "comp": [
+      {
+        "name": "Gdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "绿绿月光",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Mjtdknight",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Milkdemon",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "黑川茜龙龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "ARcYmtKQagFqCdJw",
+    "fight_id": 6,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 236564.229460001,
+    "aug_total_damage": 383897517,
+    "aug_dps": 218859.00520270955,
+    "duration_s": 1754.086,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 57014731
+      },
+      {
+        "name": "Eruption",
+        "total": 57217519
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103816317
+      },
+      {
+        "name": "Melee",
+        "total": 6699
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10411391
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22977449
+      },
+      {
+        "name": "Prescience",
+        "total": 29012489
+      },
+      {
+        "name": "Duplicate",
+        "total": 53016915
+      },
+      {
+        "name": "Bombardments",
+        "total": 18237579
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2769648
+      },
+      {
+        "name": "Upheaval",
+        "total": 22332836
+      },
+      {
+        "name": "Living Flame",
+        "total": 6831404
+      },
+      {
+        "name": "Azure Strike",
+        "total": 252540
+      }
+    ],
+    "comp": [
+      {
+        "name": "Jetskimonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Sipdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Specithick",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Früchtetraum",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Pve",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "L2hWj973avm6fxwZ",
+    "fight_id": 29,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 232043.78610998392,
+    "aug_total_damage": 333322993,
+    "aug_dps": 181854.53350137212,
+    "duration_s": 1832.91,
+    "abilities": [
+      {
+        "name": "Ebon Might",
+        "total": 91846135
+      },
+      {
+        "name": "Bombardments",
+        "total": 17206026
+      },
+      {
+        "name": "Azure Strike",
+        "total": 68624
+      },
+      {
+        "name": "Living Flame",
+        "total": 5537066
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11687473
+      },
+      {
+        "name": "Duplicate",
+        "total": 35688037
+      },
+      {
+        "name": "Fire Breath",
+        "total": 18690470
+      },
+      {
+        "name": "Prescience",
+        "total": 31784218
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1081512
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 54631175
+      },
+      {
+        "name": "Upheaval",
+        "total": 17993800
+      },
+      {
+        "name": "Eruption",
+        "total": 47100458
+      },
+      {
+        "name": "Melee",
+        "total": 7999
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Ascae",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Hotdognitro",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Preparedfour",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Yorita",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Procapproved",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "naNf87b62BJP9C3y",
+    "fight_id": 9,
+    "dungeon": "Skyreach",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 193136.16335999966,
+    "aug_total_damage": 313123549,
+    "aug_dps": 190509.1761204273,
+    "duration_s": 1643.614,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 693342
+      },
+      {
+        "name": "Melee",
+        "total": 3519
+      },
+      {
+        "name": "Upheaval",
+        "total": 14110853
+      },
+      {
+        "name": "Prescience",
+        "total": 23430463
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 44465554
+      },
+      {
+        "name": "Eruption",
+        "total": 45986163
+      },
+      {
+        "name": "Bombardments",
+        "total": 18061020
+      },
+      {
+        "name": "Duplicate",
+        "total": 43524636
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19015254
+      },
+      {
+        "name": "Ebon Might",
+        "total": 85532909
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8363849
+      },
+      {
+        "name": "Living Flame",
+        "total": 7530866
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2405121
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "丶牙齿发黄了",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "阿布夏会变身",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "孤独龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "小雨饱饱",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "天和山雨雪",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "FrpQHVPJhjN9WB8T",
+    "fight_id": 5,
+    "dungeon": "Maisara Caverns",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 247125.26824998856,
+    "aug_total_damage": 405884077,
+    "aug_dps": 232709.14515737866,
+    "duration_s": 1744.169,
+    "abilities": [
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11585523
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1393112
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 5824765
+      },
+      {
+        "name": "Eruption",
+        "total": 64976458
+      },
+      {
+        "name": "Prescience",
+        "total": 37409657
+      },
+      {
+        "name": "Upheaval",
+        "total": 15189431
+      },
+      {
+        "name": "Deep Breath",
+        "total": 64185613
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 5874076
+      },
+      {
+        "name": "Bombardments",
+        "total": 18129227
+      },
+      {
+        "name": "Azure Strike",
+        "total": 499371
+      },
+      {
+        "name": "Ebon Might",
+        "total": 117264386
+      },
+      {
+        "name": "Duplicate",
+        "total": 49916757
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13630337
+      },
+      {
+        "name": "Melee",
+        "total": 5364
+      }
+    ],
+    "comp": [
+      {
+        "name": "Asâp",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Yum",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Хеймгрип",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Valtáru",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Loathdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "7RT9jPmWNrQ82Xy4",
+    "fight_id": 3,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 206468.6636700034,
+    "aug_total_damage": 412672076,
+    "aug_dps": 204226.58163825845,
+    "duration_s": 2020.658,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 7257
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12414623
+      },
+      {
+        "name": "Eruption",
+        "total": 68385660
+      },
+      {
+        "name": "Living Flame",
+        "total": 8610077
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6653432
+      },
+      {
+        "name": "Prescience",
+        "total": 33135379
+      },
+      {
+        "name": "Upheaval",
+        "total": 15198581
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 18544082
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1751390
+      },
+      {
+        "name": "Duplicate",
+        "total": 70570849
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 105722811
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58442386
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12887684
+      },
+      {
+        "name": "Azure Strike",
+        "total": 347865
+      }
+    ],
+    "comp": [
+      {
+        "name": "Ðémoralizing",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Kókushibò",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Viraliadk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Piglord",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Almeeyy",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "fQdyxqYPMwnk6Jzm",
+    "fight_id": 8,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 199709.22591000795,
+    "aug_total_damage": 405541880,
+    "aug_dps": 203058.36912149147,
+    "duration_s": 1997.169,
+    "abilities": [
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2915837
+      },
+      {
+        "name": "Upheaval",
+        "total": 20917434
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11015651
+      },
+      {
+        "name": "Ebon Might",
+        "total": 104397221
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 5831147
+      },
+      {
+        "name": "Bombardments",
+        "total": 22116855
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 56474944
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24963188
+      },
+      {
+        "name": "Prescience",
+        "total": 28108804
+      },
+      {
+        "name": "Eruption",
+        "total": 63178635
+      },
+      {
+        "name": "Melee",
+        "total": 1525
+      },
+      {
+        "name": "Azure Strike",
+        "total": 660065
+      },
+      {
+        "name": "Duplicate",
+        "total": 64960574
+      }
+    ],
+    "comp": [
+      {
+        "name": "绯炎",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Lmmdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "丶凉丶生丶",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Pptdrangon",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Kriswu",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "KkJR98mfzvaFwXPg",
+    "fight_id": 2,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 186037.99892997742,
+    "aug_total_damage": 292150797,
+    "aug_dps": 186920.8824253902,
+    "duration_s": 1562.965,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 26454454
+      },
+      {
+        "name": "Eruption",
+        "total": 44542458
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 13495140
+      },
+      {
+        "name": "Azure Strike",
+        "total": 513011
+      },
+      {
+        "name": "Living Flame",
+        "total": 4234919
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8232521
+      },
+      {
+        "name": "Ebon Might",
+        "total": 77327546
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 17254408
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17718223
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 43714165
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 4988715
+      },
+      {
+        "name": "Duplicate",
+        "total": 31200097
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2471466
+      },
+      {
+        "name": "Melee",
+        "total": 3674
+      }
+    ],
+    "comp": [
+      {
+        "name": "Steaweed",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Breathgodx",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Mistovic",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Bustamovesx",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Lonelyfel",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "Rbj7cCwWagPJFk1t",
+    "fight_id": 9,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 231136.11194998026,
+    "aug_total_damage": 353615575,
+    "aug_dps": 205088.1039639534,
+    "duration_s": 1724.213,
+    "abilities": [
+      {
+        "name": "Bombardments",
+        "total": 12459893
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9272451
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103824291
+      },
+      {
+        "name": "Azure Strike",
+        "total": 349414
+      },
+      {
+        "name": "Melee",
+        "total": 328
+      },
+      {
+        "name": "Eruption",
+        "total": 59129768
+      },
+      {
+        "name": "Living Flame",
+        "total": 5017572
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1309950
+      },
+      {
+        "name": "Deep Breath",
+        "total": 48604962
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 26174739
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 42822283
+      },
+      {
+        "name": "Prescience",
+        "total": 32845027
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 11804897
+      }
+    ],
+    "comp": [
+      {
+        "name": "Nikovoker",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Mandur",
+        "class": "Shaman",
+        "spec": "Elemental"
+      },
+      {
+        "name": "Zacdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Nzangellips",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Titiquemonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "xvV7CJtpaY8qRnrP",
+    "fight_id": 26,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 222517.36875998974,
+    "aug_total_damage": 385304353,
+    "aug_dps": 207869.58098001336,
+    "duration_s": 1853.587,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 5854623
+      },
+      {
+        "name": "Duplicate",
+        "total": 46724139
+      },
+      {
+        "name": "Upheaval",
+        "total": 17986323
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 55172278
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22903081
+      },
+      {
+        "name": "Prescience",
+        "total": 34984394
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103931747
+      },
+      {
+        "name": "Azure Strike",
+        "total": 721484
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6075357
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 4368
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 3203756
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10846779
+      },
+      {
+        "name": "Eruption",
+        "total": 57360409
+      },
+      {
+        "name": "Bombardments",
+        "total": 19535615
+      }
+    ],
+    "comp": [
+      {
+        "name": "Myzouth",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Breathgodx",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Dailo",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Midnaj",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Spingg",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "VNbh3B4jH7yZFTAY",
+    "fight_id": 6,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 153184.94207000732,
+    "aug_total_damage": 293242506,
+    "aug_dps": 174844.36873458335,
+    "duration_s": 1677.163,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 720222
+      },
+      {
+        "name": "Ebon Might",
+        "total": 73634760
+      },
+      {
+        "name": "Bombardments",
+        "total": 18324018
+      },
+      {
+        "name": "Living Flame",
+        "total": 5732282
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 42375005
+      },
+      {
+        "name": "Eruption",
+        "total": 46624824
+      },
+      {
+        "name": "Prescience",
+        "total": 22681562
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17489483
+      },
+      {
+        "name": "Duplicate",
+        "total": 42044293
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8561200
+      },
+      {
+        "name": "Upheaval",
+        "total": 15053884
+      },
+      {
+        "name": "Melee",
+        "total": 973
+      }
+    ],
+    "comp": [
+      {
+        "name": "Nnoggiedk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Griwygoose",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Vibezz",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Andymeow",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Beatforheat",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "Z8cxz2nr3bYjLDFm",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 188521.98216998577,
+    "aug_total_damage": 363706195,
+    "aug_dps": 180750.60915943203,
+    "duration_s": 2012.199,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 704119
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11302068
+      },
+      {
+        "name": "Ebon Might",
+        "total": 101426571
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 7373548
+      },
+      {
+        "name": "Duplicate",
+        "total": 47602407
+      },
+      {
+        "name": "Bombardments",
+        "total": 18209840
+      },
+      {
+        "name": "Melee",
+        "total": 3570
+      },
+      {
+        "name": "Prescience",
+        "total": 24401017
+      },
+      {
+        "name": "Upheaval",
+        "total": 19116030
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21181955
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 48485122
+      },
+      {
+        "name": "Eruption",
+        "total": 56954489
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6945459
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "叽里咕噜蛋",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "简美妍",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "穆蛋蛋",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "叽哩哇啦蛋",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "叽哩咕噜蛋",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "bWd87JrKB16GPDV9",
+    "fight_id": 6,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 208818.9242900014,
+    "aug_total_damage": 348776172,
+    "aug_dps": 199280.85550350993,
+    "duration_s": 1750.174,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 26071117
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 20987402
+      },
+      {
+        "name": "Melee",
+        "total": 212
+      },
+      {
+        "name": "Eruption",
+        "total": 57612229
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 47593651
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1276119
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6384707
+      },
+      {
+        "name": "Duplicate",
+        "total": 36997850
+      },
+      {
+        "name": "Bombardments",
+        "total": 15808552
+      },
+      {
+        "name": "Living Flame",
+        "total": 6724077
+      },
+      {
+        "name": "Quell",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 94018106
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19448838
+      },
+      {
+        "name": "Upheaval",
+        "total": 15853312
+      }
+    ],
+    "comp": [
+      {
+        "name": "Kayaro",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Ttvkorano",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Deshgloomer",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Mindola",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Isoqt",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "G34zQAFaDhLV1fBn",
+    "fight_id": 74,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 224857.38356000185,
+    "aug_total_damage": 390383062,
+    "aug_dps": 196116.21897245513,
+    "duration_s": 1990.57,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 26241686
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 65830773
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24567171
+      },
+      {
+        "name": "Ebon Might",
+        "total": 102059902
+      },
+      {
+        "name": "Melee",
+        "total": 6683
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10567960
+      },
+      {
+        "name": "Duplicate",
+        "total": 54669483
+      },
+      {
+        "name": "Bombardments",
+        "total": 18395209
+      },
+      {
+        "name": "Eruption",
+        "total": 56724400
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1312832
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2417333
+      },
+      {
+        "name": "Upheaval",
+        "total": 21620195
+      },
+      {
+        "name": "Living Flame",
+        "total": 5969435
+      }
+    ],
+    "comp": [
+      {
+        "name": "Redptdh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "小甜菜",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "又是巨型夏天",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "吐司椰椰",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Palbakfour",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "qhWYZPaLndArbX7w",
+    "fight_id": 13,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 218238.47466999292,
+    "aug_total_damage": 303090661,
+    "aug_dps": 169748.9536679169,
+    "duration_s": 1785.523,
+    "abilities": [
+      {
+        "name": "Azure Strike",
+        "total": 1192123
+      },
+      {
+        "name": "Duplicate",
+        "total": 39491973
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 2788105
+      },
+      {
+        "name": "Prescience",
+        "total": 29909303
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9986632
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 45621096
+      },
+      {
+        "name": "Bombardments",
+        "total": 14177192
+      },
+      {
+        "name": "Melee",
+        "total": 7594
+      },
+      {
+        "name": "Ebon Might",
+        "total": 82789923
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 15479390
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17101394
+      },
+      {
+        "name": "Eruption",
+        "total": 44545936
+      }
+    ],
+    "comp": [
+      {
+        "name": "Critcat",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Fuitclaudit",
+        "class": "Warlock",
+        "spec": "Demonology"
+      },
+      {
+        "name": "Evokrah",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Etzy",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Verbeleven",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "C7HxR2cgKn6Twba9",
+    "fight_id": 3,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 195840.7555400133,
+    "aug_total_damage": 396323602,
+    "aug_dps": 204138.0443163843,
+    "duration_s": 1941.449,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 31338855
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2388098
+      },
+      {
+        "name": "Ebon Might",
+        "total": 106396598
+      },
+      {
+        "name": "Bombardments",
+        "total": 20058387
+      },
+      {
+        "name": "Living Flame",
+        "total": 6854405
+      },
+      {
+        "name": "Duplicate",
+        "total": 55219322
+      },
+      {
+        "name": "Melee",
+        "total": 9218
+      },
+      {
+        "name": "Fire Breath",
+        "total": 23488218
+      },
+      {
+        "name": "Eruption",
+        "total": 60540400
+      },
+      {
+        "name": "Upheaval",
+        "total": 21899662
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9811024
+      },
+      {
+        "name": "Azure Strike",
+        "total": 981547
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 57337868
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Siimplepathh",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Lichbite",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Ismytailok",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Noobadin",
+        "class": "Paladin",
+        "spec": "Protection"
+      },
+      {
+        "name": "Dollskill",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "2qtA8BgrfYVbThvN",
+    "fight_id": 12,
+    "dungeon": "Maisara Caverns",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 226486.50546002388,
+    "aug_total_damage": 439635979,
+    "aug_dps": 229966.88821050603,
+    "duration_s": 1911.736,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 38276406
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12353270
+      },
+      {
+        "name": "Living Flame",
+        "total": 7281479
+      },
+      {
+        "name": "Bombardments",
+        "total": 21383424
+      },
+      {
+        "name": "Duplicate",
+        "total": 61748613
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 70749463
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1590072
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15919560
+      },
+      {
+        "name": "Melee",
+        "total": 2827
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 13823279
+      },
+      {
+        "name": "Ebon Might",
+        "total": 123188569
+      },
+      {
+        "name": "Bombardments",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 72945666
+      },
+      {
+        "name": "Azure Strike",
+        "total": 373351
+      }
+    ],
+    "comp": [
+      {
+        "name": "轰天乌驹",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "绿玲珑",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "魔霭领主",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "小小火龙丶",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "小玉子",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "A1hHxaJzgtrCNybB",
+    "fight_id": 2,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 190291.0762000084,
+    "aug_total_damage": 357996811,
+    "aug_dps": 203302.1625182434,
+    "duration_s": 1760.91,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 17855865
+      },
+      {
+        "name": "Azure Strike",
+        "total": 262580
+      },
+      {
+        "name": "Eruption",
+        "total": 61307452
+      },
+      {
+        "name": "Bombardments",
+        "total": 18745522
+      },
+      {
+        "name": "Ebon Might",
+        "total": 86204082
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15787692
+      },
+      {
+        "name": "Prescience",
+        "total": 26347474
+      },
+      {
+        "name": "Melee",
+        "total": 2738
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21303130
+      },
+      {
+        "name": "Duplicate",
+        "total": 50161153
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 53454748
+      },
+      {
+        "name": "Living Flame",
+        "total": 6564375
+      }
+    ],
+    "comp": [
+      {
+        "name": "Themolished",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Steaweed",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Navvaldrag",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Ekodk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Hazardh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "pfYWZg1zV4hbARNm",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 200346.090569973,
+    "aug_total_damage": 364657909,
+    "aug_dps": 184321.37641839462,
+    "duration_s": 1978.381,
+    "abilities": [
+      {
+        "name": "Upheaval",
+        "total": 19145597
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58188555
+      },
+      {
+        "name": "Azure Strike",
+        "total": 2489687
+      },
+      {
+        "name": "Ebon Might",
+        "total": 99667800
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 27074931
+      },
+      {
+        "name": "Eruption",
+        "total": 56375267
+      },
+      {
+        "name": "Melee",
+        "total": 6474
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21561472
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Living Flame",
+        "total": 3762520
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13256285
+      },
+      {
+        "name": "Duplicate",
+        "total": 45832675
+      },
+      {
+        "name": "Bombardments",
+        "total": 17296646
+      }
+    ],
+    "comp": [
+      {
+        "name": "默然哀悼",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "薛定谔的咕",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "啥情矿",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "泰瑞莉娅",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "旋转浩浩",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "t8Z9RC14QKMk3DhL",
+    "fight_id": 5,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 212076.71004998684,
+    "aug_total_damage": 412383793,
+    "aug_dps": 223930.43385240104,
+    "duration_s": 1841.571,
+    "abilities": [
+      {
+        "name": "Fire Breath",
+        "total": 12161973
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 14307824
+      },
+      {
+        "name": "Living Flame",
+        "total": 7159591
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 69388884
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1307763
+      },
+      {
+        "name": "Prescience",
+        "total": 31038434
+      },
+      {
+        "name": "Upheaval",
+        "total": 17679787
+      },
+      {
+        "name": "Ebon Might",
+        "total": 105051403
+      },
+      {
+        "name": "Duplicate",
+        "total": 65994905
+      },
+      {
+        "name": "Bombardments",
+        "total": 20835398
+      },
+      {
+        "name": "Melee",
+        "total": 3759
+      },
+      {
+        "name": "Eruption",
+        "total": 66709187
+      },
+      {
+        "name": "Azure Strike",
+        "total": 744885
+      }
+    ],
+    "comp": [
+      {
+        "name": "一光荣一",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "酷的莫名堂",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "必兮相语丶",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Xiaojiexd",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "月光饱饱",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "FMYXBDcWK6hQyktR",
+    "fight_id": 26,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 168691.09337997437,
+    "aug_total_damage": 287149531,
+    "aug_dps": 171223.6119028481,
+    "duration_s": 1677.044,
+    "abilities": [
+      {
+        "name": "Fire Breath",
+        "total": 16895920
+      },
+      {
+        "name": "Upheaval",
+        "total": 12684780
+      },
+      {
+        "name": "Prescience",
+        "total": 24876643
+      },
+      {
+        "name": "Ebon Might",
+        "total": 74498254
+      },
+      {
+        "name": "Bombardments",
+        "total": 16664727
+      },
+      {
+        "name": "Melee",
+        "total": 2599
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8965404
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 40620526
+      },
+      {
+        "name": "Eruption",
+        "total": 44668746
+      },
+      {
+        "name": "Living Flame",
+        "total": 6133408
+      },
+      {
+        "name": "Duplicate",
+        "total": 41138524
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "隨便溜溜",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Parawxx",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "小程堡堡",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "铁甲小保",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "丁畜",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "BNw67VLYDQvfM9q3",
+    "fight_id": 11,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 227634.11584997177,
+    "aug_total_damage": 359759588,
+    "aug_dps": 193758.94067983743,
+    "duration_s": 1856.738,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 45901688
+      },
+      {
+        "name": "Living Flame",
+        "total": 7577786
+      },
+      {
+        "name": "Bombardments",
+        "total": 19820036
+      },
+      {
+        "name": "Prescience",
+        "total": 26600846
+      },
+      {
+        "name": "Ebon Might",
+        "total": 93734558
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21570330
+      },
+      {
+        "name": "Melee",
+        "total": 8881
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 63234735
+      },
+      {
+        "name": "Upheaval",
+        "total": 17034631
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10859734
+      },
+      {
+        "name": "Eruption",
+        "total": 53147937
+      },
+      {
+        "name": "Azure Strike",
+        "total": 268426
+      }
+    ],
+    "comp": [
+      {
+        "name": "粗雨",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Retrievdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "德拉古尔",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Retrievmonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "企鹅栗栗",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "kMZzG2f9yjQA4nN8",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 196552.00972998142,
+    "aug_total_damage": 407803099,
+    "aug_dps": 222925.93754731948,
+    "duration_s": 1829.321,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 32998700
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 70879205
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1957716
+      },
+      {
+        "name": "Melee",
+        "total": 4185
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Upheaval",
+        "total": 14434549
+      },
+      {
+        "name": "Duplicate",
+        "total": 60440883
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10599311
+      },
+      {
+        "name": "Azure Strike",
+        "total": 604828
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 16505794
+      },
+      {
+        "name": "Bombardments",
+        "total": 19622105
+      },
+      {
+        "name": "Eruption",
+        "total": 64533309
+      },
+      {
+        "name": "Living Flame",
+        "total": 8686662
+      },
+      {
+        "name": "Ebon Might",
+        "total": 106535852
+      }
+    ],
+    "comp": [
+      {
+        "name": "绿绿月光",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Mjtdknight",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Sumiree",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Milkdemon",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "裂风酱嗷",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "DF2JVvcZWwTjkqHd",
+    "fight_id": 1,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 227036.00972002745,
+    "aug_total_damage": 407336073,
+    "aug_dps": 214948.08194427146,
+    "duration_s": 1895.044,
+    "abilities": [
+      {
+        "name": "Shifting Sands",
+        "total": 9277892
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 53594873
+      },
+      {
+        "name": "Eruption",
+        "total": 63803318
+      },
+      {
+        "name": "Ebon Might",
+        "total": 107463930
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 25105851
+      },
+      {
+        "name": "Prescience",
+        "total": 33131422
+      },
+      {
+        "name": "Bombardments",
+        "total": 21354679
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2390661
+      },
+      {
+        "name": "Duplicate",
+        "total": 62494991
+      },
+      {
+        "name": "Azure Strike",
+        "total": 742295
+      },
+      {
+        "name": "Upheaval",
+        "total": 20825510
+      },
+      {
+        "name": "Melee",
+        "total": 3477
+      },
+      {
+        "name": "Living Flame",
+        "total": 7147174
+      }
+    ],
+    "comp": [
+      {
+        "name": "Phizz",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Cuckfurll",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Ismytailok",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Preodk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Belbis",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "MG6TaAZQjfFNbdCH",
+    "fight_id": 6,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 210670.27626997232,
+    "aug_total_damage": 328745429,
+    "aug_dps": 187443.1199863614,
+    "duration_s": 1753.841,
+    "abilities": [
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 6479686
+      },
+      {
+        "name": "Prescience",
+        "total": 24738947
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1248340
+      },
+      {
+        "name": "Upheaval",
+        "total": 17146983
+      },
+      {
+        "name": "Duplicate",
+        "total": 37522519
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19321588
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12551817
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2158984
+      },
+      {
+        "name": "Bombardments",
+        "total": 16017031
+      },
+      {
+        "name": "Melee",
+        "total": 2405
+      },
+      {
+        "name": "Living Flame",
+        "total": 6769705
+      },
+      {
+        "name": "Ebon Might",
+        "total": 82709059
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 47073205
+      },
+      {
+        "name": "Eruption",
+        "total": 55005160
+      }
+    ],
+    "comp": [
+      {
+        "name": "忘尘尘",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Schattengram",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "大臭龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "和光吹絮",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "猛踹晓帆鼙鼓",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "4wMZm2AWVjpz7Xrh",
+    "fight_id": 5,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 220729.43593001366,
+    "aug_total_damage": 425377760,
+    "aug_dps": 213977.23694363763,
+    "duration_s": 1987.958,
+    "abilities": [
+      {
+        "name": "Eruption",
+        "total": 76109099
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 68082435
+      },
+      {
+        "name": "Prescience",
+        "total": 34880540
+      },
+      {
+        "name": "Living Flame",
+        "total": 8931415
+      },
+      {
+        "name": "Azure Strike",
+        "total": 658341
+      },
+      {
+        "name": "Duplicate",
+        "total": 63913305
+      },
+      {
+        "name": "Upheaval",
+        "total": 14731884
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15381672
+      },
+      {
+        "name": "Bombardments",
+        "total": 24506605
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1959784
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12550101
+      },
+      {
+        "name": "Melee",
+        "total": 1563
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103671016
+      }
+    ],
+    "comp": [
+      {
+        "name": "比薩哈到家",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "柳垂溪畔",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Frostymonk",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "小雪淵",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Jayb",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      }
+    ]
+  },
+  {
+    "report_code": "zBGwA1jXfQp3mbLq",
+    "fight_id": 18,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 211516.28702002764,
+    "aug_total_damage": 346033952,
+    "aug_dps": 203935.54147529943,
+    "duration_s": 1696.781,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 5322019
+      },
+      {
+        "name": "Melee",
+        "total": 3579
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19940238
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15379320
+      },
+      {
+        "name": "Ebon Might",
+        "total": 93244593
+      },
+      {
+        "name": "Eruption",
+        "total": 58072312
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 49439615
+      },
+      {
+        "name": "Bombardments",
+        "total": 15583176
+      },
+      {
+        "name": "Duplicate",
+        "total": 43128633
+      },
+      {
+        "name": "Upheaval",
+        "total": 16235901
+      },
+      {
+        "name": "Azure Strike",
+        "total": 1239165
+      },
+      {
+        "name": "Prescience",
+        "total": 28445401
+      }
+    ],
+    "comp": [
+      {
+        "name": "哇嘎呢唝",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Evilsacrifi",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "玖玥婧",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "邪噩小羊",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "荰紫藤",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "PCtTyBKQwqYLGjpH",
+    "fight_id": 9,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 185995.5934100151,
+    "aug_total_damage": 273567547,
+    "aug_dps": 162051.29804508356,
+    "duration_s": 1688.154,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 32658527
+      },
+      {
+        "name": "Azure Strike",
+        "total": 306117
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Twilight Barrage",
+        "total": 1174689
+      },
+      {
+        "name": "Upheaval",
+        "total": 13286860
+      },
+      {
+        "name": "Melee",
+        "total": 2084
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10381107
+      },
+      {
+        "name": "Prescience",
+        "total": 22323222
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 39663417
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 41185939
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 14671281
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2387290
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17154117
+      },
+      {
+        "name": "Ebon Might",
+        "total": 73994435
+      },
+      {
+        "name": "Living Flame",
+        "total": 4378462
+      }
+    ],
+    "comp": [
+      {
+        "name": "Themolished",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Cadanver",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Bodycátcher",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Uwunyasha",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Vividrd",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "1dC7JgfLDthAw9xY",
+    "fight_id": 7,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 202785.61836999655,
+    "aug_total_damage": 433373635,
+    "aug_dps": 213939.61885429203,
+    "duration_s": 2025.682,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 73546158
+      },
+      {
+        "name": "Ebon Might",
+        "total": 108519371
+      },
+      {
+        "name": "Duplicate",
+        "total": 70951784
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 14452234
+      },
+      {
+        "name": "Prescience",
+        "total": 30616357
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11828303
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 2080651
+      },
+      {
+        "name": "Azure Strike",
+        "total": 330032
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 3348
+      },
+      {
+        "name": "Living Flame",
+        "total": 7846177
+      },
+      {
+        "name": "Eruption",
+        "total": 72090719
+      },
+      {
+        "name": "Bombardments",
+        "total": 22613073
+      },
+      {
+        "name": "Upheaval",
+        "total": 18495428
+      }
+    ],
+    "comp": [
+      {
+        "name": "Passionzz",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Endingstory",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Overlordzz",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "椿之颂",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "古亦今",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "cb8YyfAWkjxXJV3m",
+    "fight_id": 29,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 222468.3218600154,
+    "aug_total_damage": 446979693,
+    "aug_dps": 227576.78417867268,
+    "duration_s": 1964.083,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 83065295
+      },
+      {
+        "name": "Prescience",
+        "total": 33313821
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1766595
+      },
+      {
+        "name": "Melee",
+        "total": 1739
+      },
+      {
+        "name": "Azure Strike",
+        "total": 434837
+      },
+      {
+        "name": "Fire Breath",
+        "total": 12228404
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 69215994
+      },
+      {
+        "name": "Upheaval",
+        "total": 15732241
+      },
+      {
+        "name": "Living Flame",
+        "total": 9961005
+      },
+      {
+        "name": "Ebon Might",
+        "total": 111106825
+      },
+      {
+        "name": "Eruption",
+        "total": 72329401
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 16040514
+      },
+      {
+        "name": "Bombardments",
+        "total": 21783022
+      }
+    ],
+    "comp": [
+      {
+        "name": "叶雨清霜",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "泰瑞莉娅",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "小奈龙龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "末诚灬",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "解说玩机器",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "hFcvD4WtKRjMJm2A",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 176837.843659997,
+    "aug_total_damage": 413048405,
+    "aug_dps": 209046.24087301246,
+    "duration_s": 1975.871,
+    "abilities": [
+      {
+        "name": "Melee",
+        "total": 4223
+      },
+      {
+        "name": "Ebon Might",
+        "total": 104270712
+      },
+      {
+        "name": "Living Flame",
+        "total": 8615991
+      },
+      {
+        "name": "Eruption",
+        "total": 72341002
+      },
+      {
+        "name": "Azure Strike",
+        "total": 502952
+      },
+      {
+        "name": "Duplicate",
+        "total": 64327190
+      },
+      {
+        "name": "Fire Breath",
+        "total": 11671242
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1108052
+      },
+      {
+        "name": "Prescience",
+        "total": 32644773
+      },
+      {
+        "name": "Upheaval",
+        "total": 15739098
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 18299768
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 62437482
+      },
+      {
+        "name": "Bombardments",
+        "total": 21085920
+      }
+    ],
+    "comp": [
+      {
+        "name": "小盒饭冰",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "牛波一丶龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "爆炒唔西迪西",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "秋水日潺湲",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Chaogodxd",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "KNAZ29myQLg8GWv7",
+    "fight_id": 2,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 225161.8032900095,
+    "aug_total_damage": 400767307,
+    "aug_dps": 209391.02732232443,
+    "duration_s": 1913.966,
+    "abilities": [
+      {
+        "name": "Inferno's Blessing",
+        "total": 1588113
+      },
+      {
+        "name": "Duplicate",
+        "total": 66227209
+      },
+      {
+        "name": "Upheaval",
+        "total": 9995512
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 15896618
+      },
+      {
+        "name": "Azure Strike",
+        "total": 175924
+      },
+      {
+        "name": "Eruption",
+        "total": 70968458
+      },
+      {
+        "name": "Melee",
+        "total": 1474
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103784343
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 61547143
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10877828
+      },
+      {
+        "name": "Living Flame",
+        "total": 7814391
+      },
+      {
+        "name": "Prescience",
+        "total": 29774573
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 22115721
+      }
+    ],
+    "comp": [
+      {
+        "name": "Rainons",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Shawrus",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Muk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Dashnmash",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Srslystim",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "XKAdjkH7DM4FZQYa",
+    "fight_id": 57,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 237865.7433000207,
+    "aug_total_damage": 411437350,
+    "aug_dps": 212848.459859928,
+    "duration_s": 1933.006,
+    "abilities": [
+      {
+        "name": "Ebon Might",
+        "total": 109236621
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 1770835
+      },
+      {
+        "name": "Melee",
+        "total": 3519
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 58397131
+      },
+      {
+        "name": "Eruption",
+        "total": 61228276
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 10988868
+      },
+      {
+        "name": "Upheaval",
+        "total": 25925494
+      },
+      {
+        "name": "Duplicate",
+        "total": 58309582
+      },
+      {
+        "name": "Prescience",
+        "total": 35039301
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Bombardments",
+        "total": 19798283
+      },
+      {
+        "name": "Living Flame",
+        "total": 5859919
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24808386
+      },
+      {
+        "name": "Azure Strike",
+        "total": 71135
+      }
+    ],
+    "comp": [
+      {
+        "name": "Drøne",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Sapspyro",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Zogvar",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Tigrimir",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Hanbeí",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "43WcBKPLqVaD2gQz",
+    "fight_id": 3,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 206606.389079988,
+    "aug_total_damage": 343613448,
+    "aug_dps": 200927.32165474366,
+    "duration_s": 1710.138,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 43891630
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 16256650
+      },
+      {
+        "name": "Upheaval",
+        "total": 14646900
+      },
+      {
+        "name": "Bombardments",
+        "total": 17054728
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 50382996
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19572997
+      },
+      {
+        "name": "Eruption",
+        "total": 56328760
+      },
+      {
+        "name": "Living Flame",
+        "total": 7018893
+      },
+      {
+        "name": "Prescience",
+        "total": 27049449
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Azure Strike",
+        "total": 599177
+      },
+      {
+        "name": "Melee",
+        "total": 2845
+      },
+      {
+        "name": "Ebon Might",
+        "total": 90808423
+      }
+    ],
+    "comp": [
+      {
+        "name": "青鹜的预见丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Chaoticmuchh",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "绫波唯",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "南城龙龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "小鹤灵",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "j9vC7KpNTfz8AFZH",
+    "fight_id": 1,
+    "dungeon": "Nexus-Point Xenas",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 197453.28706002235,
+    "aug_total_damage": 361088246,
+    "aug_dps": 216931.31386194765,
+    "duration_s": 1664.528,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 51752856
+      },
+      {
+        "name": "Fire Breath",
+        "total": 9940516
+      },
+      {
+        "name": "Azure Strike",
+        "total": 702371
+      },
+      {
+        "name": "Upheaval",
+        "total": 10402971
+      },
+      {
+        "name": "Bombardments",
+        "total": 17754344
+      },
+      {
+        "name": "Duplicate",
+        "total": 58718614
+      },
+      {
+        "name": "Ebon Might",
+        "total": 90426116
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1233003
+      },
+      {
+        "name": "Melee",
+        "total": 2381
+      },
+      {
+        "name": "Living Flame",
+        "total": 7489469
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13220983
+      },
+      {
+        "name": "Prescience",
+        "total": 28587749
+      },
+      {
+        "name": "Eruption",
+        "total": 70856873
+      }
+    ],
+    "comp": [
+      {
+        "name": "Dzonamvp",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Jisoodc",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Tomassof",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Uglyclown",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Anxieyex",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "QP9fGL7kp4FRvcDK",
+    "fight_id": 3,
+    "dungeon": "Magisters' Terrace",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 223110.00532001257,
+    "aug_total_damage": 409085988,
+    "aug_dps": 210228.08704388424,
+    "duration_s": 1945.915,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 29016654
+      },
+      {
+        "name": "Fire Breath",
+        "total": 24386363
+      },
+      {
+        "name": "Upheaval",
+        "total": 19579227
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 62205705
+      },
+      {
+        "name": "Duplicate",
+        "total": 59422178
+      },
+      {
+        "name": "Living Flame",
+        "total": 5938281
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13344701
+      },
+      {
+        "name": "Bombardments",
+        "total": 20355642
+      },
+      {
+        "name": "Melee",
+        "total": 13797
+      },
+      {
+        "name": "Eruption",
+        "total": 58218200
+      },
+      {
+        "name": "Sleep Walk",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 116605240
+      }
+    ],
+    "comp": [
+      {
+        "name": "珞可可",
+        "class": "Paladin",
+        "spec": "Holy"
+      },
+      {
+        "name": "丶村里的鸡丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "丶墨墨夕",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "丨喷火龙",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "约丶修亚丶",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "kWXqgwKQMbzjPaBH",
+    "fight_id": 2,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 211554.44195997715,
+    "aug_total_damage": 355809437,
+    "aug_dps": 199154.50408597337,
+    "duration_s": 1786.6,
+    "abilities": [
+      {
+        "name": "Fire Breath",
+        "total": 18635462
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 54124134
+      },
+      {
+        "name": "Living Flame",
+        "total": 6122101
+      },
+      {
+        "name": "Ebon Might",
+        "total": 103807489
+      },
+      {
+        "name": "Duplicate",
+        "total": 48227409
+      },
+      {
+        "name": "Melee",
+        "total": 10392
+      },
+      {
+        "name": "Azure Strike",
+        "total": 263030
+      },
+      {
+        "name": "Eruption",
+        "total": 51483485
+      },
+      {
+        "name": "Upheaval",
+        "total": 19718246
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2348388
+      },
+      {
+        "name": "Bombardments",
+        "total": 13468903
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9948322
+      },
+      {
+        "name": "Prescience",
+        "total": 27652076
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Naturlampe",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Swingshot",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Lilmonke",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Keylizard",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Míkuz",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  },
+  {
+    "report_code": "gR84LaxTbMdkrq7Z",
+    "fight_id": 21,
+    "dungeon": "Windrunner Spire",
+    "key_level": 23,
+    "paired_with": "dh",
+    "paired_dps": 230094.7813900113,
+    "aug_total_damage": 405250396,
+    "aug_dps": 206386.593669629,
+    "duration_s": 1963.55,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 29910549
+      },
+      {
+        "name": "Living Flame",
+        "total": 8737719
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 63711375
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2505196
+      },
+      {
+        "name": "Duplicate",
+        "total": 53113471
+      },
+      {
+        "name": "Upheaval",
+        "total": 21380610
+      },
+      {
+        "name": "Bombardments",
+        "total": 20091263
+      },
+      {
+        "name": "Azure Strike",
+        "total": 458769
+      },
+      {
+        "name": "Melee",
+        "total": 2590
+      },
+      {
+        "name": "Fire Breath",
+        "total": 22542265
+      },
+      {
+        "name": "Eruption",
+        "total": 59936651
+      },
+      {
+        "name": "Ebon Might",
+        "total": 111538789
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 11321149
+      }
+    ],
+    "comp": [
+      {
+        "name": "胖洪洪",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Telemist",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "梅溪湖小关羽",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "灰啊灰",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Akund",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "mk8Kq1yZ6DxwQF4r",
+    "fight_id": 1,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 226412.46868002415,
+    "aug_total_damage": 368821428,
+    "aug_dps": 200530.0187632562,
+    "duration_s": 1839.233,
+    "abilities": [
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 4243990
+      },
+      {
+        "name": "Duplicate",
+        "total": 52126238
+      },
+      {
+        "name": "Bombardments",
+        "total": 15778199
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21356282
+      },
+      {
+        "name": "Upheaval",
+        "total": 21642385
+      },
+      {
+        "name": "Ebon Might",
+        "total": 101088613
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9627484
+      },
+      {
+        "name": "Melee",
+        "total": 4685
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 59321656
+      },
+      {
+        "name": "Eruption",
+        "total": 49390325
+      },
+      {
+        "name": "Prescience",
+        "total": 29394065
+      },
+      {
+        "name": "Azure Strike",
+        "total": 495177
+      },
+      {
+        "name": "Living Flame",
+        "total": 4352329
+      }
+    ],
+    "comp": [
+      {
+        "name": "Maddrag",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Robbyrobb",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Soupstain",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Mortdk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Dpxm",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "f32B9Nk1aGxLF7Kv",
+    "fight_id": 2,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 245326.8167399764,
+    "aug_total_damage": 337601098,
+    "aug_dps": 199071.68857175374,
+    "duration_s": 1695.877,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 7153760
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9267110
+      },
+      {
+        "name": "Melee",
+        "total": 10194
+      },
+      {
+        "name": "Fire Breath",
+        "total": 19506817
+      },
+      {
+        "name": "Upheaval",
+        "total": 18637651
+      },
+      {
+        "name": "Prescience",
+        "total": 23422255
+      },
+      {
+        "name": "Bombardments",
+        "total": 18083110
+      },
+      {
+        "name": "Azure Strike",
+        "total": 176700
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 59478699
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Eruption",
+        "total": 50313317
+      },
+      {
+        "name": "Ebon Might",
+        "total": 87788539
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2689164
+      },
+      {
+        "name": "Duplicate",
+        "total": 41073782
+      }
+    ],
+    "comp": [
+      {
+        "name": "Xmdw",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "拳师阿马",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Preacherman",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "夜雨小梦",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "把腿伸过来丶",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "BYMgK2xpDwy3q96J",
+    "fight_id": 1,
+    "dungeon": "Windrunner Spire",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 208464.88563001156,
+    "aug_total_damage": 377568405,
+    "aug_dps": 194129.5599327482,
+    "duration_s": 1944.93,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 4828404
+      },
+      {
+        "name": "Melee",
+        "total": 7891
+      },
+      {
+        "name": "Eruption",
+        "total": 55822911
+      },
+      {
+        "name": "Prescience",
+        "total": 31599821
+      },
+      {
+        "name": "Bombardments",
+        "total": 17277228
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2822494
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9461609
+      },
+      {
+        "name": "Ebon Might",
+        "total": 100053466
+      },
+      {
+        "name": "Azure Strike",
+        "total": 3569747
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21283720
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 56311660
+      },
+      {
+        "name": "Upheaval",
+        "total": 20658598
+      },
+      {
+        "name": "Duplicate",
+        "total": 53870856
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      }
+    ],
+    "comp": [
+      {
+        "name": "Bähamüt",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Cemodemon",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Teqb",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Keoudk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Tipsymonkey",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "PZJMG8q1F2vfda6C",
+    "fight_id": 2,
+    "dungeon": "Skyreach",
+    "key_level": 21,
+    "paired_with": "dh",
+    "paired_dps": 183209.58249002695,
+    "aug_total_damage": 265667713,
+    "aug_dps": 165564.87292270912,
+    "duration_s": 1604.614,
+    "abilities": [
+      {
+        "name": "Living Flame",
+        "total": 5603617
+      },
+      {
+        "name": "Landslide",
+        "total": 0
+      },
+      {
+        "name": "Melee",
+        "total": 2411
+      },
+      {
+        "name": "Bombardments",
+        "total": 14573586
+      },
+      {
+        "name": "Azure Strike",
+        "total": 602998
+      },
+      {
+        "name": "Prescience",
+        "total": 19017399
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 39673663
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Duplicate",
+        "total": 34560079
+      },
+      {
+        "name": "Eruption",
+        "total": 40634976
+      },
+      {
+        "name": "Ebon Might",
+        "total": 69914800
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Shadow of the Empyrean Requiem",
+        "total": 4508663
+      },
+      {
+        "name": "Fire Breath",
+        "total": 17519686
+      },
+      {
+        "name": "Upheaval",
+        "total": 10646049
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 8409786
+      }
+    ],
+    "comp": [
+      {
+        "name": "Outvecklad",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Shemz",
+        "class": "Shaman",
+        "spec": "Restoration"
+      },
+      {
+        "name": "Trissevo",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "Ursolito",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Солярадруид",
+        "class": "Druid",
+        "spec": "Guardian"
+      }
+    ]
+  },
+  {
+    "report_code": "yvkRqtpA76FxVWPj",
+    "fight_id": 1,
+    "dungeon": "Algeth'ar Academy",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 212069.24788999557,
+    "aug_total_damage": 350887379,
+    "aug_dps": 190021.2659261582,
+    "duration_s": 1846.569,
+    "abilities": [
+      {
+        "name": "Breath of Eons",
+        "total": 57456266
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 27724170
+      },
+      {
+        "name": "Bombardments",
+        "total": 19527544
+      },
+      {
+        "name": "Fire Breath",
+        "total": 21753593
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 12963393
+      },
+      {
+        "name": "Azure Strike",
+        "total": 434637
+      },
+      {
+        "name": "Eruption",
+        "total": 49063624
+      },
+      {
+        "name": "Melee",
+        "total": 6336
+      },
+      {
+        "name": "Duplicate",
+        "total": 47606958
+      },
+      {
+        "name": "Upheaval",
+        "total": 19025251
+      },
+      {
+        "name": "Ebon Might",
+        "total": 89633102
+      },
+      {
+        "name": "Living Flame",
+        "total": 5692505
+      }
+    ],
+    "comp": [
+      {
+        "name": "Gdruid",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "肉丝爪跟",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "叽哩哇啦蛋",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "丶小修神",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "吉多凶少",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      }
+    ]
+  },
+  {
+    "report_code": "QGvWyg681LTYqh9j",
+    "fight_id": 5,
+    "dungeon": "Skyreach",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 169459.35154002905,
+    "aug_total_damage": 294934572,
+    "aug_dps": 177062.48330290584,
+    "duration_s": 1665.709,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 19125954
+      },
+      {
+        "name": "Eruption",
+        "total": 49048968
+      },
+      {
+        "name": "Ebon Might",
+        "total": 78638399
+      },
+      {
+        "name": "Melee",
+        "total": 4832
+      },
+      {
+        "name": "Duplicate",
+        "total": 43715660
+      },
+      {
+        "name": "Bombardments",
+        "total": 17696237
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Fire Breath",
+        "total": 18139135
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 9340514
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 40272596
+      },
+      {
+        "name": "Living Flame",
+        "total": 6338006
+      },
+      {
+        "name": "Upheaval",
+        "total": 12614271
+      }
+    ],
+    "comp": [
+      {
+        "name": "Bearbee",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "Serrin",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "Muk",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "Dashnmash",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "Srslystim",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "6K1wXyDVL8xpCGPQ",
+    "fight_id": 5,
+    "dungeon": "Pit of Saron",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 244849.98510998487,
+    "aug_total_damage": 408828791,
+    "aug_dps": 226373.28307845985,
+    "duration_s": 1805.994,
+    "abilities": [
+      {
+        "name": "Prescience",
+        "total": 34508608
+      },
+      {
+        "name": "Bombardments",
+        "total": 16298754
+      },
+      {
+        "name": "Duplicate",
+        "total": 60455180
+      },
+      {
+        "name": "Azure Strike",
+        "total": 647508
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 19196809
+      },
+      {
+        "name": "Eruption",
+        "total": 64899876
+      },
+      {
+        "name": "Melee",
+        "total": 1249
+      },
+      {
+        "name": "Living Flame",
+        "total": 6946383
+      },
+      {
+        "name": "Ebon Might",
+        "total": 113104677
+      },
+      {
+        "name": "Inferno's Blessing",
+        "total": 1687020
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 67212806
+      },
+      {
+        "name": "Fire Breath",
+        "total": 10930717
+      },
+      {
+        "name": "Upheaval",
+        "total": 12939204
+      }
+    ],
+    "comp": [
+      {
+        "name": "伊谢尔丶星光",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "覆雪丶",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "樱乃酱",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      },
+      {
+        "name": "超级无敌小窝",
+        "class": "Shaman",
+        "spec": "Restoration"
+      },
+      {
+        "name": "甘雨丷",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      }
+    ]
+  },
+  {
+    "report_code": "cnVmjY1P2CBhAr4G",
+    "fight_id": 25,
+    "dungeon": "Seat of the Triumvirate",
+    "key_level": 22,
+    "paired_with": "dh",
+    "paired_dps": 220569.15947002172,
+    "aug_total_damage": 427054808,
+    "aug_dps": 210881.37000980202,
+    "duration_s": 2025.095,
+    "abilities": [
+      {
+        "name": "Duplicate",
+        "total": 63308534
+      },
+      {
+        "name": "Terror of the Skies",
+        "total": 0
+      },
+      {
+        "name": "Ebon Might",
+        "total": 106654142
+      },
+      {
+        "name": "Breath of Eons",
+        "total": 66201021
+      },
+      {
+        "name": "Bombardments",
+        "total": 23966957
+      },
+      {
+        "name": "Eruption",
+        "total": 69648450
+      },
+      {
+        "name": "Upheaval",
+        "total": 20135941
+      },
+      {
+        "name": "Tail Swipe",
+        "total": 0
+      },
+      {
+        "name": "Prescience",
+        "total": 28420700
+      },
+      {
+        "name": "Melee",
+        "total": 333
+      },
+      {
+        "name": "Shifting Sands",
+        "total": 13197480
+      },
+      {
+        "name": "Beacon of Lightblind Wrath",
+        "total": 2848361
+      },
+      {
+        "name": "Living Flame",
+        "total": 8235301
+      },
+      {
+        "name": "Azure Strike",
+        "total": 444537
+      },
+      {
+        "name": "Fire Breath",
+        "total": 23993051
+      }
+    ],
+    "comp": [
+      {
+        "name": "琛猫猫",
+        "class": "Evoker",
+        "spec": "Augmentation"
+      },
+      {
+        "name": "熊大王",
+        "class": "Druid",
+        "spec": "Guardian"
+      },
+      {
+        "name": "驱夜断愁丶",
+        "class": "DemonHunter",
+        "spec": "Devourer"
+      },
+      {
+        "name": "灬白昼灬",
+        "class": "Monk",
+        "spec": "Mistweaver"
+      },
+      {
+        "name": "我小时候丢过",
+        "class": "DeathKnight",
+        "spec": "Unholy"
+      }
+    ]
+  }
+]
