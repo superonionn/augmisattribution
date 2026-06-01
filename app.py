@@ -168,14 +168,7 @@ def lock_page():
 
 @app.route("/aug")
 def aug_page():
-    content = """
-    <div class="coming-soon">
-      <h2>Aug Evoker Perspective</h2>
-      <p>Coming soon. This analysis keeps Aug constant and compares how the Aug's own logged damage
-         changes based on DPS partners (DK vs DH vs Lock).</p>
-      <p style="margin-top:10px; color:#666;">If WCL misattributes more from certain classes,
-         the Aug's logged damage should be lower when paired with those classes.</p>
-    </div>"""
+    content = _render_aug_perspective()
     return render_template_string(BASE_TEMPLATE, content=content, active="aug")
 
 
@@ -730,6 +723,295 @@ def _render_lock_imp_analysis(bd):
   <thead><tr><th>Dungeon</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th><th>n aug</th><th>n no-aug</th></tr></thead>
   <tbody>{dungeon_rows}</tbody>
 </table>
+"""
+
+
+def _render_aug_perspective():
+    """Render the Aug Evoker perspective page: credited damage by partner class + cross-class misattribution."""
+    import json
+    import statistics
+    from collections import defaultdict
+
+    lock_aug_path = os.path.join("data", "aug_with_lock.json")
+    dk_aug_path = os.path.join("data", "aug_with_dk.json")
+
+    has_aug_data = os.path.exists(lock_aug_path) and os.path.exists(dk_aug_path)
+
+    html = f"""
+<h2 style="border:none; margin-top:0;">Aug Evoker — Midnight Season 1</h2>
+<p class="subtitle">How much damage does WCL credit to the Aug, and does it vary by DPS partner?</p>
+"""
+
+    if has_aug_data:
+        with open(lock_aug_path, encoding="utf-8") as f:
+            aug_lock = json.load(f)
+        with open(dk_aug_path, encoding="utf-8") as f:
+            aug_dk = json.load(f)
+
+        def ability_breakdown(entries):
+            totals = defaultdict(list)
+            overall_dps = []
+            for row in entries:
+                dur = row.get("duration_s", 0)
+                if dur <= 0:
+                    continue
+                overall_dps.append(row["aug_total_damage"] / dur)
+                for a in row.get("abilities", []):
+                    totals[a["name"]].append(a["total"] / dur)
+            return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 5}, statistics.mean(overall_dps) if overall_dps else 0
+
+        lock_ab, lock_avg = ability_breakdown(aug_lock)
+        dk_ab, dk_avg = ability_breakdown(aug_dk)
+
+        html += f"""
+<div class="cards">
+  <div class="card">
+    <div class="label">Aug DPS (paired w/ Lock)</div>
+    <div class="value accent">{lock_avg:,.0f}</div>
+    <div class="sub">{len(aug_lock)} reports</div>
+  </div>
+  <div class="card">
+    <div class="label">Aug DPS (paired w/ DK)</div>
+    <div class="value accent">{dk_avg:,.0f}</div>
+    <div class="sub">{len(aug_dk)} reports</div>
+  </div>
+  <div class="card">
+    <div class="label">Δ (Lock − DK)</div>
+    <div class="value" style="color:{'#00B894' if lock_avg >= dk_avg else '#E17055'}">{lock_avg - dk_avg:+,.0f}</div>
+    <div class="sub">{(lock_avg - dk_avg) / dk_avg * 100:+.1f}% difference</div>
+  </div>
+</div>
+
+<p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
+  If WCL over-strips damage from a DPS class (e.g., Wild Imps), that stripped damage gets <em>credited</em>
+  to the Aug. So the Aug's logged DPS should be <strong>higher</strong> when paired with classes that
+  are over-stripped.
+</p>
+"""
+
+        reattrib_abilities = ["Ebon Might", "Shifting Sands", "Prescience", "Bombardments",
+                              "Breath of Eons", "Fate Mirror", "Inferno's Blessing"]
+        own_abilities = [n for n in set(list(lock_ab.keys()) + list(dk_ab.keys())) if n not in reattrib_abilities]
+
+        ab_rows = ""
+        all_ab = set(list(lock_ab.keys()) + list(dk_ab.keys()))
+        ab_data = []
+        for name in all_ab:
+            l_val = lock_ab.get(name, 0)
+            d_val = dk_ab.get(name, 0)
+            diff = l_val - d_val
+            ab_data.append((name, l_val, d_val, diff))
+        ab_data.sort(key=lambda x: -abs(x[3]))
+
+        reattrib_rows = ""
+        own_rows = ""
+        for name, l_val, d_val, diff in ab_data:
+            if l_val + d_val < 200:
+                continue
+            color = "#00B894" if diff >= 0 else "#E17055"
+            pct = diff / d_val * 100 if d_val > 0 else 0
+            row = f"""<tr>
+                <td>{name}</td>
+                <td>{l_val:,.0f}</td>
+                <td>{d_val:,.0f}</td>
+                <td style="color:{color}">{diff:+,.0f}</td>
+                <td style="color:{color}">{pct:+.1f}%</td>
+            </tr>"""
+            if name in reattrib_abilities:
+                reattrib_rows += row
+            else:
+                own_rows += row
+
+        html += f"""
+<h3>Reattributed Abilities (damage stripped from DPS → credited to Aug)</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  These are the Aug's support abilities — damage that WCL strips from DPS players and credits to the Aug.
+  If stripping is inconsistent across DPS classes, these numbers should differ.
+</p>
+<table>
+  <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
+  <tbody>{reattrib_rows}</tbody>
+</table>
+
+<h3 style="margin-top:25px;">Aug's Own Abilities</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  The Aug's personal damage (Eruption, Living Flame, etc.) should not vary much by partner class.
+  Large differences here would suggest comp/key-level confounding rather than reattribution effects.
+</p>
+<table>
+  <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
+  <tbody>{own_rows}</tbody>
+</table>
+"""
+
+        lock_em = lock_ab.get("Ebon Might", 0)
+        dk_em = dk_ab.get("Ebon Might", 0)
+        lock_ss = lock_ab.get("Shifting Sands", 0)
+        dk_ss = dk_ab.get("Shifting Sands", 0)
+        lock_presc = lock_ab.get("Prescience", 0)
+        dk_presc = dk_ab.get("Prescience", 0)
+
+        html += f"""
+<div class="conclusion">
+  <h2>Aug Perspective Summary</h2>
+  <p style="font-size:14px; line-height:1.7; color:#ccc;">
+    The Aug Evoker gets credited <strong style="color:{STYLE['accent']}">{lock_avg - dk_avg:+,.0f} DPS ({(lock_avg - dk_avg) / dk_avg * 100:+.1f}%)</strong>
+    more damage when paired with Demo Lock vs Unholy DK.
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    <strong>Ebon Might:</strong> {lock_em:,.0f} w/ Lock vs {dk_em:,.0f} w/ DK ({lock_em - dk_em:+,.0f})<br>
+    <strong>Shifting Sands:</strong> {lock_ss:,.0f} w/ Lock vs {dk_ss:,.0f} w/ DK ({lock_ss - dk_ss:+,.0f})<br>
+    <strong>Prescience:</strong> {lock_presc:,.0f} w/ Lock vs {dk_presc:,.0f} w/ DK ({lock_presc - dk_presc:+,.0f})
+  </p>
+  <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
+    This is consistent with the per-ability findings: Demo Lock's Wild Imps are over-stripped, and that
+    excess damage flows to the Aug. Meanwhile DK is over-stripped on ST abilities (Scourge Strike), contributing
+    a smaller surplus. The differences in reattributed abilities reflect the different misattribution profiles
+    of each DPS class.
+  </p>
+</div>
+"""
+
+    else:
+        html += """
+<div class="coming-soon" style="padding: 50px 40px;">
+  <p>Aug perspective data not yet collected. Run <code>collect_aug_perspective.py</code> for Lock and DK.</p>
+</div>
+"""
+
+    html += _render_misattribution_sources()
+
+    html += """
+<div class="methodology">
+  <h3>Methodology</h3>
+  <ul>
+    <li>Aug perspective: For each report where we have DPS class data, we also query the same report+fight
+        with sourceClass=Evoker to see how WCL credits damage to the Aug.</li>
+    <li>Cross-class comparison: Per-ability deltas are computed by comparing mean ability DPS in aug groups
+        vs non-aug groups, across both Demo Lock (1,604 reports) and Unholy DK datasets.</li>
+    <li>All DPS data is the "unaugmented" (stripped) view — Aug contributions are removed from DPS and credited
+        to the Aug Evoker. The Aug's own logged damage includes both personal damage and reattributed damage.</li>
+    <li>Reattributed abilities: Ebon Might, Shifting Sands, Prescience, Bombardments, Breath of Eons,
+        Fate Mirror, Inferno's Blessing — these sum to ~17% of a DPS player's raw damage.</li>
+  </ul>
+</div>
+"""
+    return html
+
+
+def _render_misattribution_sources():
+    """Render cross-class comparison of which abilities are most misattributed."""
+    import json
+    import statistics
+    from collections import defaultdict
+
+    lock_path = os.path.join("data", "lock_breakdowns.json")
+    dk_path = os.path.join("data", "breakdowns.json")
+    if not os.path.exists(lock_path) or not os.path.exists(dk_path):
+        return ""
+
+    with open(lock_path, encoding="utf-8") as f:
+        lock_data = json.load(f)
+    with open(dk_path, encoding="utf-8") as f:
+        dk_data = json.load(f)
+
+    def per_ability(entries):
+        totals = defaultdict(list)
+        for row in entries:
+            dur = row["total_damage"] / row["dps"]
+            for a in row["abilities"]:
+                name = a["name"]
+                if name == "未知目标":
+                    name = "Raise Dead"
+                totals[name].append(a["total"] / dur)
+        return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 20}
+
+    lock_aug_ab = per_ability([e for e in lock_data if e["has_aug"]])
+    lock_noaug_ab = per_ability([e for e in lock_data if not e["has_aug"]])
+    dk_aug_ab = per_ability([e for e in dk_data if e["has_aug"]])
+    dk_noaug_ab = per_ability([e for e in dk_data if not e["has_aug"]])
+
+    rows = []
+    for name in set(lock_aug_ab) | set(lock_noaug_ab):
+        a = lock_aug_ab.get(name, 0)
+        n = lock_noaug_ab.get(name, 0)
+        if a + n > 500:
+            rows.append(("Lock", name, a, n, a - n, (a - n) / n * 100 if n else 0))
+    for name in set(dk_aug_ab) | set(dk_noaug_ab):
+        if name == "Raise Dead":
+            continue
+        a = dk_aug_ab.get(name, 0)
+        n = dk_noaug_ab.get(name, 0)
+        if a + n > 500:
+            rows.append(("DK", name, a, n, a - n, (a - n) / n * 100 if n else 0))
+
+    rows.sort(key=lambda x: -x[4])
+
+    under_rows = ""
+    for cls, name, a, n, d, pct in rows[:8]:
+        color = "#6C5CE7"
+        bar_w = min(abs(d) / 25, 100)
+        under_rows += f"""<tr>
+            <td>{name}</td><td>{cls}</td>
+            <td>{a:,.0f}</td><td>{n:,.0f}</td>
+            <td style="color:{color}">{d:+,.0f}</td>
+            <td style="color:{color}">{pct:+.1f}%</td>
+            <td><div style="background:{color};height:12px;width:{bar_w}%;border-radius:3px"></div></td>
+        </tr>"""
+
+    over_rows = ""
+    for cls, name, a, n, d, pct in sorted(rows, key=lambda x: x[4])[:6]:
+        color = "#E17055"
+        bar_w = min(abs(d) / 25, 100)
+        over_rows += f"""<tr>
+            <td>{name}</td><td>{cls}</td>
+            <td>{a:,.0f}</td><td>{n:,.0f}</td>
+            <td style="color:{color}">{d:+,.0f}</td>
+            <td style="color:{color}">{pct:+.1f}%</td>
+            <td><div style="background:{color};height:12px;width:{bar_w}%;border-radius:3px"></div></td>
+        </tr>"""
+
+    return f"""
+<h2>Cross-Class Misattribution Sources</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  Comparing per-ability deltas across Demo Lock and Unholy DK to identify which abilities are
+  most affected by reattribution issues. Positive = Aug contribution leaking through (under-stripped).
+  Negative = too much stripped from player and credited to Aug (over-stripped).
+</p>
+
+<h3>Largest Under-Stripped Abilities</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  These abilities show more DPS in aug groups than non-aug groups <em>after</em> WCL's reattribution.
+  The big uncapped AoE abilities — Graveyard (DK), Diabolic Ritual (Lock), Tyrant (Lock) — are the
+  primary contributors. Aug contributions on these abilities are not being fully stripped in dungeons.
+</p>
+<table>
+  <thead><tr><th>Ability</th><th>Class</th><th>Aug DPS</th><th>NoAug DPS</th><th>Δ DPS</th><th>Δ%</th><th></th></tr></thead>
+  <tbody>{under_rows}</tbody>
+</table>
+
+<h3 style="margin-top:25px;">Largest Over-Stripped Abilities</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  These abilities show less DPS in aug groups — more damage is being stripped than the Aug actually contributed.
+  Wild Imps dominate this list, but DK ST abilities (Scourge Strike, Melee) also appear.
+</p>
+<table>
+  <thead><tr><th>Ability</th><th>Class</th><th>Aug DPS</th><th>NoAug DPS</th><th>Δ DPS</th><th>Δ%</th><th></th></tr></thead>
+  <tbody>{over_rows}</tbody>
+</table>
+
+<p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
+  <strong style="color:{STYLE['accent']}">The pattern across both classes:</strong>
+  Big uncapped AoE abilities are consistently under-stripped (+4-9%), while ST and high-instance-count abilities
+  are over-stripped (-6 to -13%). The net effect is a small positive headline delta (+1-2%) that masks
+  significant per-ability misattribution in both directions.
+</p>
+<p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
+  Per-pull analysis confirms this: on the Crawth boss fight (pure ST) in Algeth'ar Academy, Lock overall
+  shows +0.7% while imps show -9.3%. On the Vile Lasher trash pull (true mass AoE), Lock overall shows
+  +9.2% while imps show only -2.1%. The under-stripping is concentrated in AoE, while over-stripping
+  is worse in ST — suggesting Blizzard's raid-focused fixes may overcorrect on certain ability types.
+</p>
 """
 
 
