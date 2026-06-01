@@ -1,9 +1,9 @@
 """
-Analyze Havoc DH rankings to quantify Aug Evoker damage misattribution.
+Analyze Devourer DH rankings to quantify Aug Evoker damage misattribution.
 
-Havoc DH damage is ~100% direct player damage (no pets), split between
-uncapped AoE (Immolation Aura, Eye Beam/Demonsurge) and capped cleave
-(Blade Dance/Death Sweep, Glaive Tempest).
+Devourer is a separate DH spec in Midnight (not Havoc). The dominant hero talent
+is Annihilator (99% usage). Core abilities: Collapsing Star, Eradicate, Void Ray,
+Voidfall Meteor, Devour, Consume, Catastrophe. All damage is direct (no pets).
 """
 
 import json
@@ -27,10 +27,8 @@ from analyze import (
     BUFF_MULTIPLIERS, STYLE,
 )
 
-UNCAPPED_AOE = ["Immolation Aura", "Demonsurge", "Eye Beam"]
-CAPPED_CLEAVE = ["Death Sweep", "Blade Dance", "Glaive Tempest", "Trail of Ruin",
-                 "Burning Blades", "The Hunt"]
-ST_FILLER = ["Annihilation", "Chaos Strike", "Demon Blades", "Melee", "Throw Glaive"]
+AOE_ABILITIES = ["Collapsing Star", "Eradicate", "Voidfall Meteor", "Catastrophe", "Void Ray"]
+ST_ABILITIES = ["Devour", "Consume", "Cull", "Reap", "Melee"]
 
 
 def load_dh_rankings():
@@ -134,7 +132,7 @@ def chart_dh_distributions(df):
         ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}k"))
         ax.set_xlabel("DPS", color=STYLE["text"], fontsize=10)
 
-    fig.suptitle("Havoc DH DPS Distributions: Aug vs No-Aug",
+    fig.suptitle("Devourer DH DPS Distributions: Aug vs No-Aug",
                  color=STYLE["accent"], fontsize=15, fontweight="bold", y=1.02)
     fig.tight_layout()
     return fig_to_base64(fig)
@@ -142,6 +140,7 @@ def chart_dh_distributions(df):
 
 def chart_dh_per_dungeon(df):
     dungeons = sorted(df["dungeon"].unique())
+    valid_dungeons = []
     deltas, pcts, ns_aug, ns_noaug = [], [], [], []
 
     for d in dungeons:
@@ -152,6 +151,7 @@ def chart_dh_per_dungeon(df):
             continue
         delta = a.mean() - n.mean()
         pct = delta / n.mean() * 100
+        valid_dungeons.append(d)
         deltas.append(delta)
         pcts.append(pct)
         ns_aug.append(len(a))
@@ -162,21 +162,24 @@ def chart_dh_per_dungeon(df):
     set_dark_style(ax, "Buff-Normalized DPS Delta per Dungeon (Aug - No-Aug)")
 
     short_names = [d.replace("Seat of the Triumvirate", "Seat of Triumv.")
-                    .replace("Algeth'ar Academy", "Algeth'ar Acad.") for d in dungeons]
+                    .replace("Algeth'ar Academy", "Algeth'ar Acad.") for d in valid_dungeons]
     colors = [STYLE["aug"] if d > 0 else STYLE["noaug"] for d in deltas]
     bars = ax.bar(short_names, deltas, color=colors, alpha=0.85)
 
     for bar, pct, na, nn in zip(bars, pcts, ns_aug, ns_noaug):
         y = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() / 2, y + 150,
+        offset = 150 if y >= 0 else -150
+        va = "bottom" if y >= 0 else "top"
+        ax.text(bar.get_x() + bar.get_width() / 2, y + offset,
                 f"{pct:+.1f}%\n({na}/{nn})",
-                ha="center", va="bottom", color=STYLE["text"], fontsize=8)
+                ha="center", va=va, color=STYLE["text"], fontsize=8)
 
     ax.axhline(0, color=STYLE["text"], linewidth=0.5, alpha=0.3)
-    avg_delta = sum(deltas) / len(deltas) if deltas else 0
-    ax.axhline(avg_delta, color=STYLE["accent"], linewidth=1.5, linestyle="--", alpha=0.8)
-    ax.text(len(dungeons) - 0.5, avg_delta + 200,
-            f"avg: {avg_delta:+,.0f}", color=STYLE["accent"], fontsize=10, ha="right")
+    if deltas:
+        avg_delta = sum(deltas) / len(deltas)
+        ax.axhline(avg_delta, color=STYLE["accent"], linewidth=1.5, linestyle="--", alpha=0.8)
+        ax.text(len(valid_dungeons) - 0.5, avg_delta + 200,
+                f"avg: {avg_delta:+,.0f}", color=STYLE["accent"], fontsize=10, ha="right")
     ax.set_ylabel("DPS Delta", color=STYLE["text"], fontsize=11)
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x:+,.0f}"))
     plt.xticks(rotation=30, ha="right")
@@ -197,8 +200,9 @@ def chart_dh_key_level(df):
         stds = grouped.std()
         counts = grouped.count()
         valid = counts >= 5
-        ax.errorbar(means.index[valid], means[valid], yerr=stds[valid]/counts[valid]**0.5,
-                     fmt="o-", color=color, label=label, capsize=4, linewidth=2, markersize=6)
+        if valid.any():
+            ax.errorbar(means.index[valid], means[valid], yerr=stds[valid]/counts[valid]**0.5,
+                         fmt="o-", color=color, label=label, capsize=4, linewidth=2, markersize=6)
     ax.legend(fontsize=10, facecolor=STYLE["card"], edgecolor=STYLE["grid"],
               labelcolor=STYLE["text"])
     ax.set_xlabel("Key Level", color=STYLE["text"])
@@ -232,9 +236,6 @@ def load_dh_breakdowns():
 
     aug = bdf[bdf["has_aug"]]
     noaug = bdf[~bdf["has_aug"]]
-
-    aug_dur = aug["total_damage"] / aug["dps"]
-    noaug_dur = noaug["total_damage"] / noaug["dps"]
 
     def agg(subset):
         totals = defaultdict(lambda: {"total": 0, "count": 0})
@@ -270,7 +271,6 @@ def load_dh_breakdowns():
                                  "aug_n": aug_n, "noaug_n": noaug_n})
     ability_rows.sort(key=lambda x: -abs(x["delta"]))
 
-    # AoE category analysis
     def get_dps_from_row(row, name):
         dur = row["total_damage"] / row["dps"]
         bm = compute_buff_multiplier(row["buffs"])
@@ -279,30 +279,26 @@ def load_dh_breakdowns():
                 return a["total"] / bm / dur
         return 0
 
-    aoe_analysis = {"uncapped": {}, "capped": {}, "st": {}}
+    aoe_analysis = {"aoe": {}, "st": {}}
     for label, subset in [("aug", aug), ("noaug", noaug)]:
-        for ab in UNCAPPED_AOE:
+        for ab in AOE_ABILITIES:
             vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
-            aoe_analysis["uncapped"].setdefault(ab, {})[label] = sum(vals) / len(vals)
-        for ab in CAPPED_CLEAVE:
-            vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
-            aoe_analysis["capped"].setdefault(ab, {})[label] = sum(vals) / len(vals)
-        for ab in ST_FILLER:
+            aoe_analysis["aoe"].setdefault(ab, {})[label] = sum(vals) / len(vals)
+        for ab in ST_ABILITIES:
             vals = [get_dps_from_row(row, ab) for _, row in subset.iterrows()]
             aoe_analysis["st"].setdefault(ab, {})[label] = sum(vals) / len(vals)
 
-    for cat, abilities in [("uncapped", UNCAPPED_AOE), ("capped", CAPPED_CLEAVE), ("st", ST_FILLER)]:
+    for cat, abilities in [("aoe", AOE_ABILITIES), ("st", ST_ABILITIES)]:
         for label in ["aug", "noaug"]:
             aoe_analysis[cat]["_total_" + label] = sum(
                 aoe_analysis[cat][ab][label] for ab in abilities)
 
     # Per-ability chart
-    filtered = [r for r in ability_rows if abs(r["pct"]) < 500][:18]
+    filtered = [r for r in ability_rows if abs(r["pct"]) < 500][:15]
     fig, ax = plt.subplots(figsize=(14, max(6, len(filtered) * 0.4)))
     fig.patch.set_facecolor(STYLE["bg"])
     set_dark_style(ax, "Per-Ability Normalized DPS Delta (Aug - No-Aug)")
-    cat_colors = {"uncapped_aoe": "#e74c3c", "capped_cleave": "#f39c12",
-                  "st": "#3498db", "other": "#aaa"}
+    cat_colors = {"aoe": "#e74c3c", "st": "#3498db", "other": "#aaa"}
     names = [r["name"] for r in filtered]
     deltas = [r["delta"] for r in filtered]
     colors = [cat_colors.get(r["cat"], "#aaa") for r in filtered]
@@ -316,58 +312,59 @@ def load_dh_breakdowns():
         ax.text(d + (50 if d >= 0 else -50), i, f"{d:+,.0f} ({r['pct']:+.1f}%)",
                 va="center", ha="left" if d >= 0 else "right", color=STYLE["text"], fontsize=8)
     from matplotlib.patches import Patch
-    ax.legend(handles=[Patch(color="#e74c3c", label="Uncapped AoE"),
-                       Patch(color="#f39c12", label="Capped Cleave"),
-                       Patch(color="#3498db", label="Single Target")],
+    ax.legend(handles=[Patch(color="#e74c3c", label="AoE"),
+                       Patch(color="#3498db", label="ST / Resource")],
               fontsize=10, facecolor=STYLE["card"], edgecolor=STYLE["grid"],
               labelcolor=STYLE["text"], loc="lower right")
     fig.tight_layout()
     ability_chart = fig_to_base64(fig)
 
-    # AoE category chart
-    uncapped_labels = ["Immolation\nAura", "Demonsurge", "Eye Beam"]
-    capped_labels = ["Death\nSweep", "Blade\nDance", "Glaive\nTempest",
-                     "Trail of\nRuin", "Burning\nBlades", "The Hunt"]
+    # AoE vs ST chart
+    aoe_labels = ["Collapsing\nStar", "Eradicate", "Voidfall\nMeteor", "Catastrophe", "Void Ray"]
+    st_labels = ["Devour", "Consume", "Cull", "Reap", "Melee"]
 
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
     fig.patch.set_facecolor(STYLE["bg"])
     w = 0.35
 
     ax = axes[0]
-    set_dark_style(ax, "Uncapped AoE Sources")
-    xi = range(len(UNCAPPED_AOE))
-    aug_vals = [aoe_analysis["uncapped"][ab]["aug"] for ab in UNCAPPED_AOE]
-    noaug_vals = [aoe_analysis["uncapped"][ab]["noaug"] for ab in UNCAPPED_AOE]
+    set_dark_style(ax, "AoE Abilities")
+    xi = range(len(AOE_ABILITIES))
+    aug_vals = [aoe_analysis["aoe"][ab]["aug"] for ab in AOE_ABILITIES]
+    noaug_vals = [aoe_analysis["aoe"][ab]["noaug"] for ab in AOE_ABILITIES]
     ax.bar([i - w/2 for i in xi], aug_vals, w, color=STYLE["aug"], alpha=0.85, label="Aug")
     ax.bar([i + w/2 for i in xi], noaug_vals, w, color=STYLE["noaug"], alpha=0.85, label="No Aug")
     ax.set_xticks(list(xi))
-    ax.set_xticklabels(uncapped_labels, fontsize=9)
+    ax.set_xticklabels(aoe_labels, fontsize=8)
     ax.set_ylabel("Normalized DPS", color=STYLE["text"])
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k"))
     for i, (a, n) in enumerate(zip(aug_vals, noaug_vals)):
-        delta = a - n
-        pct = delta / n * 100 if n > 0 else 0
-        ax.text(i, max(a, n) + 400, f"{pct:+.1f}%", ha="center",
-                color=STYLE["accent"], fontsize=9, fontweight="bold")
+        if n > 0:
+            delta = a - n
+            pct = delta / n * 100
+            color = STYLE["accent"] if delta >= 0 else "#E17055"
+            ax.text(i, max(a, n) + max(aug_vals) * 0.03, f"{pct:+.1f}%", ha="center",
+                    color=color, fontsize=9, fontweight="bold")
     ax.legend(fontsize=9, facecolor=STYLE["card"], edgecolor=STYLE["grid"], labelcolor=STYLE["text"])
 
     ax = axes[1]
-    set_dark_style(ax, "Capped Cleave Sources")
-    xi = range(len(CAPPED_CLEAVE))
-    aug_vals = [aoe_analysis["capped"][ab]["aug"] for ab in CAPPED_CLEAVE]
-    noaug_vals = [aoe_analysis["capped"][ab]["noaug"] for ab in CAPPED_CLEAVE]
+    set_dark_style(ax, "ST / Resource Abilities")
+    xi = range(len(ST_ABILITIES))
+    aug_vals = [aoe_analysis["st"][ab]["aug"] for ab in ST_ABILITIES]
+    noaug_vals = [aoe_analysis["st"][ab]["noaug"] for ab in ST_ABILITIES]
     ax.bar([i - w/2 for i in xi], aug_vals, w, color=STYLE["aug"], alpha=0.85, label="Aug")
     ax.bar([i + w/2 for i in xi], noaug_vals, w, color=STYLE["noaug"], alpha=0.85, label="No Aug")
     ax.set_xticks(list(xi))
-    ax.set_xticklabels(capped_labels, fontsize=8)
+    ax.set_xticklabels(st_labels, fontsize=9)
     ax.set_ylabel("Normalized DPS", color=STYLE["text"])
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k"))
     for i, (a, n) in enumerate(zip(aug_vals, noaug_vals)):
-        delta = a - n
-        pct = delta / n * 100 if n > 0 else 0
-        color = STYLE["accent"] if delta >= 0 else "#E17055"
-        ax.text(i, max(a, n) + 200, f"{pct:+.1f}%", ha="center",
-                color=color, fontsize=9, fontweight="bold")
+        if n > 0:
+            delta = a - n
+            pct = delta / n * 100
+            color = STYLE["accent"] if delta >= 0 else "#E17055"
+            ax.text(i, max(a, n) + max(max(aug_vals), max(noaug_vals)) * 0.05, f"{pct:+.1f}%", ha="center",
+                    color=color, fontsize=9, fontweight="bold")
     ax.legend(fontsize=9, facecolor=STYLE["card"], edgecolor=STYLE["grid"], labelcolor=STYLE["text"])
     fig.tight_layout()
     aoe_chart = fig_to_base64(fig)
@@ -385,10 +382,8 @@ def load_dh_breakdowns():
 
 
 def classify_dh_ability(name):
-    if name in UNCAPPED_AOE:
-        return "uncapped_aoe"
-    if name in CAPPED_CLEAVE:
-        return "capped_cleave"
-    if name in ST_FILLER:
+    if name in AOE_ABILITIES:
+        return "aoe"
+    if name in ST_ABILITIES:
         return "st"
     return "other"

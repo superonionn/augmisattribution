@@ -19,7 +19,7 @@ from analyze_lock import (
 from analyze_dh import (
     load_dh_rankings, normalize_dh_dps, compute_dh_stats,
     chart_dh_distributions, chart_dh_per_dungeon, chart_dh_key_level,
-    load_dh_breakdowns, UNCAPPED_AOE, CAPPED_CLEAVE, ST_FILLER,
+    load_dh_breakdowns, AOE_ABILITIES, ST_ABILITIES,
 )
 
 app = Flask(__name__)
@@ -1188,10 +1188,10 @@ def _render_lock_conclusion(stats, bd):
 
 
 def _render_dh(stats, charts, bd):
-    """Render the full Havoc DH analysis page content."""
+    """Render the full Devourer DH analysis page content."""
     html = f"""
-<h2 style="border:none; margin-top:0;">Havoc DH — Midnight Season 1</h2>
-<p class="subtitle">Top 400 rankings per dungeon across all regions (Havoc spec, Aldrachi Reaver)</p>
+<h2 style="border:none; margin-top:0;">Devourer DH — Midnight Season 1</h2>
+<p class="subtitle">Top 400 rankings per dungeon across all regions (Devourer spec, Annihilator hero talent)</p>
 
 <div class="cards">
   <div class="card">
@@ -1267,11 +1267,9 @@ def _render_dh_breakdown(charts, bd):
     ability_table_rows = ""
     for r in ability_rows[:15]:
         color = "#6C5CE7" if r["delta"] > 0 else "#E17055"
-        cat_colors = {"uncapped_aoe": "#e74c3c", "capped_cleave": "#f39c12",
-                      "st": "#3498db"}
+        cat_colors = {"aoe": "#e74c3c", "st": "#3498db"}
         cat_color = cat_colors.get(r["cat"], "#aaa")
-        cat_label = {"uncapped_aoe": "uncapped", "capped_cleave": "capped",
-                     "st": "ST"}.get(r["cat"], "other")
+        cat_label = {"aoe": "AoE", "st": "ST"}.get(r["cat"], "other")
         pct_str = f"{r['pct']:+.1f}%" if abs(r["pct"]) < 500 else "new"
         ability_table_rows += f"""
         <tr>
@@ -1287,8 +1285,8 @@ def _render_dh_breakdown(charts, bd):
 <h2>Damage Breakdown Analysis</h2>
 <p style="color:#888; font-size:13px; margin-bottom:10px;">
   Analyzing {n_aug + n_noaug} per-fight ability breakdowns ({n_aug} aug, {n_noaug} no-aug).
-  Havoc DH damage is entirely direct player damage (no pets), split between uncapped AoE
-  (Immolation Aura, Eye Beam/Demonsurge) and capped cleave (Blade Dance, Death Sweep, Glaive Tempest).
+  Devourer DH damage is entirely direct player damage (no pets). Core abilities: Collapsing Star,
+  Eradicate (cone AoE), Void Ray (channel), Voidfall Meteor (Annihilator proc), Devour, Consume.
   All DPS values are buff-normalized.
 </p>
 
@@ -1302,18 +1300,16 @@ def _render_dh_breakdown(charts, bd):
 </table>
 """
 
-    uc_a = aoe["uncapped"]["_total_aug"]
-    uc_n = aoe["uncapped"]["_total_noaug"]
-    cc_a = aoe["capped"]["_total_aug"]
-    cc_n = aoe["capped"]["_total_noaug"]
+    aoe_a = aoe["aoe"]["_total_aug"]
+    aoe_n = aoe["aoe"]["_total_noaug"]
     st_a = aoe["st"]["_total_aug"]
     st_n = aoe["st"]["_total_noaug"]
 
     html += f"""
-<h2>Uncapped vs Capped AoE Analysis</h2>
+<h2>AoE vs ST Analysis</h2>
 <p style="color:#888; font-size:13px; margin-bottom:10px;">
   If misattribution were a flat multiplier, all ability types should be inflated equally.
-  DH has no pets, so this comparison directly reveals whether the Aug delta comes from
+  Devourer DH has no pets, so this comparison directly reveals whether the Aug delta comes from
   gameplay differences (bigger pulls) or actual reattribution artifacts.
 </p>
 
@@ -1321,39 +1317,17 @@ def _render_dh_breakdown(charts, bd):
 
 <div class="cards">
   <div class="card">
-    <div class="label">Uncapped AoE</div>
-    <div class="value" style="color:{'#6C5CE7' if uc_a > uc_n else '#E17055'}">{(uc_a - uc_n) / uc_n * 100 if uc_n else 0:+.1f}%</div>
-    <div class="sub">Immolation Aura, Demonsurge, Eye Beam</div>
+    <div class="label">AoE Abilities</div>
+    <div class="value" style="color:{'#6C5CE7' if aoe_a > aoe_n else '#E17055'}">{(aoe_a - aoe_n) / aoe_n * 100 if aoe_n else 0:+.1f}%</div>
+    <div class="sub">Collapsing Star, Eradicate, Voidfall Meteor, Catastrophe, Void Ray</div>
   </div>
   <div class="card">
-    <div class="label">Capped Cleave</div>
-    <div class="value" style="color:{'#6C5CE7' if cc_a > cc_n else '#E17055'}">{(cc_a - cc_n) / cc_n * 100 if cc_n else 0:+.1f}%</div>
-    <div class="sub">Death Sweep, Blade Dance, Glaive Tempest, The Hunt</div>
-  </div>
-  <div class="card">
-    <div class="label">ST Filler</div>
+    <div class="label">ST / Resource</div>
     <div class="value" style="color:{'#6C5CE7' if st_a > st_n else '#E17055'}">{(st_a - st_n) / st_n * 100 if st_n else 0:+.1f}%</div>
-    <div class="sub">Annihilation, Chaos Strike, Demon Blades, Melee</div>
+    <div class="sub">Devour, Consume, Cull, Reap, Melee</div>
   </div>
 </div>
 """
-
-    NICE_NAMES = {
-        "Immolation Aura": "Immolation Aura",
-        "Demonsurge": "Demonsurge",
-        "Eye Beam": "Eye Beam",
-        "Death Sweep": "Death Sweep",
-        "Blade Dance": "Blade Dance",
-        "Glaive Tempest": "Glaive Tempest",
-        "Trail of Ruin": "Trail of Ruin",
-        "Burning Blades": "Burning Blades",
-        "The Hunt": "The Hunt",
-        "Annihilation": "Annihilation",
-        "Chaos Strike": "Chaos Strike",
-        "Demon Blades": "Demon Blades",
-        "Melee": "Melee",
-        "Throw Glaive": "Throw Glaive",
-    }
 
     def make_rows(abilities, category):
         rows = ""
@@ -1363,30 +1337,22 @@ def _render_dh_breakdown(charts, bd):
             delta = a - n
             pct = delta / n * 100 if n > 0 else 0
             color = "#6C5CE7" if delta > 0 else "#E17055"
-            rows += f"""<tr><td>{NICE_NAMES.get(ab, ab)}</td><td>{a:,.0f}</td><td>{n:,.0f}</td><td style="color:{color}">{delta:+,.0f}</td><td style="color:{color}">{pct:+.1f}%</td></tr>"""
+            rows += f"""<tr><td>{ab}</td><td>{a:,.0f}</td><td>{n:,.0f}</td><td style="color:{color}">{delta:+,.0f}</td><td style="color:{color}">{pct:+.1f}%</td></tr>"""
         return rows
 
     html += f"""
-<h3>Uncapped AoE (scales with pull size)</h3>
+<h3>AoE Abilities</h3>
 <table>
   <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
-  <tbody>{make_rows(UNCAPPED_AOE, "uncapped")}
-    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{uc_a:,.0f}</td><td>{uc_n:,.0f}</td><td style="color:{'#6C5CE7' if uc_a>uc_n else '#E17055'}">{uc_a-uc_n:+,.0f}</td><td style="color:{'#6C5CE7' if uc_a>uc_n else '#E17055'}">{(uc_a-uc_n)/uc_n*100 if uc_n else 0:+.1f}%</td></tr>
+  <tbody>{make_rows(AOE_ABILITIES, "aoe")}
+    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{aoe_a:,.0f}</td><td>{aoe_n:,.0f}</td><td style="color:{'#6C5CE7' if aoe_a>aoe_n else '#E17055'}">{aoe_a-aoe_n:+,.0f}</td><td style="color:{'#6C5CE7' if aoe_a>aoe_n else '#E17055'}">{(aoe_a-aoe_n)/aoe_n*100 if aoe_n else 0:+.1f}%</td></tr>
   </tbody>
 </table>
 
-<h3>Capped Cleave (target-capped)</h3>
+<h3>ST / Resource Abilities</h3>
 <table>
   <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
-  <tbody>{make_rows(CAPPED_CLEAVE, "capped")}
-    <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{cc_a:,.0f}</td><td>{cc_n:,.0f}</td><td style="color:{'#6C5CE7' if cc_a>cc_n else '#E17055'}">{cc_a-cc_n:+,.0f}</td><td style="color:{'#6C5CE7' if cc_a>cc_n else '#E17055'}">{(cc_a-cc_n)/cc_n*100 if cc_n else 0:+.1f}%</td></tr>
-  </tbody>
-</table>
-
-<h3>ST Filler</h3>
-<table>
-  <thead><tr><th>Ability</th><th>Aug DPS</th><th>No-Aug DPS</th><th>Δ DPS</th><th>Δ%</th></tr></thead>
-  <tbody>{make_rows(ST_FILLER, "st")}
+  <tbody>{make_rows(ST_ABILITIES, "st")}
     <tr style="border-top:2px solid {STYLE['grid']};font-weight:bold"><td>Total</td><td>{st_a:,.0f}</td><td>{st_n:,.0f}</td><td style="color:{'#6C5CE7' if st_a>st_n else '#E17055'}">{st_a-st_n:+,.0f}</td><td style="color:{'#6C5CE7' if st_a>st_n else '#E17055'}">{(st_a-st_n)/st_n*100 if st_n else 0:+.1f}%</td></tr>
   </tbody>
 </table>
@@ -1400,7 +1366,7 @@ def _render_dh_conclusion(stats, bd):
 <div class="conclusion">
   <h2>Summary</h2>
   <p style="font-size:16px; line-height:1.7;">
-    After normalizing for raid buffs, Havoc DHs with Aug show
+    After normalizing for raid buffs, Devourer DHs with Aug show
     <strong style="color:{STYLE['accent']}">{stats['norm_delta']:+,.0f} DPS ({stats['norm_pct']:+.1f}%)</strong>
     {'higher' if stats['norm_delta'] > 0 else 'lower'} personal DPS than DHs without Aug.
   </p>"""
@@ -1408,28 +1374,23 @@ def _render_dh_conclusion(stats, bd):
     if bd:
         aoe = bd.get("aoe_analysis")
         if aoe:
-            uc_a = aoe["uncapped"]["_total_aug"]
-            uc_n = aoe["uncapped"]["_total_noaug"]
-            cc_a = aoe["capped"]["_total_aug"]
-            cc_n = aoe["capped"]["_total_noaug"]
+            aoe_a = aoe["aoe"]["_total_aug"]
+            aoe_n = aoe["aoe"]["_total_noaug"]
             st_a = aoe["st"]["_total_aug"]
             st_n = aoe["st"]["_total_noaug"]
-            uc_pct = (uc_a - uc_n) / uc_n * 100 if uc_n else 0
-            cc_pct = (cc_a - cc_n) / cc_n * 100 if cc_n else 0
+            aoe_pct = (aoe_a - aoe_n) / aoe_n * 100 if aoe_n else 0
             st_pct = (st_a - st_n) / st_n * 100 if st_n else 0
             html += f"""
   <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
-    <strong style="color:{STYLE['accent']}">Uncapped vs Capped AoE split:</strong><br>
-    Uncapped AoE (Immolation Aura, Demonsurge, Eye Beam): <strong>{uc_pct:+.1f}%</strong><br>
-    Capped Cleave (Death Sweep, Blade Dance, Glaive Tempest, The Hunt): <strong>{cc_pct:+.1f}%</strong><br>
-    ST Filler (Annihilation, Chaos Strike, Demon Blades, Melee): <strong>{st_pct:+.1f}%</strong>
+    <strong style="color:{STYLE['accent']}">AoE vs ST split:</strong><br>
+    AoE (Collapsing Star, Eradicate, Voidfall Meteor, Catastrophe, Void Ray): <strong>{aoe_pct:+.1f}%</strong><br>
+    ST / Resource (Devour, Consume, Cull, Reap, Melee): <strong>{st_pct:+.1f}%</strong>
   </p>
   <p style="font-size:13px; line-height:1.6; margin-top:10px; color:#999;">
-    <strong>DH has no pets</strong>, so the misattribution picture is simpler than Lock or DK.
+    <strong>Devourer DH has no pets</strong>, so the misattribution picture is simpler than Lock or DK.
     All damage is direct player damage — no pet-specific edge cases to worry about.
-    The AoE vs ST split tells the same story as the other classes: uncapped AoE abilities
-    are slightly under-stripped in dungeons (Aug contributions leak through), while ST abilities
-    are more accurately stripped by WCL's reattribution system.
+    The AoE vs ST split reveals whether Aug contributions are being properly stripped
+    across different ability types in dungeon AoE scenarios.
   </p>"""
 
     html += """
@@ -1438,11 +1399,11 @@ def _render_dh_conclusion(stats, bd):
 <div class="methodology">
   <h3>Methodology</h3>
   <ul>
-    <li>Data: Top 400 Havoc DH rankings per dungeon from WarcraftLogs API (characterRankings), across all regions.</li>
+    <li>Data: Top 400 Devourer DH rankings per dungeon from WarcraftLogs API (characterRankings), across all regions.</li>
     <li>Buff normalization: Same approach as DK/Lock — each DH's logged DPS is divided by the multiplicative product of all raid buffs present.</li>
-    <li>Damage categorization: Uncapped AoE (Immolation Aura, Demonsurge, Eye Beam), Capped Cleave (Death Sweep, Blade Dance, Glaive Tempest, Trail of Ruin, Burning Blades, The Hunt), ST Filler (Annihilation, Chaos Strike, Demon Blades, Melee, Throw Glaive).</li>
+    <li>Damage categorization: AoE (Collapsing Star, Eradicate, Voidfall Meteor, Catastrophe, Void Ray), ST/Resource (Devour, Consume, Cull, Reap, Melee).</li>
     <li>WCL data is the "unaugmented" (stripped) view by default: Aug contributions are removed from DPS players.</li>
-    <li>Caveats: Buff multipliers use DK-tuned values. DH always provides Chaos Brand, so that buff is always present in both groups.</li>
+    <li>Caveats: Buff multipliers use DK-tuned values. Very high aug rate (95%) at top of leaderboard means small no-aug sample (n=156). DH always provides Chaos Brand.</li>
   </ul>
 </div>
 """

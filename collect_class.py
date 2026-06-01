@@ -36,7 +36,7 @@ CLASS_CONFIGS = {
     },
     "dh": {
         "wcl_class": "DemonHunter",
-        "wcl_spec": "Havoc",
+        "wcl_spec": "Devourer",
         "label": "Devourer DH",
         "data_prefix": "dh",
     },
