@@ -748,6 +748,16 @@ def _render_aug_perspective():
         with open(dk_aug_path, encoding="utf-8") as f:
             aug_dk = json.load(f)
 
+        # Trinkets, optional talents, and build-dependent abilities that add noise
+        noise_abilities = {"Shadow of the Empyrean Requiem", "Echo of the Evercurse (Soulcatcher's Charm)",
+                           "Wraps of Cosmic Madness", "Beacon of Lightblind Wrath",
+                           "Twilight Barrage", "Prismatic Focusing Iris", "Devouring Bolt",
+                           "Eternal Voidsong Chain", "Chi Wave", "Sleep Walk", "Chrono Flames",
+                           "Disintegrate", "Landslide",
+                           "Blistering Scales",     # optional talent, minor damage
+                           "Inferno's Blessing",    # build-dependent (Mighty Inferno vs Overlord)
+                           }
+
         def ability_breakdown(entries):
             totals = defaultdict(list)
             overall_dps = []
@@ -757,8 +767,10 @@ def _render_aug_perspective():
                     continue
                 overall_dps.append(row["aug_total_damage"] / dur)
                 for a in row.get("abilities", []):
+                    if a["name"] in noise_abilities:
+                        continue
                     totals[a["name"]].append(a["total"] / dur)
-            return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 5}, statistics.mean(overall_dps) if overall_dps else 0
+            return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 10}, statistics.mean(overall_dps) if overall_dps else 0
 
         lock_ab_raw, lock_avg_raw = ability_breakdown(aug_lock)
         dk_ab_raw, dk_avg_raw = ability_breakdown(aug_dk)
@@ -816,7 +828,7 @@ def _render_aug_perspective():
 """
 
         reattrib_abilities = ["Ebon Might", "Shifting Sands", "Prescience", "Bombardments",
-                              "Breath of Eons", "Fate Mirror", "Inferno's Blessing"]
+                              "Breath of Eons", "Fate Mirror"]
 
         all_ab = set(list(lock_ab.keys()) + list(dk_ab.keys()))
         ab_data = []

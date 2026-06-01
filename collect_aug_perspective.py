@@ -50,8 +50,13 @@ def collect(source_class):
     with open(rankings_path, encoding="utf-8") as f:
         rankings = json.load(f)
 
+    key_filter = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else None
+
     aug_reports = [r for r in rankings if r["has_aug"]]
-    print(f"Source: {len(aug_reports)} aug-{source_class} reports available")
+    if key_filter:
+        aug_reports = [r for r in aug_reports if r["key_level"] == key_filter]
+    print(f"Source: {len(aug_reports)} aug-{source_class} reports available" +
+          (f" (key {key_filter} only)" if key_filter else ""))
 
     existing = []
     existing_keys = set()
@@ -64,7 +69,7 @@ def collect(source_class):
 
     sample = [r for r in aug_reports if (r["report_code"], r["fight_id"]) not in existing_keys]
     random.shuffle(sample)
-    sample = sample[:500]  # cap at 500 new entries per run
+    sample = sample[:500]
 
     print(f"Collecting {len(sample)} Aug breakdowns in batches of {BATCH_SIZE} (~{len(sample)//BATCH_SIZE} requests)")
 

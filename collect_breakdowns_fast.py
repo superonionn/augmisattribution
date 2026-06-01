@@ -5,11 +5,11 @@ import sys
 import time
 import random
 
-sys.stdout.reconfigure(encoding="utf-8")
+sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 from wcl_api import query as wcl_query
 
-BATCH_SIZE = 8
+BATCH_SIZE = 12
 
 CLASS_MAP = {
     "lock": "Warlock",
@@ -111,7 +111,7 @@ def collect(key):
                     time.sleep(60)
                     consecutive_429 = 0
 
-        time.sleep(0.5)
+        time.sleep(1.5)
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
