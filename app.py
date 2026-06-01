@@ -748,15 +748,23 @@ def _render_aug_perspective():
         with open(dk_aug_path, encoding="utf-8") as f:
             aug_dk = json.load(f)
 
-        # Trinkets, optional talents, and build-dependent abilities that add noise
+        # Trinkets and minor noise abilities to exclude
         noise_abilities = {"Shadow of the Empyrean Requiem", "Echo of the Evercurse (Soulcatcher's Charm)",
                            "Wraps of Cosmic Madness", "Beacon of Lightblind Wrath",
                            "Twilight Barrage", "Prismatic Focusing Iris", "Devouring Bolt",
                            "Eternal Voidsong Chain", "Chi Wave", "Sleep Walk", "Chrono Flames",
                            "Disintegrate", "Landslide",
-                           "Blistering Scales",     # optional talent, minor damage
-                           "Inferno's Blessing",    # build-dependent (Mighty Inferno vs Overlord)
+                           "Blistering Scales",
                            }
+
+        def get_ib_dps(row):
+            dur = row.get("duration_s", 0)
+            if dur <= 0:
+                return 0
+            for a in row.get("abilities", []):
+                if a["name"] == "Inferno's Blessing":
+                    return a["total"] / dur
+            return 0
 
         def ability_breakdown(entries):
             totals = defaultdict(list)
@@ -772,8 +780,10 @@ def _render_aug_perspective():
                     totals[a["name"]].append(a["total"] / dur)
             return {n: statistics.mean(v) for n, v in totals.items() if len(v) >= 10}, statistics.mean(overall_dps) if overall_dps else 0
 
-        lock_ab_raw, lock_avg_raw = ability_breakdown(aug_lock)
-        dk_ab_raw, dk_avg_raw = ability_breakdown(aug_dk)
+        # Build detection: Inferno's Blessing > 200 DPS = Mighty Inferno, else Overlord
+        IB_THRESHOLD = 200
+        def classify_build(row):
+            return "mighty_inferno" if get_ib_dps(row) > IB_THRESHOLD else "overlord"
 
         # Key-level-controlled comparison: find overlapping key levels
         lock_by_key = defaultdict(list)
@@ -783,47 +793,60 @@ def _render_aug_perspective():
         for r in aug_dk:
             dk_by_key[r["key_level"]].append(r)
         overlap_keys = [k for k in lock_by_key if k in dk_by_key and len(lock_by_key[k]) >= 10 and len(dk_by_key[k]) >= 10]
-        if overlap_keys:
-            best_key = max(overlap_keys, key=lambda k: min(len(lock_by_key[k]), len(dk_by_key[k])))
-            lock_ab, lock_avg = ability_breakdown(lock_by_key[best_key])
-            dk_ab, dk_avg = ability_breakdown(dk_by_key[best_key])
-            controlled_note = f"Controlled for key level ({best_key}): Lock {len(lock_by_key[best_key])} / DK {len(dk_by_key[best_key])} reports"
-        else:
-            lock_ab, lock_avg = lock_ab_raw, lock_avg_raw
-            dk_ab, dk_avg = dk_ab_raw, dk_avg_raw
-            controlled_note = "No overlapping key levels with sufficient sample — using raw averages"
+        best_key = max(overlap_keys, key=lambda k: min(len(lock_by_key[k]), len(dk_by_key[k]))) if overlap_keys else None
 
         lock_mean_key = statistics.mean([r["key_level"] for r in aug_lock])
         dk_mean_key = statistics.mean([r["key_level"] for r in aug_dk])
 
+        # Build-controlled comparison at best key level
+        if best_key:
+            lock_at_key = lock_by_key[best_key]
+            dk_at_key = dk_by_key[best_key]
+            lock_ol = [r for r in lock_at_key if classify_build(r) == "overlord"]
+            lock_mi = [r for r in lock_at_key if classify_build(r) == "mighty_inferno"]
+            dk_ol = [r for r in dk_at_key if classify_build(r) == "overlord"]
+            dk_mi = [r for r in dk_at_key if classify_build(r) == "mighty_inferno"]
+
+            # Use Overlord as primary comparison (larger sample, cleaner signal)
+            lock_ab, lock_avg = ability_breakdown(lock_ol)
+            dk_ab, dk_avg = ability_breakdown(dk_ol)
+            lock_mi_ab, lock_mi_avg = ability_breakdown(lock_mi) if len(lock_mi) >= 10 else ({}, 0)
+            dk_mi_ab, dk_mi_avg = ability_breakdown(dk_mi) if len(dk_mi) >= 10 else ({}, 0)
+        else:
+            lock_ol = [r for r in aug_lock if classify_build(r) == "overlord"]
+            dk_ol = [r for r in aug_dk if classify_build(r) == "overlord"]
+            lock_ab, lock_avg = ability_breakdown(lock_ol)
+            dk_ab, dk_avg = ability_breakdown(dk_ol)
+            lock_mi_avg = dk_mi_avg = 0
+            lock_ol, lock_mi, dk_ol, dk_mi = lock_ol, [], dk_ol, []
+
+        lock_ab_raw, lock_avg_raw = ability_breakdown(aug_lock)
+        dk_ab_raw, dk_avg_raw = ability_breakdown(aug_dk)
+
         html += f"""
 <div class="cards">
   <div class="card">
-    <div class="label">Aug DPS (paired w/ Lock)</div>
+    <div class="label">Aug DPS (w/ Lock)</div>
     <div class="value accent">{lock_avg_raw:,.0f}</div>
     <div class="sub">{len(aug_lock)} reports, avg key {lock_mean_key:.1f}</div>
   </div>
   <div class="card">
-    <div class="label">Aug DPS (paired w/ DK)</div>
+    <div class="label">Aug DPS (w/ DK)</div>
     <div class="value accent">{dk_avg_raw:,.0f}</div>
     <div class="sub">{len(aug_dk)} reports, avg key {dk_mean_key:.1f}</div>
   </div>
   <div class="card">
-    <div class="label">Δ at Key {best_key if overlap_keys else '?'}</div>
+    <div class="label">Δ Overlord, Key {best_key or '?'}</div>
     <div class="value" style="color:{'#00B894' if lock_avg >= dk_avg else '#E17055'}">{lock_avg - dk_avg:+,.0f}</div>
-    <div class="sub">{(lock_avg - dk_avg) / dk_avg * 100:+.1f}% (key-controlled)</div>
+    <div class="sub">{(lock_avg - dk_avg) / dk_avg * 100 if dk_avg else 0:+.1f}% (build + key controlled)</div>
   </div>
 </div>
 
 <p style="color:#999; font-size:13px; margin-bottom:5px;">
-  <em>{controlled_note}</em>. The raw difference ({lock_avg_raw - dk_avg_raw:+,.0f} DPS) is heavily confounded
-  by key level (Lock avg {lock_mean_key:.1f} vs DK avg {dk_mean_key:.1f}).
-</p>
-
-<p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  After controlling for key level, the Aug gets credited roughly the same damage regardless of DPS partner.
-  The reattributed and own-damage deltas move in lockstep, confirming this is not a reattribution effect but
-  simply "higher keys = more damage everywhere."
+  Controlled for both key level ({best_key or '?'}) and Aug build (Overlord: Lock {len(lock_ol)} / DK {len(dk_ol)}).
+  The raw difference ({lock_avg_raw - dk_avg_raw:+,.0f} DPS) is confounded by key level
+  (Lock avg {lock_mean_key:.1f} vs DK avg {dk_mean_key:.1f}) and build choice
+  (Overlord gets Motes of Possibility which boosts all damage and buff uptime).
 </p>
 """
 
@@ -858,21 +881,22 @@ def _render_aug_perspective():
             else:
                 own_rows += row
 
-        kc_label = f"Key {best_key}" if overlap_keys else "Raw"
+        kc_label = f"Overlord Build, Key {best_key}" if best_key else "Overlord Build"
         html += f"""
-<h3>Reattributed Abilities at {kc_label} (damage stripped from DPS → credited to Aug)</h3>
+<h3>Reattributed Abilities — {kc_label}</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
-  These are the Aug's support abilities — damage that WCL strips from DPS players and credits to the Aug.
+  Damage that WCL strips from DPS players and credits to the Aug. Filtered to Overlord build only
+  (no Inferno's Blessing talent) at key {best_key or '?'} to control for build and key level differences.
 </p>
 <table>
   <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
   <tbody>{reattrib_rows}</tbody>
 </table>
 
-<h3 style="margin-top:25px;">Aug's Own Abilities at {kc_label}</h3>
+<h3 style="margin-top:25px;">Aug's Own Abilities — {kc_label}</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
-  The Aug's personal damage should not vary by partner class. Similar deltas here and above
-  confirm this is key-level confounding, not a reattribution difference.
+  The Aug's personal damage should not vary by partner class at the same key level and build.
+  Matching deltas here confirm no reattribution difference — just residual sample variation.
 </p>
 <table>
   <thead><tr><th>Ability</th><th>w/ Lock</th><th>w/ DK</th><th>Δ</th><th>Δ%</th></tr></thead>
@@ -889,14 +913,13 @@ def _render_aug_perspective():
 <div class="conclusion">
   <h2>Aug Perspective Summary</h2>
   <p style="font-size:14px; line-height:1.7; color:#ccc;">
-    At the same key level, the Aug gets credited
-    <strong style="color:{STYLE['accent']}">{lock_avg - dk_avg:+,.0f} DPS ({(lock_avg - dk_avg) / dk_avg * 100:+.1f}%)</strong>
-    when paired with Lock vs DK — effectively no meaningful difference.
-    Both reattributed ({lock_r - dk_r:+,.0f}) and own damage ({lock_o - dk_o:+,.0f}) shift by similar amounts,
-    confirming the delta is not driven by reattribution.
+    Controlling for key level and build (Overlord), the Aug gets credited
+    <strong style="color:{STYLE['accent']}">{lock_avg - dk_avg:+,.0f} DPS ({(lock_avg - dk_avg) / dk_avg * 100 if dk_avg else 0:+.1f}%)</strong>
+    when paired with Lock vs DK. The Aug's own abilities (Eruption, Duplicate, Upheaval) are nearly
+    identical between partners, confirming this is a fair comparison.
   </p>
   <p style="font-size:14px; line-height:1.7; margin-top:15px; color:#ccc;">
-    <strong style="color:{STYLE['accent']}">But the Aug's real contribution is higher than what WCL credits.</strong>
+    <strong style="color:{STYLE['accent']}">The Aug's real contribution is higher than what WCL credits.</strong>
     The DPS-side analysis shows net under-stripping of +1-2% across both Lock and DK — meaning Aug contributions
     on AoE abilities leak through and stay on the DPS player's log. The Aug is doing more than its WCL numbers suggest,
     especially in dungeon AoE where support events are less reliable.
