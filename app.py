@@ -21,6 +21,7 @@ from analyze_dh import (
     chart_dh_distributions, chart_dh_per_dungeon, chart_dh_key_level,
     load_dh_breakdowns, AOE_ABILITIES, ST_ABILITIES,
 )
+from analyze_comps import load_comp_analysis
 
 app = Flask(__name__)
 
@@ -971,6 +972,8 @@ def _render_aug_perspective():
 </div>
 """
 
+    html += _render_comp_analysis()
+
     html += _render_misattribution_sources()
 
     html += """
@@ -987,6 +990,94 @@ def _render_aug_perspective():
         Fate Mirror, Inferno's Blessing — these sum to ~17% of a DPS player's raw damage.</li>
   </ul>
 </div>
+"""
+    return html
+
+
+def _render_comp_analysis():
+    """Render the Aug DPS by party composition section."""
+    comp_data = load_comp_analysis()
+    if not comp_data:
+        return ""
+
+    stats = comp_data["stats"]
+    charts = comp_data["charts"]
+    reattrib = comp_data["reattrib"]
+
+    # Build stat cards for the three main comps
+    card_html = ""
+    for comp_key in ["DH+DK", "DK+Lock", "DH+Lock"]:
+        if comp_key not in stats:
+            continue
+        s = stats[comp_key]
+        card_html += f"""
+  <div class="card">
+    <div class="label">Aug + {comp_key}</div>
+    <div class="value accent">{s['mean_dps']:,.0f}</div>
+    <div class="sub">{s['count']} reports, avg key {s['mean_key']:.1f}</div>
+  </div>"""
+
+    # Compute deltas relative to the lowest comp
+    comp_means = {k: v["mean_dps"] for k, v in stats.items()}
+    if comp_means:
+        baseline_key = min(comp_means, key=comp_means.get)
+        baseline = comp_means[baseline_key]
+
+    # Reattrib breakdown table
+    reattrib_rows = ""
+    for comp_key in ["DH+DK", "DK+Lock", "DH+Lock"]:
+        if comp_key not in reattrib:
+            continue
+        r = reattrib[comp_key]
+        s = stats[comp_key]
+        reattrib_rows += f"""<tr>
+            <td style="font-weight:600">Aug + {comp_key}</td>
+            <td>{r['reattrib_mean']:,.0f}</td>
+            <td>{r['own_mean']:,.0f}</td>
+            <td>{s['mean_dps']:,.0f}</td>
+            <td>{r['reattrib_pct']:.1f}%</td>
+        </tr>"""
+
+    html = f"""
+<h2 style="margin-top:40px;">Aug DPS by Party Composition</h2>
+<p style="color:#888; font-size:13px; margin-bottom:10px;">
+  How does the Aug's credited DPS change depending on which two DPS classes are in the group?
+  In M+ (5-player), the standard comp is Tank + Healer + Aug + 2 DPS. The three dominant comps in
+  high keys are DH+DK (the meta), DK+Lock, and DH+Lock.
+</p>
+
+<div class="cards">{card_html}
+</div>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('comp_bars', '')}"></div>
+
+<p style="color:#999; font-size:13px; margin:10px 0;">
+  The Aug gets credited significantly more DPS when paired with DH+DK than with comps involving Lock.
+  This is consistent with the DPS-side analysis: DK and DH are both direct-damage specs with no pet middleman,
+  making reattribution cleaner. Lock's pet-heavy damage (Wild Imps over-stripped by ~12%) means
+  less net DPS flows back to the Aug's log in Lock comps. Note: key level also differs (~21.6 vs ~20.5),
+  so part of the gap is simply higher keys producing more total damage.
+</p>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('comp_dist', '')}"></div>
+
+<h3 style="margin-top:25px;">Reattributed vs Own Damage by Comp</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  How much of the Aug's credited DPS comes from reattributed abilities (Ebon Might, Prescience, etc.)
+  vs the Aug's own direct damage (Eruption, Upheaval, Fire Breath)?
+</p>
+<table>
+  <thead><tr><th>Comp</th><th>Reattrib DPS</th><th>Own DPS</th><th>Total</th><th>Reattrib %</th></tr></thead>
+  <tbody>{reattrib_rows}</tbody>
+</table>
+
+<div class="chart"><img src="data:image/png;base64,{charts.get('comp_abilities', '')}"></div>
+
+<h3 style="margin-top:25px;">Aug DPS Scaling by Key Level</h3>
+<p style="color:#888; font-size:13px; margin-bottom:8px;">
+  Does the comp advantage hold across key levels, or is it driven by key level sampling differences?
+</p>
+<div class="chart"><img src="data:image/png;base64,{charts.get('comp_keylevel', '')}"></div>
 """
     return html
 
@@ -1078,10 +1169,10 @@ def _render_misattribution_sources():
     return f"""
 <h2>Cross-Class Misattribution Sources</h2>
 <p style="color:#888; font-size:13px; margin-bottom:10px;">
-  Comparing per-ability deltas across Demo Lock, Unholy DK, and Havoc DH to identify which abilities are
+  Comparing per-ability deltas across Demo Lock, Unholy DK, and Devourer DH to identify which abilities are
   most affected by reattribution issues. Positive = Aug contribution leaking through (under-stripped).
   Negative = too much stripped from player and credited to Aug (over-stripped).
-  DH (no pets) serves as a baseline — all damage is direct, so any delta is purely from AoE stripping behavior.
+  DH (no pets, all direct damage) serves as a baseline — any delta is purely from AoE stripping behavior.
 </p>
 
 <h3>Largest Under-Stripped Abilities</h3>
@@ -1110,7 +1201,7 @@ def _render_misattribution_sources():
   Big uncapped AoE abilities are consistently under-stripped (+4-9%), while ST and high-instance-count abilities
   are over-stripped (-6 to -13%). The net effect is a small positive headline delta (+1-4%) that masks
   significant per-ability misattribution in both directions. DH confirms this isn't pet-specific —
-  Immolation Aura (uncapped AoE, no pet involvement) shows the same under-stripping pattern.
+  Collapsing Star and Eradicate (uncapped AoE, no pet involvement) show the same under-stripping pattern.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
   Per-pull analysis confirms this: on the Crawth boss fight (pure ST) in Algeth'ar Academy, Lock overall
