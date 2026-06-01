@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import threading
 
 import requests
 from dotenv import load_dotenv
@@ -23,6 +24,7 @@ _rate_state: dict = {
     "retry_after": 0,
     "last_request": 0,
 }
+_request_lock = threading.Lock()  # Serializes request timing across threads
 
 
 class RateLimitError(Exception):
@@ -97,11 +99,13 @@ def query(q: str, variables: dict | None = None) -> dict:
     if variables:
         payload["variables"] = variables
 
-    # Pre-request pacing
-    elapsed = time.time() - _rate_state["last_request"]
-    min_gap = 2.0
-    if elapsed < min_gap:
-        time.sleep(min_gap - elapsed)
+    # Thread-safe request pacing: ensures minimum gap between ANY two requests
+    with _request_lock:
+        elapsed = time.time() - _rate_state["last_request"]
+        min_gap = 1.2  # tight enough for throughput, spaced enough to avoid burst throttle
+        if elapsed < min_gap:
+            time.sleep(min_gap - elapsed)
+        _rate_state["last_request"] = time.time()
 
     try:
         resp = requests.post(
@@ -113,7 +117,6 @@ def query(q: str, variables: dict | None = None) -> dict:
     except (requests.Timeout, requests.ConnectionError) as e:
         raise TransientError(f"Network error: {e}") from e
 
-    _rate_state["last_request"] = time.time()
     _update_rate_state(resp)
 
     if resp.status_code == 429:

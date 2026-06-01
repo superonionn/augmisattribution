@@ -12,10 +12,13 @@ import os
 import sys
 import time
 import random
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 from wcl_api import query as wcl_query, get_rate_info
+
+WORKERS = 3  # Concurrent request threads (rate limiter in wcl_api serializes timing)
 
 BATCH_SIZE = 10  # Sweet spot: enough to be efficient, not so many that one failure loses a lot
 
@@ -57,23 +60,6 @@ def build_aug_query(entries):
         }}""")
     return "query { reportData {" + "".join(parts) + " } }"
 
-
-def smart_sleep(base_sleep=2.0):
-    """Adaptive sleep based on rate limit state."""
-    info = get_rate_info()
-    remaining = info["remaining"]
-    limit = info["limit"]
-
-    if remaining < 50:
-        # Very low budget — slow down significantly
-        sleep_time = 10.0
-    elif remaining < 200:
-        # Getting low — moderate pace
-        sleep_time = 5.0
-    else:
-        sleep_time = base_sleep
-
-    time.sleep(sleep_time)
 
 
 
@@ -121,29 +107,20 @@ def collect_breakdowns(class_key, max_new=None):
     results = list(existing_results)
     errors = 0
     start_time = time.time()
+    results_lock = __import__('threading').Lock()
 
-    for batch_start in range(0, len(sample), BATCH_SIZE):
-        batch = sample[batch_start:batch_start + BATCH_SIZE]
-        batch_num = batch_start // BATCH_SIZE + 1
-        new_collected = len(results) - len(existing_results)
-        elapsed = time.time() - start_time
-        rate = new_collected / elapsed * 3600 if elapsed > 10 else 0
-
-        if batch_num % 5 == 1 or batch_num == total_batches:
-            info = get_rate_info()
-            print(f"  [{batch_num}/{total_batches}] +{new_collected} new, {errors} err | "
-                  f"budget: {info['remaining']}/{info['limit']} | "
-                  f"~{rate:.0f}/hr")
-
+    def process_batch(batch_info):
+        batch, batch_num = batch_info
         q = build_breakdown_query(batch, wcl_class)
+        batch_results = []
+        batch_errors = 0
         try:
             data = wcl_query(q, {})
             report_data = data.get("reportData", {})
-
             for i, entry in enumerate(batch):
                 report = report_data.get(f"r{i}")
                 if not report or not report.get("table"):
-                    errors += 1
+                    batch_errors += 1
                     continue
                 raw = report["table"].get("data", {}).get("entries", [])
                 abilities = []
@@ -151,8 +128,7 @@ def collect_breakdowns(class_key, max_new=None):
                 for e in raw:
                     total += e.get("total", 0)
                     abilities.append({"name": e.get("name", "Unknown"), "total": e.get("total", 0)})
-
-                results.append({
+                batch_results.append({
                     "player": entry["player"],
                     "dungeon": entry["dungeon"],
                     "dps": entry["dps"],
@@ -162,16 +138,38 @@ def collect_breakdowns(class_key, max_new=None):
                     "total_damage": total,
                     "abilities": abilities,
                 })
-
         except Exception as ex:
-            errors += len(batch)
-            print(f"  Error: {ex}")
+            batch_errors = len(batch)
+            print(f"  Batch {batch_num} error: {ex}")
+        return batch_results, batch_errors
 
-        # Save every 10 batches
-        if batch_num % 10 == 0:
-            save_json(out_path, results)
+    batches = []
+    for batch_start in range(0, len(sample), BATCH_SIZE):
+        batch = sample[batch_start:batch_start + BATCH_SIZE]
+        batch_num = batch_start // BATCH_SIZE + 1
+        batches.append((batch, batch_num))
 
-        smart_sleep()
+    completed = 0
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        futures = {pool.submit(process_batch, b): b[1] for b in batches}
+        for future in as_completed(futures):
+            batch_results, batch_errors = future.result()
+            with results_lock:
+                results.extend(batch_results)
+                errors += batch_errors
+                completed += 1
+
+            if completed % 5 == 0 or completed == total_batches:
+                new_collected = len(results) - len(existing_results)
+                elapsed = time.time() - start_time
+                rate = new_collected / elapsed * 3600 if elapsed > 10 else 0
+                info = get_rate_info()
+                print(f"  [{completed}/{total_batches}] +{new_collected} new, {errors} err | "
+                      f"budget: {info['remaining']}/{info['limit']} | "
+                      f"~{rate:.0f}/hr")
+
+            if completed % 10 == 0:
+                save_json(out_path, results)
 
     save_json(out_path, results)
     aug_r = sum(1 for r in results if r["has_aug"])
@@ -214,29 +212,20 @@ def collect_aug_perspective(class_key, key_filter=None, max_new=500):
     results = list(existing)
     errors = 0
     start_time = time.time()
+    results_lock = __import__('threading').Lock()
 
-    for batch_start in range(0, len(sample), BATCH_SIZE):
-        batch = sample[batch_start:batch_start + BATCH_SIZE]
-        batch_num = batch_start // BATCH_SIZE + 1
-        new_collected = len(results) - len(existing)
-        elapsed = time.time() - start_time
-        rate = new_collected / elapsed * 3600 if elapsed > 10 else 0
-
-        if batch_num % 5 == 1 or batch_num == total_batches:
-            info = get_rate_info()
-            print(f"  [{batch_num}/{total_batches}] +{new_collected} new, {errors} err | "
-                  f"budget: {info['remaining']}/{info['limit']} | "
-                  f"~{rate:.0f}/hr")
-
+    def process_batch(batch_info):
+        batch, batch_num = batch_info
         q = build_aug_query(batch)
+        batch_results = []
+        batch_errors = 0
         try:
             data = wcl_query(q, {})
             report_data = data.get("reportData", {})
-
             for i, entry in enumerate(batch):
                 report = report_data.get(f"r{i}")
                 if not report or not report.get("table"):
-                    errors += 1
+                    batch_errors += 1
                     continue
                 raw = report["table"].get("data", {}).get("entries", [])
                 abilities = []
@@ -244,11 +233,9 @@ def collect_aug_perspective(class_key, key_filter=None, max_new=500):
                 for e in raw:
                     total += e.get("total", 0)
                     abilities.append({"name": e.get("name", "Unknown"), "total": e.get("total", 0)})
-
                 duration_s = entry.get("duration_s") or (entry.get("duration_ms", 0) / 1000)
                 aug_dps = total / duration_s if duration_s > 0 else 0
-
-                results.append({
+                batch_results.append({
                     "report_code": entry["report_code"],
                     "fight_id": entry["fight_id"],
                     "dungeon": entry["dungeon"],
@@ -261,15 +248,38 @@ def collect_aug_perspective(class_key, key_filter=None, max_new=500):
                     "abilities": abilities,
                     "comp": entry.get("comp", []),
                 })
-
         except Exception as ex:
-            errors += len(batch)
-            print(f"  Error: {ex}")
+            batch_errors = len(batch)
+            print(f"  Batch {batch_num} error: {ex}")
+        return batch_results, batch_errors
 
-        if batch_num % 10 == 0:
-            save_json(out_path, results)
+    batches = []
+    for batch_start in range(0, len(sample), BATCH_SIZE):
+        batch = sample[batch_start:batch_start + BATCH_SIZE]
+        batch_num = batch_start // BATCH_SIZE + 1
+        batches.append((batch, batch_num))
 
-        smart_sleep()
+    completed = 0
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        futures = {pool.submit(process_batch, b): b[1] for b in batches}
+        for future in as_completed(futures):
+            batch_results, batch_errors = future.result()
+            with results_lock:
+                results.extend(batch_results)
+                errors += batch_errors
+                completed += 1
+
+            if completed % 5 == 0 or completed == total_batches:
+                new_collected = len(results) - len(existing)
+                elapsed = time.time() - start_time
+                rate = new_collected / elapsed * 3600 if elapsed > 10 else 0
+                info = get_rate_info()
+                print(f"  [{completed}/{total_batches}] +{new_collected} new, {errors} err | "
+                      f"budget: {info['remaining']}/{info['limit']} | "
+                      f"~{rate:.0f}/hr")
+
+            if completed % 10 == 0:
+                save_json(out_path, results)
 
     save_json(out_path, results)
     elapsed = time.time() - start_time
