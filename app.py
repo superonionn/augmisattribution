@@ -1146,11 +1146,11 @@ def _render_comp_analysis():
 
 <p style="color:#999; font-size:13px; margin:10px 0;">
   The Aug gets credited significantly more DPS when paired with DH+DK than with comps involving Lock.
-  Lock's pet-heavy damage (Wild Imps over-stripped by ~12%) means less net DPS flows back to the Aug's log
-  in Lock comps — the over-stripping on imps is damage incorrectly credited to the Aug that inflates Lock's
-  apparent loss. DK also has significant pet damage (Army, Abomination, Ghoul) but the over-stripping is less
-  severe there. DH (Devourer) is almost entirely direct damage, which may explain why its misattribution
-  deltas are the smallest. Key level also differs (~21.6 vs ~20.5), so part of the gap is simply higher keys.
+  This is primarily driven by key level (~21.6 vs ~20.5) — higher keys mean more total party damage for
+  Ebon Might and Prescience to scale off of. Ironically, Lock's imp over-stripping (-12%) actually gives
+  the Aug <em>extra</em> credit when paired with Lock (damage incorrectly taken from Lock's log and given to Aug),
+  so the stripping errors slightly reduce the gap rather than causing it. DH (Devourer) has almost entirely
+  direct damage, which may explain why its per-ability misattribution deltas are the smallest of the three specs.
 </p>
 
 <div class="chart"><img src="data:image/png;base64,{charts.get('comp_dist', '')}"></div>
