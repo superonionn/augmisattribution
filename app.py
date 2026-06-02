@@ -1146,10 +1146,11 @@ def _render_comp_analysis():
 
 <p style="color:#999; font-size:13px; margin:10px 0;">
   The Aug gets credited significantly more DPS when paired with DH+DK than with comps involving Lock.
-  This is consistent with the DPS-side analysis: DK and DH are both direct-damage specs with no pet middleman,
-  making reattribution cleaner. Lock's pet-heavy damage (Wild Imps over-stripped by ~12%) means
-  less net DPS flows back to the Aug's log in Lock comps. Note: key level also differs (~21.6 vs ~20.5),
-  so part of the gap is simply higher keys producing more total damage.
+  Lock's pet-heavy damage (Wild Imps over-stripped by ~12%) means less net DPS flows back to the Aug's log
+  in Lock comps — the over-stripping on imps is damage incorrectly credited to the Aug that inflates Lock's
+  apparent loss. DK also has significant pet damage (Army, Abomination, Ghoul) but the over-stripping is less
+  severe there. DH (Devourer) is almost entirely direct damage, which may explain why its misattribution
+  deltas are the smallest. Key level also differs (~21.6 vs ~20.5), so part of the gap is simply higher keys.
 </p>
 
 <div class="chart"><img src="data:image/png;base64,{charts.get('comp_dist', '')}"></div>
@@ -1214,31 +1215,42 @@ def _render_misattribution_sources():
     dh_aug_ab = per_ability([e for e in dh_data if e["has_aug"]]) if dh_data else {}
     dh_noaug_ab = per_ability([e for e in dh_data if not e["has_aug"]]) if dh_data else {}
 
+    # Trinkets/noise to exclude from the comparison
+    noise = {"Twilight Barrage", "Prismatic Focusing Iris", "Eternal Voidsong Chain",
+             "Echo of the Evercurse (Soulcatcher's Charm)", "Shadow of the Empyrean Requiem",
+             "Infected Claws", "Sweeping Claws", "Claw", "Halazzi's Claws",
+             "未知目标", "Raise Dead"}
+
     rows = []
     for name in set(lock_aug_ab) | set(lock_noaug_ab):
+        if name in noise:
+            continue
         a = lock_aug_ab.get(name, 0)
         n = lock_noaug_ab.get(name, 0)
-        if a + n > 500:
+        if a > 200 and n > 200:
             rows.append(("Lock", name, a, n, a - n, (a - n) / n * 100 if n else 0))
     for name in set(dk_aug_ab) | set(dk_noaug_ab):
-        if name == "Raise Dead":
+        if name in noise:
             continue
         a = dk_aug_ab.get(name, 0)
         n = dk_noaug_ab.get(name, 0)
-        if a + n > 500:
+        if a > 200 and n > 200:
             rows.append(("DK", name, a, n, a - n, (a - n) / n * 100 if n else 0))
     for name in set(dh_aug_ab) | set(dh_noaug_ab):
+        if name in noise:
+            continue
         a = dh_aug_ab.get(name, 0)
         n = dh_noaug_ab.get(name, 0)
-        if a + n > 500:
+        if a > 200 and n > 200:
             rows.append(("DH", name, a, n, a - n, (a - n) / n * 100 if n else 0))
 
     rows.sort(key=lambda x: -x[4])
 
+    # Sort by absolute DPS impact (not %) — this is what matters for overall effect
     under_rows = ""
-    for cls, name, a, n, d, pct in rows[:8]:
+    for cls, name, a, n, d, pct in rows[:10]:
         color = "#6C5CE7"
-        bar_w = min(abs(d) / 25, 100)
+        bar_w = min(abs(d) / 30, 100)
         under_rows += f"""<tr>
             <td>{name}</td><td>{cls}</td>
             <td>{a:,.0f}</td><td>{n:,.0f}</td>
@@ -1248,9 +1260,9 @@ def _render_misattribution_sources():
         </tr>"""
 
     over_rows = ""
-    for cls, name, a, n, d, pct in sorted(rows, key=lambda x: x[4])[:6]:
+    for cls, name, a, n, d, pct in sorted(rows, key=lambda x: x[4])[:8]:
         color = "#E17055"
-        bar_w = min(abs(d) / 25, 100)
+        bar_w = min(abs(d) / 30, 100)
         over_rows += f"""<tr>
             <td>{name}</td><td>{cls}</td>
             <td>{a:,.0f}</td><td>{n:,.0f}</td>
@@ -1268,21 +1280,23 @@ def _render_misattribution_sources():
   DH (no pets, all direct damage) serves as a baseline — any delta is purely from AoE stripping behavior.
 </p>
 
-<h3>Largest Under-Stripped Abilities</h3>
+<h3>Largest Under-Stripped Abilities (sorted by net DPS impact)</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
   These abilities show more DPS in aug groups than non-aug groups <em>after</em> WCL's reattribution.
-  The big uncapped AoE abilities — Graveyard (DK), Diabolic Ritual (Lock), Tyrant (Lock) — are the
-  primary contributors. Aug contributions on these abilities are not being fully stripped in dungeons.
+  Sorted by absolute DPS impact ��� a 5% swing on a 20k DPS ability matters more than a 15% swing on a 2k ability.
+  The biggest contributors are pet-related (DK Army/Abom, Lock Tyrant/Diabolic Ritual) and uncapped AoE (Graveyard).
 </p>
 <table>
   <thead><tr><th>Ability</th><th>Class</th><th>Aug DPS</th><th>NoAug DPS</th><th>Δ DPS</th><th>Δ%</th><th></th></tr></thead>
   <tbody>{under_rows}</tbody>
 </table>
 
-<h3 style="margin-top:25px;">Largest Over-Stripped Abilities</h3>
+<h3 style="margin-top:25px;">Largest Over-Stripped Abilities (sorted by net DPS impact)</h3>
 <p style="color:#888; font-size:13px; margin-bottom:8px;">
   These abilities show less DPS in aug groups — more damage is being stripped than the Aug actually contributed.
-  Wild Imps dominate this list, but DK ST abilities (Scourge Strike, Melee) also appear.
+  Wild Imps dominate this list due to 15-20+ simultaneous pet instances generating unreliable support events.
+  DK melee appears over-stripped but this is largely a Windfury confound (no-aug groups always have RSham for lust,
+  which provides Windfury Totem — melee is &lt;1% of total DPS so the net effect is negligible).
 </p>
 <table>
   <thead><tr><th>Ability</th><th>Class</th><th>Aug DPS</th><th>NoAug DPS</th><th>Δ DPS</th><th>Δ%</th><th></th></tr></thead>
@@ -1290,17 +1304,18 @@ def _render_misattribution_sources():
 </table>
 
 <p style="color:#ccc; font-size:14px; line-height:1.7; margin:15px 0;">
-  <strong style="color:{STYLE['accent']}">The pattern across all three classes:</strong>
-  Big uncapped AoE abilities are consistently under-stripped (+4-9%), while ST and high-instance-count abilities
-  are over-stripped (-6 to -13%). The net effect is a small positive headline delta (+1-4%) that masks
-  significant per-ability misattribution in both directions. DH confirms this isn't pet-specific —
-  Collapsing Star and Eradicate (uncapped AoE, no pet involvement) show the same under-stripping pattern.
+  <strong style="color:{STYLE['accent']}">The misattribution is primarily pet-driven:</strong>
+  The largest absolute DPS swings come from pet abilities — Lock's Wild Imps (-12%, over-stripped),
+  DK's Army/Abomination (+5-8%, under-stripped), and Lock's Tyrant/Diabolic Ritual (+4-5%, under-stripped).
+  DH (Devourer), which has almost no pet damage, shows the same AoE/ST pattern but at much smaller magnitudes
+  (Collapsing Star +3.6% vs Graveyard +12.4%). This suggests the core issue is pet instances generating
+  unreliable support events — the direct-damage AoE stripping error is smaller but still present.
 </p>
 <p style="color:#999; font-size:13px; line-height:1.6; margin:10px 0;">
-  Per-pull analysis confirms this: on the Crawth boss fight (pure ST) in Algeth'ar Academy, Lock overall
-  shows +0.7% while imps show -9.3%. On the Vile Lasher trash pull (true mass AoE), Lock overall shows
-  +9.2% while imps show only -2.1%. The under-stripping is concentrated in AoE, while over-stripping
-  is worse in ST — suggesting Blizzard's raid-focused fixes may overcorrect on certain ability types.
+  <strong>Net effect on overall DPS:</strong> The per-ability errors largely cancel out. When you control for
+  pull size (aug groups pull bigger because Mistweaver &gt; Resto Shaman healing) and key level, the residual
+  aug effect on total logged DPS is approximately zero across all three classes (see Pull-Size Decomposition above).
+  The headline "aug inflates DPS" narrative is actually a "MW healer enables bigger pulls" narrative.
 </p>
 """
 
