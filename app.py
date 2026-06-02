@@ -1146,11 +1146,11 @@ def _render_comp_analysis():
 
 <p style="color:#999; font-size:13px; margin:10px 0;">
   The Aug gets credited significantly more DPS when paired with DH+DK than with comps involving Lock.
-  This is primarily driven by key level (~21.6 vs ~20.5) — higher keys mean more total party damage for
-  Ebon Might and Prescience to scale off of. Ironically, Lock's imp over-stripping (-12%) actually gives
-  the Aug <em>extra</em> credit when paired with Lock (damage incorrectly taken from Lock's log and given to Aug),
-  so the stripping errors slightly reduce the gap rather than causing it. DH (Devourer) has almost entirely
-  direct damage, which may explain why its per-ability misattribution deltas are the smallest of the three specs.
+  At the same key level (21), the gap shrinks to ~3% (189k vs 183k) — key level explains ~60% of the headline
+  difference. The remaining gap is from partner DPS: DK+DH individually do more damage (~218k) than Lock (~198k),
+  and since Ebon Might/Prescience scale as a % of partner damage, Aug's reattribution credit scales with it.
+  Lock's imp over-stripping (-12%) actually gives the Aug <em>extra</em> credit (damage taken from Lock's log
+  and given to Aug), so stripping errors slightly reduce the gap rather than causing it.
 </p>
 
 <div class="chart"><img src="data:image/png;base64,{charts.get('comp_dist', '')}"></div>
